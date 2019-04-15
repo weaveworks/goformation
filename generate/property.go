@@ -218,6 +218,8 @@ func convertTypeToGo(pt string) string {
 		return "*Value"
 	case "Timestamp":
 		return "string"
+	case "Map":
+		return "*Value"
 	case "Json":
 		return "interface{}"
 	default:
