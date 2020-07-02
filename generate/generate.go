@@ -276,17 +276,6 @@ func (rg *ResourceGenerator) generateResources(name string, resource Resource, i
 		}
 	}
 
-	// Check if this resource has any tag properties
-	// note: the property might not always be called 'Tags'
-	// see: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-tagstoadd
-	hasTags := false
-	for _, property := range resource.Properties {
-		if property.ItemType == "Tag" {
-			hasTags = true
-			break
-		}
-	}
-
 	// Pass in the following information into the template
 	sname, err := structName(name)
 	if err != nil {
@@ -296,6 +285,18 @@ func (rg *ResourceGenerator) generateResources(name string, resource Resource, i
 	pname, err := packageName(name, true)
 	if err != nil {
 		return err
+	}
+
+	// Check if this resource has any tag properties (and if it's not in the
+	// same package as the `Tag` type
+	// note: the property might not always be called 'Tags'
+	// see: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-tagstoadd
+	hasTags := false
+	for _, property := range resource.Properties {
+		if property.ItemType == "Tag" {
+			hasTags = true && pname != "cloudformation"
+			break
+		}
 	}
 
 	nameParts := strings.Split(name, "::")
@@ -430,6 +431,7 @@ func generatePolymorphicProperty(typename string, name string, property Property
 	// Open the polymorphic property template
 	tmpl, err := template.New("polymorphic-property.template").Funcs(template.FuncMap{
 		"convertToGoType": convertTypeToGo,
+		"convertToPureGoType": convertTypeToPureGo,
 	}).ParseFiles("generate/templates/polymorphic-property.template")
 
 	nameParts := strings.Split(name, "_")

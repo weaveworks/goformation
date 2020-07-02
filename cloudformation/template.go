@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/awslabs/goformation/v4/intrinsics"
 	"github.com/sanathkr/yaml"
 )
 
@@ -171,8 +170,7 @@ func (t *Template) JSON() ([]byte, error) {
 		return nil, err
 	}
 
-	return intrinsics.ProcessJSON(j, nil)
-
+	return j, nil
 }
 
 // YAML converts an AWS CloudFormation template object to YAML

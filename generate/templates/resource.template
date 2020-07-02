@@ -5,14 +5,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"bytes"
+	{{if .Resource.HasValueProperty}}
+	"github.com/weaveworks/goformation/v4/cloudformation/types"{{end}}
 	{{if .HasTags}}
-	"github.com/awslabs/goformation/v4/cloudformation/tags"{{end}}
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"{{end}}
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 {{else}}
-import ({{if .HasTags}}
-	"github.com/awslabs/goformation/v4/cloudformation/tags"{{end}}
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+import ({{if .Resource.HasValueProperty}}
+	"github.com/weaveworks/goformation/v4/cloudformation/types"{{end}}
+	{{if .HasTags}}
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"{{end}}
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 {{end}}
 
@@ -25,7 +29,7 @@ type {{.StructName}} struct {
     // {{$name}} AWS CloudFormation Property
     // Required: {{$property.Required}}
     // See: {{$property.Documentation}}
-    {{$prop_name}} {{if (or ($property.IsPolymorphic) ($property.IsCustomType) )}}*{{end}}{{$property.GoType $.Name $.Basename $name}} `json:"{{$name}}{{if (not (and ($property.IsNumeric) ($property.Required)))}},omitempty{{end}}"`
+    {{$prop_name}} {{if (or ($property.IsPolymorphic) ($property.IsCustomType) )}}*{{end}}{{$property.GoType $.Name $.Basename $name $.PackageName}} `json:"{{$name}}{{if (not (and ($property.IsNumeric) ($property.Required)))}},omitempty{{end}}"`
     {{end}}
 	{{if .HasUpdatePolicy }}// AWSCloudFormationUpdatePolicy represents a CloudFormation UpdatePolicy
 	AWSCloudFormationUpdatePolicy *policies.UpdatePolicy `json:"-"`{{ end }}

@@ -9,6 +9,20 @@ import (
 )
 
 var typeToGo = map[string]string{
+	"String":    "*types.Value",
+	"Long":      "*types.Value",
+	"Integer":   "*types.Value",
+	"Double":    "*types.Value",
+	"Boolean":   "*types.Value",
+	"Timestamp": "string",
+	"Json":      "interface{}",
+	"Map":       "*types.Value",
+
+	// Overrides to fix CF errors
+	"ParameterValues": "interface{}", // fix for AWS::SSM::Association
+}
+
+var typeToPureGo = map[string]string{
 	"String":    "string",
 	"Long":      "int64",
 	"Integer":   "int",
@@ -165,10 +179,13 @@ func (p Property) IsCustomType() bool {
 
 // GoType returns the correct type for this property
 // within a Go struct. For example, []string or map[string]AWSLambdaFunction_VpcConfig
-func (p Property) GoType(typename string, basename string, name string) string {
+func (p Property) GoType(typename, basename, name, packageName string) string {
 
 	if p.ItemType == "Tag" {
-		return "[]tags.Tag"
+		if packageName == "cloudformation" {
+			return "[]Tag"
+		}
+		return "[]cloudformation.Tag"
 	}
 
 	if p.IsPolymorphic() {
@@ -191,6 +208,9 @@ func (p Property) GoType(typename string, basename string, name string) string {
 	if p.IsList() {
 
 		if p.convertTypeToGo() != "" {
+			if p.GoTypeIsValue() {
+				return p.convertTypeToGo()
+			}
 			return "[]" + p.convertTypeToGo()
 		}
 
@@ -228,6 +248,26 @@ func (p Property) convertTypeToGo() string {
 	}
 }
 
+func (p Property) GoTypeIsValue() bool {
+	var goType string
+	if p.PrimitiveType != "" {
+		goType = convertTypeToGo(p.PrimitiveType)
+	} else if p.PrimitiveItemType != "" {
+		goType = convertTypeToGo(p.PrimitiveItemType)
+	} else {
+		goType = convertTypeToGo(p.ItemType)
+	}
+	if strings.Contains(goType, "Value") {
+		return true
+	}
+	for _, t := range append(append(p.PrimitiveTypes, p.PrimitiveItemTypes...), p.ItemTypes...) {
+		if strings.Contains(convertTypeToGo(t), "Value") {
+			return true
+		}
+	}
+	return false
+}
+
 func (p Property) convertTypeToJSON() string {
 	if p.PrimitiveType != "" {
 		return convertTypeToJSON(p.PrimitiveType)
@@ -240,6 +280,14 @@ func (p Property) convertTypeToJSON() string {
 
 func convertTypeToGo(name string) string {
 	t, ok := typeToGo[name]
+	if !ok {
+		return ""
+	}
+	return t
+}
+
+func convertTypeToPureGo(name string) string {
+	t, ok := typeToPureGo[name]
 	if !ok {
 		return ""
 	}

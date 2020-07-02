@@ -4,7 +4,9 @@ import (
 	"sort"
 	"encoding/json"
 
-	"github.com/awslabs/goformation/v4/cloudformation/utils"
+	{{if .Property.GoTypeIsValue}}
+	"github.com/weaveworks/goformation/v4/cloudformation/types"{{end}}
+	"github.com/weaveworks/goformation/v4/cloudformation/utils"
 )
 
 // {{.Name}} is a helper struct that can hold either a {{.TypesJoined}} value
@@ -75,13 +77,25 @@ func (r *{{.Name}}) UnmarshalJSON(b []byte) error {
 	switch val := typecheck.(type) {
 
 		{{range $type := $.Property.PrimitiveTypes}}
-			case {{convertToGoType $type}}:
-			r.{{$type}} = &val
+			case {{convertToPureGoType $type}}:
+			v, err := types.NewValueFromPrimitive(val)
+			if err != nil {
+				return err
+			}
+			r.{{$type}} = &v
 		{{end}}
 
 		{{range $type := $.Property.PrimitiveItemTypes}}
-			case []{{convertToGoType $type}}:
-			r.{{$type}}Array = &val
+			case []{{convertToPureGoType $type}}:
+			var values []*types.Value
+			for _, vv := range val {
+			    vvv, err := types.NewValueFromPrimitive(vv)
+			    if err != nil {
+			        return err
+			    }
+			    values = append(values, vvv)
+			}
+			r.{{$type}}Array = &values
 		{{end}}
 
 		case map[string]interface{}:

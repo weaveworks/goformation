@@ -61,14 +61,7 @@ func ParseJSON(data []byte) (*cloudformation.Template, error) {
 // ParseJSONWithOptions an AWS CloudFormation template (expects a []byte of valid JSON)
 // Parsing can be tweaked via the specified options.
 func ParseJSONWithOptions(data []byte, options *intrinsics.ProcessorOptions) (*cloudformation.Template, error) {
-
-	// Process all AWS CloudFormation intrinsic functions (e.g. Fn::Join)
-	intrinsified, err := intrinsics.ProcessJSON(data, options)
-	if err != nil {
-		return nil, err
-	}
-
-	return unmarshal(intrinsified)
+	return unmarshal(data)
 
 }
 

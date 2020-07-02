@@ -20,6 +20,15 @@ type Resource struct {
 	Properties map[string]Property
 }
 
+func (r Resource) HasValueProperty() bool {
+	for _, p := range r.Properties {
+		if p.GoTypeIsValue() {
+			return true
+		}
+	}
+	return false
+}
+
 // Schema returns a JSON Schema for the resource (as a string)
 func (r Resource) Schema(name string, isCustomProperty bool) string {
 
