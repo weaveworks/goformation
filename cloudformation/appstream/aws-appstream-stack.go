@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Stack AWS CloudFormation Resource (AWS::AppStream::Stack)
@@ -26,42 +28,42 @@ type Stack struct {
 	// AttributesToDelete AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-attributestodelete
-	AttributesToDelete []string `json:"AttributesToDelete,omitempty"`
+	AttributesToDelete *types.Value `json:"AttributesToDelete,omitempty"`
 
 	// DeleteStorageConnectors AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-deletestorageconnectors
-	DeleteStorageConnectors bool `json:"DeleteStorageConnectors,omitempty"`
+	DeleteStorageConnectors *types.Value `json:"DeleteStorageConnectors,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// DisplayName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-displayname
-	DisplayName string `json:"DisplayName,omitempty"`
+	DisplayName *types.Value `json:"DisplayName,omitempty"`
 
 	// EmbedHostDomains AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-embedhostdomains
-	EmbedHostDomains []string `json:"EmbedHostDomains,omitempty"`
+	EmbedHostDomains *types.Value `json:"EmbedHostDomains,omitempty"`
 
 	// FeedbackURL AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-feedbackurl
-	FeedbackURL string `json:"FeedbackURL,omitempty"`
+	FeedbackURL *types.Value `json:"FeedbackURL,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// RedirectURL AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-redirecturl
-	RedirectURL string `json:"RedirectURL,omitempty"`
+	RedirectURL *types.Value `json:"RedirectURL,omitempty"`
 
 	// StorageConnectors AWS CloudFormation Property
 	// Required: false
@@ -71,7 +73,7 @@ type Stack struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// UserSettings AWS CloudFormation Property
 	// Required: false

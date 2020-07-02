@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // User AWS CloudFormation Resource (AWS::Transfer::User)
@@ -16,7 +18,7 @@ type User struct {
 	// HomeDirectory AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectory
-	HomeDirectory string `json:"HomeDirectory,omitempty"`
+	HomeDirectory *types.Value `json:"HomeDirectory,omitempty"`
 
 	// HomeDirectoryMappings AWS CloudFormation Property
 	// Required: false
@@ -26,22 +28,22 @@ type User struct {
 	// HomeDirectoryType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectorytype
-	HomeDirectoryType string `json:"HomeDirectoryType,omitempty"`
+	HomeDirectoryType *types.Value `json:"HomeDirectoryType,omitempty"`
 
 	// Policy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-policy
-	Policy string `json:"Policy,omitempty"`
+	Policy *types.Value `json:"Policy,omitempty"`
 
 	// Role AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-role
-	Role string `json:"Role,omitempty"`
+	Role *types.Value `json:"Role,omitempty"`
 
 	// ServerId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-serverid
-	ServerId string `json:"ServerId,omitempty"`
+	ServerId *types.Value `json:"ServerId,omitempty"`
 
 	// SshPublicKeys AWS CloudFormation Property
 	// Required: false
@@ -51,12 +53,12 @@ type User struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// UserName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-username
-	UserName string `json:"UserName,omitempty"`
+	UserName *types.Value `json:"UserName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

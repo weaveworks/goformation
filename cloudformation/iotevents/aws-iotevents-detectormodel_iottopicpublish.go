@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_IotTopicPublish AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.IotTopicPublish)
@@ -11,7 +13,7 @@ type DetectorModel_IotTopicPublish struct {
 	// MqttTopic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic
-	MqttTopic string `json:"MqttTopic,omitempty"`
+	MqttTopic *types.Value `json:"MqttTopic,omitempty"`
 
 	// Payload AWS CloudFormation Property
 	// Required: false

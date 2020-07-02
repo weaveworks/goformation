@@ -1,7 +1,9 @@
 package events
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Rule_KinesisParameters AWS CloudFormation Resource (AWS::Events::Rule.KinesisParameters)
@@ -11,7 +13,7 @@ type Rule_KinesisParameters struct {
 	// PartitionKeyPath AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html#cfn-events-rule-kinesisparameters-partitionkeypath
-	PartitionKeyPath string `json:"PartitionKeyPath,omitempty"`
+	PartitionKeyPath *types.Value `json:"PartitionKeyPath,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

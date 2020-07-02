@@ -1,7 +1,9 @@
 package greengrass
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FunctionDefinitionVersion_Environment AWS CloudFormation Resource (AWS::Greengrass::FunctionDefinitionVersion.Environment)
@@ -11,7 +13,7 @@ type FunctionDefinitionVersion_Environment struct {
 	// AccessSysfs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-accesssysfs
-	AccessSysfs bool `json:"AccessSysfs,omitempty"`
+	AccessSysfs *types.Value `json:"AccessSysfs,omitempty"`
 
 	// Execution AWS CloudFormation Property
 	// Required: false

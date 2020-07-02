@@ -1,7 +1,9 @@
 package kinesisfirehose
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeliveryStream_OpenXJsonSerDe AWS CloudFormation Resource (AWS::KinesisFirehose::DeliveryStream.OpenXJsonSerDe)
@@ -11,17 +13,17 @@ type DeliveryStream_OpenXJsonSerDe struct {
 	// CaseInsensitive AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html#cfn-kinesisfirehose-deliverystream-openxjsonserde-caseinsensitive
-	CaseInsensitive bool `json:"CaseInsensitive,omitempty"`
+	CaseInsensitive *types.Value `json:"CaseInsensitive,omitempty"`
 
 	// ColumnToJsonKeyMappings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html#cfn-kinesisfirehose-deliverystream-openxjsonserde-columntojsonkeymappings
-	ColumnToJsonKeyMappings map[string]string `json:"ColumnToJsonKeyMappings,omitempty"`
+	ColumnToJsonKeyMappings map[string]*types.Value `json:"ColumnToJsonKeyMappings,omitempty"`
 
 	// ConvertDotsInJsonKeysToUnderscores AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html#cfn-kinesisfirehose-deliverystream-openxjsonserde-convertdotsinjsonkeystounderscores
-	ConvertDotsInJsonKeysToUnderscores bool `json:"ConvertDotsInJsonKeysToUnderscores,omitempty"`
+	ConvertDotsInJsonKeysToUnderscores *types.Value `json:"ConvertDotsInJsonKeysToUnderscores,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

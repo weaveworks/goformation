@@ -1,7 +1,9 @@
 package opsworks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Layer_AutoScalingThresholds AWS CloudFormation Resource (AWS::OpsWorks::Layer.AutoScalingThresholds)
@@ -11,32 +13,32 @@ type Layer_AutoScalingThresholds struct {
 	// CpuThreshold AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold
-	CpuThreshold float64 `json:"CpuThreshold,omitempty"`
+	CpuThreshold *types.Value `json:"CpuThreshold,omitempty"`
 
 	// IgnoreMetricsTime AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime
-	IgnoreMetricsTime int `json:"IgnoreMetricsTime,omitempty"`
+	IgnoreMetricsTime *types.Value `json:"IgnoreMetricsTime,omitempty"`
 
 	// InstanceCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount
-	InstanceCount int `json:"InstanceCount,omitempty"`
+	InstanceCount *types.Value `json:"InstanceCount,omitempty"`
 
 	// LoadThreshold AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold
-	LoadThreshold float64 `json:"LoadThreshold,omitempty"`
+	LoadThreshold *types.Value `json:"LoadThreshold,omitempty"`
 
 	// MemoryThreshold AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold
-	MemoryThreshold float64 `json:"MemoryThreshold,omitempty"`
+	MemoryThreshold *types.Value `json:"MemoryThreshold,omitempty"`
 
 	// ThresholdsWaitTime AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime
-	ThresholdsWaitTime int `json:"ThresholdsWaitTime,omitempty"`
+	ThresholdsWaitTime *types.Value `json:"ThresholdsWaitTime,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

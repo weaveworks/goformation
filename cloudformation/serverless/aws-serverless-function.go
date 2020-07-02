@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function AWS CloudFormation Resource (AWS::Serverless::Function)
@@ -15,7 +17,7 @@ type Function struct {
 	// AutoPublishAlias AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	AutoPublishAlias string `json:"AutoPublishAlias,omitempty"`
+	AutoPublishAlias *types.Value `json:"AutoPublishAlias,omitempty"`
 
 	// CodeUri AWS CloudFormation Property
 	// Required: true
@@ -35,7 +37,7 @@ type Function struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// Environment AWS CloudFormation Property
 	// Required: false
@@ -50,32 +52,32 @@ type Function struct {
 	// FunctionName AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	FunctionName string `json:"FunctionName,omitempty"`
+	FunctionName *types.Value `json:"FunctionName,omitempty"`
 
 	// Handler AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Handler string `json:"Handler,omitempty"`
+	Handler *types.Value `json:"Handler,omitempty"`
 
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	KmsKeyArn string `json:"KmsKeyArn,omitempty"`
+	KmsKeyArn *types.Value `json:"KmsKeyArn,omitempty"`
 
 	// Layers AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Layers []string `json:"Layers,omitempty"`
+	Layers *types.Value `json:"Layers,omitempty"`
 
 	// MemorySize AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	MemorySize int `json:"MemorySize,omitempty"`
+	MemorySize *types.Value `json:"MemorySize,omitempty"`
 
 	// PermissionsBoundary AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	PermissionsBoundary string `json:"PermissionsBoundary,omitempty"`
+	PermissionsBoundary *types.Value `json:"PermissionsBoundary,omitempty"`
 
 	// Policies AWS CloudFormation Property
 	// Required: false
@@ -85,32 +87,32 @@ type Function struct {
 	// ReservedConcurrentExecutions AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	ReservedConcurrentExecutions int `json:"ReservedConcurrentExecutions,omitempty"`
+	ReservedConcurrentExecutions *types.Value `json:"ReservedConcurrentExecutions,omitempty"`
 
 	// Role AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Role string `json:"Role,omitempty"`
+	Role *types.Value `json:"Role,omitempty"`
 
 	// Runtime AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Runtime string `json:"Runtime,omitempty"`
+	Runtime *types.Value `json:"Runtime,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Tags map[string]string `json:"Tags,omitempty"`
+	Tags map[string]*types.Value `json:"Tags,omitempty"`
 
 	// Timeout AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Timeout int `json:"Timeout,omitempty"`
+	Timeout *types.Value `json:"Timeout,omitempty"`
 
 	// Tracing AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Tracing string `json:"Tracing,omitempty"`
+	Tracing *types.Value `json:"Tracing,omitempty"`
 
 	// VpcConfig AWS CloudFormation Property
 	// Required: false

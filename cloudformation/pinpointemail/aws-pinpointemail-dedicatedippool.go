@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DedicatedIpPool AWS CloudFormation Resource (AWS::PinpointEmail::DedicatedIpPool)
@@ -15,7 +17,7 @@ type DedicatedIpPool struct {
 	// PoolName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html#cfn-pinpointemail-dedicatedippool-poolname
-	PoolName string `json:"PoolName,omitempty"`
+	PoolName *types.Value `json:"PoolName,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

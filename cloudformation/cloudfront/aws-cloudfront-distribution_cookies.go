@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Distribution_Cookies AWS CloudFormation Resource (AWS::CloudFront::Distribution.Cookies)
@@ -11,12 +13,12 @@ type Distribution_Cookies struct {
 	// Forward AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cookies.html#cfn-cloudfront-distribution-cookies-forward
-	Forward string `json:"Forward,omitempty"`
+	Forward *types.Value `json:"Forward,omitempty"`
 
 	// WhitelistedNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cookies.html#cfn-cloudfront-distribution-cookies-whitelistednames
-	WhitelistedNames []string `json:"WhitelistedNames,omitempty"`
+	WhitelistedNames *types.Value `json:"WhitelistedNames,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

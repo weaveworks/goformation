@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeploymentStrategy AWS CloudFormation Resource (AWS::AppConfig::DeploymentStrategy)
@@ -15,37 +17,37 @@ type DeploymentStrategy struct {
 	// DeploymentDurationInMinutes AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-deploymentdurationinminutes
-	DeploymentDurationInMinutes float64 `json:"DeploymentDurationInMinutes"`
+	DeploymentDurationInMinutes *types.Value `json:"DeploymentDurationInMinutes"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// FinalBakeTimeInMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-finalbaketimeinminutes
-	FinalBakeTimeInMinutes float64 `json:"FinalBakeTimeInMinutes,omitempty"`
+	FinalBakeTimeInMinutes *types.Value `json:"FinalBakeTimeInMinutes,omitempty"`
 
 	// GrowthFactor AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-growthfactor
-	GrowthFactor float64 `json:"GrowthFactor"`
+	GrowthFactor *types.Value `json:"GrowthFactor"`
 
 	// GrowthType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-growthtype
-	GrowthType string `json:"GrowthType,omitempty"`
+	GrowthType *types.Value `json:"GrowthType,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// ReplicateTo AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-replicateto
-	ReplicateTo string `json:"ReplicateTo,omitempty"`
+	ReplicateTo *types.Value `json:"ReplicateTo,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

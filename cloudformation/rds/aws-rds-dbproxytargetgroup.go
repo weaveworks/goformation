@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DBProxyTargetGroup AWS CloudFormation Resource (AWS::RDS::DBProxyTargetGroup)
@@ -20,17 +22,17 @@ type DBProxyTargetGroup struct {
 	// DBClusterIdentifiers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbclusteridentifiers
-	DBClusterIdentifiers []string `json:"DBClusterIdentifiers,omitempty"`
+	DBClusterIdentifiers *types.Value `json:"DBClusterIdentifiers,omitempty"`
 
 	// DBInstanceIdentifiers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers
-	DBInstanceIdentifiers []string `json:"DBInstanceIdentifiers,omitempty"`
+	DBInstanceIdentifiers *types.Value `json:"DBInstanceIdentifiers,omitempty"`
 
 	// DBProxyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbproxyname
-	DBProxyName string `json:"DBProxyName,omitempty"`
+	DBProxyName *types.Value `json:"DBProxyName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

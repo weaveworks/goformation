@@ -1,7 +1,9 @@
 package dlm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LifecyclePolicy_CrossRegionCopyRule AWS CloudFormation Resource (AWS::DLM::LifecyclePolicy.CrossRegionCopyRule)
@@ -11,17 +13,17 @@ type LifecyclePolicy_CrossRegionCopyRule struct {
 	// CmkArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-cmkarn
-	CmkArn string `json:"CmkArn,omitempty"`
+	CmkArn *types.Value `json:"CmkArn,omitempty"`
 
 	// CopyTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags
-	CopyTags bool `json:"CopyTags,omitempty"`
+	CopyTags *types.Value `json:"CopyTags,omitempty"`
 
 	// Encrypted AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted
-	Encrypted bool `json:"Encrypted"`
+	Encrypted *types.Value `json:"Encrypted"`
 
 	// RetainRule AWS CloudFormation Property
 	// Required: false
@@ -31,7 +33,7 @@ type LifecyclePolicy_CrossRegionCopyRule struct {
 	// TargetRegion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion
-	TargetRegion string `json:"TargetRegion,omitempty"`
+	TargetRegion *types.Value `json:"TargetRegion,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

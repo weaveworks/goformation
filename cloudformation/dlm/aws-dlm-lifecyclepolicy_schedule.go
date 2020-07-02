@@ -1,8 +1,10 @@
 package dlm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LifecyclePolicy_Schedule AWS CloudFormation Resource (AWS::DLM::LifecyclePolicy.Schedule)
@@ -12,7 +14,7 @@ type LifecyclePolicy_Schedule struct {
 	// CopyTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-copytags
-	CopyTags bool `json:"CopyTags,omitempty"`
+	CopyTags *types.Value `json:"CopyTags,omitempty"`
 
 	// CreateRule AWS CloudFormation Property
 	// Required: false
@@ -32,7 +34,7 @@ type LifecyclePolicy_Schedule struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// RetainRule AWS CloudFormation Property
 	// Required: false
@@ -42,12 +44,12 @@ type LifecyclePolicy_Schedule struct {
 	// TagsToAdd AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-tagstoadd
-	TagsToAdd []tags.Tag `json:"TagsToAdd,omitempty"`
+	TagsToAdd []cloudformation.Tag `json:"TagsToAdd,omitempty"`
 
 	// VariableTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-variabletags
-	VariableTags []tags.Tag `json:"VariableTags,omitempty"`
+	VariableTags []cloudformation.Tag `json:"VariableTags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

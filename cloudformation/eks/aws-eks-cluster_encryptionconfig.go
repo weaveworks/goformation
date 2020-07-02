@@ -1,7 +1,9 @@
 package eks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_EncryptionConfig AWS CloudFormation Resource (AWS::EKS::Cluster.EncryptionConfig)
@@ -16,7 +18,7 @@ type Cluster_EncryptionConfig struct {
 	// Resources AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources
-	Resources []string `json:"Resources,omitempty"`
+	Resources *types.Value `json:"Resources,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

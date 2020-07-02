@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FunctionDefinitionVersion AWS CloudFormation Resource (AWS::Greengrass::FunctionDefinitionVersion)
@@ -20,7 +22,7 @@ type FunctionDefinitionVersion struct {
 	// FunctionDefinitionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html#cfn-greengrass-functiondefinitionversion-functiondefinitionid
-	FunctionDefinitionId string `json:"FunctionDefinitionId,omitempty"`
+	FunctionDefinitionId *types.Value `json:"FunctionDefinitionId,omitempty"`
 
 	// Functions AWS CloudFormation Property
 	// Required: true

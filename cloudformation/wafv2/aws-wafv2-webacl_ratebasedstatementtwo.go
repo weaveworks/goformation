@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_RateBasedStatementTwo AWS CloudFormation Resource (AWS::WAFv2::WebACL.RateBasedStatementTwo)
@@ -11,12 +13,12 @@ type WebACL_RateBasedStatementTwo struct {
 	// AggregateKeyType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementtwo.html#cfn-wafv2-webacl-ratebasedstatementtwo-aggregatekeytype
-	AggregateKeyType string `json:"AggregateKeyType,omitempty"`
+	AggregateKeyType *types.Value `json:"AggregateKeyType,omitempty"`
 
 	// Limit AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementtwo.html#cfn-wafv2-webacl-ratebasedstatementtwo-limit
-	Limit int `json:"Limit"`
+	Limit *types.Value `json:"Limit"`
 
 	// ScopeDownStatement AWS CloudFormation Property
 	// Required: false

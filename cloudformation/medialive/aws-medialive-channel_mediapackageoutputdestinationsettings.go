@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_MediaPackageOutputDestinationSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.MediaPackageOutputDestinationSettings)
@@ -11,7 +13,7 @@ type Channel_MediaPackageOutputDestinationSettings struct {
 	// ChannelId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackageoutputdestinationsettings.html#cfn-medialive-channel-mediapackageoutputdestinationsettings-channelid
-	ChannelId string `json:"ChannelId,omitempty"`
+	ChannelId *types.Value `json:"ChannelId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

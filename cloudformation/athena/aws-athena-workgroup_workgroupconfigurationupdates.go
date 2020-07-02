@@ -1,7 +1,9 @@
 package athena
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WorkGroup_WorkGroupConfigurationUpdates AWS CloudFormation Resource (AWS::Athena::WorkGroup.WorkGroupConfigurationUpdates)
@@ -11,27 +13,27 @@ type WorkGroup_WorkGroupConfigurationUpdates struct {
 	// BytesScannedCutoffPerQuery AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery
-	BytesScannedCutoffPerQuery int `json:"BytesScannedCutoffPerQuery,omitempty"`
+	BytesScannedCutoffPerQuery *types.Value `json:"BytesScannedCutoffPerQuery,omitempty"`
 
 	// EnforceWorkGroupConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration
-	EnforceWorkGroupConfiguration bool `json:"EnforceWorkGroupConfiguration,omitempty"`
+	EnforceWorkGroupConfiguration *types.Value `json:"EnforceWorkGroupConfiguration,omitempty"`
 
 	// PublishCloudWatchMetricsEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled
-	PublishCloudWatchMetricsEnabled bool `json:"PublishCloudWatchMetricsEnabled,omitempty"`
+	PublishCloudWatchMetricsEnabled *types.Value `json:"PublishCloudWatchMetricsEnabled,omitempty"`
 
 	// RemoveBytesScannedCutoffPerQuery AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery
-	RemoveBytesScannedCutoffPerQuery bool `json:"RemoveBytesScannedCutoffPerQuery,omitempty"`
+	RemoveBytesScannedCutoffPerQuery *types.Value `json:"RemoveBytesScannedCutoffPerQuery,omitempty"`
 
 	// RequesterPaysEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled
-	RequesterPaysEnabled bool `json:"RequesterPaysEnabled,omitempty"`
+	RequesterPaysEnabled *types.Value `json:"RequesterPaysEnabled,omitempty"`
 
 	// ResultConfigurationUpdates AWS CloudFormation Property
 	// Required: false

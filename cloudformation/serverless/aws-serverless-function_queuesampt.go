@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_QueueSAMPT AWS CloudFormation Resource (AWS::Serverless::Function.QueueSAMPT)
@@ -11,7 +13,7 @@ type Function_QueueSAMPT struct {
 	// QueueName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst
-	QueueName string `json:"QueueName,omitempty"`
+	QueueName *types.Value `json:"QueueName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

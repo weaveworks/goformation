@@ -1,7 +1,9 @@
 package autoscalingplans
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ScalingPlan_ApplicationSource AWS CloudFormation Resource (AWS::AutoScalingPlans::ScalingPlan.ApplicationSource)
@@ -11,7 +13,7 @@ type ScalingPlan_ApplicationSource struct {
 	// CloudFormationStackARN AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn
-	CloudFormationStackARN string `json:"CloudFormationStackARN,omitempty"`
+	CloudFormationStackARN *types.Value `json:"CloudFormationStackARN,omitempty"`
 
 	// TagFilters AWS CloudFormation Property
 	// Required: false

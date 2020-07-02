@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GitHubRepository AWS CloudFormation Resource (AWS::CodeStar::GitHubRepository)
@@ -20,32 +22,32 @@ type GitHubRepository struct {
 	// EnableIssues AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-enableissues
-	EnableIssues bool `json:"EnableIssues,omitempty"`
+	EnableIssues *types.Value `json:"EnableIssues,omitempty"`
 
 	// IsPrivate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-isprivate
-	IsPrivate bool `json:"IsPrivate,omitempty"`
+	IsPrivate *types.Value `json:"IsPrivate,omitempty"`
 
 	// RepositoryAccessToken AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryaccesstoken
-	RepositoryAccessToken string `json:"RepositoryAccessToken,omitempty"`
+	RepositoryAccessToken *types.Value `json:"RepositoryAccessToken,omitempty"`
 
 	// RepositoryDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositorydescription
-	RepositoryDescription string `json:"RepositoryDescription,omitempty"`
+	RepositoryDescription *types.Value `json:"RepositoryDescription,omitempty"`
 
 	// RepositoryName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryname
-	RepositoryName string `json:"RepositoryName,omitempty"`
+	RepositoryName *types.Value `json:"RepositoryName,omitempty"`
 
 	// RepositoryOwner AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryowner
-	RepositoryOwner string `json:"RepositoryOwner,omitempty"`
+	RepositoryOwner *types.Value `json:"RepositoryOwner,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

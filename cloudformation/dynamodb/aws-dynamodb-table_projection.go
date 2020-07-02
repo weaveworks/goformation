@@ -1,7 +1,9 @@
 package dynamodb
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_Projection AWS CloudFormation Resource (AWS::DynamoDB::Table.Projection)
@@ -11,12 +13,12 @@ type Table_Projection struct {
 	// NonKeyAttributes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-nonkeyatt
-	NonKeyAttributes []string `json:"NonKeyAttributes,omitempty"`
+	NonKeyAttributes *types.Value `json:"NonKeyAttributes,omitempty"`
 
 	// ProjectionType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-projtype
-	ProjectionType string `json:"ProjectionType,omitempty"`
+	ProjectionType *types.Value `json:"ProjectionType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

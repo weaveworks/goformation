@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Api_Auth AWS CloudFormation Resource (AWS::Serverless::Api.Auth)
@@ -16,7 +18,7 @@ type Api_Auth struct {
 	// DefaultAuthorizer AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api-auth-object
-	DefaultAuthorizer string `json:"DefaultAuthorizer,omitempty"`
+	DefaultAuthorizer *types.Value `json:"DefaultAuthorizer,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

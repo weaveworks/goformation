@@ -1,7 +1,9 @@
 package networkmanager
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Link_Bandwidth AWS CloudFormation Resource (AWS::NetworkManager::Link.Bandwidth)
@@ -11,12 +13,12 @@ type Link_Bandwidth struct {
 	// DownloadSpeed AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html#cfn-networkmanager-link-bandwidth-downloadspeed
-	DownloadSpeed int `json:"DownloadSpeed,omitempty"`
+	DownloadSpeed *types.Value `json:"DownloadSpeed,omitempty"`
 
 	// UploadSpeed AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html#cfn-networkmanager-link-bandwidth-uploadspeed
-	UploadSpeed int `json:"UploadSpeed,omitempty"`
+	UploadSpeed *types.Value `json:"UploadSpeed,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

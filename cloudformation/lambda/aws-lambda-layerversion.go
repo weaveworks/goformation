@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LayerVersion AWS CloudFormation Resource (AWS::Lambda::LayerVersion)
@@ -15,7 +17,7 @@ type LayerVersion struct {
 	// CompatibleRuntimes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html#cfn-lambda-layerversion-compatibleruntimes
-	CompatibleRuntimes []string `json:"CompatibleRuntimes,omitempty"`
+	CompatibleRuntimes *types.Value `json:"CompatibleRuntimes,omitempty"`
 
 	// Content AWS CloudFormation Property
 	// Required: true
@@ -25,17 +27,17 @@ type LayerVersion struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html#cfn-lambda-layerversion-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// LayerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html#cfn-lambda-layerversion-layername
-	LayerName string `json:"LayerName,omitempty"`
+	LayerName *types.Value `json:"LayerName,omitempty"`
 
 	// LicenseInfo AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html#cfn-lambda-layerversion-licenseinfo
-	LicenseInfo string `json:"LicenseInfo,omitempty"`
+	LicenseInfo *types.Value `json:"LicenseInfo,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

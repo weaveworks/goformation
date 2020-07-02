@@ -1,7 +1,9 @@
 package mediastore
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Container_MetricPolicyRule AWS CloudFormation Resource (AWS::MediaStore::Container.MetricPolicyRule)
@@ -11,12 +13,12 @@ type Container_MetricPolicyRule struct {
 	// ObjectGroup AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroup
-	ObjectGroup string `json:"ObjectGroup,omitempty"`
+	ObjectGroup *types.Value `json:"ObjectGroup,omitempty"`
 
 	// ObjectGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname
-	ObjectGroupName string `json:"ObjectGroupName,omitempty"`
+	ObjectGroupName *types.Value `json:"ObjectGroupName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

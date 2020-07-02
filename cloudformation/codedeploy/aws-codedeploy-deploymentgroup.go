@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeploymentGroup AWS CloudFormation Resource (AWS::CodeDeploy::DeploymentGroup)
@@ -20,7 +22,7 @@ type DeploymentGroup struct {
 	// ApplicationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *types.Value `json:"ApplicationName,omitempty"`
 
 	// AutoRollbackConfiguration AWS CloudFormation Property
 	// Required: false
@@ -30,7 +32,7 @@ type DeploymentGroup struct {
 	// AutoScalingGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-autoscalinggroups
-	AutoScalingGroups []string `json:"AutoScalingGroups,omitempty"`
+	AutoScalingGroups *types.Value `json:"AutoScalingGroups,omitempty"`
 
 	// Deployment AWS CloudFormation Property
 	// Required: false
@@ -40,12 +42,12 @@ type DeploymentGroup struct {
 	// DeploymentConfigName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentconfigname
-	DeploymentConfigName string `json:"DeploymentConfigName,omitempty"`
+	DeploymentConfigName *types.Value `json:"DeploymentConfigName,omitempty"`
 
 	// DeploymentGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentgroupname
-	DeploymentGroupName string `json:"DeploymentGroupName,omitempty"`
+	DeploymentGroupName *types.Value `json:"DeploymentGroupName,omitempty"`
 
 	// DeploymentStyle AWS CloudFormation Property
 	// Required: false
@@ -80,7 +82,7 @@ type DeploymentGroup struct {
 	// ServiceRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-servicerolearn
-	ServiceRoleArn string `json:"ServiceRoleArn,omitempty"`
+	ServiceRoleArn *types.Value `json:"ServiceRoleArn,omitempty"`
 
 	// TriggerConfigurations AWS CloudFormation Property
 	// Required: false

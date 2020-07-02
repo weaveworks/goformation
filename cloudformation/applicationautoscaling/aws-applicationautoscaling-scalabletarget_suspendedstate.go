@@ -1,7 +1,9 @@
 package applicationautoscaling
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ScalableTarget_SuspendedState AWS CloudFormation Resource (AWS::ApplicationAutoScaling::ScalableTarget.SuspendedState)
@@ -11,17 +13,17 @@ type ScalableTarget_SuspendedState struct {
 	// DynamicScalingInSuspended AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html#cfn-applicationautoscaling-scalabletarget-suspendedstate-dynamicscalinginsuspended
-	DynamicScalingInSuspended bool `json:"DynamicScalingInSuspended,omitempty"`
+	DynamicScalingInSuspended *types.Value `json:"DynamicScalingInSuspended,omitempty"`
 
 	// DynamicScalingOutSuspended AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html#cfn-applicationautoscaling-scalabletarget-suspendedstate-dynamicscalingoutsuspended
-	DynamicScalingOutSuspended bool `json:"DynamicScalingOutSuspended,omitempty"`
+	DynamicScalingOutSuspended *types.Value `json:"DynamicScalingOutSuspended,omitempty"`
 
 	// ScheduledScalingSuspended AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html#cfn-applicationautoscaling-scalabletarget-suspendedstate-scheduledscalingsuspended
-	ScheduledScalingSuspended bool `json:"ScheduledScalingSuspended,omitempty"`
+	ScheduledScalingSuspended *types.Value `json:"ScheduledScalingSuspended,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package mediastore
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Container_MetricPolicy AWS CloudFormation Resource (AWS::MediaStore::Container.MetricPolicy)
@@ -11,7 +13,7 @@ type Container_MetricPolicy struct {
 	// ContainerLevelMetrics AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-containerlevelmetrics
-	ContainerLevelMetrics string `json:"ContainerLevelMetrics,omitempty"`
+	ContainerLevelMetrics *types.Value `json:"ContainerLevelMetrics,omitempty"`
 
 	// MetricPolicyRules AWS CloudFormation Property
 	// Required: false

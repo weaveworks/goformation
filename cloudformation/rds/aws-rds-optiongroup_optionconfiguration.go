@@ -1,7 +1,9 @@
 package rds
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OptionGroup_OptionConfiguration AWS CloudFormation Resource (AWS::RDS::OptionGroup.OptionConfiguration)
@@ -11,12 +13,12 @@ type OptionGroup_OptionConfiguration struct {
 	// DBSecurityGroupMemberships AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships
-	DBSecurityGroupMemberships []string `json:"DBSecurityGroupMemberships,omitempty"`
+	DBSecurityGroupMemberships *types.Value `json:"DBSecurityGroupMemberships,omitempty"`
 
 	// OptionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionname
-	OptionName string `json:"OptionName,omitempty"`
+	OptionName *types.Value `json:"OptionName,omitempty"`
 
 	// OptionSettings AWS CloudFormation Property
 	// Required: false
@@ -26,17 +28,17 @@ type OptionGroup_OptionConfiguration struct {
 	// OptionVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfiguration-optionversion
-	OptionVersion string `json:"OptionVersion,omitempty"`
+	OptionVersion *types.Value `json:"OptionVersion,omitempty"`
 
 	// Port AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-port
-	Port int `json:"Port,omitempty"`
+	Port *types.Value `json:"Port,omitempty"`
 
 	// VpcSecurityGroupMemberships AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships
-	VpcSecurityGroupMemberships []string `json:"VpcSecurityGroupMemberships,omitempty"`
+	VpcSecurityGroupMemberships *types.Value `json:"VpcSecurityGroupMemberships,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

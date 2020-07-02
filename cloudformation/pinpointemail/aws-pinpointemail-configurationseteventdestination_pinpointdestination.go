@@ -1,7 +1,9 @@
 package pinpointemail
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationSetEventDestination_PinpointDestination AWS CloudFormation Resource (AWS::PinpointEmail::ConfigurationSetEventDestination.PinpointDestination)
@@ -11,7 +13,7 @@ type ConfigurationSetEventDestination_PinpointDestination struct {
 	// ApplicationArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html#cfn-pinpointemail-configurationseteventdestination-pinpointdestination-applicationarn
-	ApplicationArn string `json:"ApplicationArn,omitempty"`
+	ApplicationArn *types.Value `json:"ApplicationArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TransitGatewayRouteTablePropagation AWS CloudFormation Resource (AWS::EC2::TransitGatewayRouteTablePropagation)
@@ -15,12 +17,12 @@ type TransitGatewayRouteTablePropagation struct {
 	// TransitGatewayAttachmentId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayattachmentid
-	TransitGatewayAttachmentId string `json:"TransitGatewayAttachmentId,omitempty"`
+	TransitGatewayAttachmentId *types.Value `json:"TransitGatewayAttachmentId,omitempty"`
 
 	// TransitGatewayRouteTableId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayroutetableid
-	TransitGatewayRouteTableId string `json:"TransitGatewayRouteTableId,omitempty"`
+	TransitGatewayRouteTableId *types.Value `json:"TransitGatewayRouteTableId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

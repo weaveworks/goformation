@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_CloudWatchLogsEvent AWS CloudFormation Resource (AWS::Serverless::Function.CloudWatchLogsEvent)
@@ -11,12 +13,12 @@ type Function_CloudWatchLogsEvent struct {
 	// FilterPattern AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchlogs
-	FilterPattern string `json:"FilterPattern,omitempty"`
+	FilterPattern *types.Value `json:"FilterPattern,omitempty"`
 
 	// LogGroupName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchlogs
-	LogGroupName string `json:"LogGroupName,omitempty"`
+	LogGroupName *types.Value `json:"LogGroupName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

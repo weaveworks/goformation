@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobTemplate AWS CloudFormation Resource (AWS::MediaConvert::JobTemplate)
@@ -20,12 +22,12 @@ type JobTemplate struct {
 	// Category AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-category
-	Category string `json:"Category,omitempty"`
+	Category *types.Value `json:"Category,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// HopDestinations AWS CloudFormation Property
 	// Required: false
@@ -35,17 +37,17 @@ type JobTemplate struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Priority AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-priority
-	Priority int `json:"Priority,omitempty"`
+	Priority *types.Value `json:"Priority,omitempty"`
 
 	// Queue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-queue
-	Queue string `json:"Queue,omitempty"`
+	Queue *types.Value `json:"Queue,omitempty"`
 
 	// SettingsJson AWS CloudFormation Property
 	// Required: true
@@ -55,7 +57,7 @@ type JobTemplate struct {
 	// StatusUpdateInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-statusupdateinterval
-	StatusUpdateInterval string `json:"StatusUpdateInterval,omitempty"`
+	StatusUpdateInterval *types.Value `json:"StatusUpdateInterval,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

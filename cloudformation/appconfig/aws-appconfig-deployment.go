@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Deployment AWS CloudFormation Resource (AWS::AppConfig::Deployment)
@@ -15,32 +17,32 @@ type Deployment struct {
 	// ApplicationId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-applicationid
-	ApplicationId string `json:"ApplicationId,omitempty"`
+	ApplicationId *types.Value `json:"ApplicationId,omitempty"`
 
 	// ConfigurationProfileId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-configurationprofileid
-	ConfigurationProfileId string `json:"ConfigurationProfileId,omitempty"`
+	ConfigurationProfileId *types.Value `json:"ConfigurationProfileId,omitempty"`
 
 	// ConfigurationVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-configurationversion
-	ConfigurationVersion string `json:"ConfigurationVersion,omitempty"`
+	ConfigurationVersion *types.Value `json:"ConfigurationVersion,omitempty"`
 
 	// DeploymentStrategyId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-deploymentstrategyid
-	DeploymentStrategyId string `json:"DeploymentStrategyId,omitempty"`
+	DeploymentStrategyId *types.Value `json:"DeploymentStrategyId,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// EnvironmentId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-environmentid
-	EnvironmentId string `json:"EnvironmentId,omitempty"`
+	EnvironmentId *types.Value `json:"EnvironmentId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

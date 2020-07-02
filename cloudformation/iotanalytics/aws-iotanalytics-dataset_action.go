@@ -1,7 +1,9 @@
 package iotanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Dataset_Action AWS CloudFormation Resource (AWS::IoTAnalytics::Dataset.Action)
@@ -11,7 +13,7 @@ type Dataset_Action struct {
 	// ActionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-actionname
-	ActionName string `json:"ActionName,omitempty"`
+	ActionName *types.Value `json:"ActionName,omitempty"`
 
 	// ContainerAction AWS CloudFormation Property
 	// Required: false

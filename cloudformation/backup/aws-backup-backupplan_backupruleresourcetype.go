@@ -1,7 +1,9 @@
 package backup
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupPlan_BackupRuleResourceType AWS CloudFormation Resource (AWS::Backup::BackupPlan.BackupRuleResourceType)
@@ -11,7 +13,7 @@ type BackupPlan_BackupRuleResourceType struct {
 	// CompletionWindowMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes
-	CompletionWindowMinutes float64 `json:"CompletionWindowMinutes,omitempty"`
+	CompletionWindowMinutes *types.Value `json:"CompletionWindowMinutes,omitempty"`
 
 	// CopyActions AWS CloudFormation Property
 	// Required: false
@@ -31,22 +33,22 @@ type BackupPlan_BackupRuleResourceType struct {
 	// RuleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-rulename
-	RuleName string `json:"RuleName,omitempty"`
+	RuleName *types.Value `json:"RuleName,omitempty"`
 
 	// ScheduleExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression
-	ScheduleExpression string `json:"ScheduleExpression,omitempty"`
+	ScheduleExpression *types.Value `json:"ScheduleExpression,omitempty"`
 
 	// StartWindowMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes
-	StartWindowMinutes float64 `json:"StartWindowMinutes,omitempty"`
+	StartWindowMinutes *types.Value `json:"StartWindowMinutes,omitempty"`
 
 	// TargetBackupVault AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault
-	TargetBackupVault string `json:"TargetBackupVault,omitempty"`
+	TargetBackupVault *types.Value `json:"TargetBackupVault,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

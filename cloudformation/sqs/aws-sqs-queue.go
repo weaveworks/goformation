@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Queue AWS CloudFormation Resource (AWS::SQS::Queue)
@@ -16,47 +18,47 @@ type Queue struct {
 	// ContentBasedDeduplication AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-contentbaseddeduplication
-	ContentBasedDeduplication bool `json:"ContentBasedDeduplication,omitempty"`
+	ContentBasedDeduplication *types.Value `json:"ContentBasedDeduplication,omitempty"`
 
 	// DelaySeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-delayseconds
-	DelaySeconds int `json:"DelaySeconds,omitempty"`
+	DelaySeconds *types.Value `json:"DelaySeconds,omitempty"`
 
 	// FifoQueue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-fifoqueue
-	FifoQueue bool `json:"FifoQueue,omitempty"`
+	FifoQueue *types.Value `json:"FifoQueue,omitempty"`
 
 	// KmsDataKeyReusePeriodSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsdatakeyreuseperiodseconds
-	KmsDataKeyReusePeriodSeconds int `json:"KmsDataKeyReusePeriodSeconds,omitempty"`
+	KmsDataKeyReusePeriodSeconds *types.Value `json:"KmsDataKeyReusePeriodSeconds,omitempty"`
 
 	// KmsMasterKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsmasterkeyid
-	KmsMasterKeyId string `json:"KmsMasterKeyId,omitempty"`
+	KmsMasterKeyId *types.Value `json:"KmsMasterKeyId,omitempty"`
 
 	// MaximumMessageSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-maxmesgsize
-	MaximumMessageSize int `json:"MaximumMessageSize,omitempty"`
+	MaximumMessageSize *types.Value `json:"MaximumMessageSize,omitempty"`
 
 	// MessageRetentionPeriod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-msgretentionperiod
-	MessageRetentionPeriod int `json:"MessageRetentionPeriod,omitempty"`
+	MessageRetentionPeriod *types.Value `json:"MessageRetentionPeriod,omitempty"`
 
 	// QueueName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-name
-	QueueName string `json:"QueueName,omitempty"`
+	QueueName *types.Value `json:"QueueName,omitempty"`
 
 	// ReceiveMessageWaitTimeSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-receivemsgwaittime
-	ReceiveMessageWaitTimeSeconds int `json:"ReceiveMessageWaitTimeSeconds,omitempty"`
+	ReceiveMessageWaitTimeSeconds *types.Value `json:"ReceiveMessageWaitTimeSeconds,omitempty"`
 
 	// RedrivePolicy AWS CloudFormation Property
 	// Required: false
@@ -66,12 +68,12 @@ type Queue struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VisibilityTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout
-	VisibilityTimeout int `json:"VisibilityTimeout,omitempty"`
+	VisibilityTimeout *types.Value `json:"VisibilityTimeout,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

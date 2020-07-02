@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_Environment AWS CloudFormation Resource (AWS::CodeBuild::Project.Environment)
@@ -11,12 +13,12 @@ type Project_Environment struct {
 	// Certificate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate
-	Certificate string `json:"Certificate,omitempty"`
+	Certificate *types.Value `json:"Certificate,omitempty"`
 
 	// ComputeType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-computetype
-	ComputeType string `json:"ComputeType,omitempty"`
+	ComputeType *types.Value `json:"ComputeType,omitempty"`
 
 	// EnvironmentVariables AWS CloudFormation Property
 	// Required: false
@@ -26,17 +28,17 @@ type Project_Environment struct {
 	// Image AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-image
-	Image string `json:"Image,omitempty"`
+	Image *types.Value `json:"Image,omitempty"`
 
 	// ImagePullCredentialsType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-imagepullcredentialstype
-	ImagePullCredentialsType string `json:"ImagePullCredentialsType,omitempty"`
+	ImagePullCredentialsType *types.Value `json:"ImagePullCredentialsType,omitempty"`
 
 	// PrivilegedMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-privilegedmode
-	PrivilegedMode bool `json:"PrivilegedMode,omitempty"`
+	PrivilegedMode *types.Value `json:"PrivilegedMode,omitempty"`
 
 	// RegistryCredential AWS CloudFormation Property
 	// Required: false
@@ -46,7 +48,7 @@ type Project_Environment struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

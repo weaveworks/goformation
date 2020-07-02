@@ -1,7 +1,9 @@
 package kinesisanalyticsv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_ApplicationSnapshotConfiguration AWS CloudFormation Resource (AWS::KinesisAnalyticsV2::Application.ApplicationSnapshotConfiguration)
@@ -11,7 +13,7 @@ type Application_ApplicationSnapshotConfiguration struct {
 	// SnapshotsEnabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled
-	SnapshotsEnabled bool `json:"SnapshotsEnabled"`
+	SnapshotsEnabled *types.Value `json:"SnapshotsEnabled"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

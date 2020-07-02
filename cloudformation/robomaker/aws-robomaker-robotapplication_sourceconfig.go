@@ -1,7 +1,9 @@
 package robomaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RobotApplication_SourceConfig AWS CloudFormation Resource (AWS::RoboMaker::RobotApplication.SourceConfig)
@@ -11,17 +13,17 @@ type RobotApplication_SourceConfig struct {
 	// Architecture AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-sourceconfig.html#cfn-robomaker-robotapplication-sourceconfig-architecture
-	Architecture string `json:"Architecture,omitempty"`
+	Architecture *types.Value `json:"Architecture,omitempty"`
 
 	// S3Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-sourceconfig.html#cfn-robomaker-robotapplication-sourceconfig-s3bucket
-	S3Bucket string `json:"S3Bucket,omitempty"`
+	S3Bucket *types.Value `json:"S3Bucket,omitempty"`
 
 	// S3Key AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-sourceconfig.html#cfn-robomaker-robotapplication-sourceconfig-s3key
-	S3Key string `json:"S3Key,omitempty"`
+	S3Key *types.Value `json:"S3Key,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

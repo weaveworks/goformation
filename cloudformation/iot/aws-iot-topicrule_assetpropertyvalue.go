@@ -1,7 +1,9 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TopicRule_AssetPropertyValue AWS CloudFormation Resource (AWS::IoT::TopicRule.AssetPropertyValue)
@@ -11,7 +13,7 @@ type TopicRule_AssetPropertyValue struct {
 	// Quality AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvalue.html#cfn-iot-topicrule-assetpropertyvalue-quality
-	Quality string `json:"Quality,omitempty"`
+	Quality *types.Value `json:"Quality,omitempty"`
 
 	// Timestamp AWS CloudFormation Property
 	// Required: true

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Webhook AWS CloudFormation Resource (AWS::CodePipeline::Webhook)
@@ -15,7 +17,7 @@ type Webhook struct {
 	// Authentication AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-authentication
-	Authentication string `json:"Authentication,omitempty"`
+	Authentication *types.Value `json:"Authentication,omitempty"`
 
 	// AuthenticationConfiguration AWS CloudFormation Property
 	// Required: true
@@ -30,27 +32,27 @@ type Webhook struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// RegisterWithThirdParty AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-registerwiththirdparty
-	RegisterWithThirdParty bool `json:"RegisterWithThirdParty,omitempty"`
+	RegisterWithThirdParty *types.Value `json:"RegisterWithThirdParty,omitempty"`
 
 	// TargetAction AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetaction
-	TargetAction string `json:"TargetAction,omitempty"`
+	TargetAction *types.Value `json:"TargetAction,omitempty"`
 
 	// TargetPipeline AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipeline
-	TargetPipeline string `json:"TargetPipeline,omitempty"`
+	TargetPipeline *types.Value `json:"TargetPipeline,omitempty"`
 
 	// TargetPipelineVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipelineversion
-	TargetPipelineVersion int `json:"TargetPipelineVersion"`
+	TargetPipelineVersion *types.Value `json:"TargetPipelineVersion"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

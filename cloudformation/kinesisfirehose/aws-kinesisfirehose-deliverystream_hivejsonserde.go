@@ -1,7 +1,9 @@
 package kinesisfirehose
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeliveryStream_HiveJsonSerDe AWS CloudFormation Resource (AWS::KinesisFirehose::DeliveryStream.HiveJsonSerDe)
@@ -11,7 +13,7 @@ type DeliveryStream_HiveJsonSerDe struct {
 	// TimestampFormats AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-hivejsonserde.html#cfn-kinesisfirehose-deliverystream-hivejsonserde-timestampformats
-	TimestampFormats []string `json:"TimestampFormats,omitempty"`
+	TimestampFormats *types.Value `json:"TimestampFormats,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

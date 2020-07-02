@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CodeRepository AWS CloudFormation Resource (AWS::SageMaker::CodeRepository)
@@ -15,7 +17,7 @@ type CodeRepository struct {
 	// CodeRepositoryName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-coderepository.html#cfn-sagemaker-coderepository-coderepositoryname
-	CodeRepositoryName string `json:"CodeRepositoryName,omitempty"`
+	CodeRepositoryName *types.Value `json:"CodeRepositoryName,omitempty"`
 
 	// GitConfig AWS CloudFormation Property
 	// Required: true

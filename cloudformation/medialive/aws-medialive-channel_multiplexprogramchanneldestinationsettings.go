@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_MultiplexProgramChannelDestinationSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.MultiplexProgramChannelDestinationSettings)
@@ -11,12 +13,12 @@ type Channel_MultiplexProgramChannelDestinationSettings struct {
 	// MultiplexId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html#cfn-medialive-channel-multiplexprogramchanneldestinationsettings-multiplexid
-	MultiplexId string `json:"MultiplexId,omitempty"`
+	MultiplexId *types.Value `json:"MultiplexId,omitempty"`
 
 	// ProgramName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html#cfn-medialive-channel-multiplexprogramchanneldestinationsettings-programname
-	ProgramName string `json:"ProgramName,omitempty"`
+	ProgramName *types.Value `json:"ProgramName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LocalGatewayRoute AWS CloudFormation Resource (AWS::EC2::LocalGatewayRoute)
@@ -15,17 +17,17 @@ type LocalGatewayRoute struct {
 	// DestinationCidrBlock AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html#cfn-ec2-localgatewayroute-destinationcidrblock
-	DestinationCidrBlock string `json:"DestinationCidrBlock,omitempty"`
+	DestinationCidrBlock *types.Value `json:"DestinationCidrBlock,omitempty"`
 
 	// LocalGatewayRouteTableId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html#cfn-ec2-localgatewayroute-localgatewayroutetableid
-	LocalGatewayRouteTableId string `json:"LocalGatewayRouteTableId,omitempty"`
+	LocalGatewayRouteTableId *types.Value `json:"LocalGatewayRouteTableId,omitempty"`
 
 	// LocalGatewayVirtualInterfaceGroupId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html#cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid
-	LocalGatewayVirtualInterfaceGroupId string `json:"LocalGatewayVirtualInterfaceGroupId,omitempty"`
+	LocalGatewayVirtualInterfaceGroupId *types.Value `json:"LocalGatewayVirtualInterfaceGroupId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

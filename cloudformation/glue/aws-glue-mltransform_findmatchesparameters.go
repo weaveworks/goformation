@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // MLTransform_FindMatchesParameters AWS CloudFormation Resource (AWS::Glue::MLTransform.FindMatchesParameters)
@@ -11,22 +13,22 @@ type MLTransform_FindMatchesParameters struct {
 	// AccuracyCostTradeoff AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters-findmatchesparameters.html#cfn-glue-mltransform-transformparameters-findmatchesparameters-accuracycosttradeoff
-	AccuracyCostTradeoff float64 `json:"AccuracyCostTradeoff,omitempty"`
+	AccuracyCostTradeoff *types.Value `json:"AccuracyCostTradeoff,omitempty"`
 
 	// EnforceProvidedLabels AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters-findmatchesparameters.html#cfn-glue-mltransform-transformparameters-findmatchesparameters-enforceprovidedlabels
-	EnforceProvidedLabels bool `json:"EnforceProvidedLabels,omitempty"`
+	EnforceProvidedLabels *types.Value `json:"EnforceProvidedLabels,omitempty"`
 
 	// PrecisionRecallTradeoff AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters-findmatchesparameters.html#cfn-glue-mltransform-transformparameters-findmatchesparameters-precisionrecalltradeoff
-	PrecisionRecallTradeoff float64 `json:"PrecisionRecallTradeoff,omitempty"`
+	PrecisionRecallTradeoff *types.Value `json:"PrecisionRecallTradeoff,omitempty"`
 
 	// PrimaryKeyColumnName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters-findmatchesparameters.html#cfn-glue-mltransform-transformparameters-findmatchesparameters-primarykeycolumnname
-	PrimaryKeyColumnName string `json:"PrimaryKeyColumnName,omitempty"`
+	PrimaryKeyColumnName *types.Value `json:"PrimaryKeyColumnName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

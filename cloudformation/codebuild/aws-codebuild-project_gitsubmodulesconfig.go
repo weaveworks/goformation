@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_GitSubmodulesConfig AWS CloudFormation Resource (AWS::CodeBuild::Project.GitSubmodulesConfig)
@@ -11,7 +13,7 @@ type Project_GitSubmodulesConfig struct {
 	// FetchSubmodules AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules
-	FetchSubmodules bool `json:"FetchSubmodules"`
+	FetchSubmodules *types.Value `json:"FetchSubmodules"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

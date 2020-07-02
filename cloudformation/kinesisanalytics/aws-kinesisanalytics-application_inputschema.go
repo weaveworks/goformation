@@ -1,7 +1,9 @@
 package kinesisanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_InputSchema AWS CloudFormation Resource (AWS::KinesisAnalytics::Application.InputSchema)
@@ -16,7 +18,7 @@ type Application_InputSchema struct {
 	// RecordEncoding AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordencoding
-	RecordEncoding string `json:"RecordEncoding,omitempty"`
+	RecordEncoding *types.Value `json:"RecordEncoding,omitempty"`
 
 	// RecordFormat AWS CloudFormation Property
 	// Required: true

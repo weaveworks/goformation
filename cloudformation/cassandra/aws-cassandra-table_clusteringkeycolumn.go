@@ -1,7 +1,9 @@
 package cassandra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_ClusteringKeyColumn AWS CloudFormation Resource (AWS::Cassandra::Table.ClusteringKeyColumn)
@@ -16,7 +18,7 @@ type Table_ClusteringKeyColumn struct {
 	// OrderBy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-orderby
-	OrderBy string `json:"OrderBy,omitempty"`
+	OrderBy *types.Value `json:"OrderBy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

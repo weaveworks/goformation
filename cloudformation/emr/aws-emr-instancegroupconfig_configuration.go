@@ -1,7 +1,9 @@
 package emr
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // InstanceGroupConfig_Configuration AWS CloudFormation Resource (AWS::EMR::InstanceGroupConfig.Configuration)
@@ -11,12 +13,12 @@ type InstanceGroupConfig_Configuration struct {
 	// Classification AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification
-	Classification string `json:"Classification,omitempty"`
+	Classification *types.Value `json:"Classification,omitempty"`
 
 	// ConfigurationProperties AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties
-	ConfigurationProperties map[string]string `json:"ConfigurationProperties,omitempty"`
+	ConfigurationProperties map[string]*types.Value `json:"ConfigurationProperties,omitempty"`
 
 	// Configurations AWS CloudFormation Property
 	// Required: false

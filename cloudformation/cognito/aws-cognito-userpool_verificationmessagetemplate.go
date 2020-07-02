@@ -1,7 +1,9 @@
 package cognito
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPool_VerificationMessageTemplate AWS CloudFormation Resource (AWS::Cognito::UserPool.VerificationMessageTemplate)
@@ -11,32 +13,32 @@ type UserPool_VerificationMessageTemplate struct {
 	// DefaultEmailOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption
-	DefaultEmailOption string `json:"DefaultEmailOption,omitempty"`
+	DefaultEmailOption *types.Value `json:"DefaultEmailOption,omitempty"`
 
 	// EmailMessage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage
-	EmailMessage string `json:"EmailMessage,omitempty"`
+	EmailMessage *types.Value `json:"EmailMessage,omitempty"`
 
 	// EmailMessageByLink AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink
-	EmailMessageByLink string `json:"EmailMessageByLink,omitempty"`
+	EmailMessageByLink *types.Value `json:"EmailMessageByLink,omitempty"`
 
 	// EmailSubject AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject
-	EmailSubject string `json:"EmailSubject,omitempty"`
+	EmailSubject *types.Value `json:"EmailSubject,omitempty"`
 
 	// EmailSubjectByLink AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink
-	EmailSubjectByLink string `json:"EmailSubjectByLink,omitempty"`
+	EmailSubjectByLink *types.Value `json:"EmailSubjectByLink,omitempty"`
 
 	// SmsMessage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage
-	SmsMessage string `json:"SmsMessage,omitempty"`
+	SmsMessage *types.Value `json:"SmsMessage,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

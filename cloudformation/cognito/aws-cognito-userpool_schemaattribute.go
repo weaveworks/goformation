@@ -1,7 +1,9 @@
 package cognito
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPool_SchemaAttribute AWS CloudFormation Resource (AWS::Cognito::UserPool.SchemaAttribute)
@@ -11,22 +13,22 @@ type UserPool_SchemaAttribute struct {
 	// AttributeDataType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype
-	AttributeDataType string `json:"AttributeDataType,omitempty"`
+	AttributeDataType *types.Value `json:"AttributeDataType,omitempty"`
 
 	// DeveloperOnlyAttribute AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute
-	DeveloperOnlyAttribute bool `json:"DeveloperOnlyAttribute,omitempty"`
+	DeveloperOnlyAttribute *types.Value `json:"DeveloperOnlyAttribute,omitempty"`
 
 	// Mutable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable
-	Mutable bool `json:"Mutable,omitempty"`
+	Mutable *types.Value `json:"Mutable,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// NumberAttributeConstraints AWS CloudFormation Property
 	// Required: false
@@ -36,7 +38,7 @@ type UserPool_SchemaAttribute struct {
 	// Required AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required
-	Required bool `json:"Required,omitempty"`
+	Required *types.Value `json:"Required,omitempty"`
 
 	// StringAttributeConstraints AWS CloudFormation Property
 	// Required: false

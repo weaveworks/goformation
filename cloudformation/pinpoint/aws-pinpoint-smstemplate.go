@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SmsTemplate AWS CloudFormation Resource (AWS::Pinpoint::SmsTemplate)
@@ -15,12 +17,12 @@ type SmsTemplate struct {
 	// Body AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-body
-	Body string `json:"Body,omitempty"`
+	Body *types.Value `json:"Body,omitempty"`
 
 	// DefaultSubstitutions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-defaultsubstitutions
-	DefaultSubstitutions string `json:"DefaultSubstitutions,omitempty"`
+	DefaultSubstitutions *types.Value `json:"DefaultSubstitutions,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -30,12 +32,12 @@ type SmsTemplate struct {
 	// TemplateDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-templatedescription
-	TemplateDescription string `json:"TemplateDescription,omitempty"`
+	TemplateDescription *types.Value `json:"TemplateDescription,omitempty"`
 
 	// TemplateName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-templatename
-	TemplateName string `json:"TemplateName,omitempty"`
+	TemplateName *types.Value `json:"TemplateName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

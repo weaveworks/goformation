@@ -1,7 +1,9 @@
 package efs
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AccessPoint_CreationInfo AWS CloudFormation Resource (AWS::EFS::AccessPoint.CreationInfo)
@@ -11,17 +13,17 @@ type AccessPoint_CreationInfo struct {
 	// OwnerGid AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-ownergid
-	OwnerGid string `json:"OwnerGid,omitempty"`
+	OwnerGid *types.Value `json:"OwnerGid,omitempty"`
 
 	// OwnerUid AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-owneruid
-	OwnerUid string `json:"OwnerUid,omitempty"`
+	OwnerUid *types.Value `json:"OwnerUid,omitempty"`
 
 	// Permissions AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-permissions
-	Permissions string `json:"Permissions,omitempty"`
+	Permissions *types.Value `json:"Permissions,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

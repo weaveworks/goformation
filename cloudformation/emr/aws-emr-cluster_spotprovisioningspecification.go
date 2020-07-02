@@ -1,7 +1,9 @@
 package emr
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_SpotProvisioningSpecification AWS CloudFormation Resource (AWS::EMR::Cluster.SpotProvisioningSpecification)
@@ -11,17 +13,17 @@ type Cluster_SpotProvisioningSpecification struct {
 	// BlockDurationMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.html#cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes
-	BlockDurationMinutes int `json:"BlockDurationMinutes,omitempty"`
+	BlockDurationMinutes *types.Value `json:"BlockDurationMinutes,omitempty"`
 
 	// TimeoutAction AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.html#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction
-	TimeoutAction string `json:"TimeoutAction,omitempty"`
+	TimeoutAction *types.Value `json:"TimeoutAction,omitempty"`
 
 	// TimeoutDurationMinutes AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.html#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes
-	TimeoutDurationMinutes int `json:"TimeoutDurationMinutes"`
+	TimeoutDurationMinutes *types.Value `json:"TimeoutDurationMinutes"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
