@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/awslabs/goformation/v4/intrinsics"
 	"github.com/sanathkr/yaml"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
 )
 
 // Template represents an AWS CloudFormation template
@@ -40,11 +40,11 @@ type Parameter struct {
 type Output struct {
 	Value       interface{} `json:"Value"`
 	Description string      `json:"Description,omitempty"`
-	Export      Export      `json:"Export,omitempty"`
+	Export      *Export     `json:"Export,omitempty"`
 }
 
 type Export struct {
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 }
 
 type Resource interface {
@@ -183,8 +183,7 @@ func (t *Template) JSON() ([]byte, error) {
 		return nil, err
 	}
 
-	return intrinsics.ProcessJSON(j, nil)
-
+	return j, nil
 }
 
 // YAML converts an AWS CloudFormation template object to YAML
