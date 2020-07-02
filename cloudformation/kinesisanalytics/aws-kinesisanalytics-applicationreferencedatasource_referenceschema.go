@@ -1,7 +1,9 @@
 package kinesisanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ApplicationReferenceDataSource_ReferenceSchema AWS CloudFormation Resource (AWS::KinesisAnalytics::ApplicationReferenceDataSource.ReferenceSchema)
@@ -16,7 +18,7 @@ type ApplicationReferenceDataSource_ReferenceSchema struct {
 	// RecordEncoding AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding
-	RecordEncoding string `json:"RecordEncoding,omitempty"`
+	RecordEncoding *types.Value `json:"RecordEncoding,omitempty"`
 
 	// RecordFormat AWS CloudFormation Property
 	// Required: true

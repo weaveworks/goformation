@@ -1,7 +1,7 @@
 package batch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobDefinition_LinuxParameters AWS CloudFormation Resource (AWS::Batch::JobDefinition.LinuxParameters)

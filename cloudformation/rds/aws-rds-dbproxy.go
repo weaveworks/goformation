@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DBProxy AWS CloudFormation Resource (AWS::RDS::DBProxy)
@@ -20,32 +22,32 @@ type DBProxy struct {
 	// DBProxyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-dbproxyname
-	DBProxyName string `json:"DBProxyName,omitempty"`
+	DBProxyName *types.Value `json:"DBProxyName,omitempty"`
 
 	// DebugLogging AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-debuglogging
-	DebugLogging bool `json:"DebugLogging,omitempty"`
+	DebugLogging *types.Value `json:"DebugLogging,omitempty"`
 
 	// EngineFamily AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-enginefamily
-	EngineFamily string `json:"EngineFamily,omitempty"`
+	EngineFamily *types.Value `json:"EngineFamily,omitempty"`
 
 	// IdleClientTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-idleclienttimeout
-	IdleClientTimeout int `json:"IdleClientTimeout,omitempty"`
+	IdleClientTimeout *types.Value `json:"IdleClientTimeout,omitempty"`
 
 	// RequireTLS AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-requiretls
-	RequireTLS bool `json:"RequireTLS,omitempty"`
+	RequireTLS *types.Value `json:"RequireTLS,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -55,12 +57,12 @@ type DBProxy struct {
 	// VpcSecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-vpcsecuritygroupids
-	VpcSecurityGroupIds []string `json:"VpcSecurityGroupIds,omitempty"`
+	VpcSecurityGroupIds *types.Value `json:"VpcSecurityGroupIds,omitempty"`
 
 	// VpcSubnetIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-vpcsubnetids
-	VpcSubnetIds []string `json:"VpcSubnetIds,omitempty"`
+	VpcSubnetIds *types.Value `json:"VpcSubnetIds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // VPCEndpointConnectionNotification AWS CloudFormation Resource (AWS::EC2::VPCEndpointConnectionNotification)
@@ -15,22 +17,22 @@ type VPCEndpointConnectionNotification struct {
 	// ConnectionEvents AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionevents
-	ConnectionEvents []string `json:"ConnectionEvents,omitempty"`
+	ConnectionEvents *types.Value `json:"ConnectionEvents,omitempty"`
 
 	// ConnectionNotificationArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn
-	ConnectionNotificationArn string `json:"ConnectionNotificationArn,omitempty"`
+	ConnectionNotificationArn *types.Value `json:"ConnectionNotificationArn,omitempty"`
 
 	// ServiceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-serviceid
-	ServiceId string `json:"ServiceId,omitempty"`
+	ServiceId *types.Value `json:"ServiceId,omitempty"`
 
 	// VPCEndpointId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid
-	VPCEndpointId string `json:"VPCEndpointId,omitempty"`
+	VPCEndpointId *types.Value `json:"VPCEndpointId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

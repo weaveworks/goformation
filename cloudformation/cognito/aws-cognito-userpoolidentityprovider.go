@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPoolIdentityProvider AWS CloudFormation Resource (AWS::Cognito::UserPoolIdentityProvider)
@@ -20,7 +22,7 @@ type UserPoolIdentityProvider struct {
 	// IdpIdentifiers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers
-	IdpIdentifiers []string `json:"IdpIdentifiers,omitempty"`
+	IdpIdentifiers *types.Value `json:"IdpIdentifiers,omitempty"`
 
 	// ProviderDetails AWS CloudFormation Property
 	// Required: false
@@ -30,17 +32,17 @@ type UserPoolIdentityProvider struct {
 	// ProviderName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providername
-	ProviderName string `json:"ProviderName,omitempty"`
+	ProviderName *types.Value `json:"ProviderName,omitempty"`
 
 	// ProviderType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providertype
-	ProviderType string `json:"ProviderType,omitempty"`
+	ProviderType *types.Value `json:"ProviderType,omitempty"`
 
 	// UserPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-userpoolid
-	UserPoolId string `json:"UserPoolId,omitempty"`
+	UserPoolId *types.Value `json:"UserPoolId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

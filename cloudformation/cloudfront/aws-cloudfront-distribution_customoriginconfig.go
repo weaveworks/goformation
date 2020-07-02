@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Distribution_CustomOriginConfig AWS CloudFormation Resource (AWS::CloudFront::Distribution.CustomOriginConfig)
@@ -11,32 +13,32 @@ type Distribution_CustomOriginConfig struct {
 	// HTTPPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpport
-	HTTPPort int `json:"HTTPPort,omitempty"`
+	HTTPPort *types.Value `json:"HTTPPort,omitempty"`
 
 	// HTTPSPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpsport
-	HTTPSPort int `json:"HTTPSPort,omitempty"`
+	HTTPSPort *types.Value `json:"HTTPSPort,omitempty"`
 
 	// OriginKeepaliveTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout
-	OriginKeepaliveTimeout int `json:"OriginKeepaliveTimeout,omitempty"`
+	OriginKeepaliveTimeout *types.Value `json:"OriginKeepaliveTimeout,omitempty"`
 
 	// OriginProtocolPolicy AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy
-	OriginProtocolPolicy string `json:"OriginProtocolPolicy,omitempty"`
+	OriginProtocolPolicy *types.Value `json:"OriginProtocolPolicy,omitempty"`
 
 	// OriginReadTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout
-	OriginReadTimeout int `json:"OriginReadTimeout,omitempty"`
+	OriginReadTimeout *types.Value `json:"OriginReadTimeout,omitempty"`
 
 	// OriginSSLProtocols AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols
-	OriginSSLProtocols []string `json:"OriginSSLProtocols,omitempty"`
+	OriginSSLProtocols *types.Value `json:"OriginSSLProtocols,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package lakeformation
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Permissions_ColumnWildcard AWS CloudFormation Resource (AWS::LakeFormation::Permissions.ColumnWildcard)
@@ -11,7 +13,7 @@ type Permissions_ColumnWildcard struct {
 	// ExcludedColumnNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-columnwildcard.html#cfn-lakeformation-permissions-columnwildcard-excludedcolumnnames
-	ExcludedColumnNames []string `json:"ExcludedColumnNames,omitempty"`
+	ExcludedColumnNames *types.Value `json:"ExcludedColumnNames,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

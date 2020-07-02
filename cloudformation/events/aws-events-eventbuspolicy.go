@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EventBusPolicy AWS CloudFormation Resource (AWS::Events::EventBusPolicy)
@@ -15,7 +17,7 @@ type EventBusPolicy struct {
 	// Action AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-action
-	Action string `json:"Action,omitempty"`
+	Action *types.Value `json:"Action,omitempty"`
 
 	// Condition AWS CloudFormation Property
 	// Required: false
@@ -25,17 +27,17 @@ type EventBusPolicy struct {
 	// EventBusName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-eventbusname
-	EventBusName string `json:"EventBusName,omitempty"`
+	EventBusName *types.Value `json:"EventBusName,omitempty"`
 
 	// Principal AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-principal
-	Principal string `json:"Principal,omitempty"`
+	Principal *types.Value `json:"Principal,omitempty"`
 
 	// StatementId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-statementid
-	StatementId string `json:"StatementId,omitempty"`
+	StatementId *types.Value `json:"StatementId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

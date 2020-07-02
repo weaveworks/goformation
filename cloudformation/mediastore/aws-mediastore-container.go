@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Container AWS CloudFormation Resource (AWS::MediaStore::Container)
@@ -16,12 +18,12 @@ type Container struct {
 	// AccessLoggingEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-accessloggingenabled
-	AccessLoggingEnabled bool `json:"AccessLoggingEnabled,omitempty"`
+	AccessLoggingEnabled *types.Value `json:"AccessLoggingEnabled,omitempty"`
 
 	// ContainerName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-containername
-	ContainerName string `json:"ContainerName,omitempty"`
+	ContainerName *types.Value `json:"ContainerName,omitempty"`
 
 	// CorsPolicy AWS CloudFormation Property
 	// Required: false
@@ -31,7 +33,7 @@ type Container struct {
 	// LifecyclePolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-lifecyclepolicy
-	LifecyclePolicy string `json:"LifecyclePolicy,omitempty"`
+	LifecyclePolicy *types.Value `json:"LifecyclePolicy,omitempty"`
 
 	// MetricPolicy AWS CloudFormation Property
 	// Required: false
@@ -41,12 +43,12 @@ type Container struct {
 	// Policy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-policy
-	Policy string `json:"Policy,omitempty"`
+	Policy *types.Value `json:"Policy,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

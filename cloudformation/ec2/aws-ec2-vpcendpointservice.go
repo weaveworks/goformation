@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // VPCEndpointService AWS CloudFormation Resource (AWS::EC2::VPCEndpointService)
@@ -15,12 +17,12 @@ type VPCEndpointService struct {
 	// AcceptanceRequired AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-acceptancerequired
-	AcceptanceRequired bool `json:"AcceptanceRequired,omitempty"`
+	AcceptanceRequired *types.Value `json:"AcceptanceRequired,omitempty"`
 
 	// NetworkLoadBalancerArns AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-networkloadbalancerarns
-	NetworkLoadBalancerArns []string `json:"NetworkLoadBalancerArns,omitempty"`
+	NetworkLoadBalancerArns *types.Value `json:"NetworkLoadBalancerArns,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

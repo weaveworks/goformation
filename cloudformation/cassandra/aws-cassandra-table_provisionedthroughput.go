@@ -1,7 +1,9 @@
 package cassandra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_ProvisionedThroughput AWS CloudFormation Resource (AWS::Cassandra::Table.ProvisionedThroughput)
@@ -11,12 +13,12 @@ type Table_ProvisionedThroughput struct {
 	// ReadCapacityUnits AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-readcapacityunits
-	ReadCapacityUnits int `json:"ReadCapacityUnits"`
+	ReadCapacityUnits *types.Value `json:"ReadCapacityUnits"`
 
 	// WriteCapacityUnits AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-writecapacityunits
-	WriteCapacityUnits int `json:"WriteCapacityUnits"`
+	WriteCapacityUnits *types.Value `json:"WriteCapacityUnits"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

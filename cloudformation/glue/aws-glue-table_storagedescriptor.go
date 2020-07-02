@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_StorageDescriptor AWS CloudFormation Resource (AWS::Glue::Table.StorageDescriptor)
@@ -11,7 +13,7 @@ type Table_StorageDescriptor struct {
 	// BucketColumns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-bucketcolumns
-	BucketColumns []string `json:"BucketColumns,omitempty"`
+	BucketColumns *types.Value `json:"BucketColumns,omitempty"`
 
 	// Columns AWS CloudFormation Property
 	// Required: false
@@ -21,27 +23,27 @@ type Table_StorageDescriptor struct {
 	// Compressed AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-compressed
-	Compressed bool `json:"Compressed,omitempty"`
+	Compressed *types.Value `json:"Compressed,omitempty"`
 
 	// InputFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-inputformat
-	InputFormat string `json:"InputFormat,omitempty"`
+	InputFormat *types.Value `json:"InputFormat,omitempty"`
 
 	// Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-location
-	Location string `json:"Location,omitempty"`
+	Location *types.Value `json:"Location,omitempty"`
 
 	// NumberOfBuckets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-numberofbuckets
-	NumberOfBuckets int `json:"NumberOfBuckets,omitempty"`
+	NumberOfBuckets *types.Value `json:"NumberOfBuckets,omitempty"`
 
 	// OutputFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-outputformat
-	OutputFormat string `json:"OutputFormat,omitempty"`
+	OutputFormat *types.Value `json:"OutputFormat,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
@@ -66,7 +68,7 @@ type Table_StorageDescriptor struct {
 	// StoredAsSubDirectories AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-storedassubdirectories
-	StoredAsSubDirectories bool `json:"StoredAsSubDirectories,omitempty"`
+	StoredAsSubDirectories *types.Value `json:"StoredAsSubDirectories,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

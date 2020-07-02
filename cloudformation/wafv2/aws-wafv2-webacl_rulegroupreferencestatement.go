@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_RuleGroupReferenceStatement AWS CloudFormation Resource (AWS::WAFv2::WebACL.RuleGroupReferenceStatement)
@@ -11,7 +13,7 @@ type WebACL_RuleGroupReferenceStatement struct {
 	// Arn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rulegroupreferencestatement.html#cfn-wafv2-webacl-rulegroupreferencestatement-arn
-	Arn string `json:"Arn,omitempty"`
+	Arn *types.Value `json:"Arn,omitempty"`
 
 	// ExcludedRules AWS CloudFormation Property
 	// Required: false

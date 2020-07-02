@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_ReplicationRuleFilter AWS CloudFormation Resource (AWS::S3::Bucket.ReplicationRuleFilter)
@@ -16,7 +18,7 @@ type Bucket_ReplicationRuleFilter struct {
 	// Prefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationrulefilter.html#cfn-s3-bucket-replicationrulefilter-prefix
-	Prefix string `json:"Prefix,omitempty"`
+	Prefix *types.Value `json:"Prefix,omitempty"`
 
 	// TagFilter AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package cloudwatch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AnomalyDetector_Range AWS CloudFormation Resource (AWS::CloudWatch::AnomalyDetector.Range)
@@ -11,12 +13,12 @@ type AnomalyDetector_Range struct {
 	// EndTime AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-range.html#cfn-cloudwatch-anomalydetector-range-endtime
-	EndTime string `json:"EndTime,omitempty"`
+	EndTime *types.Value `json:"EndTime,omitempty"`
 
 	// StartTime AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-range.html#cfn-cloudwatch-anomalydetector-range-starttime
-	StartTime string `json:"StartTime,omitempty"`
+	StartTime *types.Value `json:"StartTime,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package dynamodb
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_LocalSecondaryIndex AWS CloudFormation Resource (AWS::DynamoDB::Table.LocalSecondaryIndex)
@@ -11,7 +13,7 @@ type Table_LocalSecondaryIndex struct {
 	// IndexName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-indexname
-	IndexName string `json:"IndexName,omitempty"`
+	IndexName *types.Value `json:"IndexName,omitempty"`
 
 	// KeySchema AWS CloudFormation Property
 	// Required: true

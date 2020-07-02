@@ -1,7 +1,9 @@
 package managedblockchain
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Member_ApprovalThresholdPolicy AWS CloudFormation Resource (AWS::ManagedBlockchain::Member.ApprovalThresholdPolicy)
@@ -11,17 +13,17 @@ type Member_ApprovalThresholdPolicy struct {
 	// ProposalDurationInHours AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-approvalthresholdpolicy.html#cfn-managedblockchain-member-approvalthresholdpolicy-proposaldurationinhours
-	ProposalDurationInHours int `json:"ProposalDurationInHours,omitempty"`
+	ProposalDurationInHours *types.Value `json:"ProposalDurationInHours,omitempty"`
 
 	// ThresholdComparator AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-approvalthresholdpolicy.html#cfn-managedblockchain-member-approvalthresholdpolicy-thresholdcomparator
-	ThresholdComparator string `json:"ThresholdComparator,omitempty"`
+	ThresholdComparator *types.Value `json:"ThresholdComparator,omitempty"`
 
 	// ThresholdPercentage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-approvalthresholdpolicy.html#cfn-managedblockchain-member-approvalthresholdpolicy-thresholdpercentage
-	ThresholdPercentage int `json:"ThresholdPercentage,omitempty"`
+	ThresholdPercentage *types.Value `json:"ThresholdPercentage,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

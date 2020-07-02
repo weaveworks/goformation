@@ -1,7 +1,9 @@
 package kinesisanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ApplicationReferenceDataSource_CSVMappingParameters AWS CloudFormation Resource (AWS::KinesisAnalytics::ApplicationReferenceDataSource.CSVMappingParameters)
@@ -11,12 +13,12 @@ type ApplicationReferenceDataSource_CSVMappingParameters struct {
 	// RecordColumnDelimiter AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter
-	RecordColumnDelimiter string `json:"RecordColumnDelimiter,omitempty"`
+	RecordColumnDelimiter *types.Value `json:"RecordColumnDelimiter,omitempty"`
 
 	// RecordRowDelimiter AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter
-	RecordRowDelimiter string `json:"RecordRowDelimiter,omitempty"`
+	RecordRowDelimiter *types.Value `json:"RecordRowDelimiter,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

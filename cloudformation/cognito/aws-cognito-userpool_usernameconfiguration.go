@@ -1,7 +1,9 @@
 package cognito
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPool_UsernameConfiguration AWS CloudFormation Resource (AWS::Cognito::UserPool.UsernameConfiguration)
@@ -11,7 +13,7 @@ type UserPool_UsernameConfiguration struct {
 	// CaseSensitive AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive
-	CaseSensitive bool `json:"CaseSensitive,omitempty"`
+	CaseSensitive *types.Value `json:"CaseSensitive,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

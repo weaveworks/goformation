@@ -1,7 +1,9 @@
 package lakeformation
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Permissions_DataLocationResource AWS CloudFormation Resource (AWS::LakeFormation::Permissions.DataLocationResource)
@@ -11,7 +13,7 @@ type Permissions_DataLocationResource struct {
 	// S3Resource AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html#cfn-lakeformation-permissions-datalocationresource-s3resource
-	S3Resource string `json:"S3Resource,omitempty"`
+	S3Resource *types.Value `json:"S3Resource,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

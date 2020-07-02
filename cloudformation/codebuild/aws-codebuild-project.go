@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project AWS CloudFormation Resource (AWS::CodeBuild::Project)
@@ -21,7 +23,7 @@ type Project struct {
 	// BadgeEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-badgeenabled
-	BadgeEnabled bool `json:"BadgeEnabled,omitempty"`
+	BadgeEnabled *types.Value `json:"BadgeEnabled,omitempty"`
 
 	// Cache AWS CloudFormation Property
 	// Required: false
@@ -31,12 +33,12 @@ type Project struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// EncryptionKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-encryptionkey
-	EncryptionKey string `json:"EncryptionKey,omitempty"`
+	EncryptionKey *types.Value `json:"EncryptionKey,omitempty"`
 
 	// Environment AWS CloudFormation Property
 	// Required: true
@@ -56,12 +58,12 @@ type Project struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// QueuedTimeoutInMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-queuedtimeoutinminutes
-	QueuedTimeoutInMinutes int `json:"QueuedTimeoutInMinutes,omitempty"`
+	QueuedTimeoutInMinutes *types.Value `json:"QueuedTimeoutInMinutes,omitempty"`
 
 	// SecondaryArtifacts AWS CloudFormation Property
 	// Required: false
@@ -81,7 +83,7 @@ type Project struct {
 	// ServiceRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-servicerole
-	ServiceRole string `json:"ServiceRole,omitempty"`
+	ServiceRole *types.Value `json:"ServiceRole,omitempty"`
 
 	// Source AWS CloudFormation Property
 	// Required: true
@@ -91,17 +93,17 @@ type Project struct {
 	// SourceVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-sourceversion
-	SourceVersion string `json:"SourceVersion,omitempty"`
+	SourceVersion *types.Value `json:"SourceVersion,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// TimeoutInMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-timeoutinminutes
-	TimeoutInMinutes int `json:"TimeoutInMinutes,omitempty"`
+	TimeoutInMinutes *types.Value `json:"TimeoutInMinutes,omitempty"`
 
 	// Triggers AWS CloudFormation Property
 	// Required: false

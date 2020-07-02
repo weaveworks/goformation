@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Trigger_Condition AWS CloudFormation Resource (AWS::Glue::Trigger.Condition)
@@ -11,27 +13,27 @@ type Trigger_Condition struct {
 	// CrawlState AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-crawlstate
-	CrawlState string `json:"CrawlState,omitempty"`
+	CrawlState *types.Value `json:"CrawlState,omitempty"`
 
 	// CrawlerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-crawlername
-	CrawlerName string `json:"CrawlerName,omitempty"`
+	CrawlerName *types.Value `json:"CrawlerName,omitempty"`
 
 	// JobName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-jobname
-	JobName string `json:"JobName,omitempty"`
+	JobName *types.Value `json:"JobName,omitempty"`
 
 	// LogicalOperator AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-logicaloperator
-	LogicalOperator string `json:"LogicalOperator,omitempty"`
+	LogicalOperator *types.Value `json:"LogicalOperator,omitempty"`
 
 	// State AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-state
-	State string `json:"State,omitempty"`
+	State *types.Value `json:"State,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

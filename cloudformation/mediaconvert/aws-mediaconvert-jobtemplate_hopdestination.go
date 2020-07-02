@@ -1,7 +1,9 @@
 package mediaconvert
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobTemplate_HopDestination AWS CloudFormation Resource (AWS::MediaConvert::JobTemplate.HopDestination)
@@ -11,17 +13,17 @@ type JobTemplate_HopDestination struct {
 	// Priority AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconvert-jobtemplate-hopdestination.html#cfn-mediaconvert-jobtemplate-hopdestination-priority
-	Priority int `json:"Priority,omitempty"`
+	Priority *types.Value `json:"Priority,omitempty"`
 
 	// Queue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconvert-jobtemplate-hopdestination.html#cfn-mediaconvert-jobtemplate-hopdestination-queue
-	Queue string `json:"Queue,omitempty"`
+	Queue *types.Value `json:"Queue,omitempty"`
 
 	// WaitMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconvert-jobtemplate-hopdestination.html#cfn-mediaconvert-jobtemplate-hopdestination-waitminutes
-	WaitMinutes int `json:"WaitMinutes,omitempty"`
+	WaitMinutes *types.Value `json:"WaitMinutes,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

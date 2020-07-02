@@ -1,7 +1,9 @@
 package dms
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Endpoint_S3Settings AWS CloudFormation Resource (AWS::DMS::Endpoint.S3Settings)
@@ -11,37 +13,37 @@ type Endpoint_S3Settings struct {
 	// BucketFolder AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder
-	BucketFolder string `json:"BucketFolder,omitempty"`
+	BucketFolder *types.Value `json:"BucketFolder,omitempty"`
 
 	// BucketName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname
-	BucketName string `json:"BucketName,omitempty"`
+	BucketName *types.Value `json:"BucketName,omitempty"`
 
 	// CompressionType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype
-	CompressionType string `json:"CompressionType,omitempty"`
+	CompressionType *types.Value `json:"CompressionType,omitempty"`
 
 	// CsvDelimiter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter
-	CsvDelimiter string `json:"CsvDelimiter,omitempty"`
+	CsvDelimiter *types.Value `json:"CsvDelimiter,omitempty"`
 
 	// CsvRowDelimiter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter
-	CsvRowDelimiter string `json:"CsvRowDelimiter,omitempty"`
+	CsvRowDelimiter *types.Value `json:"CsvRowDelimiter,omitempty"`
 
 	// ExternalTableDefinition AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition
-	ExternalTableDefinition string `json:"ExternalTableDefinition,omitempty"`
+	ExternalTableDefinition *types.Value `json:"ExternalTableDefinition,omitempty"`
 
 	// ServiceAccessRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn
-	ServiceAccessRoleArn string `json:"ServiceAccessRoleArn,omitempty"`
+	ServiceAccessRoleArn *types.Value `json:"ServiceAccessRoleArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

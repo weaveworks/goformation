@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EC2Fleet_SpotOptionsRequest AWS CloudFormation Resource (AWS::EC2::EC2Fleet.SpotOptionsRequest)
@@ -11,37 +13,37 @@ type EC2Fleet_SpotOptionsRequest struct {
 	// AllocationStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy
-	AllocationStrategy string `json:"AllocationStrategy,omitempty"`
+	AllocationStrategy *types.Value `json:"AllocationStrategy,omitempty"`
 
 	// InstanceInterruptionBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior
-	InstanceInterruptionBehavior string `json:"InstanceInterruptionBehavior,omitempty"`
+	InstanceInterruptionBehavior *types.Value `json:"InstanceInterruptionBehavior,omitempty"`
 
 	// InstancePoolsToUseCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount
-	InstancePoolsToUseCount int `json:"InstancePoolsToUseCount,omitempty"`
+	InstancePoolsToUseCount *types.Value `json:"InstancePoolsToUseCount,omitempty"`
 
 	// MaxTotalPrice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice
-	MaxTotalPrice string `json:"MaxTotalPrice,omitempty"`
+	MaxTotalPrice *types.Value `json:"MaxTotalPrice,omitempty"`
 
 	// MinTargetCapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity
-	MinTargetCapacity int `json:"MinTargetCapacity,omitempty"`
+	MinTargetCapacity *types.Value `json:"MinTargetCapacity,omitempty"`
 
 	// SingleAvailabilityZone AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone
-	SingleAvailabilityZone bool `json:"SingleAvailabilityZone,omitempty"`
+	SingleAvailabilityZone *types.Value `json:"SingleAvailabilityZone,omitempty"`
 
 	// SingleInstanceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleinstancetype
-	SingleInstanceType bool `json:"SingleInstanceType,omitempty"`
+	SingleInstanceType *types.Value `json:"SingleInstanceType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

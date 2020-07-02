@@ -1,7 +1,7 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_NotStatementTwo AWS CloudFormation Resource (AWS::WAFv2::WebACL.NotStatementTwo)

@@ -1,7 +1,9 @@
 package appmesh
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Route_HttpRetryPolicy AWS CloudFormation Resource (AWS::AppMesh::Route.HttpRetryPolicy)
@@ -11,12 +13,12 @@ type Route_HttpRetryPolicy struct {
 	// HttpRetryEvents AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpretrypolicy.html#cfn-appmesh-route-httpretrypolicy-httpretryevents
-	HttpRetryEvents []string `json:"HttpRetryEvents,omitempty"`
+	HttpRetryEvents *types.Value `json:"HttpRetryEvents,omitempty"`
 
 	// MaxRetries AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpretrypolicy.html#cfn-appmesh-route-httpretrypolicy-maxretries
-	MaxRetries int `json:"MaxRetries"`
+	MaxRetries *types.Value `json:"MaxRetries"`
 
 	// PerRetryTimeout AWS CloudFormation Property
 	// Required: true
@@ -26,7 +28,7 @@ type Route_HttpRetryPolicy struct {
 	// TcpRetryEvents AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpretrypolicy.html#cfn-appmesh-route-httpretrypolicy-tcpretryevents
-	TcpRetryEvents []string `json:"TcpRetryEvents,omitempty"`
+	TcpRetryEvents *types.Value `json:"TcpRetryEvents,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,8 +1,10 @@
 package dlm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LifecyclePolicy_PolicyDetails AWS CloudFormation Resource (AWS::DLM::LifecyclePolicy.PolicyDetails)
@@ -17,12 +19,12 @@ type LifecyclePolicy_PolicyDetails struct {
 	// PolicyType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-policytype
-	PolicyType string `json:"PolicyType,omitempty"`
+	PolicyType *types.Value `json:"PolicyType,omitempty"`
 
 	// ResourceTypes AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes
-	ResourceTypes []string `json:"ResourceTypes,omitempty"`
+	ResourceTypes *types.Value `json:"ResourceTypes,omitempty"`
 
 	// Schedules AWS CloudFormation Property
 	// Required: true
@@ -32,7 +34,7 @@ type LifecyclePolicy_PolicyDetails struct {
 	// TargetTags AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-targettags
-	TargetTags []tags.Tag `json:"TargetTags,omitempty"`
+	TargetTags []cloudformation.Tag `json:"TargetTags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

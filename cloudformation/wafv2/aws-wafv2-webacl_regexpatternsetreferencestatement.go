@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_RegexPatternSetReferenceStatement AWS CloudFormation Resource (AWS::WAFv2::WebACL.RegexPatternSetReferenceStatement)
@@ -11,7 +13,7 @@ type WebACL_RegexPatternSetReferenceStatement struct {
 	// Arn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-regexpatternsetreferencestatement.html#cfn-wafv2-webacl-regexpatternsetreferencestatement-arn
-	Arn string `json:"Arn,omitempty"`
+	Arn *types.Value `json:"Arn,omitempty"`
 
 	// FieldToMatch AWS CloudFormation Property
 	// Required: true

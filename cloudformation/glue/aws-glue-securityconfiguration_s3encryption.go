@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SecurityConfiguration_S3Encryption AWS CloudFormation Resource (AWS::Glue::SecurityConfiguration.S3Encryption)
@@ -11,12 +13,12 @@ type SecurityConfiguration_S3Encryption struct {
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-kmskeyarn
-	KmsKeyArn string `json:"KmsKeyArn,omitempty"`
+	KmsKeyArn *types.Value `json:"KmsKeyArn,omitempty"`
 
 	// S3EncryptionMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-s3encryptionmode
-	S3EncryptionMode string `json:"S3EncryptionMode,omitempty"`
+	S3EncryptionMode *types.Value `json:"S3EncryptionMode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

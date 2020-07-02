@@ -1,7 +1,9 @@
 package events
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Rule_InputTransformer AWS CloudFormation Resource (AWS::Events::Rule.InputTransformer)
@@ -11,12 +13,12 @@ type Rule_InputTransformer struct {
 	// InputPathsMap AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap
-	InputPathsMap map[string]string `json:"InputPathsMap,omitempty"`
+	InputPathsMap map[string]*types.Value `json:"InputPathsMap,omitempty"`
 
 	// InputTemplate AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate
-	InputTemplate string `json:"InputTemplate,omitempty"`
+	InputTemplate *types.Value `json:"InputTemplate,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

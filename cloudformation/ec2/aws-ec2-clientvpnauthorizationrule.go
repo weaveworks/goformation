@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ClientVpnAuthorizationRule AWS CloudFormation Resource (AWS::EC2::ClientVpnAuthorizationRule)
@@ -15,27 +17,27 @@ type ClientVpnAuthorizationRule struct {
 	// AccessGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html#cfn-ec2-clientvpnauthorizationrule-accessgroupid
-	AccessGroupId string `json:"AccessGroupId,omitempty"`
+	AccessGroupId *types.Value `json:"AccessGroupId,omitempty"`
 
 	// AuthorizeAllGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html#cfn-ec2-clientvpnauthorizationrule-authorizeallgroups
-	AuthorizeAllGroups bool `json:"AuthorizeAllGroups,omitempty"`
+	AuthorizeAllGroups *types.Value `json:"AuthorizeAllGroups,omitempty"`
 
 	// ClientVpnEndpointId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html#cfn-ec2-clientvpnauthorizationrule-clientvpnendpointid
-	ClientVpnEndpointId string `json:"ClientVpnEndpointId,omitempty"`
+	ClientVpnEndpointId *types.Value `json:"ClientVpnEndpointId,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html#cfn-ec2-clientvpnauthorizationrule-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// TargetNetworkCidr AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html#cfn-ec2-clientvpnauthorizationrule-targetnetworkcidr
-	TargetNetworkCidr string `json:"TargetNetworkCidr,omitempty"`
+	TargetNetworkCidr *types.Value `json:"TargetNetworkCidr,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

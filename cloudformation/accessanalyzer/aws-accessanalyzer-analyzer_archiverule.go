@@ -1,7 +1,9 @@
 package accessanalyzer
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Analyzer_ArchiveRule AWS CloudFormation Resource (AWS::AccessAnalyzer::Analyzer.ArchiveRule)
@@ -16,7 +18,7 @@ type Analyzer_ArchiveRule struct {
 	// RuleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-rulename
-	RuleName string `json:"RuleName,omitempty"`
+	RuleName *types.Value `json:"RuleName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

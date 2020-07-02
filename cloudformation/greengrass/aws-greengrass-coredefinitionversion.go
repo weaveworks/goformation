@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CoreDefinitionVersion AWS CloudFormation Resource (AWS::Greengrass::CoreDefinitionVersion)
@@ -15,7 +17,7 @@ type CoreDefinitionVersion struct {
 	// CoreDefinitionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-coredefinitionid
-	CoreDefinitionId string `json:"CoreDefinitionId,omitempty"`
+	CoreDefinitionId *types.Value `json:"CoreDefinitionId,omitempty"`
 
 	// Cores AWS CloudFormation Property
 	// Required: true

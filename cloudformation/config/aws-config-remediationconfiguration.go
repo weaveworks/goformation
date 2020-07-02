@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RemediationConfiguration AWS CloudFormation Resource (AWS::Config::RemediationConfiguration)
@@ -15,12 +17,12 @@ type RemediationConfiguration struct {
 	// Automatic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-automatic
-	Automatic bool `json:"Automatic,omitempty"`
+	Automatic *types.Value `json:"Automatic,omitempty"`
 
 	// ConfigRuleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-configrulename
-	ConfigRuleName string `json:"ConfigRuleName,omitempty"`
+	ConfigRuleName *types.Value `json:"ConfigRuleName,omitempty"`
 
 	// ExecutionControls AWS CloudFormation Property
 	// Required: false
@@ -30,7 +32,7 @@ type RemediationConfiguration struct {
 	// MaximumAutomaticAttempts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-maximumautomaticattempts
-	MaximumAutomaticAttempts int `json:"MaximumAutomaticAttempts,omitempty"`
+	MaximumAutomaticAttempts *types.Value `json:"MaximumAutomaticAttempts,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
@@ -40,27 +42,27 @@ type RemediationConfiguration struct {
 	// ResourceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-resourcetype
-	ResourceType string `json:"ResourceType,omitempty"`
+	ResourceType *types.Value `json:"ResourceType,omitempty"`
 
 	// RetryAttemptSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-retryattemptseconds
-	RetryAttemptSeconds int `json:"RetryAttemptSeconds,omitempty"`
+	RetryAttemptSeconds *types.Value `json:"RetryAttemptSeconds,omitempty"`
 
 	// TargetId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-targetid
-	TargetId string `json:"TargetId,omitempty"`
+	TargetId *types.Value `json:"TargetId,omitempty"`
 
 	// TargetType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-targettype
-	TargetType string `json:"TargetType,omitempty"`
+	TargetType *types.Value `json:"TargetType,omitempty"`
 
 	// TargetVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html#cfn-config-remediationconfiguration-targetversion
-	TargetVersion string `json:"TargetVersion,omitempty"`
+	TargetVersion *types.Value `json:"TargetVersion,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

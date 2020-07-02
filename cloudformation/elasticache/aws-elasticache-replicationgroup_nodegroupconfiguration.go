@@ -1,7 +1,9 @@
 package elasticache
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ReplicationGroup_NodeGroupConfiguration AWS CloudFormation Resource (AWS::ElastiCache::ReplicationGroup.NodeGroupConfiguration)
@@ -11,27 +13,27 @@ type ReplicationGroup_NodeGroupConfiguration struct {
 	// NodeGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid
-	NodeGroupId string `json:"NodeGroupId,omitempty"`
+	NodeGroupId *types.Value `json:"NodeGroupId,omitempty"`
 
 	// PrimaryAvailabilityZone AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone
-	PrimaryAvailabilityZone string `json:"PrimaryAvailabilityZone,omitempty"`
+	PrimaryAvailabilityZone *types.Value `json:"PrimaryAvailabilityZone,omitempty"`
 
 	// ReplicaAvailabilityZones AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicaavailabilityzones
-	ReplicaAvailabilityZones []string `json:"ReplicaAvailabilityZones,omitempty"`
+	ReplicaAvailabilityZones *types.Value `json:"ReplicaAvailabilityZones,omitempty"`
 
 	// ReplicaCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-replicacount
-	ReplicaCount int `json:"ReplicaCount,omitempty"`
+	ReplicaCount *types.Value `json:"ReplicaCount,omitempty"`
 
 	// Slots AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-slots
-	Slots string `json:"Slots,omitempty"`
+	Slots *types.Value `json:"Slots,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

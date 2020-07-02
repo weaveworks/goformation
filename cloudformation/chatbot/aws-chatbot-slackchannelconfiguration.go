@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SlackChannelConfiguration AWS CloudFormation Resource (AWS::Chatbot::SlackChannelConfiguration)
@@ -15,32 +17,32 @@ type SlackChannelConfiguration struct {
 	// ConfigurationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-configurationname
-	ConfigurationName string `json:"ConfigurationName,omitempty"`
+	ConfigurationName *types.Value `json:"ConfigurationName,omitempty"`
 
 	// IamRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-iamrolearn
-	IamRoleArn string `json:"IamRoleArn,omitempty"`
+	IamRoleArn *types.Value `json:"IamRoleArn,omitempty"`
 
 	// LoggingLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-logginglevel
-	LoggingLevel string `json:"LoggingLevel,omitempty"`
+	LoggingLevel *types.Value `json:"LoggingLevel,omitempty"`
 
 	// SlackChannelId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackchannelid
-	SlackChannelId string `json:"SlackChannelId,omitempty"`
+	SlackChannelId *types.Value `json:"SlackChannelId,omitempty"`
 
 	// SlackWorkspaceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid
-	SlackWorkspaceId string `json:"SlackWorkspaceId,omitempty"`
+	SlackWorkspaceId *types.Value `json:"SlackWorkspaceId,omitempty"`
 
 	// SnsTopicArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns
-	SnsTopicArns []string `json:"SnsTopicArns,omitempty"`
+	SnsTopicArns *types.Value `json:"SnsTopicArns,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

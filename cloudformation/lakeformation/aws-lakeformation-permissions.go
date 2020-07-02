@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Permissions AWS CloudFormation Resource (AWS::LakeFormation::Permissions)
@@ -20,12 +22,12 @@ type Permissions struct {
 	// Permissions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html#cfn-lakeformation-permissions-permissions
-	Permissions []string `json:"Permissions,omitempty"`
+	Permissions *types.Value `json:"Permissions,omitempty"`
 
 	// PermissionsWithGrantOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html#cfn-lakeformation-permissions-permissionswithgrantoption
-	PermissionsWithGrantOption []string `json:"PermissionsWithGrantOption,omitempty"`
+	PermissionsWithGrantOption *types.Value `json:"PermissionsWithGrantOption,omitempty"`
 
 	// Resource AWS CloudFormation Property
 	// Required: true

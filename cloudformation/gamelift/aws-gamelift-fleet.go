@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Fleet AWS CloudFormation Resource (AWS::GameLift::Fleet)
@@ -15,7 +17,7 @@ type Fleet struct {
 	// BuildId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid
-	BuildId string `json:"BuildId,omitempty"`
+	BuildId *types.Value `json:"BuildId,omitempty"`
 
 	// CertificateConfiguration AWS CloudFormation Property
 	// Required: false
@@ -25,12 +27,12 @@ type Fleet struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// DesiredEC2Instances AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances
-	DesiredEC2Instances int `json:"DesiredEC2Instances,omitempty"`
+	DesiredEC2Instances *types.Value `json:"DesiredEC2Instances,omitempty"`
 
 	// EC2InboundPermissions AWS CloudFormation Property
 	// Required: false
@@ -40,57 +42,57 @@ type Fleet struct {
 	// EC2InstanceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype
-	EC2InstanceType string `json:"EC2InstanceType,omitempty"`
+	EC2InstanceType *types.Value `json:"EC2InstanceType,omitempty"`
 
 	// FleetType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype
-	FleetType string `json:"FleetType,omitempty"`
+	FleetType *types.Value `json:"FleetType,omitempty"`
 
 	// InstanceRoleARN AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn
-	InstanceRoleARN string `json:"InstanceRoleARN,omitempty"`
+	InstanceRoleARN *types.Value `json:"InstanceRoleARN,omitempty"`
 
 	// LogPaths AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-logpaths
-	LogPaths []string `json:"LogPaths,omitempty"`
+	LogPaths *types.Value `json:"LogPaths,omitempty"`
 
 	// MaxSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize
-	MaxSize int `json:"MaxSize,omitempty"`
+	MaxSize *types.Value `json:"MaxSize,omitempty"`
 
 	// MetricGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-metricgroups
-	MetricGroups []string `json:"MetricGroups,omitempty"`
+	MetricGroups *types.Value `json:"MetricGroups,omitempty"`
 
 	// MinSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize
-	MinSize int `json:"MinSize,omitempty"`
+	MinSize *types.Value `json:"MinSize,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// NewGameSessionProtectionPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-newgamesessionprotectionpolicy
-	NewGameSessionProtectionPolicy string `json:"NewGameSessionProtectionPolicy,omitempty"`
+	NewGameSessionProtectionPolicy *types.Value `json:"NewGameSessionProtectionPolicy,omitempty"`
 
 	// PeerVpcAwsAccountId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcawsaccountid
-	PeerVpcAwsAccountId string `json:"PeerVpcAwsAccountId,omitempty"`
+	PeerVpcAwsAccountId *types.Value `json:"PeerVpcAwsAccountId,omitempty"`
 
 	// PeerVpcId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid
-	PeerVpcId string `json:"PeerVpcId,omitempty"`
+	PeerVpcId *types.Value `json:"PeerVpcId,omitempty"`
 
 	// ResourceCreationLimitPolicy AWS CloudFormation Property
 	// Required: false
@@ -105,17 +107,17 @@ type Fleet struct {
 	// ScriptId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid
-	ScriptId string `json:"ScriptId,omitempty"`
+	ScriptId *types.Value `json:"ScriptId,omitempty"`
 
 	// ServerLaunchParameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-serverlaunchparameters
-	ServerLaunchParameters string `json:"ServerLaunchParameters,omitempty"`
+	ServerLaunchParameters *types.Value `json:"ServerLaunchParameters,omitempty"`
 
 	// ServerLaunchPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-serverlaunchpath
-	ServerLaunchPath string `json:"ServerLaunchPath,omitempty"`
+	ServerLaunchPath *types.Value `json:"ServerLaunchPath,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

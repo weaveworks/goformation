@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Resolver AWS CloudFormation Resource (AWS::AppSync::Resolver)
@@ -15,7 +17,7 @@ type Resolver struct {
 	// ApiId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-apiid
-	ApiId string `json:"ApiId,omitempty"`
+	ApiId *types.Value `json:"ApiId,omitempty"`
 
 	// CachingConfig AWS CloudFormation Property
 	// Required: false
@@ -25,17 +27,17 @@ type Resolver struct {
 	// DataSourceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-datasourcename
-	DataSourceName string `json:"DataSourceName,omitempty"`
+	DataSourceName *types.Value `json:"DataSourceName,omitempty"`
 
 	// FieldName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-fieldname
-	FieldName string `json:"FieldName,omitempty"`
+	FieldName *types.Value `json:"FieldName,omitempty"`
 
 	// Kind AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-kind
-	Kind string `json:"Kind,omitempty"`
+	Kind *types.Value `json:"Kind,omitempty"`
 
 	// PipelineConfig AWS CloudFormation Property
 	// Required: false
@@ -45,22 +47,22 @@ type Resolver struct {
 	// RequestMappingTemplate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplate
-	RequestMappingTemplate string `json:"RequestMappingTemplate,omitempty"`
+	RequestMappingTemplate *types.Value `json:"RequestMappingTemplate,omitempty"`
 
 	// RequestMappingTemplateS3Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplates3location
-	RequestMappingTemplateS3Location string `json:"RequestMappingTemplateS3Location,omitempty"`
+	RequestMappingTemplateS3Location *types.Value `json:"RequestMappingTemplateS3Location,omitempty"`
 
 	// ResponseMappingTemplate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplate
-	ResponseMappingTemplate string `json:"ResponseMappingTemplate,omitempty"`
+	ResponseMappingTemplate *types.Value `json:"ResponseMappingTemplate,omitempty"`
 
 	// ResponseMappingTemplateS3Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplates3location
-	ResponseMappingTemplateS3Location string `json:"ResponseMappingTemplateS3Location,omitempty"`
+	ResponseMappingTemplateS3Location *types.Value `json:"ResponseMappingTemplateS3Location,omitempty"`
 
 	// SyncConfig AWS CloudFormation Property
 	// Required: false
@@ -70,7 +72,7 @@ type Resolver struct {
 	// TypeName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-typename
-	TypeName string `json:"TypeName,omitempty"`
+	TypeName *types.Value `json:"TypeName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

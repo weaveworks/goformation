@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Node AWS CloudFormation Resource (AWS::ManagedBlockchain::Node)
@@ -15,12 +17,12 @@ type Node struct {
 	// MemberId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-memberid
-	MemberId string `json:"MemberId,omitempty"`
+	MemberId *types.Value `json:"MemberId,omitempty"`
 
 	// NetworkId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid
-	NetworkId string `json:"NetworkId,omitempty"`
+	NetworkId *types.Value `json:"NetworkId,omitempty"`
 
 	// NodeConfiguration AWS CloudFormation Property
 	// Required: true

@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Topic AWS CloudFormation Resource (AWS::SNS::Topic)
@@ -16,22 +18,22 @@ type Topic struct {
 	// ContentBasedDeduplication AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-contentbaseddeduplication
-	ContentBasedDeduplication bool `json:"ContentBasedDeduplication,omitempty"`
+	ContentBasedDeduplication *types.Value `json:"ContentBasedDeduplication,omitempty"`
 
 	// DisplayName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-displayname
-	DisplayName string `json:"DisplayName,omitempty"`
+	DisplayName *types.Value `json:"DisplayName,omitempty"`
 
 	// FifoTopic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-fifotopic
-	FifoTopic bool `json:"FifoTopic,omitempty"`
+	FifoTopic *types.Value `json:"FifoTopic,omitempty"`
 
 	// KmsMasterKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-kmsmasterkeyid
-	KmsMasterKeyId string `json:"KmsMasterKeyId,omitempty"`
+	KmsMasterKeyId *types.Value `json:"KmsMasterKeyId,omitempty"`
 
 	// Subscription AWS CloudFormation Property
 	// Required: false
@@ -41,12 +43,12 @@ type Topic struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// TopicName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-topicname
-	TopicName string `json:"TopicName,omitempty"`
+	TopicName *types.Value `json:"TopicName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine AWS CloudFormation Resource (AWS::StepFunctions::StateMachine)
@@ -20,7 +22,7 @@ type StateMachine struct {
 	// DefinitionString AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionstring
-	DefinitionString string `json:"DefinitionString,omitempty"`
+	DefinitionString *types.Value `json:"DefinitionString,omitempty"`
 
 	// DefinitionSubstitutions AWS CloudFormation Property
 	// Required: false
@@ -35,17 +37,17 @@ type StateMachine struct {
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// StateMachineName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinename
-	StateMachineName string `json:"StateMachineName,omitempty"`
+	StateMachineName *types.Value `json:"StateMachineName,omitempty"`
 
 	// StateMachineType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinetype
-	StateMachineType string `json:"StateMachineType,omitempty"`
+	StateMachineType *types.Value `json:"StateMachineType,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

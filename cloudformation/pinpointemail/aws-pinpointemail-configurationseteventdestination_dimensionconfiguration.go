@@ -1,7 +1,9 @@
 package pinpointemail
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationSetEventDestination_DimensionConfiguration AWS CloudFormation Resource (AWS::PinpointEmail::ConfigurationSetEventDestination.DimensionConfiguration)
@@ -11,17 +13,17 @@ type ConfigurationSetEventDestination_DimensionConfiguration struct {
 	// DefaultDimensionValue AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-dimensionconfiguration.html#cfn-pinpointemail-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue
-	DefaultDimensionValue string `json:"DefaultDimensionValue,omitempty"`
+	DefaultDimensionValue *types.Value `json:"DefaultDimensionValue,omitempty"`
 
 	// DimensionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-dimensionconfiguration.html#cfn-pinpointemail-configurationseteventdestination-dimensionconfiguration-dimensionname
-	DimensionName string `json:"DimensionName,omitempty"`
+	DimensionName *types.Value `json:"DimensionName,omitempty"`
 
 	// DimensionValueSource AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-dimensionconfiguration.html#cfn-pinpointemail-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource
-	DimensionValueSource string `json:"DimensionValueSource,omitempty"`
+	DimensionValueSource *types.Value `json:"DimensionValueSource,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

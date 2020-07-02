@@ -1,7 +1,9 @@
 package greengrass
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResourceDefinitionVersion_LocalVolumeResourceData AWS CloudFormation Resource (AWS::Greengrass::ResourceDefinitionVersion.LocalVolumeResourceData)
@@ -11,7 +13,7 @@ type ResourceDefinitionVersion_LocalVolumeResourceData struct {
 	// DestinationPath AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata.html#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath
-	DestinationPath string `json:"DestinationPath,omitempty"`
+	DestinationPath *types.Value `json:"DestinationPath,omitempty"`
 
 	// GroupOwnerSetting AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type ResourceDefinitionVersion_LocalVolumeResourceData struct {
 	// SourcePath AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata.html#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath
-	SourcePath string `json:"SourcePath,omitempty"`
+	SourcePath *types.Value `json:"SourcePath,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

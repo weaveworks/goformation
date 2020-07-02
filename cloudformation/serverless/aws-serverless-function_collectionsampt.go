@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_CollectionSAMPT AWS CloudFormation Resource (AWS::Serverless::Function.CollectionSAMPT)
@@ -11,7 +13,7 @@ type Function_CollectionSAMPT struct {
 	// CollectionId AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst
-	CollectionId string `json:"CollectionId,omitempty"`
+	CollectionId *types.Value `json:"CollectionId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

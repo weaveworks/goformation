@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster AWS CloudFormation Resource (AWS::MSK::Cluster)
@@ -25,7 +27,7 @@ type Cluster struct {
 	// ClusterName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clustername
-	ClusterName string `json:"ClusterName,omitempty"`
+	ClusterName *types.Value `json:"ClusterName,omitempty"`
 
 	// ConfigurationInfo AWS CloudFormation Property
 	// Required: false
@@ -40,12 +42,12 @@ type Cluster struct {
 	// EnhancedMonitoring AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-enhancedmonitoring
-	EnhancedMonitoring string `json:"EnhancedMonitoring,omitempty"`
+	EnhancedMonitoring *types.Value `json:"EnhancedMonitoring,omitempty"`
 
 	// KafkaVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-kafkaversion
-	KafkaVersion string `json:"KafkaVersion,omitempty"`
+	KafkaVersion *types.Value `json:"KafkaVersion,omitempty"`
 
 	// LoggingInfo AWS CloudFormation Property
 	// Required: false
@@ -55,7 +57,7 @@ type Cluster struct {
 	// NumberOfBrokerNodes AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-numberofbrokernodes
-	NumberOfBrokerNodes int `json:"NumberOfBrokerNodes"`
+	NumberOfBrokerNodes *types.Value `json:"NumberOfBrokerNodes"`
 
 	// OpenMonitoring AWS CloudFormation Property
 	// Required: false

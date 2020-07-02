@@ -1,7 +1,9 @@
 package waf
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SizeConstraintSet_SizeConstraint AWS CloudFormation Resource (AWS::WAF::SizeConstraintSet.SizeConstraint)
@@ -11,7 +13,7 @@ type SizeConstraintSet_SizeConstraint struct {
 	// ComparisonOperator AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-comparisonoperator
-	ComparisonOperator string `json:"ComparisonOperator,omitempty"`
+	ComparisonOperator *types.Value `json:"ComparisonOperator,omitempty"`
 
 	// FieldToMatch AWS CloudFormation Property
 	// Required: true
@@ -21,12 +23,12 @@ type SizeConstraintSet_SizeConstraint struct {
 	// Size AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-size
-	Size int `json:"Size"`
+	Size *types.Value `json:"Size"`
 
 	// TextTransformation AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-texttransformation
-	TextTransformation string `json:"TextTransformation,omitempty"`
+	TextTransformation *types.Value `json:"TextTransformation,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

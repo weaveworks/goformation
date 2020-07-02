@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EndpointGroup AWS CloudFormation Resource (AWS::GlobalAccelerator::EndpointGroup)
@@ -20,42 +22,42 @@ type EndpointGroup struct {
 	// EndpointGroupRegion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-endpointgroupregion
-	EndpointGroupRegion string `json:"EndpointGroupRegion,omitempty"`
+	EndpointGroupRegion *types.Value `json:"EndpointGroupRegion,omitempty"`
 
 	// HealthCheckIntervalSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds
-	HealthCheckIntervalSeconds int `json:"HealthCheckIntervalSeconds,omitempty"`
+	HealthCheckIntervalSeconds *types.Value `json:"HealthCheckIntervalSeconds,omitempty"`
 
 	// HealthCheckPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckpath
-	HealthCheckPath string `json:"HealthCheckPath,omitempty"`
+	HealthCheckPath *types.Value `json:"HealthCheckPath,omitempty"`
 
 	// HealthCheckPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckport
-	HealthCheckPort int `json:"HealthCheckPort,omitempty"`
+	HealthCheckPort *types.Value `json:"HealthCheckPort,omitempty"`
 
 	// HealthCheckProtocol AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckprotocol
-	HealthCheckProtocol string `json:"HealthCheckProtocol,omitempty"`
+	HealthCheckProtocol *types.Value `json:"HealthCheckProtocol,omitempty"`
 
 	// ListenerArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-listenerarn
-	ListenerArn string `json:"ListenerArn,omitempty"`
+	ListenerArn *types.Value `json:"ListenerArn,omitempty"`
 
 	// ThresholdCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-thresholdcount
-	ThresholdCount int `json:"ThresholdCount,omitempty"`
+	ThresholdCount *types.Value `json:"ThresholdCount,omitempty"`
 
 	// TrafficDialPercentage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-trafficdialpercentage
-	TrafficDialPercentage float64 `json:"TrafficDialPercentage,omitempty"`
+	TrafficDialPercentage *types.Value `json:"TrafficDialPercentage,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

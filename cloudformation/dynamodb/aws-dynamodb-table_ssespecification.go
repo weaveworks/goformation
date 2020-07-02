@@ -1,7 +1,9 @@
 package dynamodb
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_SSESpecification AWS CloudFormation Resource (AWS::DynamoDB::Table.SSESpecification)
@@ -11,17 +13,17 @@ type Table_SSESpecification struct {
 	// KMSMasterKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-kmsmasterkeyid
-	KMSMasterKeyId string `json:"KMSMasterKeyId,omitempty"`
+	KMSMasterKeyId *types.Value `json:"KMSMasterKeyId,omitempty"`
 
 	// SSEEnabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled
-	SSEEnabled bool `json:"SSEEnabled"`
+	SSEEnabled *types.Value `json:"SSEEnabled"`
 
 	// SSEType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-ssetype
-	SSEType string `json:"SSEType,omitempty"`
+	SSEType *types.Value `json:"SSEType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

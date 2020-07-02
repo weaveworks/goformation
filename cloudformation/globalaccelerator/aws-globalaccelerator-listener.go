@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Listener AWS CloudFormation Resource (AWS::GlobalAccelerator::Listener)
@@ -15,12 +17,12 @@ type Listener struct {
 	// AcceleratorArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-acceleratorarn
-	AcceleratorArn string `json:"AcceleratorArn,omitempty"`
+	AcceleratorArn *types.Value `json:"AcceleratorArn,omitempty"`
 
 	// ClientAffinity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-clientaffinity
-	ClientAffinity string `json:"ClientAffinity,omitempty"`
+	ClientAffinity *types.Value `json:"ClientAffinity,omitempty"`
 
 	// PortRanges AWS CloudFormation Property
 	// Required: true
@@ -30,7 +32,7 @@ type Listener struct {
 	// Protocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-protocol
-	Protocol string `json:"Protocol,omitempty"`
+	Protocol *types.Value `json:"Protocol,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

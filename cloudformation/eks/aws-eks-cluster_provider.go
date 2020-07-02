@@ -1,7 +1,9 @@
 package eks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_Provider AWS CloudFormation Resource (AWS::EKS::Cluster.Provider)
@@ -11,7 +13,7 @@ type Cluster_Provider struct {
 	// KeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html#cfn-eks-cluster-provider-keyarn
-	KeyArn string `json:"KeyArn,omitempty"`
+	KeyArn *types.Value `json:"KeyArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

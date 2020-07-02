@@ -1,7 +1,9 @@
 package backup
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupPlan_CopyActionResourceType AWS CloudFormation Resource (AWS::Backup::BackupPlan.CopyActionResourceType)
@@ -11,7 +13,7 @@ type BackupPlan_CopyActionResourceType struct {
 	// DestinationBackupVaultArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn
-	DestinationBackupVaultArn string `json:"DestinationBackupVaultArn,omitempty"`
+	DestinationBackupVaultArn *types.Value `json:"DestinationBackupVaultArn,omitempty"`
 
 	// Lifecycle AWS CloudFormation Property
 	// Required: false

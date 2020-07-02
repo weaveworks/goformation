@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_IotSiteWise AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.IotSiteWise)
@@ -11,22 +13,22 @@ type DetectorModel_IotSiteWise struct {
 	// AssetId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-assetid
-	AssetId string `json:"AssetId,omitempty"`
+	AssetId *types.Value `json:"AssetId,omitempty"`
 
 	// EntryId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-entryid
-	EntryId string `json:"EntryId,omitempty"`
+	EntryId *types.Value `json:"EntryId,omitempty"`
 
 	// PropertyAlias AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyalias
-	PropertyAlias string `json:"PropertyAlias,omitempty"`
+	PropertyAlias *types.Value `json:"PropertyAlias,omitempty"`
 
 	// PropertyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyid
-	PropertyId string `json:"PropertyId,omitempty"`
+	PropertyId *types.Value `json:"PropertyId,omitempty"`
 
 	// PropertyValue AWS CloudFormation Property
 	// Required: false

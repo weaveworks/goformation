@@ -1,7 +1,9 @@
 package autoscaling
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AutoScalingGroup_InstancesDistribution AWS CloudFormation Resource (AWS::AutoScaling::AutoScalingGroup.InstancesDistribution)
@@ -11,32 +13,32 @@ type AutoScalingGroup_InstancesDistribution struct {
 	// OnDemandAllocationStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandallocationstrategy
-	OnDemandAllocationStrategy string `json:"OnDemandAllocationStrategy,omitempty"`
+	OnDemandAllocationStrategy *types.Value `json:"OnDemandAllocationStrategy,omitempty"`
 
 	// OnDemandBaseCapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandbasecapacity
-	OnDemandBaseCapacity int `json:"OnDemandBaseCapacity,omitempty"`
+	OnDemandBaseCapacity *types.Value `json:"OnDemandBaseCapacity,omitempty"`
 
 	// OnDemandPercentageAboveBaseCapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandpercentageabovebasecapacity
-	OnDemandPercentageAboveBaseCapacity int `json:"OnDemandPercentageAboveBaseCapacity,omitempty"`
+	OnDemandPercentageAboveBaseCapacity *types.Value `json:"OnDemandPercentageAboveBaseCapacity,omitempty"`
 
 	// SpotAllocationStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotallocationstrategy
-	SpotAllocationStrategy string `json:"SpotAllocationStrategy,omitempty"`
+	SpotAllocationStrategy *types.Value `json:"SpotAllocationStrategy,omitempty"`
 
 	// SpotInstancePools AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotinstancepools
-	SpotInstancePools int `json:"SpotInstancePools,omitempty"`
+	SpotInstancePools *types.Value `json:"SpotInstancePools,omitempty"`
 
 	// SpotMaxPrice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice
-	SpotMaxPrice string `json:"SpotMaxPrice,omitempty"`
+	SpotMaxPrice *types.Value `json:"SpotMaxPrice,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package budgets
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Budget_CostTypes AWS CloudFormation Resource (AWS::Budgets::Budget.CostTypes)
@@ -11,57 +13,57 @@ type Budget_CostTypes struct {
 	// IncludeCredit AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includecredit
-	IncludeCredit bool `json:"IncludeCredit,omitempty"`
+	IncludeCredit *types.Value `json:"IncludeCredit,omitempty"`
 
 	// IncludeDiscount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includediscount
-	IncludeDiscount bool `json:"IncludeDiscount,omitempty"`
+	IncludeDiscount *types.Value `json:"IncludeDiscount,omitempty"`
 
 	// IncludeOtherSubscription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includeothersubscription
-	IncludeOtherSubscription bool `json:"IncludeOtherSubscription,omitempty"`
+	IncludeOtherSubscription *types.Value `json:"IncludeOtherSubscription,omitempty"`
 
 	// IncludeRecurring AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includerecurring
-	IncludeRecurring bool `json:"IncludeRecurring,omitempty"`
+	IncludeRecurring *types.Value `json:"IncludeRecurring,omitempty"`
 
 	// IncludeRefund AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includerefund
-	IncludeRefund bool `json:"IncludeRefund,omitempty"`
+	IncludeRefund *types.Value `json:"IncludeRefund,omitempty"`
 
 	// IncludeSubscription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includesubscription
-	IncludeSubscription bool `json:"IncludeSubscription,omitempty"`
+	IncludeSubscription *types.Value `json:"IncludeSubscription,omitempty"`
 
 	// IncludeSupport AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includesupport
-	IncludeSupport bool `json:"IncludeSupport,omitempty"`
+	IncludeSupport *types.Value `json:"IncludeSupport,omitempty"`
 
 	// IncludeTax AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includetax
-	IncludeTax bool `json:"IncludeTax,omitempty"`
+	IncludeTax *types.Value `json:"IncludeTax,omitempty"`
 
 	// IncludeUpfront AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-includeupfront
-	IncludeUpfront bool `json:"IncludeUpfront,omitempty"`
+	IncludeUpfront *types.Value `json:"IncludeUpfront,omitempty"`
 
 	// UseAmortized AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-useamortized
-	UseAmortized bool `json:"UseAmortized,omitempty"`
+	UseAmortized *types.Value `json:"UseAmortized,omitempty"`
 
 	// UseBlended AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html#cfn-budgets-budget-costtypes-useblended
-	UseBlended bool `json:"UseBlended,omitempty"`
+	UseBlended *types.Value `json:"UseBlended,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

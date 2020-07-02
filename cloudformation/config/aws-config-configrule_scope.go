@@ -1,7 +1,9 @@
 package config
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigRule_Scope AWS CloudFormation Resource (AWS::Config::ConfigRule.Scope)
@@ -11,22 +13,22 @@ type ConfigRule_Scope struct {
 	// ComplianceResourceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-scope.html#cfn-config-configrule-scope-complianceresourceid
-	ComplianceResourceId string `json:"ComplianceResourceId,omitempty"`
+	ComplianceResourceId *types.Value `json:"ComplianceResourceId,omitempty"`
 
 	// ComplianceResourceTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-scope.html#cfn-config-configrule-scope-complianceresourcetypes
-	ComplianceResourceTypes []string `json:"ComplianceResourceTypes,omitempty"`
+	ComplianceResourceTypes *types.Value `json:"ComplianceResourceTypes,omitempty"`
 
 	// TagKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-scope.html#cfn-config-configrule-scope-tagkey
-	TagKey string `json:"TagKey,omitempty"`
+	TagKey *types.Value `json:"TagKey,omitempty"`
 
 	// TagValue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-scope.html#cfn-config-configrule-scope-tagvalue
-	TagValue string `json:"TagValue,omitempty"`
+	TagValue *types.Value `json:"TagValue,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

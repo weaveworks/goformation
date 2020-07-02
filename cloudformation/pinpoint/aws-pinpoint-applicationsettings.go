@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ApplicationSettings AWS CloudFormation Resource (AWS::Pinpoint::ApplicationSettings)
@@ -15,7 +17,7 @@ type ApplicationSettings struct {
 	// ApplicationId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-applicationid
-	ApplicationId string `json:"ApplicationId,omitempty"`
+	ApplicationId *types.Value `json:"ApplicationId,omitempty"`
 
 	// CampaignHook AWS CloudFormation Property
 	// Required: false
@@ -25,7 +27,7 @@ type ApplicationSettings struct {
 	// CloudWatchMetricsEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled
-	CloudWatchMetricsEnabled bool `json:"CloudWatchMetricsEnabled,omitempty"`
+	CloudWatchMetricsEnabled *types.Value `json:"CloudWatchMetricsEnabled,omitempty"`
 
 	// Limits AWS CloudFormation Property
 	// Required: false

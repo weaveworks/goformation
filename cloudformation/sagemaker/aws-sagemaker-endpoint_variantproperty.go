@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Endpoint_VariantProperty AWS CloudFormation Resource (AWS::SageMaker::Endpoint.VariantProperty)
@@ -11,7 +13,7 @@ type Endpoint_VariantProperty struct {
 	// VariantPropertyType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html#cfn-sagemaker-endpoint-variantproperty-variantpropertytype
-	VariantPropertyType string `json:"VariantPropertyType,omitempty"`
+	VariantPropertyType *types.Value `json:"VariantPropertyType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

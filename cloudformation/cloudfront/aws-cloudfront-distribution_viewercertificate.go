@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Distribution_ViewerCertificate AWS CloudFormation Resource (AWS::CloudFront::Distribution.ViewerCertificate)
@@ -11,27 +13,27 @@ type Distribution_ViewerCertificate struct {
 	// AcmCertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-acmcertificatearn
-	AcmCertificateArn string `json:"AcmCertificateArn,omitempty"`
+	AcmCertificateArn *types.Value `json:"AcmCertificateArn,omitempty"`
 
 	// CloudFrontDefaultCertificate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-cloudfrontdefaultcertificate
-	CloudFrontDefaultCertificate bool `json:"CloudFrontDefaultCertificate,omitempty"`
+	CloudFrontDefaultCertificate *types.Value `json:"CloudFrontDefaultCertificate,omitempty"`
 
 	// IamCertificateId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-iamcertificateid
-	IamCertificateId string `json:"IamCertificateId,omitempty"`
+	IamCertificateId *types.Value `json:"IamCertificateId,omitempty"`
 
 	// MinimumProtocolVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-minimumprotocolversion
-	MinimumProtocolVersion string `json:"MinimumProtocolVersion,omitempty"`
+	MinimumProtocolVersion *types.Value `json:"MinimumProtocolVersion,omitempty"`
 
 	// SslSupportMethod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod
-	SslSupportMethod string `json:"SslSupportMethod,omitempty"`
+	SslSupportMethod *types.Value `json:"SslSupportMethod,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

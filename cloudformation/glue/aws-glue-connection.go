@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Connection AWS CloudFormation Resource (AWS::Glue::Connection)
@@ -15,7 +17,7 @@ type Connection struct {
 	// CatalogId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html#cfn-glue-connection-catalogid
-	CatalogId string `json:"CatalogId,omitempty"`
+	CatalogId *types.Value `json:"CatalogId,omitempty"`
 
 	// ConnectionInput AWS CloudFormation Property
 	// Required: true

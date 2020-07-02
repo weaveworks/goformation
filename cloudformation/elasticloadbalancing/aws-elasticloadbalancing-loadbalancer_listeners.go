@@ -1,7 +1,9 @@
 package elasticloadbalancing
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LoadBalancer_Listeners AWS CloudFormation Resource (AWS::ElasticLoadBalancing::LoadBalancer.Listeners)
@@ -11,32 +13,32 @@ type LoadBalancer_Listeners struct {
 	// InstancePort AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceport
-	InstancePort string `json:"InstancePort,omitempty"`
+	InstancePort *types.Value `json:"InstancePort,omitempty"`
 
 	// InstanceProtocol AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol
-	InstanceProtocol string `json:"InstanceProtocol,omitempty"`
+	InstanceProtocol *types.Value `json:"InstanceProtocol,omitempty"`
 
 	// LoadBalancerPort AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport
-	LoadBalancerPort string `json:"LoadBalancerPort,omitempty"`
+	LoadBalancerPort *types.Value `json:"LoadBalancerPort,omitempty"`
 
 	// PolicyNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames
-	PolicyNames []string `json:"PolicyNames,omitempty"`
+	PolicyNames *types.Value `json:"PolicyNames,omitempty"`
 
 	// Protocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol
-	Protocol string `json:"Protocol,omitempty"`
+	Protocol *types.Value `json:"Protocol,omitempty"`
 
 	// SSLCertificateId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid
-	SSLCertificateId string `json:"SSLCertificateId,omitempty"`
+	SSLCertificateId *types.Value `json:"SSLCertificateId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

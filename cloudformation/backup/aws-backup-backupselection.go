@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupSelection AWS CloudFormation Resource (AWS::Backup::BackupSelection)
@@ -15,7 +17,7 @@ type BackupSelection struct {
 	// BackupPlanId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html#cfn-backup-backupselection-backupplanid
-	BackupPlanId string `json:"BackupPlanId,omitempty"`
+	BackupPlanId *types.Value `json:"BackupPlanId,omitempty"`
 
 	// BackupSelection AWS CloudFormation Property
 	// Required: true

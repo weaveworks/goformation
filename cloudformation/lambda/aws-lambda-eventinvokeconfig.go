@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EventInvokeConfig AWS CloudFormation Resource (AWS::Lambda::EventInvokeConfig)
@@ -20,22 +22,22 @@ type EventInvokeConfig struct {
 	// FunctionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-functionname
-	FunctionName string `json:"FunctionName,omitempty"`
+	FunctionName *types.Value `json:"FunctionName,omitempty"`
 
 	// MaximumEventAgeInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-maximumeventageinseconds
-	MaximumEventAgeInSeconds int `json:"MaximumEventAgeInSeconds,omitempty"`
+	MaximumEventAgeInSeconds *types.Value `json:"MaximumEventAgeInSeconds,omitempty"`
 
 	// MaximumRetryAttempts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-maximumretryattempts
-	MaximumRetryAttempts int `json:"MaximumRetryAttempts,omitempty"`
+	MaximumRetryAttempts *types.Value `json:"MaximumRetryAttempts,omitempty"`
 
 	// Qualifier AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-qualifier
-	Qualifier string `json:"Qualifier,omitempty"`
+	Qualifier *types.Value `json:"Qualifier,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

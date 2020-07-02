@@ -1,7 +1,9 @@
 package gamelift
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GameSessionQueue_PlayerLatencyPolicy AWS CloudFormation Resource (AWS::GameLift::GameSessionQueue.PlayerLatencyPolicy)
@@ -11,12 +13,12 @@ type GameSessionQueue_PlayerLatencyPolicy struct {
 	// MaximumIndividualPlayerLatencyMilliseconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds
-	MaximumIndividualPlayerLatencyMilliseconds int `json:"MaximumIndividualPlayerLatencyMilliseconds,omitempty"`
+	MaximumIndividualPlayerLatencyMilliseconds *types.Value `json:"MaximumIndividualPlayerLatencyMilliseconds,omitempty"`
 
 	// PolicyDurationSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds
-	PolicyDurationSeconds int `json:"PolicyDurationSeconds,omitempty"`
+	PolicyDurationSeconds *types.Value `json:"PolicyDurationSeconds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

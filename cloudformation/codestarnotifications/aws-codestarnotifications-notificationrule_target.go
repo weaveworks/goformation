@@ -1,7 +1,9 @@
 package codestarnotifications
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // NotificationRule_Target AWS CloudFormation Resource (AWS::CodeStarNotifications::NotificationRule.Target)
@@ -11,12 +13,12 @@ type NotificationRule_Target struct {
 	// TargetAddress AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestarnotifications-notificationrule-target.html#cfn-codestarnotifications-notificationrule-target-targetaddress
-	TargetAddress string `json:"TargetAddress,omitempty"`
+	TargetAddress *types.Value `json:"TargetAddress,omitempty"`
 
 	// TargetType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestarnotifications-notificationrule-target.html#cfn-codestarnotifications-notificationrule-target-targettype
-	TargetType string `json:"TargetType,omitempty"`
+	TargetType *types.Value `json:"TargetType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

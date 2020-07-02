@@ -1,7 +1,9 @@
 package pinpointemail
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationSetEventDestination_EventDestination AWS CloudFormation Resource (AWS::PinpointEmail::ConfigurationSetEventDestination.EventDestination)
@@ -16,7 +18,7 @@ type ConfigurationSetEventDestination_EventDestination struct {
 	// Enabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-eventdestination.html#cfn-pinpointemail-configurationseteventdestination-eventdestination-enabled
-	Enabled bool `json:"Enabled,omitempty"`
+	Enabled *types.Value `json:"Enabled,omitempty"`
 
 	// KinesisFirehoseDestination AWS CloudFormation Property
 	// Required: false
@@ -26,7 +28,7 @@ type ConfigurationSetEventDestination_EventDestination struct {
 	// MatchingEventTypes AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-eventdestination.html#cfn-pinpointemail-configurationseteventdestination-eventdestination-matchingeventtypes
-	MatchingEventTypes []string `json:"MatchingEventTypes,omitempty"`
+	MatchingEventTypes *types.Value `json:"MatchingEventTypes,omitempty"`
 
 	// PinpointDestination AWS CloudFormation Property
 	// Required: false

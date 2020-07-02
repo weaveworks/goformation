@@ -4,12 +4,13 @@ import (
 	"encoding/json"
 	"sort"
 
-	"github.com/awslabs/goformation/v4/cloudformation/utils"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+	"github.com/weaveworks/goformation/v4/cloudformation/utils"
 )
 
 // Api_DefinitionUri is a helper struct that can hold either a String or S3Location value
 type Api_DefinitionUri struct {
-	String *string
+	String **types.Value
 
 	S3Location *Api_S3Location
 }
@@ -49,7 +50,11 @@ func (r *Api_DefinitionUri) UnmarshalJSON(b []byte) error {
 	switch val := typecheck.(type) {
 
 	case string:
-		r.String = &val
+		v, err := types.NewValueFromPrimitive(val)
+		if err != nil {
+			return err
+		}
+		r.String = &v
 
 	case map[string]interface{}:
 		val = val // This ensures val is used to stop an error

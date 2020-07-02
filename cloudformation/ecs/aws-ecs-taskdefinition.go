@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TaskDefinition AWS CloudFormation Resource (AWS::ECS::TaskDefinition)
@@ -21,17 +23,17 @@ type TaskDefinition struct {
 	// Cpu AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-cpu
-	Cpu string `json:"Cpu,omitempty"`
+	Cpu *types.Value `json:"Cpu,omitempty"`
 
 	// ExecutionRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn
-	ExecutionRoleArn string `json:"ExecutionRoleArn,omitempty"`
+	ExecutionRoleArn *types.Value `json:"ExecutionRoleArn,omitempty"`
 
 	// Family AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-family
-	Family string `json:"Family,omitempty"`
+	Family *types.Value `json:"Family,omitempty"`
 
 	// InferenceAccelerators AWS CloudFormation Property
 	// Required: false
@@ -41,22 +43,22 @@ type TaskDefinition struct {
 	// IpcMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-ipcmode
-	IpcMode string `json:"IpcMode,omitempty"`
+	IpcMode *types.Value `json:"IpcMode,omitempty"`
 
 	// Memory AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-memory
-	Memory string `json:"Memory,omitempty"`
+	Memory *types.Value `json:"Memory,omitempty"`
 
 	// NetworkMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode
-	NetworkMode string `json:"NetworkMode,omitempty"`
+	NetworkMode *types.Value `json:"NetworkMode,omitempty"`
 
 	// PidMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-pidmode
-	PidMode string `json:"PidMode,omitempty"`
+	PidMode *types.Value `json:"PidMode,omitempty"`
 
 	// PlacementConstraints AWS CloudFormation Property
 	// Required: false
@@ -71,17 +73,17 @@ type TaskDefinition struct {
 	// RequiresCompatibilities AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-requirescompatibilities
-	RequiresCompatibilities []string `json:"RequiresCompatibilities,omitempty"`
+	RequiresCompatibilities *types.Value `json:"RequiresCompatibilities,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// TaskRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn
-	TaskRoleArn string `json:"TaskRoleArn,omitempty"`
+	TaskRoleArn *types.Value `json:"TaskRoleArn,omitempty"`
 
 	// Volumes AWS CloudFormation Property
 	// Required: false

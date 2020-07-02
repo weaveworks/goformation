@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Route AWS CloudFormation Resource (AWS::EC2::Route)
@@ -15,52 +17,52 @@ type Route struct {
 	// DestinationCidrBlock AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationcidrblock
-	DestinationCidrBlock string `json:"DestinationCidrBlock,omitempty"`
+	DestinationCidrBlock *types.Value `json:"DestinationCidrBlock,omitempty"`
 
 	// DestinationIpv6CidrBlock AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationipv6cidrblock
-	DestinationIpv6CidrBlock string `json:"DestinationIpv6CidrBlock,omitempty"`
+	DestinationIpv6CidrBlock *types.Value `json:"DestinationIpv6CidrBlock,omitempty"`
 
 	// EgressOnlyInternetGatewayId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-egressonlyinternetgatewayid
-	EgressOnlyInternetGatewayId string `json:"EgressOnlyInternetGatewayId,omitempty"`
+	EgressOnlyInternetGatewayId *types.Value `json:"EgressOnlyInternetGatewayId,omitempty"`
 
 	// GatewayId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-gatewayid
-	GatewayId string `json:"GatewayId,omitempty"`
+	GatewayId *types.Value `json:"GatewayId,omitempty"`
 
 	// InstanceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-instanceid
-	InstanceId string `json:"InstanceId,omitempty"`
+	InstanceId *types.Value `json:"InstanceId,omitempty"`
 
 	// NatGatewayId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-natgatewayid
-	NatGatewayId string `json:"NatGatewayId,omitempty"`
+	NatGatewayId *types.Value `json:"NatGatewayId,omitempty"`
 
 	// NetworkInterfaceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-networkinterfaceid
-	NetworkInterfaceId string `json:"NetworkInterfaceId,omitempty"`
+	NetworkInterfaceId *types.Value `json:"NetworkInterfaceId,omitempty"`
 
 	// RouteTableId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-routetableid
-	RouteTableId string `json:"RouteTableId,omitempty"`
+	RouteTableId *types.Value `json:"RouteTableId,omitempty"`
 
 	// TransitGatewayId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-transitgatewayid
-	TransitGatewayId string `json:"TransitGatewayId,omitempty"`
+	TransitGatewayId *types.Value `json:"TransitGatewayId,omitempty"`
 
 	// VpcPeeringConnectionId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-vpcpeeringconnectionid
-	VpcPeeringConnectionId string `json:"VpcPeeringConnectionId,omitempty"`
+	VpcPeeringConnectionId *types.Value `json:"VpcPeeringConnectionId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

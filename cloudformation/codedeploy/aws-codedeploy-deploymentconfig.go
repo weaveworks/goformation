@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeploymentConfig AWS CloudFormation Resource (AWS::CodeDeploy::DeploymentConfig)
@@ -15,7 +17,7 @@ type DeploymentConfig struct {
 	// DeploymentConfigName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-deploymentconfigname
-	DeploymentConfigName string `json:"DeploymentConfigName,omitempty"`
+	DeploymentConfigName *types.Value `json:"DeploymentConfigName,omitempty"`
 
 	// MinimumHealthyHosts AWS CloudFormation Property
 	// Required: false
