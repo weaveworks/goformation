@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_Column AWS CloudFormation Resource (AWS::Glue::Table.Column)
@@ -11,17 +13,17 @@ type Table_Column struct {
 	// Comment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-comment
-	Comment string `json:"Comment,omitempty"`
+	Comment *types.Value `json:"Comment,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Type AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package transfer
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // User_HomeDirectoryMapEntry AWS CloudFormation Resource (AWS::Transfer::User.HomeDirectoryMapEntry)
@@ -11,12 +13,12 @@ type User_HomeDirectoryMapEntry struct {
 	// Entry AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-entry
-	Entry string `json:"Entry,omitempty"`
+	Entry *types.Value `json:"Entry,omitempty"`
 
 	// Target AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-target
-	Target string `json:"Target,omitempty"`
+	Target *types.Value `json:"Target,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

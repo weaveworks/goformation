@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataCatalogEncryptionSettings_ConnectionPasswordEncryption AWS CloudFormation Resource (AWS::Glue::DataCatalogEncryptionSettings.ConnectionPasswordEncryption)
@@ -11,12 +13,12 @@ type DataCatalogEncryptionSettings_ConnectionPasswordEncryption struct {
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *types.Value `json:"KmsKeyId,omitempty"`
 
 	// ReturnConnectionPasswordEncrypted AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted
-	ReturnConnectionPasswordEncrypted bool `json:"ReturnConnectionPasswordEncrypted,omitempty"`
+	ReturnConnectionPasswordEncrypted *types.Value `json:"ReturnConnectionPasswordEncrypted,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

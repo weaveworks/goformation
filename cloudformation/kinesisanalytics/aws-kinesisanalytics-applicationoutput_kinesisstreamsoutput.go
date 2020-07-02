@@ -1,7 +1,9 @@
 package kinesisanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ApplicationOutput_KinesisStreamsOutput AWS CloudFormation Resource (AWS::KinesisAnalytics::ApplicationOutput.KinesisStreamsOutput)
@@ -11,12 +13,12 @@ type ApplicationOutput_KinesisStreamsOutput struct {
 	// ResourceARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn
-	ResourceARN string `json:"ResourceARN,omitempty"`
+	ResourceARN *types.Value `json:"ResourceARN,omitempty"`
 
 	// RoleARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn
-	RoleARN string `json:"RoleARN,omitempty"`
+	RoleARN *types.Value `json:"RoleARN,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

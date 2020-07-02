@@ -1,7 +1,9 @@
 package emr
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // InstanceGroupConfig_EbsConfiguration AWS CloudFormation Resource (AWS::EMR::InstanceGroupConfig.EbsConfiguration)
@@ -16,7 +18,7 @@ type InstanceGroupConfig_EbsConfiguration struct {
 	// EbsOptimized AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsoptimized
-	EbsOptimized bool `json:"EbsOptimized,omitempty"`
+	EbsOptimized *types.Value `json:"EbsOptimized,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

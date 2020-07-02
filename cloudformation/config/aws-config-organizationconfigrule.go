@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OrganizationConfigRule AWS CloudFormation Resource (AWS::Config::OrganizationConfigRule)
@@ -15,12 +17,12 @@ type OrganizationConfigRule struct {
 	// ExcludedAccounts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html#cfn-config-organizationconfigrule-excludedaccounts
-	ExcludedAccounts []string `json:"ExcludedAccounts,omitempty"`
+	ExcludedAccounts *types.Value `json:"ExcludedAccounts,omitempty"`
 
 	// OrganizationConfigRuleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html#cfn-config-organizationconfigrule-organizationconfigrulename
-	OrganizationConfigRuleName string `json:"OrganizationConfigRuleName,omitempty"`
+	OrganizationConfigRuleName *types.Value `json:"OrganizationConfigRuleName,omitempty"`
 
 	// OrganizationCustomRuleMetadata AWS CloudFormation Property
 	// Required: false

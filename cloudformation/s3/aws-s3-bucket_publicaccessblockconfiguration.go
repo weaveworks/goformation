@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_PublicAccessBlockConfiguration AWS CloudFormation Resource (AWS::S3::Bucket.PublicAccessBlockConfiguration)
@@ -11,22 +13,22 @@ type Bucket_PublicAccessBlockConfiguration struct {
 	// BlockPublicAcls AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicacls
-	BlockPublicAcls bool `json:"BlockPublicAcls,omitempty"`
+	BlockPublicAcls *types.Value `json:"BlockPublicAcls,omitempty"`
 
 	// BlockPublicPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicpolicy
-	BlockPublicPolicy bool `json:"BlockPublicPolicy,omitempty"`
+	BlockPublicPolicy *types.Value `json:"BlockPublicPolicy,omitempty"`
 
 	// IgnorePublicAcls AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-ignorepublicacls
-	IgnorePublicAcls bool `json:"IgnorePublicAcls,omitempty"`
+	IgnorePublicAcls *types.Value `json:"IgnorePublicAcls,omitempty"`
 
 	// RestrictPublicBuckets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets
-	RestrictPublicBuckets bool `json:"RestrictPublicBuckets,omitempty"`
+	RestrictPublicBuckets *types.Value `json:"RestrictPublicBuckets,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

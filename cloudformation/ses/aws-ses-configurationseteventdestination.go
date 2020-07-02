@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationSetEventDestination AWS CloudFormation Resource (AWS::SES::ConfigurationSetEventDestination)
@@ -15,7 +17,7 @@ type ConfigurationSetEventDestination struct {
 	// ConfigurationSetName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname
-	ConfigurationSetName string `json:"ConfigurationSetName,omitempty"`
+	ConfigurationSetName *types.Value `json:"ConfigurationSetName,omitempty"`
 
 	// EventDestination AWS CloudFormation Property
 	// Required: true

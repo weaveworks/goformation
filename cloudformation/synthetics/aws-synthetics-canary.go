@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Canary AWS CloudFormation Resource (AWS::Synthetics::Canary)
@@ -16,7 +18,7 @@ type Canary struct {
 	// ArtifactS3Location AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-artifacts3location
-	ArtifactS3Location string `json:"ArtifactS3Location,omitempty"`
+	ArtifactS3Location *types.Value `json:"ArtifactS3Location,omitempty"`
 
 	// Code AWS CloudFormation Property
 	// Required: true
@@ -26,27 +28,27 @@ type Canary struct {
 	// ExecutionRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-executionrolearn
-	ExecutionRoleArn string `json:"ExecutionRoleArn,omitempty"`
+	ExecutionRoleArn *types.Value `json:"ExecutionRoleArn,omitempty"`
 
 	// FailureRetentionPeriod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod
-	FailureRetentionPeriod int `json:"FailureRetentionPeriod,omitempty"`
+	FailureRetentionPeriod *types.Value `json:"FailureRetentionPeriod,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// RunConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-runconfig
 	RunConfig *Canary_RunConfig `json:"RunConfig,omitempty"`
 
 	// RuntimeVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-runtimeversion
-	RuntimeVersion string `json:"RuntimeVersion,omitempty"`
+	RuntimeVersion *types.Value `json:"RuntimeVersion,omitempty"`
 
 	// Schedule AWS CloudFormation Property
 	// Required: true
@@ -56,17 +58,17 @@ type Canary struct {
 	// StartCanaryAfterCreation AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-startcanaryaftercreation
-	StartCanaryAfterCreation bool `json:"StartCanaryAfterCreation"`
+	StartCanaryAfterCreation *types.Value `json:"StartCanaryAfterCreation"`
 
 	// SuccessRetentionPeriod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-successretentionperiod
-	SuccessRetentionPeriod int `json:"SuccessRetentionPeriod,omitempty"`
+	SuccessRetentionPeriod *types.Value `json:"SuccessRetentionPeriod,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VPCConfig AWS CloudFormation Property
 	// Required: false

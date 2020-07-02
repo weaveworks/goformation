@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Campaign AWS CloudFormation Resource (AWS::Pinpoint::Campaign)
@@ -20,7 +22,7 @@ type Campaign struct {
 	// ApplicationId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-applicationid
-	ApplicationId string `json:"ApplicationId,omitempty"`
+	ApplicationId *types.Value `json:"ApplicationId,omitempty"`
 
 	// CampaignHook AWS CloudFormation Property
 	// Required: false
@@ -30,17 +32,17 @@ type Campaign struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// HoldoutPercent AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-holdoutpercent
-	HoldoutPercent int `json:"HoldoutPercent,omitempty"`
+	HoldoutPercent *types.Value `json:"HoldoutPercent,omitempty"`
 
 	// IsPaused AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-ispaused
-	IsPaused bool `json:"IsPaused,omitempty"`
+	IsPaused *types.Value `json:"IsPaused,omitempty"`
 
 	// Limits AWS CloudFormation Property
 	// Required: false
@@ -55,7 +57,7 @@ type Campaign struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Schedule AWS CloudFormation Property
 	// Required: true
@@ -65,12 +67,12 @@ type Campaign struct {
 	// SegmentId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-segmentid
-	SegmentId string `json:"SegmentId,omitempty"`
+	SegmentId *types.Value `json:"SegmentId,omitempty"`
 
 	// SegmentVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-segmentversion
-	SegmentVersion int `json:"SegmentVersion,omitempty"`
+	SegmentVersion *types.Value `json:"SegmentVersion,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -80,12 +82,12 @@ type Campaign struct {
 	// TreatmentDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-treatmentdescription
-	TreatmentDescription string `json:"TreatmentDescription,omitempty"`
+	TreatmentDescription *types.Value `json:"TreatmentDescription,omitempty"`
 
 	// TreatmentName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-treatmentname
-	TreatmentName string `json:"TreatmentName,omitempty"`
+	TreatmentName *types.Value `json:"TreatmentName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

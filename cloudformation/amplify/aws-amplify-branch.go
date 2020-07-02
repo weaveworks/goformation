@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Branch AWS CloudFormation Resource (AWS::Amplify::Branch)
@@ -16,7 +18,7 @@ type Branch struct {
 	// AppId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-appid
-	AppId string `json:"AppId,omitempty"`
+	AppId *types.Value `json:"AppId,omitempty"`
 
 	// BasicAuthConfig AWS CloudFormation Property
 	// Required: false
@@ -26,27 +28,27 @@ type Branch struct {
 	// BranchName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-branchname
-	BranchName string `json:"BranchName,omitempty"`
+	BranchName *types.Value `json:"BranchName,omitempty"`
 
 	// BuildSpec AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-buildspec
-	BuildSpec string `json:"BuildSpec,omitempty"`
+	BuildSpec *types.Value `json:"BuildSpec,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// EnableAutoBuild AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enableautobuild
-	EnableAutoBuild bool `json:"EnableAutoBuild,omitempty"`
+	EnableAutoBuild *types.Value `json:"EnableAutoBuild,omitempty"`
 
 	// EnablePullRequestPreview AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enablepullrequestpreview
-	EnablePullRequestPreview bool `json:"EnablePullRequestPreview,omitempty"`
+	EnablePullRequestPreview *types.Value `json:"EnablePullRequestPreview,omitempty"`
 
 	// EnvironmentVariables AWS CloudFormation Property
 	// Required: false
@@ -56,17 +58,17 @@ type Branch struct {
 	// PullRequestEnvironmentName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-pullrequestenvironmentname
-	PullRequestEnvironmentName string `json:"PullRequestEnvironmentName,omitempty"`
+	PullRequestEnvironmentName *types.Value `json:"PullRequestEnvironmentName,omitempty"`
 
 	// Stage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-stage
-	Stage string `json:"Stage,omitempty"`
+	Stage *types.Value `json:"Stage,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StackUserAssociation AWS CloudFormation Resource (AWS::AppStream::StackUserAssociation)
@@ -15,22 +17,22 @@ type StackUserAssociation struct {
 	// AuthenticationType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-authenticationtype
-	AuthenticationType string `json:"AuthenticationType,omitempty"`
+	AuthenticationType *types.Value `json:"AuthenticationType,omitempty"`
 
 	// SendEmailNotification AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-sendemailnotification
-	SendEmailNotification bool `json:"SendEmailNotification,omitempty"`
+	SendEmailNotification *types.Value `json:"SendEmailNotification,omitempty"`
 
 	// StackName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-stackname
-	StackName string `json:"StackName,omitempty"`
+	StackName *types.Value `json:"StackName,omitempty"`
 
 	// UserName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-username
-	UserName string `json:"UserName,omitempty"`
+	UserName *types.Value `json:"UserName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

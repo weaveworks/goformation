@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Trigger_Action AWS CloudFormation Resource (AWS::Glue::Trigger.Action)
@@ -16,12 +18,12 @@ type Trigger_Action struct {
 	// CrawlerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-crawlername
-	CrawlerName string `json:"CrawlerName,omitempty"`
+	CrawlerName *types.Value `json:"CrawlerName,omitempty"`
 
 	// JobName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname
-	JobName string `json:"JobName,omitempty"`
+	JobName *types.Value `json:"JobName,omitempty"`
 
 	// NotificationProperty AWS CloudFormation Property
 	// Required: false
@@ -31,12 +33,12 @@ type Trigger_Action struct {
 	// SecurityConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-securityconfiguration
-	SecurityConfiguration string `json:"SecurityConfiguration,omitempty"`
+	SecurityConfiguration *types.Value `json:"SecurityConfiguration,omitempty"`
 
 	// Timeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-timeout
-	Timeout int `json:"Timeout,omitempty"`
+	Timeout *types.Value `json:"Timeout,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

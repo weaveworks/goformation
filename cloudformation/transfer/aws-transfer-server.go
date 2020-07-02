@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Server AWS CloudFormation Resource (AWS::Transfer::Server)
@@ -16,7 +18,7 @@ type Server struct {
 	// Certificate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-certificate
-	Certificate string `json:"Certificate,omitempty"`
+	Certificate *types.Value `json:"Certificate,omitempty"`
 
 	// EndpointDetails AWS CloudFormation Property
 	// Required: false
@@ -26,7 +28,7 @@ type Server struct {
 	// EndpointType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-endpointtype
-	EndpointType string `json:"EndpointType,omitempty"`
+	EndpointType *types.Value `json:"EndpointType,omitempty"`
 
 	// IdentityProviderDetails AWS CloudFormation Property
 	// Required: false
@@ -36,12 +38,12 @@ type Server struct {
 	// IdentityProviderType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityprovidertype
-	IdentityProviderType string `json:"IdentityProviderType,omitempty"`
+	IdentityProviderType *types.Value `json:"IdentityProviderType,omitempty"`
 
 	// LoggingRole AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-loggingrole
-	LoggingRole string `json:"LoggingRole,omitempty"`
+	LoggingRole *types.Value `json:"LoggingRole,omitempty"`
 
 	// Protocols AWS CloudFormation Property
 	// Required: false
@@ -51,7 +53,7 @@ type Server struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

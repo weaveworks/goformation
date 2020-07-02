@@ -1,7 +1,9 @@
 package appmesh
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // VirtualNode_ListenerTlsFileCertificate AWS CloudFormation Resource (AWS::AppMesh::VirtualNode.ListenerTlsFileCertificate)
@@ -11,12 +13,12 @@ type VirtualNode_ListenerTlsFileCertificate struct {
 	// CertificateChain AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsfilecertificate.html#cfn-appmesh-virtualnode-listenertlsfilecertificate-certificatechain
-	CertificateChain string `json:"CertificateChain,omitempty"`
+	CertificateChain *types.Value `json:"CertificateChain,omitempty"`
 
 	// PrivateKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsfilecertificate.html#cfn-appmesh-virtualnode-listenertlsfilecertificate-privatekey
-	PrivateKey string `json:"PrivateKey,omitempty"`
+	PrivateKey *types.Value `json:"PrivateKey,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

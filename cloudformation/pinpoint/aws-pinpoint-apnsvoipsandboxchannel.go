@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // APNSVoipSandboxChannel AWS CloudFormation Resource (AWS::Pinpoint::APNSVoipSandboxChannel)
@@ -15,47 +17,47 @@ type APNSVoipSandboxChannel struct {
 	// ApplicationId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-applicationid
-	ApplicationId string `json:"ApplicationId,omitempty"`
+	ApplicationId *types.Value `json:"ApplicationId,omitempty"`
 
 	// BundleId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-bundleid
-	BundleId string `json:"BundleId,omitempty"`
+	BundleId *types.Value `json:"BundleId,omitempty"`
 
 	// Certificate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-certificate
-	Certificate string `json:"Certificate,omitempty"`
+	Certificate *types.Value `json:"Certificate,omitempty"`
 
 	// DefaultAuthenticationMethod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-defaultauthenticationmethod
-	DefaultAuthenticationMethod string `json:"DefaultAuthenticationMethod,omitempty"`
+	DefaultAuthenticationMethod *types.Value `json:"DefaultAuthenticationMethod,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-enabled
-	Enabled bool `json:"Enabled,omitempty"`
+	Enabled *types.Value `json:"Enabled,omitempty"`
 
 	// PrivateKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-privatekey
-	PrivateKey string `json:"PrivateKey,omitempty"`
+	PrivateKey *types.Value `json:"PrivateKey,omitempty"`
 
 	// TeamId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-teamid
-	TeamId string `json:"TeamId,omitempty"`
+	TeamId *types.Value `json:"TeamId,omitempty"`
 
 	// TokenKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-tokenkey
-	TokenKey string `json:"TokenKey,omitempty"`
+	TokenKey *types.Value `json:"TokenKey,omitempty"`
 
 	// TokenKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-tokenkeyid
-	TokenKeyId string `json:"TokenKeyId,omitempty"`
+	TokenKeyId *types.Value `json:"TokenKeyId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

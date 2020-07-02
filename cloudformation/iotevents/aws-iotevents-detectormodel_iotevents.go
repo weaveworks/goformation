@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_IotEvents AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.IotEvents)
@@ -11,7 +13,7 @@ type DetectorModel_IotEvents struct {
 	// InputName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-inputname
-	InputName string `json:"InputName,omitempty"`
+	InputName *types.Value `json:"InputName,omitempty"`
 
 	// Payload AWS CloudFormation Property
 	// Required: false

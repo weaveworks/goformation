@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DomainName AWS CloudFormation Resource (AWS::ApiGateway::DomainName)
@@ -16,12 +18,12 @@ type DomainName struct {
 	// CertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn
-	CertificateArn string `json:"CertificateArn,omitempty"`
+	CertificateArn *types.Value `json:"CertificateArn,omitempty"`
 
 	// DomainName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *types.Value `json:"DomainName,omitempty"`
 
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
@@ -31,17 +33,17 @@ type DomainName struct {
 	// RegionalCertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn
-	RegionalCertificateArn string `json:"RegionalCertificateArn,omitempty"`
+	RegionalCertificateArn *types.Value `json:"RegionalCertificateArn,omitempty"`
 
 	// SecurityPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-securitypolicy
-	SecurityPolicy string `json:"SecurityPolicy,omitempty"`
+	SecurityPolicy *types.Value `json:"SecurityPolicy,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // InputSecurityGroup_InputWhitelistRuleCidr AWS CloudFormation Resource (AWS::MediaLive::InputSecurityGroup.InputWhitelistRuleCidr)
@@ -11,7 +13,7 @@ type InputSecurityGroup_InputWhitelistRuleCidr struct {
 	// Cidr AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.html#cfn-medialive-inputsecuritygroup-inputwhitelistrulecidr-cidr
-	Cidr string `json:"Cidr,omitempty"`
+	Cidr *types.Value `json:"Cidr,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

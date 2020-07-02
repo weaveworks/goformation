@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_State AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.State)
@@ -26,7 +28,7 @@ type DetectorModel_State struct {
 	// StateName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-statename
-	StateName string `json:"StateName,omitempty"`
+	StateName *types.Value `json:"StateName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

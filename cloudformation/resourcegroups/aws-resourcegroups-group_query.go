@@ -1,7 +1,9 @@
 package resourcegroups
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Group_Query AWS CloudFormation Resource (AWS::ResourceGroups::Group.Query)
@@ -11,12 +13,12 @@ type Group_Query struct {
 	// ResourceTypeFilters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-resourcetypefilters
-	ResourceTypeFilters []string `json:"ResourceTypeFilters,omitempty"`
+	ResourceTypeFilters *types.Value `json:"ResourceTypeFilters,omitempty"`
 
 	// StackIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-stackidentifier
-	StackIdentifier string `json:"StackIdentifier,omitempty"`
+	StackIdentifier *types.Value `json:"StackIdentifier,omitempty"`
 
 	// TagFilters AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package msk
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_JmxExporter AWS CloudFormation Resource (AWS::MSK::Cluster.JmxExporter)
@@ -11,7 +13,7 @@ type Cluster_JmxExporter struct {
 	// EnabledInBroker AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-jmxexporter.html#cfn-msk-cluster-jmxexporter-enabledinbroker
-	EnabledInBroker bool `json:"EnabledInBroker"`
+	EnabledInBroker *types.Value `json:"EnabledInBroker"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

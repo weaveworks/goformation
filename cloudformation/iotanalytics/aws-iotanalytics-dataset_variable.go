@@ -1,7 +1,9 @@
 package iotanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Dataset_Variable AWS CloudFormation Resource (AWS::IoTAnalytics::Dataset.Variable)
@@ -16,7 +18,7 @@ type Dataset_Variable struct {
 	// DoubleValue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-variable.html#cfn-iotanalytics-dataset-variable-doublevalue
-	DoubleValue float64 `json:"DoubleValue,omitempty"`
+	DoubleValue *types.Value `json:"DoubleValue,omitempty"`
 
 	// OutputFileUriValue AWS CloudFormation Property
 	// Required: false
@@ -26,12 +28,12 @@ type Dataset_Variable struct {
 	// StringValue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-variable.html#cfn-iotanalytics-dataset-variable-stringvalue
-	StringValue string `json:"StringValue,omitempty"`
+	StringValue *types.Value `json:"StringValue,omitempty"`
 
 	// VariableName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-variable.html#cfn-iotanalytics-dataset-variable-variablename
-	VariableName string `json:"VariableName,omitempty"`
+	VariableName *types.Value `json:"VariableName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

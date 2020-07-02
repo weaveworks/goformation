@@ -1,7 +1,9 @@
 package config
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RemediationConfiguration_SsmControls AWS CloudFormation Resource (AWS::Config::RemediationConfiguration.SsmControls)
@@ -11,12 +13,12 @@ type RemediationConfiguration_SsmControls struct {
 	// ConcurrentExecutionRatePercentage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage
-	ConcurrentExecutionRatePercentage int `json:"ConcurrentExecutionRatePercentage,omitempty"`
+	ConcurrentExecutionRatePercentage *types.Value `json:"ConcurrentExecutionRatePercentage,omitempty"`
 
 	// ErrorPercentage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage
-	ErrorPercentage int `json:"ErrorPercentage,omitempty"`
+	ErrorPercentage *types.Value `json:"ErrorPercentage,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

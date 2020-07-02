@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SecurityGroupEgress AWS CloudFormation Resource (AWS::EC2::SecurityGroupEgress)
@@ -15,47 +17,47 @@ type SecurityGroupEgress struct {
 	// CidrIp AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-cidrip
-	CidrIp string `json:"CidrIp,omitempty"`
+	CidrIp *types.Value `json:"CidrIp,omitempty"`
 
 	// CidrIpv6 AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-cidripv6
-	CidrIpv6 string `json:"CidrIpv6,omitempty"`
+	CidrIpv6 *types.Value `json:"CidrIpv6,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// DestinationPrefixListId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-destinationprefixlistid
-	DestinationPrefixListId string `json:"DestinationPrefixListId,omitempty"`
+	DestinationPrefixListId *types.Value `json:"DestinationPrefixListId,omitempty"`
 
 	// DestinationSecurityGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-destinationsecuritygroupid
-	DestinationSecurityGroupId string `json:"DestinationSecurityGroupId,omitempty"`
+	DestinationSecurityGroupId *types.Value `json:"DestinationSecurityGroupId,omitempty"`
 
 	// FromPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-fromport
-	FromPort int `json:"FromPort,omitempty"`
+	FromPort *types.Value `json:"FromPort,omitempty"`
 
 	// GroupId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-groupid
-	GroupId string `json:"GroupId,omitempty"`
+	GroupId *types.Value `json:"GroupId,omitempty"`
 
 	// IpProtocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-ipprotocol
-	IpProtocol string `json:"IpProtocol,omitempty"`
+	IpProtocol *types.Value `json:"IpProtocol,omitempty"`
 
 	// ToPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html#cfn-ec2-securitygroupegress-toport
-	ToPort int `json:"ToPort,omitempty"`
+	ToPort *types.Value `json:"ToPort,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

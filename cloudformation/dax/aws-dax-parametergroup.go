@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ParameterGroup AWS CloudFormation Resource (AWS::DAX::ParameterGroup)
@@ -15,12 +17,12 @@ type ParameterGroup struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// ParameterGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parametergroupname
-	ParameterGroupName string `json:"ParameterGroupName,omitempty"`
+	ParameterGroupName *types.Value `json:"ParameterGroupName,omitempty"`
 
 	// ParameterNameValues AWS CloudFormation Property
 	// Required: false

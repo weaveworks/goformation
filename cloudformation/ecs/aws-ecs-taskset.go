@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TaskSet AWS CloudFormation Resource (AWS::ECS::TaskSet)
@@ -15,17 +17,17 @@ type TaskSet struct {
 	// Cluster AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-cluster
-	Cluster string `json:"Cluster,omitempty"`
+	Cluster *types.Value `json:"Cluster,omitempty"`
 
 	// ExternalId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-externalid
-	ExternalId string `json:"ExternalId,omitempty"`
+	ExternalId *types.Value `json:"ExternalId,omitempty"`
 
 	// LaunchType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-launchtype
-	LaunchType string `json:"LaunchType,omitempty"`
+	LaunchType *types.Value `json:"LaunchType,omitempty"`
 
 	// LoadBalancers AWS CloudFormation Property
 	// Required: false
@@ -40,7 +42,7 @@ type TaskSet struct {
 	// PlatformVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-platformversion
-	PlatformVersion string `json:"PlatformVersion,omitempty"`
+	PlatformVersion *types.Value `json:"PlatformVersion,omitempty"`
 
 	// Scale AWS CloudFormation Property
 	// Required: false
@@ -50,7 +52,7 @@ type TaskSet struct {
 	// Service AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-service
-	Service string `json:"Service,omitempty"`
+	Service *types.Value `json:"Service,omitempty"`
 
 	// ServiceRegistries AWS CloudFormation Property
 	// Required: false
@@ -60,7 +62,7 @@ type TaskSet struct {
 	// TaskDefinition AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-taskdefinition
-	TaskDefinition string `json:"TaskDefinition,omitempty"`
+	TaskDefinition *types.Value `json:"TaskDefinition,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

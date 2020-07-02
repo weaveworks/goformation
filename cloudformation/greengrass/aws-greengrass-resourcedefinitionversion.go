@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResourceDefinitionVersion AWS CloudFormation Resource (AWS::Greengrass::ResourceDefinitionVersion)
@@ -15,7 +17,7 @@ type ResourceDefinitionVersion struct {
 	// ResourceDefinitionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html#cfn-greengrass-resourcedefinitionversion-resourcedefinitionid
-	ResourceDefinitionId string `json:"ResourceDefinitionId,omitempty"`
+	ResourceDefinitionId *types.Value `json:"ResourceDefinitionId,omitempty"`
 
 	// Resources AWS CloudFormation Property
 	// Required: true

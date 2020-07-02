@@ -1,7 +1,9 @@
 package elasticbeanstalk
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationTemplate_ConfigurationOptionSetting AWS CloudFormation Resource (AWS::ElasticBeanstalk::ConfigurationTemplate.ConfigurationOptionSetting)
@@ -11,22 +13,22 @@ type ConfigurationTemplate_ConfigurationOptionSetting struct {
 	// Namespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace
-	Namespace string `json:"Namespace,omitempty"`
+	Namespace *types.Value `json:"Namespace,omitempty"`
 
 	// OptionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname
-	OptionName string `json:"OptionName,omitempty"`
+	OptionName *types.Value `json:"OptionName,omitempty"`
 
 	// ResourceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename
-	ResourceName string `json:"ResourceName,omitempty"`
+	ResourceName *types.Value `json:"ResourceName,omitempty"`
 
 	// Value AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value
-	Value string `json:"Value,omitempty"`
+	Value *types.Value `json:"Value,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

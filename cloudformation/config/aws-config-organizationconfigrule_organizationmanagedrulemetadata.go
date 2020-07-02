@@ -1,7 +1,9 @@
 package config
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OrganizationConfigRule_OrganizationManagedRuleMetadata AWS CloudFormation Resource (AWS::Config::OrganizationConfigRule.OrganizationManagedRuleMetadata)
@@ -11,42 +13,42 @@ type OrganizationConfigRule_OrganizationManagedRuleMetadata struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// InputParameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-inputparameters
-	InputParameters string `json:"InputParameters,omitempty"`
+	InputParameters *types.Value `json:"InputParameters,omitempty"`
 
 	// MaximumExecutionFrequency AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-maximumexecutionfrequency
-	MaximumExecutionFrequency string `json:"MaximumExecutionFrequency,omitempty"`
+	MaximumExecutionFrequency *types.Value `json:"MaximumExecutionFrequency,omitempty"`
 
 	// ResourceIdScope AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-resourceidscope
-	ResourceIdScope string `json:"ResourceIdScope,omitempty"`
+	ResourceIdScope *types.Value `json:"ResourceIdScope,omitempty"`
 
 	// ResourceTypesScope AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-resourcetypesscope
-	ResourceTypesScope []string `json:"ResourceTypesScope,omitempty"`
+	ResourceTypesScope *types.Value `json:"ResourceTypesScope,omitempty"`
 
 	// RuleIdentifier AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-ruleidentifier
-	RuleIdentifier string `json:"RuleIdentifier,omitempty"`
+	RuleIdentifier *types.Value `json:"RuleIdentifier,omitempty"`
 
 	// TagKeyScope AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-tagkeyscope
-	TagKeyScope string `json:"TagKeyScope,omitempty"`
+	TagKeyScope *types.Value `json:"TagKeyScope,omitempty"`
 
 	// TagValueScope AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html#cfn-config-organizationconfigrule-organizationmanagedrulemetadata-tagvaluescope
-	TagValueScope string `json:"TagValueScope,omitempty"`
+	TagValueScope *types.Value `json:"TagValueScope,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

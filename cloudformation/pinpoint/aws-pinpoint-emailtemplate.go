@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EmailTemplate AWS CloudFormation Resource (AWS::Pinpoint::EmailTemplate)
@@ -15,17 +17,17 @@ type EmailTemplate struct {
 	// DefaultSubstitutions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-defaultsubstitutions
-	DefaultSubstitutions string `json:"DefaultSubstitutions,omitempty"`
+	DefaultSubstitutions *types.Value `json:"DefaultSubstitutions,omitempty"`
 
 	// HtmlPart AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-htmlpart
-	HtmlPart string `json:"HtmlPart,omitempty"`
+	HtmlPart *types.Value `json:"HtmlPart,omitempty"`
 
 	// Subject AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-subject
-	Subject string `json:"Subject,omitempty"`
+	Subject *types.Value `json:"Subject,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -35,17 +37,17 @@ type EmailTemplate struct {
 	// TemplateDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-templatedescription
-	TemplateDescription string `json:"TemplateDescription,omitempty"`
+	TemplateDescription *types.Value `json:"TemplateDescription,omitempty"`
 
 	// TemplateName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-templatename
-	TemplateName string `json:"TemplateName,omitempty"`
+	TemplateName *types.Value `json:"TemplateName,omitempty"`
 
 	// TextPart AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-textpart
-	TextPart string `json:"TextPart,omitempty"`
+	TextPart *types.Value `json:"TextPart,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

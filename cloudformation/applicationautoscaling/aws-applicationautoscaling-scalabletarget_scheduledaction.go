@@ -1,7 +1,9 @@
 package applicationautoscaling
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ScalableTarget_ScheduledAction AWS CloudFormation Resource (AWS::ApplicationAutoScaling::ScalableTarget.ScheduledAction)
@@ -21,12 +23,12 @@ type ScalableTarget_ScheduledAction struct {
 	// Schedule AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule
-	Schedule string `json:"Schedule,omitempty"`
+	Schedule *types.Value `json:"Schedule,omitempty"`
 
 	// ScheduledActionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname
-	ScheduledActionName string `json:"ScheduledActionName,omitempty"`
+	ScheduledActionName *types.Value `json:"ScheduledActionName,omitempty"`
 
 	// StartTime AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_InputAttachment AWS CloudFormation Resource (AWS::MediaLive::Channel.InputAttachment)
@@ -11,12 +13,12 @@ type Channel_InputAttachment struct {
 	// InputAttachmentName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputattachment.html#cfn-medialive-channel-inputattachment-inputattachmentname
-	InputAttachmentName string `json:"InputAttachmentName,omitempty"`
+	InputAttachmentName *types.Value `json:"InputAttachmentName,omitempty"`
 
 	// InputId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputattachment.html#cfn-medialive-channel-inputattachment-inputid
-	InputId string `json:"InputId,omitempty"`
+	InputId *types.Value `json:"InputId,omitempty"`
 
 	// InputSettings AWS CloudFormation Property
 	// Required: false

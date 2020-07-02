@@ -1,7 +1,9 @@
 package codecommit
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Repository_S3 AWS CloudFormation Resource (AWS::CodeCommit::Repository.S3)
@@ -11,17 +13,17 @@ type Repository_S3 struct {
 	// Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-bucket
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *types.Value `json:"Bucket,omitempty"`
 
 	// Key AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-key
-	Key string `json:"Key,omitempty"`
+	Key *types.Value `json:"Key,omitempty"`
 
 	// ObjectVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-objectversion
-	ObjectVersion string `json:"ObjectVersion,omitempty"`
+	ObjectVersion *types.Value `json:"ObjectVersion,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

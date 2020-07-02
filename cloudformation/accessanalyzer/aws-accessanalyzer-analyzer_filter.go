@@ -1,7 +1,9 @@
 package accessanalyzer
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Analyzer_Filter AWS CloudFormation Resource (AWS::AccessAnalyzer::Analyzer.Filter)
@@ -11,27 +13,27 @@ type Analyzer_Filter struct {
 	// Contains AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-contains
-	Contains []string `json:"Contains,omitempty"`
+	Contains *types.Value `json:"Contains,omitempty"`
 
 	// Eq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-eq
-	Eq []string `json:"Eq,omitempty"`
+	Eq *types.Value `json:"Eq,omitempty"`
 
 	// Exists AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-exists
-	Exists bool `json:"Exists,omitempty"`
+	Exists *types.Value `json:"Exists,omitempty"`
 
 	// Neq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-neq
-	Neq []string `json:"Neq,omitempty"`
+	Neq *types.Value `json:"Neq,omitempty"`
 
 	// Property AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-property
-	Property string `json:"Property,omitempty"`
+	Property *types.Value `json:"Property,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

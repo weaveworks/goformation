@@ -1,7 +1,9 @@
 package dlm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LifecyclePolicy_CrossRegionCopyRetainRule AWS CloudFormation Resource (AWS::DLM::LifecyclePolicy.CrossRegionCopyRetainRule)
@@ -11,12 +13,12 @@ type LifecyclePolicy_CrossRegionCopyRetainRule struct {
 	// Interval AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-interval
-	Interval int `json:"Interval"`
+	Interval *types.Value `json:"Interval"`
 
 	// IntervalUnit AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-intervalunit
-	IntervalUnit string `json:"IntervalUnit,omitempty"`
+	IntervalUnit *types.Value `json:"IntervalUnit,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DirectoryConfig AWS CloudFormation Resource (AWS::AppStream::DirectoryConfig)
@@ -15,12 +17,12 @@ type DirectoryConfig struct {
 	// DirectoryName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-directoryname
-	DirectoryName string `json:"DirectoryName,omitempty"`
+	DirectoryName *types.Value `json:"DirectoryName,omitempty"`
 
 	// OrganizationalUnitDistinguishedNames AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-organizationalunitdistinguishednames
-	OrganizationalUnitDistinguishedNames []string `json:"OrganizationalUnitDistinguishedNames,omitempty"`
+	OrganizationalUnitDistinguishedNames *types.Value `json:"OrganizationalUnitDistinguishedNames,omitempty"`
 
 	// ServiceAccountCredentials AWS CloudFormation Property
 	// Required: true

@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CertificateAuthority AWS CloudFormation Resource (AWS::ACMPCA::CertificateAuthority)
@@ -16,7 +18,7 @@ type CertificateAuthority struct {
 	// KeyAlgorithm AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-keyalgorithm
-	KeyAlgorithm string `json:"KeyAlgorithm,omitempty"`
+	KeyAlgorithm *types.Value `json:"KeyAlgorithm,omitempty"`
 
 	// RevocationConfiguration AWS CloudFormation Property
 	// Required: false
@@ -26,7 +28,7 @@ type CertificateAuthority struct {
 	// SigningAlgorithm AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-signingalgorithm
-	SigningAlgorithm string `json:"SigningAlgorithm,omitempty"`
+	SigningAlgorithm *types.Value `json:"SigningAlgorithm,omitempty"`
 
 	// Subject AWS CloudFormation Property
 	// Required: true
@@ -36,12 +38,12 @@ type CertificateAuthority struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EC2Fleet_CapacityReservationOptionsRequest AWS CloudFormation Resource (AWS::EC2::EC2Fleet.CapacityReservationOptionsRequest)
@@ -11,7 +13,7 @@ type EC2Fleet_CapacityReservationOptionsRequest struct {
 	// UsageStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html#cfn-ec2-ec2fleet-capacityreservationoptionsrequest-usagestrategy
-	UsageStrategy string `json:"UsageStrategy,omitempty"`
+	UsageStrategy *types.Value `json:"UsageStrategy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

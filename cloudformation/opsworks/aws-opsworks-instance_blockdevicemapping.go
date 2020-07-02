@@ -1,7 +1,9 @@
 package opsworks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Instance_BlockDeviceMapping AWS CloudFormation Resource (AWS::OpsWorks::Instance.BlockDeviceMapping)
@@ -11,7 +13,7 @@ type Instance_BlockDeviceMapping struct {
 	// DeviceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename
-	DeviceName string `json:"DeviceName,omitempty"`
+	DeviceName *types.Value `json:"DeviceName,omitempty"`
 
 	// Ebs AWS CloudFormation Property
 	// Required: false
@@ -21,12 +23,12 @@ type Instance_BlockDeviceMapping struct {
 	// NoDevice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice
-	NoDevice string `json:"NoDevice,omitempty"`
+	NoDevice *types.Value `json:"NoDevice,omitempty"`
 
 	// VirtualName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname
-	VirtualName string `json:"VirtualName,omitempty"`
+	VirtualName *types.Value `json:"VirtualName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

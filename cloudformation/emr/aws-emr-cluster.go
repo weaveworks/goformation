@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster AWS CloudFormation Resource (AWS::EMR::Cluster)
@@ -26,7 +28,7 @@ type Cluster struct {
 	// AutoScalingRole AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-autoscalingrole
-	AutoScalingRole string `json:"AutoScalingRole,omitempty"`
+	AutoScalingRole *types.Value `json:"AutoScalingRole,omitempty"`
 
 	// BootstrapActions AWS CloudFormation Property
 	// Required: false
@@ -41,12 +43,12 @@ type Cluster struct {
 	// CustomAmiId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-customamiid
-	CustomAmiId string `json:"CustomAmiId,omitempty"`
+	CustomAmiId *types.Value `json:"CustomAmiId,omitempty"`
 
 	// EbsRootVolumeSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-ebsrootvolumesize
-	EbsRootVolumeSize int `json:"EbsRootVolumeSize,omitempty"`
+	EbsRootVolumeSize *types.Value `json:"EbsRootVolumeSize,omitempty"`
 
 	// Instances AWS CloudFormation Property
 	// Required: true
@@ -56,7 +58,7 @@ type Cluster struct {
 	// JobFlowRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-jobflowrole
-	JobFlowRole string `json:"JobFlowRole,omitempty"`
+	JobFlowRole *types.Value `json:"JobFlowRole,omitempty"`
 
 	// KerberosAttributes AWS CloudFormation Property
 	// Required: false
@@ -66,32 +68,32 @@ type Cluster struct {
 	// LogUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri
-	LogUri string `json:"LogUri,omitempty"`
+	LogUri *types.Value `json:"LogUri,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// ReleaseLabel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-releaselabel
-	ReleaseLabel string `json:"ReleaseLabel,omitempty"`
+	ReleaseLabel *types.Value `json:"ReleaseLabel,omitempty"`
 
 	// ScaleDownBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-scaledownbehavior
-	ScaleDownBehavior string `json:"ScaleDownBehavior,omitempty"`
+	ScaleDownBehavior *types.Value `json:"ScaleDownBehavior,omitempty"`
 
 	// SecurityConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-securityconfiguration
-	SecurityConfiguration string `json:"SecurityConfiguration,omitempty"`
+	SecurityConfiguration *types.Value `json:"SecurityConfiguration,omitempty"`
 
 	// ServiceRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-servicerole
-	ServiceRole string `json:"ServiceRole,omitempty"`
+	ServiceRole *types.Value `json:"ServiceRole,omitempty"`
 
 	// Steps AWS CloudFormation Property
 	// Required: false
@@ -101,12 +103,12 @@ type Cluster struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VisibleToAllUsers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-visibletoallusers
-	VisibleToAllUsers bool `json:"VisibleToAllUsers,omitempty"`
+	VisibleToAllUsers *types.Value `json:"VisibleToAllUsers,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

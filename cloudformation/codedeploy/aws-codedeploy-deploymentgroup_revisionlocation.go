@@ -1,7 +1,9 @@
 package codedeploy
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeploymentGroup_RevisionLocation AWS CloudFormation Resource (AWS::CodeDeploy::DeploymentGroup.RevisionLocation)
@@ -16,7 +18,7 @@ type DeploymentGroup_RevisionLocation struct {
 	// RevisionType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype
-	RevisionType string `json:"RevisionType,omitempty"`
+	RevisionType *types.Value `json:"RevisionType,omitempty"`
 
 	// S3Location AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package msk
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_ConfigurationInfo AWS CloudFormation Resource (AWS::MSK::Cluster.ConfigurationInfo)
@@ -11,12 +13,12 @@ type Cluster_ConfigurationInfo struct {
 	// Arn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-configurationinfo.html#cfn-msk-cluster-configurationinfo-arn
-	Arn string `json:"Arn,omitempty"`
+	Arn *types.Value `json:"Arn,omitempty"`
 
 	// Revision AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-configurationinfo.html#cfn-msk-cluster-configurationinfo-revision
-	Revision int `json:"Revision"`
+	Revision *types.Value `json:"Revision"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

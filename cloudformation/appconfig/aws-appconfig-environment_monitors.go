@@ -1,7 +1,9 @@
 package appconfig
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Environment_Monitors AWS CloudFormation Resource (AWS::AppConfig::Environment.Monitors)
@@ -11,12 +13,12 @@ type Environment_Monitors struct {
 	// AlarmArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmarn
-	AlarmArn string `json:"AlarmArn,omitempty"`
+	AlarmArn *types.Value `json:"AlarmArn,omitempty"`
 
 	// AlarmRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmrolearn
-	AlarmRoleArn string `json:"AlarmRoleArn,omitempty"`
+	AlarmRoleArn *types.Value `json:"AlarmRoleArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package ssm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResourceDataSync_S3Destination AWS CloudFormation Resource (AWS::SSM::ResourceDataSync.S3Destination)
@@ -11,27 +13,27 @@ type ResourceDataSync_S3Destination struct {
 	// BucketName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html#cfn-ssm-resourcedatasync-s3destination-bucketname
-	BucketName string `json:"BucketName,omitempty"`
+	BucketName *types.Value `json:"BucketName,omitempty"`
 
 	// BucketPrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html#cfn-ssm-resourcedatasync-s3destination-bucketprefix
-	BucketPrefix string `json:"BucketPrefix,omitempty"`
+	BucketPrefix *types.Value `json:"BucketPrefix,omitempty"`
 
 	// BucketRegion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html#cfn-ssm-resourcedatasync-s3destination-bucketregion
-	BucketRegion string `json:"BucketRegion,omitempty"`
+	BucketRegion *types.Value `json:"BucketRegion,omitempty"`
 
 	// KMSKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html#cfn-ssm-resourcedatasync-s3destination-kmskeyarn
-	KMSKeyArn string `json:"KMSKeyArn,omitempty"`
+	KMSKeyArn *types.Value `json:"KMSKeyArn,omitempty"`
 
 	// SyncFormat AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html#cfn-ssm-resourcedatasync-s3destination-syncformat
-	SyncFormat string `json:"SyncFormat,omitempty"`
+	SyncFormat *types.Value `json:"SyncFormat,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

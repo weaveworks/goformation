@@ -1,7 +1,9 @@
 package pinpointemail
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationSetEventDestination_SnsDestination AWS CloudFormation Resource (AWS::PinpointEmail::ConfigurationSetEventDestination.SnsDestination)
@@ -11,7 +13,7 @@ type ConfigurationSetEventDestination_SnsDestination struct {
 	// TopicArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-snsdestination.html#cfn-pinpointemail-configurationseteventdestination-snsdestination-topicarn
-	TopicArn string `json:"TopicArn,omitempty"`
+	TopicArn *types.Value `json:"TopicArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

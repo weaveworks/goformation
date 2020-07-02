@@ -1,7 +1,9 @@
 package dms
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Endpoint_KafkaSettings AWS CloudFormation Resource (AWS::DMS::Endpoint.KafkaSettings)
@@ -11,12 +13,12 @@ type Endpoint_KafkaSettings struct {
 	// Broker AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-broker
-	Broker string `json:"Broker,omitempty"`
+	Broker *types.Value `json:"Broker,omitempty"`
 
 	// Topic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-topic
-	Topic string `json:"Topic,omitempty"`
+	Topic *types.Value `json:"Topic,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

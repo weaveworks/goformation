@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // User AWS CloudFormation Resource (AWS::AppStream::User)
@@ -15,27 +17,27 @@ type User struct {
 	// AuthenticationType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-authenticationtype
-	AuthenticationType string `json:"AuthenticationType,omitempty"`
+	AuthenticationType *types.Value `json:"AuthenticationType,omitempty"`
 
 	// FirstName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-firstname
-	FirstName string `json:"FirstName,omitempty"`
+	FirstName *types.Value `json:"FirstName,omitempty"`
 
 	// LastName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-lastname
-	LastName string `json:"LastName,omitempty"`
+	LastName *types.Value `json:"LastName,omitempty"`
 
 	// MessageAction AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-messageaction
-	MessageAction string `json:"MessageAction,omitempty"`
+	MessageAction *types.Value `json:"MessageAction,omitempty"`
 
 	// UserName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-username
-	UserName string `json:"UserName,omitempty"`
+	UserName *types.Value `json:"UserName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package ecs
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TaskDefinition_InferenceAccelerator AWS CloudFormation Resource (AWS::ECS::TaskDefinition.InferenceAccelerator)
@@ -11,12 +13,12 @@ type TaskDefinition_InferenceAccelerator struct {
 	// DeviceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename
-	DeviceName string `json:"DeviceName,omitempty"`
+	DeviceName *types.Value `json:"DeviceName,omitempty"`
 
 	// DeviceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype
-	DeviceType string `json:"DeviceType,omitempty"`
+	DeviceType *types.Value `json:"DeviceType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

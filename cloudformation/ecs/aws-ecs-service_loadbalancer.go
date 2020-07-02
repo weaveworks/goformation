@@ -1,7 +1,9 @@
 package ecs
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Service_LoadBalancer AWS CloudFormation Resource (AWS::ECS::Service.LoadBalancer)
@@ -11,22 +13,22 @@ type Service_LoadBalancer struct {
 	// ContainerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containername
-	ContainerName string `json:"ContainerName,omitempty"`
+	ContainerName *types.Value `json:"ContainerName,omitempty"`
 
 	// ContainerPort AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-containerport
-	ContainerPort int `json:"ContainerPort"`
+	ContainerPort *types.Value `json:"ContainerPort"`
 
 	// LoadBalancerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-loadbalancername
-	LoadBalancerName string `json:"LoadBalancerName,omitempty"`
+	LoadBalancerName *types.Value `json:"LoadBalancerName,omitempty"`
 
 	// TargetGroupArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html#cfn-ecs-service-loadbalancers-targetgrouparn
-	TargetGroupArn string `json:"TargetGroupArn,omitempty"`
+	TargetGroupArn *types.Value `json:"TargetGroupArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

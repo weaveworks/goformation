@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupVault AWS CloudFormation Resource (AWS::Backup::BackupVault)
@@ -20,7 +22,7 @@ type BackupVault struct {
 	// BackupVaultName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname
-	BackupVaultName string `json:"BackupVaultName,omitempty"`
+	BackupVaultName *types.Value `json:"BackupVaultName,omitempty"`
 
 	// BackupVaultTags AWS CloudFormation Property
 	// Required: false
@@ -30,7 +32,7 @@ type BackupVault struct {
 	// EncryptionKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-encryptionkeyarn
-	EncryptionKeyArn string `json:"EncryptionKeyArn,omitempty"`
+	EncryptionKeyArn *types.Value `json:"EncryptionKeyArn,omitempty"`
 
 	// Notifications AWS CloudFormation Property
 	// Required: false

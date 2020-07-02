@@ -1,7 +1,9 @@
 package autoscalingplans
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ScalingPlan_TargetTrackingConfiguration AWS CloudFormation Resource (AWS::AutoScalingPlans::ScalingPlan.TargetTrackingConfiguration)
@@ -16,12 +18,12 @@ type ScalingPlan_TargetTrackingConfiguration struct {
 	// DisableScaleIn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein
-	DisableScaleIn bool `json:"DisableScaleIn,omitempty"`
+	DisableScaleIn *types.Value `json:"DisableScaleIn,omitempty"`
 
 	// EstimatedInstanceWarmup AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup
-	EstimatedInstanceWarmup int `json:"EstimatedInstanceWarmup,omitempty"`
+	EstimatedInstanceWarmup *types.Value `json:"EstimatedInstanceWarmup,omitempty"`
 
 	// PredefinedScalingMetricSpecification AWS CloudFormation Property
 	// Required: false
@@ -31,17 +33,17 @@ type ScalingPlan_TargetTrackingConfiguration struct {
 	// ScaleInCooldown AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown
-	ScaleInCooldown int `json:"ScaleInCooldown,omitempty"`
+	ScaleInCooldown *types.Value `json:"ScaleInCooldown,omitempty"`
 
 	// ScaleOutCooldown AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown
-	ScaleOutCooldown int `json:"ScaleOutCooldown,omitempty"`
+	ScaleOutCooldown *types.Value `json:"ScaleOutCooldown,omitempty"`
 
 	// TargetValue AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue
-	TargetValue float64 `json:"TargetValue"`
+	TargetValue *types.Value `json:"TargetValue"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

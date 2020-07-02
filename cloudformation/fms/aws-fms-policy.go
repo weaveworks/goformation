@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Policy AWS CloudFormation Resource (AWS::FMS::Policy)
@@ -15,7 +17,7 @@ type Policy struct {
 	// DeleteAllPolicyResources AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-deleteallpolicyresources
-	DeleteAllPolicyResources bool `json:"DeleteAllPolicyResources,omitempty"`
+	DeleteAllPolicyResources *types.Value `json:"DeleteAllPolicyResources,omitempty"`
 
 	// ExcludeMap AWS CloudFormation Property
 	// Required: false
@@ -25,7 +27,7 @@ type Policy struct {
 	// ExcludeResourceTags AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-excluderesourcetags
-	ExcludeResourceTags bool `json:"ExcludeResourceTags"`
+	ExcludeResourceTags *types.Value `json:"ExcludeResourceTags"`
 
 	// IncludeMap AWS CloudFormation Property
 	// Required: false
@@ -35,12 +37,12 @@ type Policy struct {
 	// PolicyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policyname
-	PolicyName string `json:"PolicyName,omitempty"`
+	PolicyName *types.Value `json:"PolicyName,omitempty"`
 
 	// RemediationEnabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-remediationenabled
-	RemediationEnabled bool `json:"RemediationEnabled"`
+	RemediationEnabled *types.Value `json:"RemediationEnabled"`
 
 	// ResourceTags AWS CloudFormation Property
 	// Required: false
@@ -50,12 +52,12 @@ type Policy struct {
 	// ResourceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetype
-	ResourceType string `json:"ResourceType,omitempty"`
+	ResourceType *types.Value `json:"ResourceType,omitempty"`
 
 	// ResourceTypeList AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetypelist
-	ResourceTypeList []string `json:"ResourceTypeList,omitempty"`
+	ResourceTypeList *types.Value `json:"ResourceTypeList,omitempty"`
 
 	// SecurityServicePolicyData AWS CloudFormation Property
 	// Required: true

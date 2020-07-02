@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_WebsiteConfiguration AWS CloudFormation Resource (AWS::S3::Bucket.WebsiteConfiguration)
@@ -11,12 +13,12 @@ type Bucket_WebsiteConfiguration struct {
 	// ErrorDocument AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html#cfn-s3-websiteconfiguration-errordocument
-	ErrorDocument string `json:"ErrorDocument,omitempty"`
+	ErrorDocument *types.Value `json:"ErrorDocument,omitempty"`
 
 	// IndexDocument AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html#cfn-s3-websiteconfiguration-indexdocument
-	IndexDocument string `json:"IndexDocument,omitempty"`
+	IndexDocument *types.Value `json:"IndexDocument,omitempty"`
 
 	// RedirectAllRequestsTo AWS CloudFormation Property
 	// Required: false

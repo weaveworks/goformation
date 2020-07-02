@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RuleGroup_RateBasedStatementTwo AWS CloudFormation Resource (AWS::WAFv2::RuleGroup.RateBasedStatementTwo)
@@ -11,12 +13,17 @@ type RuleGroup_RateBasedStatementTwo struct {
 	// AggregateKeyType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementtwo.html#cfn-wafv2-rulegroup-ratebasedstatementtwo-aggregatekeytype
-	AggregateKeyType string `json:"AggregateKeyType,omitempty"`
+	AggregateKeyType *types.Value `json:"AggregateKeyType,omitempty"`
+
+	// ForwardedIPConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementtwo.html#cfn-wafv2-rulegroup-ratebasedstatementtwo-forwardedipconfig
+	ForwardedIPConfig *RuleGroup_ForwardedIPConfiguration `json:"ForwardedIPConfig,omitempty"`
 
 	// Limit AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementtwo.html#cfn-wafv2-rulegroup-ratebasedstatementtwo-limit
-	Limit int `json:"Limit"`
+	Limit *types.Value `json:"Limit"`
 
 	// ScopeDownStatement AWS CloudFormation Property
 	// Required: false

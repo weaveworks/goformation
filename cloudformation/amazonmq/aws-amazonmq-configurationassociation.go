@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationAssociation AWS CloudFormation Resource (AWS::AmazonMQ::ConfigurationAssociation)
@@ -15,7 +17,7 @@ type ConfigurationAssociation struct {
 	// Broker AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html#cfn-amazonmq-configurationassociation-broker
-	Broker string `json:"Broker,omitempty"`
+	Broker *types.Value `json:"Broker,omitempty"`
 
 	// Configuration AWS CloudFormation Property
 	// Required: true

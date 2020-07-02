@@ -1,7 +1,9 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TopicRule_AssetPropertyTimestamp AWS CloudFormation Resource (AWS::IoT::TopicRule.AssetPropertyTimestamp)
@@ -11,12 +13,12 @@ type TopicRule_AssetPropertyTimestamp struct {
 	// OffsetInNanos AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertytimestamp.html#cfn-iot-topicrule-assetpropertytimestamp-offsetinnanos
-	OffsetInNanos string `json:"OffsetInNanos,omitempty"`
+	OffsetInNanos *types.Value `json:"OffsetInNanos,omitempty"`
 
 	// TimeInSeconds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertytimestamp.html#cfn-iot-topicrule-assetpropertytimestamp-timeinseconds
-	TimeInSeconds string `json:"TimeInSeconds,omitempty"`
+	TimeInSeconds *types.Value `json:"TimeInSeconds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

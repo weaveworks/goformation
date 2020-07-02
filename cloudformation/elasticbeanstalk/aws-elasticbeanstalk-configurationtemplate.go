@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationTemplate AWS CloudFormation Resource (AWS::ElasticBeanstalk::ConfigurationTemplate)
@@ -15,17 +17,17 @@ type ConfigurationTemplate struct {
 	// ApplicationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *types.Value `json:"ApplicationName,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// EnvironmentId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-environmentid
-	EnvironmentId string `json:"EnvironmentId,omitempty"`
+	EnvironmentId *types.Value `json:"EnvironmentId,omitempty"`
 
 	// OptionSettings AWS CloudFormation Property
 	// Required: false
@@ -35,12 +37,12 @@ type ConfigurationTemplate struct {
 	// PlatformArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-platformarn
-	PlatformArn string `json:"PlatformArn,omitempty"`
+	PlatformArn *types.Value `json:"PlatformArn,omitempty"`
 
 	// SolutionStackName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-solutionstackname
-	SolutionStackName string `json:"SolutionStackName,omitempty"`
+	SolutionStackName *types.Value `json:"SolutionStackName,omitempty"`
 
 	// SourceConfiguration AWS CloudFormation Property
 	// Required: false

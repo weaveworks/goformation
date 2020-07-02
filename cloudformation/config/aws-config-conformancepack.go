@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConformancePack AWS CloudFormation Resource (AWS::Config::ConformancePack)
@@ -20,27 +22,27 @@ type ConformancePack struct {
 	// ConformancePackName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackname
-	ConformancePackName string `json:"ConformancePackName,omitempty"`
+	ConformancePackName *types.Value `json:"ConformancePackName,omitempty"`
 
 	// DeliveryS3Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3bucket
-	DeliveryS3Bucket string `json:"DeliveryS3Bucket,omitempty"`
+	DeliveryS3Bucket *types.Value `json:"DeliveryS3Bucket,omitempty"`
 
 	// DeliveryS3KeyPrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix
-	DeliveryS3KeyPrefix string `json:"DeliveryS3KeyPrefix,omitempty"`
+	DeliveryS3KeyPrefix *types.Value `json:"DeliveryS3KeyPrefix,omitempty"`
 
 	// TemplateBody AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatebody
-	TemplateBody string `json:"TemplateBody,omitempty"`
+	TemplateBody *types.Value `json:"TemplateBody,omitempty"`
 
 	// TemplateS3Uri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templates3uri
-	TemplateS3Uri string `json:"TemplateS3Uri,omitempty"`
+	TemplateS3Uri *types.Value `json:"TemplateS3Uri,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

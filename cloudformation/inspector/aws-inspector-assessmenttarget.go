@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AssessmentTarget AWS CloudFormation Resource (AWS::Inspector::AssessmentTarget)
@@ -15,12 +17,12 @@ type AssessmentTarget struct {
 	// AssessmentTargetName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html#cfn-inspector-assessmenttarget-assessmenttargetname
-	AssessmentTargetName string `json:"AssessmentTargetName,omitempty"`
+	AssessmentTargetName *types.Value `json:"AssessmentTargetName,omitempty"`
 
 	// ResourceGroupArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html#cfn-inspector-assessmenttarget-resourcegrouparn
-	ResourceGroupArn string `json:"ResourceGroupArn,omitempty"`
+	ResourceGroupArn *types.Value `json:"ResourceGroupArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

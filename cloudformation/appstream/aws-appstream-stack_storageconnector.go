@@ -1,7 +1,9 @@
 package appstream
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Stack_StorageConnector AWS CloudFormation Resource (AWS::AppStream::Stack.StorageConnector)
@@ -11,17 +13,17 @@ type Stack_StorageConnector struct {
 	// ConnectorType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-storageconnector.html#cfn-appstream-stack-storageconnector-connectortype
-	ConnectorType string `json:"ConnectorType,omitempty"`
+	ConnectorType *types.Value `json:"ConnectorType,omitempty"`
 
 	// Domains AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-storageconnector.html#cfn-appstream-stack-storageconnector-domains
-	Domains []string `json:"Domains,omitempty"`
+	Domains *types.Value `json:"Domains,omitempty"`
 
 	// ResourceIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-storageconnector.html#cfn-appstream-stack-storageconnector-resourceidentifier
-	ResourceIdentifier string `json:"ResourceIdentifier,omitempty"`
+	ResourceIdentifier *types.Value `json:"ResourceIdentifier,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

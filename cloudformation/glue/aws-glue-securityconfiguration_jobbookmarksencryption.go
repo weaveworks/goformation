@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SecurityConfiguration_JobBookmarksEncryption AWS CloudFormation Resource (AWS::Glue::SecurityConfiguration.JobBookmarksEncryption)
@@ -11,12 +13,12 @@ type SecurityConfiguration_JobBookmarksEncryption struct {
 	// JobBookmarksEncryptionMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-jobbookmarksencryptionmode
-	JobBookmarksEncryptionMode string `json:"JobBookmarksEncryptionMode,omitempty"`
+	JobBookmarksEncryptionMode *types.Value `json:"JobBookmarksEncryptionMode,omitempty"`
 
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn
-	KmsKeyArn string `json:"KmsKeyArn,omitempty"`
+	KmsKeyArn *types.Value `json:"KmsKeyArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

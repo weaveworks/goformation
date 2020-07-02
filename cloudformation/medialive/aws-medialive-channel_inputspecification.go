@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_InputSpecification AWS CloudFormation Resource (AWS::MediaLive::Channel.InputSpecification)
@@ -11,17 +13,17 @@ type Channel_InputSpecification struct {
 	// Codec AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputspecification.html#cfn-medialive-channel-inputspecification-codec
-	Codec string `json:"Codec,omitempty"`
+	Codec *types.Value `json:"Codec,omitempty"`
 
 	// MaximumBitrate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputspecification.html#cfn-medialive-channel-inputspecification-maximumbitrate
-	MaximumBitrate string `json:"MaximumBitrate,omitempty"`
+	MaximumBitrate *types.Value `json:"MaximumBitrate,omitempty"`
 
 	// Resolution AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputspecification.html#cfn-medialive-channel-inputspecification-resolution
-	Resolution string `json:"Resolution,omitempty"`
+	Resolution *types.Value `json:"Resolution,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Robot AWS CloudFormation Resource (AWS::RoboMaker::Robot)
@@ -15,22 +17,22 @@ type Robot struct {
 	// Architecture AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-architecture
-	Architecture string `json:"Architecture,omitempty"`
+	Architecture *types.Value `json:"Architecture,omitempty"`
 
 	// Fleet AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-fleet
-	Fleet string `json:"Fleet,omitempty"`
+	Fleet *types.Value `json:"Fleet,omitempty"`
 
 	// GreengrassGroupId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-greengrassgroupid
-	GreengrassGroupId string `json:"GreengrassGroupId,omitempty"`
+	GreengrassGroupId *types.Value `json:"GreengrassGroupId,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

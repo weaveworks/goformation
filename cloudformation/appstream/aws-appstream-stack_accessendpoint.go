@@ -1,7 +1,9 @@
 package appstream
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Stack_AccessEndpoint AWS CloudFormation Resource (AWS::AppStream::Stack.AccessEndpoint)
@@ -11,12 +13,12 @@ type Stack_AccessEndpoint struct {
 	// EndpointType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-endpointtype
-	EndpointType string `json:"EndpointType,omitempty"`
+	EndpointType *types.Value `json:"EndpointType,omitempty"`
 
 	// VpceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid
-	VpceId string `json:"VpceId,omitempty"`
+	VpceId *types.Value `json:"VpceId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

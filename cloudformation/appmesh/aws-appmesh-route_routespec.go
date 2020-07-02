@@ -1,7 +1,9 @@
 package appmesh
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Route_RouteSpec AWS CloudFormation Resource (AWS::AppMesh::Route.RouteSpec)
@@ -26,7 +28,7 @@ type Route_RouteSpec struct {
 	// Priority AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-routespec.html#cfn-appmesh-route-routespec-priority
-	Priority int `json:"Priority,omitempty"`
+	Priority *types.Value `json:"Priority,omitempty"`
 
 	// TcpRoute AWS CloudFormation Property
 	// Required: false

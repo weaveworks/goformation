@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeliveryStream AWS CloudFormation Resource (AWS::KinesisFirehose::DeliveryStream)
@@ -15,12 +17,12 @@ type DeliveryStream struct {
 	// DeliveryStreamName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname
-	DeliveryStreamName string `json:"DeliveryStreamName,omitempty"`
+	DeliveryStreamName *types.Value `json:"DeliveryStreamName,omitempty"`
 
 	// DeliveryStreamType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype
-	DeliveryStreamType string `json:"DeliveryStreamType,omitempty"`
+	DeliveryStreamType *types.Value `json:"DeliveryStreamType,omitempty"`
 
 	// ElasticsearchDestinationConfiguration AWS CloudFormation Property
 	// Required: false
@@ -31,6 +33,11 @@ type DeliveryStream struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration
 	ExtendedS3DestinationConfiguration *DeliveryStream_ExtendedS3DestinationConfiguration `json:"ExtendedS3DestinationConfiguration,omitempty"`
+
+	// HttpEndpointDestinationConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration
+	HttpEndpointDestinationConfiguration *DeliveryStream_HttpEndpointDestinationConfiguration `json:"HttpEndpointDestinationConfiguration,omitempty"`
 
 	// KinesisStreamSourceConfiguration AWS CloudFormation Property
 	// Required: false

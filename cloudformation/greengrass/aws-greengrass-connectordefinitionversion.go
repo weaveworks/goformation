@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorDefinitionVersion AWS CloudFormation Resource (AWS::Greengrass::ConnectorDefinitionVersion)
@@ -15,7 +17,7 @@ type ConnectorDefinitionVersion struct {
 	// ConnectorDefinitionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html#cfn-greengrass-connectordefinitionversion-connectordefinitionid
-	ConnectorDefinitionId string `json:"ConnectorDefinitionId,omitempty"`
+	ConnectorDefinitionId *types.Value `json:"ConnectorDefinitionId,omitempty"`
 
 	// Connectors AWS CloudFormation Property
 	// Required: true

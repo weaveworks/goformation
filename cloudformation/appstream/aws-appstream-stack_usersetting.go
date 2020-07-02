@@ -1,7 +1,9 @@
 package appstream
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Stack_UserSetting AWS CloudFormation Resource (AWS::AppStream::Stack.UserSetting)
@@ -11,12 +13,12 @@ type Stack_UserSetting struct {
 	// Action AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-usersetting.html#cfn-appstream-stack-usersetting-action
-	Action string `json:"Action,omitempty"`
+	Action *types.Value `json:"Action,omitempty"`
 
 	// Permission AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-usersetting.html#cfn-appstream-stack-usersetting-permission
-	Permission string `json:"Permission,omitempty"`
+	Permission *types.Value `json:"Permission,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

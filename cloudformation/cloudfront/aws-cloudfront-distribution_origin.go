@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Distribution_Origin AWS CloudFormation Resource (AWS::CloudFront::Distribution.Origin)
@@ -11,12 +13,12 @@ type Distribution_Origin struct {
 	// ConnectionAttempts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-connectionattempts
-	ConnectionAttempts int `json:"ConnectionAttempts,omitempty"`
+	ConnectionAttempts *types.Value `json:"ConnectionAttempts,omitempty"`
 
 	// ConnectionTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-connectiontimeout
-	ConnectionTimeout int `json:"ConnectionTimeout,omitempty"`
+	ConnectionTimeout *types.Value `json:"ConnectionTimeout,omitempty"`
 
 	// CustomOriginConfig AWS CloudFormation Property
 	// Required: false
@@ -26,12 +28,12 @@ type Distribution_Origin struct {
 	// DomainName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *types.Value `json:"DomainName,omitempty"`
 
 	// Id AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-id
-	Id string `json:"Id,omitempty"`
+	Id *types.Value `json:"Id,omitempty"`
 
 	// OriginCustomHeaders AWS CloudFormation Property
 	// Required: false
@@ -41,7 +43,7 @@ type Distribution_Origin struct {
 	// OriginPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-originpath
-	OriginPath string `json:"OriginPath,omitempty"`
+	OriginPath *types.Value `json:"OriginPath,omitempty"`
 
 	// S3OriginConfig AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Model_ContainerDefinition AWS CloudFormation Resource (AWS::SageMaker::Model.ContainerDefinition)
@@ -11,7 +13,7 @@ type Model_ContainerDefinition struct {
 	// ContainerHostname AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-containerhostname
-	ContainerHostname string `json:"ContainerHostname,omitempty"`
+	ContainerHostname *types.Value `json:"ContainerHostname,omitempty"`
 
 	// Environment AWS CloudFormation Property
 	// Required: false
@@ -19,19 +21,24 @@ type Model_ContainerDefinition struct {
 	Environment interface{} `json:"Environment,omitempty"`
 
 	// Image AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-image
-	Image string `json:"Image,omitempty"`
+	Image *types.Value `json:"Image,omitempty"`
 
 	// Mode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-mode
-	Mode string `json:"Mode,omitempty"`
+	Mode *types.Value `json:"Mode,omitempty"`
 
 	// ModelDataUrl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-modeldataurl
-	ModelDataUrl string `json:"ModelDataUrl,omitempty"`
+	ModelDataUrl *types.Value `json:"ModelDataUrl,omitempty"`
+
+	// ModelPackageName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-modelpackagename
+	ModelPackageName *types.Value `json:"ModelPackageName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

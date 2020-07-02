@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Subscription AWS CloudFormation Resource (AWS::SNS::Subscription)
@@ -20,7 +22,7 @@ type Subscription struct {
 	// Endpoint AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-endpoint
-	Endpoint string `json:"Endpoint,omitempty"`
+	Endpoint *types.Value `json:"Endpoint,omitempty"`
 
 	// FilterPolicy AWS CloudFormation Property
 	// Required: false
@@ -30,12 +32,12 @@ type Subscription struct {
 	// Protocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-protocol
-	Protocol string `json:"Protocol,omitempty"`
+	Protocol *types.Value `json:"Protocol,omitempty"`
 
 	// RawMessageDelivery AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-rawmessagedelivery
-	RawMessageDelivery bool `json:"RawMessageDelivery,omitempty"`
+	RawMessageDelivery *types.Value `json:"RawMessageDelivery,omitempty"`
 
 	// RedrivePolicy AWS CloudFormation Property
 	// Required: false
@@ -45,12 +47,12 @@ type Subscription struct {
 	// Region AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-region
-	Region string `json:"Region,omitempty"`
+	Region *types.Value `json:"Region,omitempty"`
 
 	// TopicArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#topicarn
-	TopicArn string `json:"TopicArn,omitempty"`
+	TopicArn *types.Value `json:"TopicArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

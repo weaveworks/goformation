@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Input AWS CloudFormation Resource (AWS::MediaLive::Input)
@@ -20,7 +22,7 @@ type Input struct {
 	// InputSecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputsecuritygroups
-	InputSecurityGroups []string `json:"InputSecurityGroups,omitempty"`
+	InputSecurityGroups *types.Value `json:"InputSecurityGroups,omitempty"`
 
 	// MediaConnectFlows AWS CloudFormation Property
 	// Required: false
@@ -30,12 +32,12 @@ type Input struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// Sources AWS CloudFormation Property
 	// Required: false
@@ -50,7 +52,7 @@ type Input struct {
 	// Type AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// Vpc AWS CloudFormation Property
 	// Required: false

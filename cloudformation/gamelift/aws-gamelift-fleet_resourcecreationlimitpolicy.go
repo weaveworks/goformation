@@ -1,7 +1,9 @@
 package gamelift
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Fleet_ResourceCreationLimitPolicy AWS CloudFormation Resource (AWS::GameLift::Fleet.ResourceCreationLimitPolicy)
@@ -11,12 +13,12 @@ type Fleet_ResourceCreationLimitPolicy struct {
 	// NewGameSessionsPerCreator AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator
-	NewGameSessionsPerCreator int `json:"NewGameSessionsPerCreator,omitempty"`
+	NewGameSessionsPerCreator *types.Value `json:"NewGameSessionsPerCreator,omitempty"`
 
 	// PolicyPeriodInMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-policyperiodinminutes
-	PolicyPeriodInMinutes int `json:"PolicyPeriodInMinutes,omitempty"`
+	PolicyPeriodInMinutes *types.Value `json:"PolicyPeriodInMinutes,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

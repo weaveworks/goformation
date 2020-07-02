@@ -1,7 +1,9 @@
 package iotanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Dataset_GlueConfiguration AWS CloudFormation Resource (AWS::IoTAnalytics::Dataset.GlueConfiguration)
@@ -11,12 +13,12 @@ type Dataset_GlueConfiguration struct {
 	// DatabaseName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-databasename
-	DatabaseName string `json:"DatabaseName,omitempty"`
+	DatabaseName *types.Value `json:"DatabaseName,omitempty"`
 
 	// TableName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-tablename
-	TableName string `json:"TableName,omitempty"`
+	TableName *types.Value `json:"TableName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

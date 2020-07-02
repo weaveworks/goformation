@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Job_ExecutionProperty AWS CloudFormation Resource (AWS::Glue::Job.ExecutionProperty)
@@ -11,7 +13,7 @@ type Job_ExecutionProperty struct {
 	// MaxConcurrentRuns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns
-	MaxConcurrentRuns float64 `json:"MaxConcurrentRuns,omitempty"`
+	MaxConcurrentRuns *types.Value `json:"MaxConcurrentRuns,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

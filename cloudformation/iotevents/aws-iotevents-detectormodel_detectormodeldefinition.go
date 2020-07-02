@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_DetectorModelDefinition AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.DetectorModelDefinition)
@@ -11,7 +13,7 @@ type DetectorModel_DetectorModelDefinition struct {
 	// InitialStateName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename
-	InitialStateName string `json:"InitialStateName,omitempty"`
+	InitialStateName *types.Value `json:"InitialStateName,omitempty"`
 
 	// States AWS CloudFormation Property
 	// Required: false

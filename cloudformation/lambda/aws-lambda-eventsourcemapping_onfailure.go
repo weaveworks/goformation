@@ -1,7 +1,9 @@
 package lambda
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EventSourceMapping_OnFailure AWS CloudFormation Resource (AWS::Lambda::EventSourceMapping.OnFailure)
@@ -11,7 +13,7 @@ type EventSourceMapping_OnFailure struct {
 	// Destination AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination
-	Destination string `json:"Destination,omitempty"`
+	Destination *types.Value `json:"Destination,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

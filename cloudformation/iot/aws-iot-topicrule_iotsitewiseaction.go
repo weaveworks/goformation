@@ -1,7 +1,9 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TopicRule_IotSiteWiseAction AWS CloudFormation Resource (AWS::IoT::TopicRule.IotSiteWiseAction)
@@ -16,7 +18,7 @@ type TopicRule_IotSiteWiseAction struct {
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotsitewiseaction.html#cfn-iot-topicrule-iotsitewiseaction-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

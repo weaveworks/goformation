@@ -5,17 +5,24 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FileSystem AWS CloudFormation Resource (AWS::EFS::FileSystem)
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html
 type FileSystem struct {
 
+	// BackupPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-backuppolicy
+	BackupPolicy *FileSystem_BackupPolicy `json:"BackupPolicy,omitempty"`
+
 	// Encrypted AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-encrypted
-	Encrypted bool `json:"Encrypted,omitempty"`
+	Encrypted *types.Value `json:"Encrypted,omitempty"`
 
 	// FileSystemPolicy AWS CloudFormation Property
 	// Required: false
@@ -30,7 +37,7 @@ type FileSystem struct {
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *types.Value `json:"KmsKeyId,omitempty"`
 
 	// LifecyclePolicies AWS CloudFormation Property
 	// Required: false
@@ -40,17 +47,17 @@ type FileSystem struct {
 	// PerformanceMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-performancemode
-	PerformanceMode string `json:"PerformanceMode,omitempty"`
+	PerformanceMode *types.Value `json:"PerformanceMode,omitempty"`
 
 	// ProvisionedThroughputInMibps AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-provisionedthroughputinmibps
-	ProvisionedThroughputInMibps float64 `json:"ProvisionedThroughputInMibps,omitempty"`
+	ProvisionedThroughputInMibps *types.Value `json:"ProvisionedThroughputInMibps,omitempty"`
 
 	// ThroughputMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-throughputmode
-	ThroughputMode string `json:"ThroughputMode,omitempty"`
+	ThroughputMode *types.Value `json:"ThroughputMode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

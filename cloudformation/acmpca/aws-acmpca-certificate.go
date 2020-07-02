@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Certificate AWS CloudFormation Resource (AWS::ACMPCA::Certificate)
@@ -15,22 +17,22 @@ type Certificate struct {
 	// CertificateAuthorityArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-certificateauthorityarn
-	CertificateAuthorityArn string `json:"CertificateAuthorityArn,omitempty"`
+	CertificateAuthorityArn *types.Value `json:"CertificateAuthorityArn,omitempty"`
 
 	// CertificateSigningRequest AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-certificatesigningrequest
-	CertificateSigningRequest string `json:"CertificateSigningRequest,omitempty"`
+	CertificateSigningRequest *types.Value `json:"CertificateSigningRequest,omitempty"`
 
 	// SigningAlgorithm AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-signingalgorithm
-	SigningAlgorithm string `json:"SigningAlgorithm,omitempty"`
+	SigningAlgorithm *types.Value `json:"SigningAlgorithm,omitempty"`
 
 	// TemplateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-templatearn
-	TemplateArn string `json:"TemplateArn,omitempty"`
+	TemplateArn *types.Value `json:"TemplateArn,omitempty"`
 
 	// Validity AWS CloudFormation Property
 	// Required: true

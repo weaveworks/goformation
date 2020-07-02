@@ -1,7 +1,9 @@
 package pinpoint
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Campaign_AttributeDimension AWS CloudFormation Resource (AWS::Pinpoint::Campaign.AttributeDimension)
@@ -11,12 +13,12 @@ type Campaign_AttributeDimension struct {
 	// AttributeType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-attributetype
-	AttributeType string `json:"AttributeType,omitempty"`
+	AttributeType *types.Value `json:"AttributeType,omitempty"`
 
 	// Values AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-values
-	Values []string `json:"Values,omitempty"`
+	Values *types.Value `json:"Values,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

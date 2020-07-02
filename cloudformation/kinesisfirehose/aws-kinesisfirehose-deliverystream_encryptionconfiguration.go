@@ -1,7 +1,9 @@
 package kinesisfirehose
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeliveryStream_EncryptionConfiguration AWS CloudFormation Resource (AWS::KinesisFirehose::DeliveryStream.EncryptionConfiguration)
@@ -16,7 +18,7 @@ type DeliveryStream_EncryptionConfiguration struct {
 	// NoEncryptionConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.html#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig
-	NoEncryptionConfig string `json:"NoEncryptionConfig,omitempty"`
+	NoEncryptionConfig *types.Value `json:"NoEncryptionConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package kinesisanalyticsv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_JSONMappingParameters AWS CloudFormation Resource (AWS::KinesisAnalyticsV2::Application.JSONMappingParameters)
@@ -11,7 +13,7 @@ type Application_JSONMappingParameters struct {
 	// RecordRowPath AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath
-	RecordRowPath string `json:"RecordRowPath,omitempty"`
+	RecordRowPath *types.Value `json:"RecordRowPath,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

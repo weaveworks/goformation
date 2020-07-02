@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ApiCache AWS CloudFormation Resource (AWS::AppSync::ApiCache)
@@ -15,32 +17,32 @@ type ApiCache struct {
 	// ApiCachingBehavior AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apicachingbehavior
-	ApiCachingBehavior string `json:"ApiCachingBehavior,omitempty"`
+	ApiCachingBehavior *types.Value `json:"ApiCachingBehavior,omitempty"`
 
 	// ApiId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apiid
-	ApiId string `json:"ApiId,omitempty"`
+	ApiId *types.Value `json:"ApiId,omitempty"`
 
 	// AtRestEncryptionEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled
-	AtRestEncryptionEnabled bool `json:"AtRestEncryptionEnabled,omitempty"`
+	AtRestEncryptionEnabled *types.Value `json:"AtRestEncryptionEnabled,omitempty"`
 
 	// TransitEncryptionEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled
-	TransitEncryptionEnabled bool `json:"TransitEncryptionEnabled,omitempty"`
+	TransitEncryptionEnabled *types.Value `json:"TransitEncryptionEnabled,omitempty"`
 
 	// Ttl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-ttl
-	Ttl float64 `json:"Ttl"`
+	Ttl *types.Value `json:"Ttl"`
 
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

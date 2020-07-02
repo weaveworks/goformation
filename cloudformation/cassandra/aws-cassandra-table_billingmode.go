@@ -1,7 +1,9 @@
 package cassandra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_BillingMode AWS CloudFormation Resource (AWS::Cassandra::Table.BillingMode)
@@ -11,7 +13,7 @@ type Table_BillingMode struct {
 	// Mode AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-mode
-	Mode string `json:"Mode,omitempty"`
+	Mode *types.Value `json:"Mode,omitempty"`
 
 	// ProvisionedThroughput AWS CloudFormation Property
 	// Required: false

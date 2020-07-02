@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TrafficMirrorFilterRule_TrafficMirrorPortRange AWS CloudFormation Resource (AWS::EC2::TrafficMirrorFilterRule.TrafficMirrorPortRange)
@@ -11,12 +13,12 @@ type TrafficMirrorFilterRule_TrafficMirrorPortRange struct {
 	// FromPort AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.html#cfn-ec2-trafficmirrorfilterrule-trafficmirrorportrange-fromport
-	FromPort int `json:"FromPort"`
+	FromPort *types.Value `json:"FromPort"`
 
 	// ToPort AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.html#cfn-ec2-trafficmirrorfilterrule-trafficmirrorportrange-toport
-	ToPort int `json:"ToPort"`
+	ToPort *types.Value `json:"ToPort"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

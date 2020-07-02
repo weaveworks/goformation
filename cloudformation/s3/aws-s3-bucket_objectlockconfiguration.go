@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_ObjectLockConfiguration AWS CloudFormation Resource (AWS::S3::Bucket.ObjectLockConfiguration)
@@ -11,7 +13,7 @@ type Bucket_ObjectLockConfiguration struct {
 	// ObjectLockEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockconfiguration.html#cfn-s3-bucket-objectlockconfiguration-objectlockenabled
-	ObjectLockEnabled string `json:"ObjectLockEnabled,omitempty"`
+	ObjectLockEnabled *types.Value `json:"ObjectLockEnabled,omitempty"`
 
 	// Rule AWS CloudFormation Property
 	// Required: false

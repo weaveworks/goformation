@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // IdentityPoolRoleAttachment AWS CloudFormation Resource (AWS::Cognito::IdentityPoolRoleAttachment)
@@ -15,7 +17,7 @@ type IdentityPoolRoleAttachment struct {
 	// IdentityPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-identitypoolid
-	IdentityPoolId string `json:"IdentityPoolId,omitempty"`
+	IdentityPoolId *types.Value `json:"IdentityPoolId,omitempty"`
 
 	// RoleMappings AWS CloudFormation Property
 	// Required: false

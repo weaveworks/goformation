@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RouteResponse AWS CloudFormation Resource (AWS::ApiGatewayV2::RouteResponse)
@@ -15,12 +17,12 @@ type RouteResponse struct {
 	// ApiId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-apiid
-	ApiId string `json:"ApiId,omitempty"`
+	ApiId *types.Value `json:"ApiId,omitempty"`
 
 	// ModelSelectionExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-modelselectionexpression
-	ModelSelectionExpression string `json:"ModelSelectionExpression,omitempty"`
+	ModelSelectionExpression *types.Value `json:"ModelSelectionExpression,omitempty"`
 
 	// ResponseModels AWS CloudFormation Property
 	// Required: false
@@ -35,12 +37,12 @@ type RouteResponse struct {
 	// RouteId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-routeid
-	RouteId string `json:"RouteId,omitempty"`
+	RouteId *types.Value `json:"RouteId,omitempty"`
 
 	// RouteResponseKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-routeresponsekey
-	RouteResponseKey string `json:"RouteResponseKey,omitempty"`
+	RouteResponseKey *types.Value `json:"RouteResponseKey,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

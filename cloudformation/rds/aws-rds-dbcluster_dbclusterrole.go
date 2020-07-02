@@ -1,7 +1,9 @@
 package rds
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DBCluster_DBClusterRole AWS CloudFormation Resource (AWS::RDS::DBCluster.DBClusterRole)
@@ -11,12 +13,12 @@ type DBCluster_DBClusterRole struct {
 	// FeatureName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-featurename
-	FeatureName string `json:"FeatureName,omitempty"`
+	FeatureName *types.Value `json:"FeatureName,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_VideoSelector AWS CloudFormation Resource (AWS::MediaLive::Channel.VideoSelector)
@@ -11,12 +13,12 @@ type Channel_VideoSelector struct {
 	// ColorSpace AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoselector.html#cfn-medialive-channel-videoselector-colorspace
-	ColorSpace string `json:"ColorSpace,omitempty"`
+	ColorSpace *types.Value `json:"ColorSpace,omitempty"`
 
 	// ColorSpaceUsage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoselector.html#cfn-medialive-channel-videoselector-colorspaceusage
-	ColorSpaceUsage string `json:"ColorSpaceUsage,omitempty"`
+	ColorSpaceUsage *types.Value `json:"ColorSpaceUsage,omitempty"`
 
 	// SelectorSettings AWS CloudFormation Property
 	// Required: false

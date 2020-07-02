@@ -1,7 +1,9 @@
 package events
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Rule_EcsParameters AWS CloudFormation Resource (AWS::Events::Rule.EcsParameters)
@@ -11,12 +13,12 @@ type Rule_EcsParameters struct {
 	// Group AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-group
-	Group string `json:"Group,omitempty"`
+	Group *types.Value `json:"Group,omitempty"`
 
 	// LaunchType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-launchtype
-	LaunchType string `json:"LaunchType,omitempty"`
+	LaunchType *types.Value `json:"LaunchType,omitempty"`
 
 	// NetworkConfiguration AWS CloudFormation Property
 	// Required: false
@@ -26,17 +28,17 @@ type Rule_EcsParameters struct {
 	// PlatformVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-platformversion
-	PlatformVersion string `json:"PlatformVersion,omitempty"`
+	PlatformVersion *types.Value `json:"PlatformVersion,omitempty"`
 
 	// TaskCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskcount
-	TaskCount int `json:"TaskCount,omitempty"`
+	TaskCount *types.Value `json:"TaskCount,omitempty"`
 
 	// TaskDefinitionArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskdefinitionarn
-	TaskDefinitionArn string `json:"TaskDefinitionArn,omitempty"`
+	TaskDefinitionArn *types.Value `json:"TaskDefinitionArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

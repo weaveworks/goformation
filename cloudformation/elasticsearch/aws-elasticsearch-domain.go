@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Domain AWS CloudFormation Resource (AWS::Elasticsearch::Domain)
@@ -21,17 +23,27 @@ type Domain struct {
 	// AdvancedOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions
-	AdvancedOptions map[string]string `json:"AdvancedOptions,omitempty"`
+	AdvancedOptions map[string]*types.Value `json:"AdvancedOptions,omitempty"`
+
+	// AdvancedSecurityOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedsecurityoptions
+	AdvancedSecurityOptions *Domain_AdvancedSecurityOptionsInput `json:"AdvancedSecurityOptions,omitempty"`
 
 	// CognitoOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-cognitooptions
 	CognitoOptions *Domain_CognitoOptions `json:"CognitoOptions,omitempty"`
 
+	// DomainEndpointOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainendpointoptions
+	DomainEndpointOptions *Domain_DomainEndpointOptions `json:"DomainEndpointOptions,omitempty"`
+
 	// DomainName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *types.Value `json:"DomainName,omitempty"`
 
 	// EBSOptions AWS CloudFormation Property
 	// Required: false
@@ -46,7 +58,7 @@ type Domain struct {
 	// ElasticsearchVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchversion
-	ElasticsearchVersion string `json:"ElasticsearchVersion,omitempty"`
+	ElasticsearchVersion *types.Value `json:"ElasticsearchVersion,omitempty"`
 
 	// EncryptionAtRestOptions AWS CloudFormation Property
 	// Required: false
@@ -71,7 +83,7 @@ type Domain struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VPCOptions AWS CloudFormation Property
 	// Required: false

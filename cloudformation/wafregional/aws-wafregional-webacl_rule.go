@@ -1,7 +1,9 @@
 package wafregional
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_Rule AWS CloudFormation Resource (AWS::WAFRegional::WebACL.Rule)
@@ -16,12 +18,12 @@ type WebACL_Rule struct {
 	// Priority AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority
-	Priority int `json:"Priority"`
+	Priority *types.Value `json:"Priority"`
 
 	// RuleId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid
-	RuleId string `json:"RuleId,omitempty"`
+	RuleId *types.Value `json:"RuleId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

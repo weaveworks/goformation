@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket AWS CloudFormation Resource (AWS::S3::Bucket)
@@ -21,7 +23,7 @@ type Bucket struct {
 	// AccessControl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol
-	AccessControl string `json:"AccessControl,omitempty"`
+	AccessControl *types.Value `json:"AccessControl,omitempty"`
 
 	// AnalyticsConfigurations AWS CloudFormation Property
 	// Required: false
@@ -36,7 +38,7 @@ type Bucket struct {
 	// BucketName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
-	BucketName string `json:"BucketName,omitempty"`
+	BucketName *types.Value `json:"BucketName,omitempty"`
 
 	// CorsConfiguration AWS CloudFormation Property
 	// Required: false
@@ -76,7 +78,7 @@ type Bucket struct {
 	// ObjectLockEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-objectlockenabled
-	ObjectLockEnabled bool `json:"ObjectLockEnabled,omitempty"`
+	ObjectLockEnabled *types.Value `json:"ObjectLockEnabled,omitempty"`
 
 	// PublicAccessBlockConfiguration AWS CloudFormation Property
 	// Required: false
@@ -91,7 +93,7 @@ type Bucket struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VersioningConfiguration AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_ProjectSourceVersion AWS CloudFormation Resource (AWS::CodeBuild::Project.ProjectSourceVersion)
@@ -11,12 +13,12 @@ type Project_ProjectSourceVersion struct {
 	// SourceIdentifier AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectsourceversion.html#cfn-codebuild-project-projectsourceversion-sourceidentifier
-	SourceIdentifier string `json:"SourceIdentifier,omitempty"`
+	SourceIdentifier *types.Value `json:"SourceIdentifier,omitempty"`
 
 	// SourceVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectsourceversion.html#cfn-codebuild-project-projectsourceversion-sourceversion
-	SourceVersion string `json:"SourceVersion,omitempty"`
+	SourceVersion *types.Value `json:"SourceVersion,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

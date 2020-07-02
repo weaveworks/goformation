@@ -1,7 +1,9 @@
 package appsync
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GraphQLApi_LogConfig AWS CloudFormation Resource (AWS::AppSync::GraphQLApi.LogConfig)
@@ -11,17 +13,17 @@ type GraphQLApi_LogConfig struct {
 	// CloudWatchLogsRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn
-	CloudWatchLogsRoleArn string `json:"CloudWatchLogsRoleArn,omitempty"`
+	CloudWatchLogsRoleArn *types.Value `json:"CloudWatchLogsRoleArn,omitempty"`
 
 	// ExcludeVerboseContent AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent
-	ExcludeVerboseContent bool `json:"ExcludeVerboseContent,omitempty"`
+	ExcludeVerboseContent *types.Value `json:"ExcludeVerboseContent,omitempty"`
 
 	// FieldLogLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel
-	FieldLogLevel string `json:"FieldLogLevel,omitempty"`
+	FieldLogLevel *types.Value `json:"FieldLogLevel,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

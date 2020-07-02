@@ -1,7 +1,9 @@
 package glue
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_TableInput AWS CloudFormation Resource (AWS::Glue::Table.TableInput)
@@ -11,17 +13,17 @@ type Table_TableInput struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Owner AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner
-	Owner string `json:"Owner,omitempty"`
+	Owner *types.Value `json:"Owner,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
@@ -36,7 +38,7 @@ type Table_TableInput struct {
 	// Retention AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-retention
-	Retention int `json:"Retention,omitempty"`
+	Retention *types.Value `json:"Retention,omitempty"`
 
 	// StorageDescriptor AWS CloudFormation Property
 	// Required: false
@@ -46,17 +48,17 @@ type Table_TableInput struct {
 	// TableType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype
-	TableType string `json:"TableType,omitempty"`
+	TableType *types.Value `json:"TableType,omitempty"`
 
 	// ViewExpandedText AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext
-	ViewExpandedText string `json:"ViewExpandedText,omitempty"`
+	ViewExpandedText *types.Value `json:"ViewExpandedText,omitempty"`
 
 	// ViewOriginalText AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext
-	ViewOriginalText string `json:"ViewOriginalText,omitempty"`
+	ViewOriginalText *types.Value `json:"ViewOriginalText,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

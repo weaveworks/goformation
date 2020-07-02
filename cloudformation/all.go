@@ -2,126 +2,126 @@ package cloudformation
 
 import (
 	"fmt"
-	"github.com/awslabs/goformation/v4/cloudformation/accessanalyzer"
-	"github.com/awslabs/goformation/v4/cloudformation/acmpca"
-	"github.com/awslabs/goformation/v4/cloudformation/amazonmq"
-	"github.com/awslabs/goformation/v4/cloudformation/amplify"
-	"github.com/awslabs/goformation/v4/cloudformation/apigateway"
-	"github.com/awslabs/goformation/v4/cloudformation/apigatewayv2"
-	"github.com/awslabs/goformation/v4/cloudformation/appconfig"
-	"github.com/awslabs/goformation/v4/cloudformation/applicationautoscaling"
-	"github.com/awslabs/goformation/v4/cloudformation/appmesh"
-	"github.com/awslabs/goformation/v4/cloudformation/appstream"
-	"github.com/awslabs/goformation/v4/cloudformation/appsync"
-	"github.com/awslabs/goformation/v4/cloudformation/ask"
-	"github.com/awslabs/goformation/v4/cloudformation/athena"
-	"github.com/awslabs/goformation/v4/cloudformation/autoscaling"
-	"github.com/awslabs/goformation/v4/cloudformation/autoscalingplans"
-	"github.com/awslabs/goformation/v4/cloudformation/backup"
-	"github.com/awslabs/goformation/v4/cloudformation/batch"
-	"github.com/awslabs/goformation/v4/cloudformation/budgets"
-	"github.com/awslabs/goformation/v4/cloudformation/cassandra"
-	"github.com/awslabs/goformation/v4/cloudformation/ce"
-	"github.com/awslabs/goformation/v4/cloudformation/certificatemanager"
-	"github.com/awslabs/goformation/v4/cloudformation/chatbot"
-	"github.com/awslabs/goformation/v4/cloudformation/cloud9"
-	"github.com/awslabs/goformation/v4/cloudformation/cloudformation"
-	"github.com/awslabs/goformation/v4/cloudformation/cloudfront"
-	"github.com/awslabs/goformation/v4/cloudformation/cloudtrail"
-	"github.com/awslabs/goformation/v4/cloudformation/cloudwatch"
-	"github.com/awslabs/goformation/v4/cloudformation/codebuild"
-	"github.com/awslabs/goformation/v4/cloudformation/codecommit"
-	"github.com/awslabs/goformation/v4/cloudformation/codedeploy"
-	"github.com/awslabs/goformation/v4/cloudformation/codeguruprofiler"
-	"github.com/awslabs/goformation/v4/cloudformation/codepipeline"
-	"github.com/awslabs/goformation/v4/cloudformation/codestar"
-	"github.com/awslabs/goformation/v4/cloudformation/codestarconnections"
-	"github.com/awslabs/goformation/v4/cloudformation/codestarnotifications"
-	"github.com/awslabs/goformation/v4/cloudformation/cognito"
-	"github.com/awslabs/goformation/v4/cloudformation/config"
-	"github.com/awslabs/goformation/v4/cloudformation/datapipeline"
-	"github.com/awslabs/goformation/v4/cloudformation/dax"
-	"github.com/awslabs/goformation/v4/cloudformation/detective"
-	"github.com/awslabs/goformation/v4/cloudformation/directoryservice"
-	"github.com/awslabs/goformation/v4/cloudformation/dlm"
-	"github.com/awslabs/goformation/v4/cloudformation/dms"
-	"github.com/awslabs/goformation/v4/cloudformation/docdb"
-	"github.com/awslabs/goformation/v4/cloudformation/dynamodb"
-	"github.com/awslabs/goformation/v4/cloudformation/ec2"
-	"github.com/awslabs/goformation/v4/cloudformation/ecr"
-	"github.com/awslabs/goformation/v4/cloudformation/ecs"
-	"github.com/awslabs/goformation/v4/cloudformation/efs"
-	"github.com/awslabs/goformation/v4/cloudformation/eks"
-	"github.com/awslabs/goformation/v4/cloudformation/elasticache"
-	"github.com/awslabs/goformation/v4/cloudformation/elasticbeanstalk"
-	"github.com/awslabs/goformation/v4/cloudformation/elasticloadbalancing"
-	"github.com/awslabs/goformation/v4/cloudformation/elasticloadbalancingv2"
-	"github.com/awslabs/goformation/v4/cloudformation/elasticsearch"
-	"github.com/awslabs/goformation/v4/cloudformation/emr"
-	"github.com/awslabs/goformation/v4/cloudformation/events"
-	"github.com/awslabs/goformation/v4/cloudformation/eventschemas"
-	"github.com/awslabs/goformation/v4/cloudformation/fms"
-	"github.com/awslabs/goformation/v4/cloudformation/fsx"
-	"github.com/awslabs/goformation/v4/cloudformation/gamelift"
-	"github.com/awslabs/goformation/v4/cloudformation/globalaccelerator"
-	"github.com/awslabs/goformation/v4/cloudformation/glue"
-	"github.com/awslabs/goformation/v4/cloudformation/greengrass"
-	"github.com/awslabs/goformation/v4/cloudformation/guardduty"
-	"github.com/awslabs/goformation/v4/cloudformation/iam"
-	"github.com/awslabs/goformation/v4/cloudformation/imagebuilder"
-	"github.com/awslabs/goformation/v4/cloudformation/inspector"
-	"github.com/awslabs/goformation/v4/cloudformation/iot"
-	"github.com/awslabs/goformation/v4/cloudformation/iot1click"
-	"github.com/awslabs/goformation/v4/cloudformation/iotanalytics"
-	"github.com/awslabs/goformation/v4/cloudformation/iotevents"
-	"github.com/awslabs/goformation/v4/cloudformation/iotthingsgraph"
-	"github.com/awslabs/goformation/v4/cloudformation/kinesis"
-	"github.com/awslabs/goformation/v4/cloudformation/kinesisanalytics"
-	"github.com/awslabs/goformation/v4/cloudformation/kinesisanalyticsv2"
-	"github.com/awslabs/goformation/v4/cloudformation/kinesisfirehose"
-	"github.com/awslabs/goformation/v4/cloudformation/kms"
-	"github.com/awslabs/goformation/v4/cloudformation/lakeformation"
-	"github.com/awslabs/goformation/v4/cloudformation/lambda"
-	"github.com/awslabs/goformation/v4/cloudformation/logs"
-	"github.com/awslabs/goformation/v4/cloudformation/macie"
-	"github.com/awslabs/goformation/v4/cloudformation/managedblockchain"
-	"github.com/awslabs/goformation/v4/cloudformation/mediaconvert"
-	"github.com/awslabs/goformation/v4/cloudformation/medialive"
-	"github.com/awslabs/goformation/v4/cloudformation/mediastore"
-	"github.com/awslabs/goformation/v4/cloudformation/msk"
-	"github.com/awslabs/goformation/v4/cloudformation/neptune"
-	"github.com/awslabs/goformation/v4/cloudformation/networkmanager"
-	"github.com/awslabs/goformation/v4/cloudformation/opsworks"
-	"github.com/awslabs/goformation/v4/cloudformation/opsworkscm"
-	"github.com/awslabs/goformation/v4/cloudformation/pinpoint"
-	"github.com/awslabs/goformation/v4/cloudformation/pinpointemail"
-	"github.com/awslabs/goformation/v4/cloudformation/qldb"
-	"github.com/awslabs/goformation/v4/cloudformation/ram"
-	"github.com/awslabs/goformation/v4/cloudformation/rds"
-	"github.com/awslabs/goformation/v4/cloudformation/redshift"
-	"github.com/awslabs/goformation/v4/cloudformation/resourcegroups"
-	"github.com/awslabs/goformation/v4/cloudformation/robomaker"
-	"github.com/awslabs/goformation/v4/cloudformation/route53"
-	"github.com/awslabs/goformation/v4/cloudformation/route53resolver"
-	"github.com/awslabs/goformation/v4/cloudformation/s3"
-	"github.com/awslabs/goformation/v4/cloudformation/sagemaker"
-	"github.com/awslabs/goformation/v4/cloudformation/sdb"
-	"github.com/awslabs/goformation/v4/cloudformation/secretsmanager"
-	"github.com/awslabs/goformation/v4/cloudformation/securityhub"
-	"github.com/awslabs/goformation/v4/cloudformation/serverless"
-	"github.com/awslabs/goformation/v4/cloudformation/servicecatalog"
-	"github.com/awslabs/goformation/v4/cloudformation/servicediscovery"
-	"github.com/awslabs/goformation/v4/cloudformation/ses"
-	"github.com/awslabs/goformation/v4/cloudformation/sns"
-	"github.com/awslabs/goformation/v4/cloudformation/sqs"
-	"github.com/awslabs/goformation/v4/cloudformation/ssm"
-	"github.com/awslabs/goformation/v4/cloudformation/stepfunctions"
-	"github.com/awslabs/goformation/v4/cloudformation/synthetics"
-	"github.com/awslabs/goformation/v4/cloudformation/transfer"
-	"github.com/awslabs/goformation/v4/cloudformation/waf"
-	"github.com/awslabs/goformation/v4/cloudformation/wafregional"
-	"github.com/awslabs/goformation/v4/cloudformation/wafv2"
-	"github.com/awslabs/goformation/v4/cloudformation/workspaces"
+	"github.com/weaveworks/goformation/v4/cloudformation/accessanalyzer"
+	"github.com/weaveworks/goformation/v4/cloudformation/acmpca"
+	"github.com/weaveworks/goformation/v4/cloudformation/amazonmq"
+	"github.com/weaveworks/goformation/v4/cloudformation/amplify"
+	"github.com/weaveworks/goformation/v4/cloudformation/apigateway"
+	"github.com/weaveworks/goformation/v4/cloudformation/apigatewayv2"
+	"github.com/weaveworks/goformation/v4/cloudformation/appconfig"
+	"github.com/weaveworks/goformation/v4/cloudformation/applicationautoscaling"
+	"github.com/weaveworks/goformation/v4/cloudformation/appmesh"
+	"github.com/weaveworks/goformation/v4/cloudformation/appstream"
+	"github.com/weaveworks/goformation/v4/cloudformation/appsync"
+	"github.com/weaveworks/goformation/v4/cloudformation/ask"
+	"github.com/weaveworks/goformation/v4/cloudformation/athena"
+	"github.com/weaveworks/goformation/v4/cloudformation/autoscaling"
+	"github.com/weaveworks/goformation/v4/cloudformation/autoscalingplans"
+	"github.com/weaveworks/goformation/v4/cloudformation/backup"
+	"github.com/weaveworks/goformation/v4/cloudformation/batch"
+	"github.com/weaveworks/goformation/v4/cloudformation/budgets"
+	"github.com/weaveworks/goformation/v4/cloudformation/cassandra"
+	"github.com/weaveworks/goformation/v4/cloudformation/ce"
+	"github.com/weaveworks/goformation/v4/cloudformation/certificatemanager"
+	"github.com/weaveworks/goformation/v4/cloudformation/chatbot"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloud9"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudfront"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudtrail"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudwatch"
+	"github.com/weaveworks/goformation/v4/cloudformation/codebuild"
+	"github.com/weaveworks/goformation/v4/cloudformation/codecommit"
+	"github.com/weaveworks/goformation/v4/cloudformation/codedeploy"
+	"github.com/weaveworks/goformation/v4/cloudformation/codeguruprofiler"
+	"github.com/weaveworks/goformation/v4/cloudformation/codepipeline"
+	"github.com/weaveworks/goformation/v4/cloudformation/codestar"
+	"github.com/weaveworks/goformation/v4/cloudformation/codestarconnections"
+	"github.com/weaveworks/goformation/v4/cloudformation/codestarnotifications"
+	"github.com/weaveworks/goformation/v4/cloudformation/cognito"
+	"github.com/weaveworks/goformation/v4/cloudformation/config"
+	"github.com/weaveworks/goformation/v4/cloudformation/datapipeline"
+	"github.com/weaveworks/goformation/v4/cloudformation/dax"
+	"github.com/weaveworks/goformation/v4/cloudformation/detective"
+	"github.com/weaveworks/goformation/v4/cloudformation/directoryservice"
+	"github.com/weaveworks/goformation/v4/cloudformation/dlm"
+	"github.com/weaveworks/goformation/v4/cloudformation/dms"
+	"github.com/weaveworks/goformation/v4/cloudformation/docdb"
+	"github.com/weaveworks/goformation/v4/cloudformation/dynamodb"
+	"github.com/weaveworks/goformation/v4/cloudformation/ec2"
+	"github.com/weaveworks/goformation/v4/cloudformation/ecr"
+	"github.com/weaveworks/goformation/v4/cloudformation/ecs"
+	"github.com/weaveworks/goformation/v4/cloudformation/efs"
+	"github.com/weaveworks/goformation/v4/cloudformation/eks"
+	"github.com/weaveworks/goformation/v4/cloudformation/elasticache"
+	"github.com/weaveworks/goformation/v4/cloudformation/elasticbeanstalk"
+	"github.com/weaveworks/goformation/v4/cloudformation/elasticloadbalancing"
+	"github.com/weaveworks/goformation/v4/cloudformation/elasticloadbalancingv2"
+	"github.com/weaveworks/goformation/v4/cloudformation/elasticsearch"
+	"github.com/weaveworks/goformation/v4/cloudformation/emr"
+	"github.com/weaveworks/goformation/v4/cloudformation/events"
+	"github.com/weaveworks/goformation/v4/cloudformation/eventschemas"
+	"github.com/weaveworks/goformation/v4/cloudformation/fms"
+	"github.com/weaveworks/goformation/v4/cloudformation/fsx"
+	"github.com/weaveworks/goformation/v4/cloudformation/gamelift"
+	"github.com/weaveworks/goformation/v4/cloudformation/globalaccelerator"
+	"github.com/weaveworks/goformation/v4/cloudformation/glue"
+	"github.com/weaveworks/goformation/v4/cloudformation/greengrass"
+	"github.com/weaveworks/goformation/v4/cloudformation/guardduty"
+	"github.com/weaveworks/goformation/v4/cloudformation/iam"
+	"github.com/weaveworks/goformation/v4/cloudformation/imagebuilder"
+	"github.com/weaveworks/goformation/v4/cloudformation/inspector"
+	"github.com/weaveworks/goformation/v4/cloudformation/iot"
+	"github.com/weaveworks/goformation/v4/cloudformation/iot1click"
+	"github.com/weaveworks/goformation/v4/cloudformation/iotanalytics"
+	"github.com/weaveworks/goformation/v4/cloudformation/iotevents"
+	"github.com/weaveworks/goformation/v4/cloudformation/iotthingsgraph"
+	"github.com/weaveworks/goformation/v4/cloudformation/kinesis"
+	"github.com/weaveworks/goformation/v4/cloudformation/kinesisanalytics"
+	"github.com/weaveworks/goformation/v4/cloudformation/kinesisanalyticsv2"
+	"github.com/weaveworks/goformation/v4/cloudformation/kinesisfirehose"
+	"github.com/weaveworks/goformation/v4/cloudformation/kms"
+	"github.com/weaveworks/goformation/v4/cloudformation/lakeformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/lambda"
+	"github.com/weaveworks/goformation/v4/cloudformation/logs"
+	"github.com/weaveworks/goformation/v4/cloudformation/macie"
+	"github.com/weaveworks/goformation/v4/cloudformation/managedblockchain"
+	"github.com/weaveworks/goformation/v4/cloudformation/mediaconvert"
+	"github.com/weaveworks/goformation/v4/cloudformation/medialive"
+	"github.com/weaveworks/goformation/v4/cloudformation/mediastore"
+	"github.com/weaveworks/goformation/v4/cloudformation/msk"
+	"github.com/weaveworks/goformation/v4/cloudformation/neptune"
+	"github.com/weaveworks/goformation/v4/cloudformation/networkmanager"
+	"github.com/weaveworks/goformation/v4/cloudformation/opsworks"
+	"github.com/weaveworks/goformation/v4/cloudformation/opsworkscm"
+	"github.com/weaveworks/goformation/v4/cloudformation/pinpoint"
+	"github.com/weaveworks/goformation/v4/cloudformation/pinpointemail"
+	"github.com/weaveworks/goformation/v4/cloudformation/qldb"
+	"github.com/weaveworks/goformation/v4/cloudformation/ram"
+	"github.com/weaveworks/goformation/v4/cloudformation/rds"
+	"github.com/weaveworks/goformation/v4/cloudformation/redshift"
+	"github.com/weaveworks/goformation/v4/cloudformation/resourcegroups"
+	"github.com/weaveworks/goformation/v4/cloudformation/robomaker"
+	"github.com/weaveworks/goformation/v4/cloudformation/route53"
+	"github.com/weaveworks/goformation/v4/cloudformation/route53resolver"
+	"github.com/weaveworks/goformation/v4/cloudformation/s3"
+	"github.com/weaveworks/goformation/v4/cloudformation/sagemaker"
+	"github.com/weaveworks/goformation/v4/cloudformation/sdb"
+	"github.com/weaveworks/goformation/v4/cloudformation/secretsmanager"
+	"github.com/weaveworks/goformation/v4/cloudformation/securityhub"
+	"github.com/weaveworks/goformation/v4/cloudformation/serverless"
+	"github.com/weaveworks/goformation/v4/cloudformation/servicecatalog"
+	"github.com/weaveworks/goformation/v4/cloudformation/servicediscovery"
+	"github.com/weaveworks/goformation/v4/cloudformation/ses"
+	"github.com/weaveworks/goformation/v4/cloudformation/sns"
+	"github.com/weaveworks/goformation/v4/cloudformation/sqs"
+	"github.com/weaveworks/goformation/v4/cloudformation/ssm"
+	"github.com/weaveworks/goformation/v4/cloudformation/stepfunctions"
+	"github.com/weaveworks/goformation/v4/cloudformation/synthetics"
+	"github.com/weaveworks/goformation/v4/cloudformation/transfer"
+	"github.com/weaveworks/goformation/v4/cloudformation/waf"
+	"github.com/weaveworks/goformation/v4/cloudformation/wafregional"
+	"github.com/weaveworks/goformation/v4/cloudformation/wafv2"
+	"github.com/weaveworks/goformation/v4/cloudformation/workspaces"
 )
 
 // AllResources fetches an iterable map all CloudFormation and SAM resources
@@ -157,6 +157,7 @@ func AllResources() map[string]Resource {
 		"AWS::ApiGateway::UsagePlanKey":                               &apigateway.UsagePlanKey{},
 		"AWS::ApiGateway::VpcLink":                                    &apigateway.VpcLink{},
 		"AWS::ApiGatewayV2::Api":                                      &apigatewayv2.Api{},
+		"AWS::ApiGatewayV2::ApiGatewayManagedOverrides":               &apigatewayv2.ApiGatewayManagedOverrides{},
 		"AWS::ApiGatewayV2::ApiMapping":                               &apigatewayv2.ApiMapping{},
 		"AWS::ApiGatewayV2::Authorizer":                               &apigatewayv2.Authorizer{},
 		"AWS::ApiGatewayV2::Deployment":                               &apigatewayv2.Deployment{},
@@ -167,14 +168,17 @@ func AllResources() map[string]Resource {
 		"AWS::ApiGatewayV2::Route":                                    &apigatewayv2.Route{},
 		"AWS::ApiGatewayV2::RouteResponse":                            &apigatewayv2.RouteResponse{},
 		"AWS::ApiGatewayV2::Stage":                                    &apigatewayv2.Stage{},
+		"AWS::ApiGatewayV2::VpcLink":                                  &apigatewayv2.VpcLink{},
 		"AWS::AppConfig::Application":                                 &appconfig.Application{},
 		"AWS::AppConfig::ConfigurationProfile":                        &appconfig.ConfigurationProfile{},
 		"AWS::AppConfig::Deployment":                                  &appconfig.Deployment{},
 		"AWS::AppConfig::DeploymentStrategy":                          &appconfig.DeploymentStrategy{},
 		"AWS::AppConfig::Environment":                                 &appconfig.Environment{},
 		"AWS::AppConfig::HostedConfigurationVersion":                  &appconfig.HostedConfigurationVersion{},
+		"AWS::AppMesh::GatewayRoute":                                  &appmesh.GatewayRoute{},
 		"AWS::AppMesh::Mesh":                                          &appmesh.Mesh{},
 		"AWS::AppMesh::Route":                                         &appmesh.Route{},
+		"AWS::AppMesh::VirtualGateway":                                &appmesh.VirtualGateway{},
 		"AWS::AppMesh::VirtualNode":                                   &appmesh.VirtualNode{},
 		"AWS::AppMesh::VirtualRouter":                                 &appmesh.VirtualRouter{},
 		"AWS::AppMesh::VirtualService":                                &appmesh.VirtualService{},
@@ -194,6 +198,7 @@ func AllResources() map[string]Resource {
 		"AWS::AppSync::Resolver":                                      &appsync.Resolver{},
 		"AWS::ApplicationAutoScaling::ScalableTarget":                 &applicationautoscaling.ScalableTarget{},
 		"AWS::ApplicationAutoScaling::ScalingPolicy":                  &applicationautoscaling.ScalingPolicy{},
+		"AWS::Athena::DataCatalog":                                    &athena.DataCatalog{},
 		"AWS::Athena::NamedQuery":                                     &athena.NamedQuery{},
 		"AWS::Athena::WorkGroup":                                      &athena.WorkGroup{},
 		"AWS::AutoScaling::AutoScalingGroup":                          &autoscaling.AutoScalingGroup{},
@@ -310,6 +315,7 @@ func AllResources() map[string]Resource {
 		"AWS::EC2::NetworkInterfaceAttachment":                        &ec2.NetworkInterfaceAttachment{},
 		"AWS::EC2::NetworkInterfacePermission":                        &ec2.NetworkInterfacePermission{},
 		"AWS::EC2::PlacementGroup":                                    &ec2.PlacementGroup{},
+		"AWS::EC2::PrefixList":                                        &ec2.PrefixList{},
 		"AWS::EC2::Route":                                             &ec2.Route{},
 		"AWS::EC2::RouteTable":                                        &ec2.RouteTable{},
 		"AWS::EC2::SecurityGroup":                                     &ec2.SecurityGroup{},
@@ -553,6 +559,7 @@ func AllResources() map[string]Resource {
 		"AWS::PinpointEmail::DedicatedIpPool":                         &pinpointemail.DedicatedIpPool{},
 		"AWS::PinpointEmail::Identity":                                &pinpointemail.Identity{},
 		"AWS::QLDB::Ledger":                                           &qldb.Ledger{},
+		"AWS::QLDB::Stream":                                           &qldb.Stream{},
 		"AWS::RAM::ResourceShare":                                     &ram.ResourceShare{},
 		"AWS::RDS::DBCluster":                                         &rds.DBCluster{},
 		"AWS::RDS::DBClusterParameterGroup":                           &rds.DBClusterParameterGroup{},
@@ -1396,6 +1403,30 @@ func (t *Template) GetApiGatewayV2ApiWithName(name string) (*apigatewayv2.Api, e
 	return nil, fmt.Errorf("resource %q of type apigatewayv2.Api not found", name)
 }
 
+// GetAllApiGatewayV2ApiGatewayManagedOverridesResources retrieves all apigatewayv2.ApiGatewayManagedOverrides items from an AWS CloudFormation template
+func (t *Template) GetAllApiGatewayV2ApiGatewayManagedOverridesResources() map[string]*apigatewayv2.ApiGatewayManagedOverrides {
+	results := map[string]*apigatewayv2.ApiGatewayManagedOverrides{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *apigatewayv2.ApiGatewayManagedOverrides:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApiGatewayV2ApiGatewayManagedOverridesWithName retrieves all apigatewayv2.ApiGatewayManagedOverrides items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApiGatewayV2ApiGatewayManagedOverridesWithName(name string) (*apigatewayv2.ApiGatewayManagedOverrides, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *apigatewayv2.ApiGatewayManagedOverrides:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type apigatewayv2.ApiGatewayManagedOverrides not found", name)
+}
+
 // GetAllApiGatewayV2ApiMappingResources retrieves all apigatewayv2.ApiMapping items from an AWS CloudFormation template
 func (t *Template) GetAllApiGatewayV2ApiMappingResources() map[string]*apigatewayv2.ApiMapping {
 	results := map[string]*apigatewayv2.ApiMapping{}
@@ -1636,6 +1667,30 @@ func (t *Template) GetApiGatewayV2StageWithName(name string) (*apigatewayv2.Stag
 	return nil, fmt.Errorf("resource %q of type apigatewayv2.Stage not found", name)
 }
 
+// GetAllApiGatewayV2VpcLinkResources retrieves all apigatewayv2.VpcLink items from an AWS CloudFormation template
+func (t *Template) GetAllApiGatewayV2VpcLinkResources() map[string]*apigatewayv2.VpcLink {
+	results := map[string]*apigatewayv2.VpcLink{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *apigatewayv2.VpcLink:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApiGatewayV2VpcLinkWithName retrieves all apigatewayv2.VpcLink items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApiGatewayV2VpcLinkWithName(name string) (*apigatewayv2.VpcLink, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *apigatewayv2.VpcLink:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type apigatewayv2.VpcLink not found", name)
+}
+
 // GetAllAppConfigApplicationResources retrieves all appconfig.Application items from an AWS CloudFormation template
 func (t *Template) GetAllAppConfigApplicationResources() map[string]*appconfig.Application {
 	results := map[string]*appconfig.Application{}
@@ -1780,6 +1835,30 @@ func (t *Template) GetAppConfigHostedConfigurationVersionWithName(name string) (
 	return nil, fmt.Errorf("resource %q of type appconfig.HostedConfigurationVersion not found", name)
 }
 
+// GetAllAppMeshGatewayRouteResources retrieves all appmesh.GatewayRoute items from an AWS CloudFormation template
+func (t *Template) GetAllAppMeshGatewayRouteResources() map[string]*appmesh.GatewayRoute {
+	results := map[string]*appmesh.GatewayRoute{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *appmesh.GatewayRoute:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetAppMeshGatewayRouteWithName retrieves all appmesh.GatewayRoute items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetAppMeshGatewayRouteWithName(name string) (*appmesh.GatewayRoute, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *appmesh.GatewayRoute:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type appmesh.GatewayRoute not found", name)
+}
+
 // GetAllAppMeshMeshResources retrieves all appmesh.Mesh items from an AWS CloudFormation template
 func (t *Template) GetAllAppMeshMeshResources() map[string]*appmesh.Mesh {
 	results := map[string]*appmesh.Mesh{}
@@ -1826,6 +1905,30 @@ func (t *Template) GetAppMeshRouteWithName(name string) (*appmesh.Route, error) 
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type appmesh.Route not found", name)
+}
+
+// GetAllAppMeshVirtualGatewayResources retrieves all appmesh.VirtualGateway items from an AWS CloudFormation template
+func (t *Template) GetAllAppMeshVirtualGatewayResources() map[string]*appmesh.VirtualGateway {
+	results := map[string]*appmesh.VirtualGateway{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *appmesh.VirtualGateway:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetAppMeshVirtualGatewayWithName retrieves all appmesh.VirtualGateway items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetAppMeshVirtualGatewayWithName(name string) (*appmesh.VirtualGateway, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *appmesh.VirtualGateway:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type appmesh.VirtualGateway not found", name)
 }
 
 // GetAllAppMeshVirtualNodeResources retrieves all appmesh.VirtualNode items from an AWS CloudFormation template
@@ -2282,6 +2385,30 @@ func (t *Template) GetApplicationAutoScalingScalingPolicyWithName(name string) (
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type applicationautoscaling.ScalingPolicy not found", name)
+}
+
+// GetAllAthenaDataCatalogResources retrieves all athena.DataCatalog items from an AWS CloudFormation template
+func (t *Template) GetAllAthenaDataCatalogResources() map[string]*athena.DataCatalog {
+	results := map[string]*athena.DataCatalog{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *athena.DataCatalog:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetAthenaDataCatalogWithName retrieves all athena.DataCatalog items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetAthenaDataCatalogWithName(name string) (*athena.DataCatalog, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *athena.DataCatalog:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type athena.DataCatalog not found", name)
 }
 
 // GetAllAthenaNamedQueryResources retrieves all athena.NamedQuery items from an AWS CloudFormation template
@@ -5066,6 +5193,30 @@ func (t *Template) GetEC2PlacementGroupWithName(name string) (*ec2.PlacementGrou
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type ec2.PlacementGroup not found", name)
+}
+
+// GetAllEC2PrefixListResources retrieves all ec2.PrefixList items from an AWS CloudFormation template
+func (t *Template) GetAllEC2PrefixListResources() map[string]*ec2.PrefixList {
+	results := map[string]*ec2.PrefixList{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ec2.PrefixList:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetEC2PrefixListWithName retrieves all ec2.PrefixList items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetEC2PrefixListWithName(name string) (*ec2.PrefixList, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ec2.PrefixList:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ec2.PrefixList not found", name)
 }
 
 // GetAllEC2RouteResources retrieves all ec2.Route items from an AWS CloudFormation template
@@ -10898,6 +11049,30 @@ func (t *Template) GetQLDBLedgerWithName(name string) (*qldb.Ledger, error) {
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type qldb.Ledger not found", name)
+}
+
+// GetAllQLDBStreamResources retrieves all qldb.Stream items from an AWS CloudFormation template
+func (t *Template) GetAllQLDBStreamResources() map[string]*qldb.Stream {
+	results := map[string]*qldb.Stream{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qldb.Stream:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQLDBStreamWithName retrieves all qldb.Stream items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQLDBStreamWithName(name string) (*qldb.Stream, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qldb.Stream:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qldb.Stream not found", name)
 }
 
 // GetAllRAMResourceShareResources retrieves all ram.ResourceShare items from an AWS CloudFormation template

@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RuleGroup_Rule AWS CloudFormation Resource (AWS::WAFv2::RuleGroup.Rule)
@@ -16,12 +18,12 @@ type RuleGroup_Rule struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html#cfn-wafv2-rulegroup-rule-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Priority AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html#cfn-wafv2-rulegroup-rule-priority
-	Priority int `json:"Priority"`
+	Priority *types.Value `json:"Priority"`
 
 	// Statement AWS CloudFormation Property
 	// Required: true

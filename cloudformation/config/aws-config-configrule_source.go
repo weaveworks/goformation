@@ -1,7 +1,9 @@
 package config
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigRule_Source AWS CloudFormation Resource (AWS::Config::ConfigRule.Source)
@@ -11,7 +13,7 @@ type ConfigRule_Source struct {
 	// Owner AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-owner
-	Owner string `json:"Owner,omitempty"`
+	Owner *types.Value `json:"Owner,omitempty"`
 
 	// SourceDetails AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type ConfigRule_Source struct {
 	// SourceIdentifier AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-sourceidentifier
-	SourceIdentifier string `json:"SourceIdentifier,omitempty"`
+	SourceIdentifier *types.Value `json:"SourceIdentifier,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

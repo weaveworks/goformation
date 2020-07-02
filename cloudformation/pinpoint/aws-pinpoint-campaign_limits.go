@@ -1,7 +1,9 @@
 package pinpoint
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Campaign_Limits AWS CloudFormation Resource (AWS::Pinpoint::Campaign.Limits)
@@ -11,22 +13,22 @@ type Campaign_Limits struct {
 	// Daily AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-daily
-	Daily int `json:"Daily,omitempty"`
+	Daily *types.Value `json:"Daily,omitempty"`
 
 	// MaximumDuration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-maximumduration
-	MaximumDuration int `json:"MaximumDuration,omitempty"`
+	MaximumDuration *types.Value `json:"MaximumDuration,omitempty"`
 
 	// MessagesPerSecond AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-messagespersecond
-	MessagesPerSecond int `json:"MessagesPerSecond,omitempty"`
+	MessagesPerSecond *types.Value `json:"MessagesPerSecond,omitempty"`
 
 	// Total AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-total
-	Total int `json:"Total,omitempty"`
+	Total *types.Value `json:"Total,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

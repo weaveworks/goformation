@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_ReplicationDestination AWS CloudFormation Resource (AWS::S3::Bucket.ReplicationDestination)
@@ -16,12 +18,12 @@ type Bucket_ReplicationDestination struct {
 	// Account AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-account
-	Account string `json:"Account,omitempty"`
+	Account *types.Value `json:"Account,omitempty"`
 
 	// Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *types.Value `json:"Bucket,omitempty"`
 
 	// EncryptionConfiguration AWS CloudFormation Property
 	// Required: false
@@ -41,7 +43,7 @@ type Bucket_ReplicationDestination struct {
 	// StorageClass AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass
-	StorageClass string `json:"StorageClass,omitempty"`
+	StorageClass *types.Value `json:"StorageClass,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

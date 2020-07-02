@@ -1,7 +1,9 @@
 package msk
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_CloudWatchLogs AWS CloudFormation Resource (AWS::MSK::Cluster.CloudWatchLogs)
@@ -11,12 +13,12 @@ type Cluster_CloudWatchLogs struct {
 	// Enabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-enabled
-	Enabled bool `json:"Enabled"`
+	Enabled *types.Value `json:"Enabled"`
 
 	// LogGroup AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-loggroup
-	LogGroup string `json:"LogGroup,omitempty"`
+	LogGroup *types.Value `json:"LogGroup,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

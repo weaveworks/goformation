@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_IPSetReferenceStatement AWS CloudFormation Resource (AWS::WAFv2::WebACL.IPSetReferenceStatement)
@@ -11,7 +13,12 @@ type WebACL_IPSetReferenceStatement struct {
 	// Arn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetreferencestatement.html#cfn-wafv2-webacl-ipsetreferencestatement-arn
-	Arn string `json:"Arn,omitempty"`
+	Arn *types.Value `json:"Arn,omitempty"`
+
+	// IPSetForwardedIPConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetreferencestatement.html#cfn-wafv2-webacl-ipsetreferencestatement-ipsetforwardedipconfig
+	IPSetForwardedIPConfig *WebACL_IPSetForwardedIPConfiguration `json:"IPSetForwardedIPConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

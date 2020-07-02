@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Distribution_DistributionConfig AWS CloudFormation Resource (AWS::CloudFront::Distribution.DistributionConfig)
@@ -11,7 +13,7 @@ type Distribution_DistributionConfig struct {
 	// Aliases AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases
-	Aliases []string `json:"Aliases,omitempty"`
+	Aliases *types.Value `json:"Aliases,omitempty"`
 
 	// CacheBehaviors AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type Distribution_DistributionConfig struct {
 	// Comment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-comment
-	Comment string `json:"Comment,omitempty"`
+	Comment *types.Value `json:"Comment,omitempty"`
 
 	// CustomErrorResponses AWS CloudFormation Property
 	// Required: false
@@ -36,22 +38,22 @@ type Distribution_DistributionConfig struct {
 	// DefaultRootObject AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultrootobject
-	DefaultRootObject string `json:"DefaultRootObject,omitempty"`
+	DefaultRootObject *types.Value `json:"DefaultRootObject,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-enabled
-	Enabled bool `json:"Enabled"`
+	Enabled *types.Value `json:"Enabled"`
 
 	// HttpVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-httpversion
-	HttpVersion string `json:"HttpVersion,omitempty"`
+	HttpVersion *types.Value `json:"HttpVersion,omitempty"`
 
 	// IPV6Enabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-ipv6enabled
-	IPV6Enabled bool `json:"IPV6Enabled,omitempty"`
+	IPV6Enabled *types.Value `json:"IPV6Enabled,omitempty"`
 
 	// Logging AWS CloudFormation Property
 	// Required: false
@@ -71,7 +73,7 @@ type Distribution_DistributionConfig struct {
 	// PriceClass AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-priceclass
-	PriceClass string `json:"PriceClass,omitempty"`
+	PriceClass *types.Value `json:"PriceClass,omitempty"`
 
 	// Restrictions AWS CloudFormation Property
 	// Required: false
@@ -86,7 +88,7 @@ type Distribution_DistributionConfig struct {
 	// WebACLId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-webaclid
-	WebACLId string `json:"WebACLId,omitempty"`
+	WebACLId *types.Value `json:"WebACLId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

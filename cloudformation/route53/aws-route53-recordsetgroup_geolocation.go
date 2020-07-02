@@ -1,7 +1,9 @@
 package route53
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RecordSetGroup_GeoLocation AWS CloudFormation Resource (AWS::Route53::RecordSetGroup.GeoLocation)
@@ -11,17 +13,17 @@ type RecordSetGroup_GeoLocation struct {
 	// ContinentCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode
-	ContinentCode string `json:"ContinentCode,omitempty"`
+	ContinentCode *types.Value `json:"ContinentCode,omitempty"`
 
 	// CountryCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
-	CountryCode string `json:"CountryCode,omitempty"`
+	CountryCode *types.Value `json:"CountryCode,omitempty"`
 
 	// SubdivisionCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
-	SubdivisionCode string `json:"SubdivisionCode,omitempty"`
+	SubdivisionCode *types.Value `json:"SubdivisionCode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

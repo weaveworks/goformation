@@ -1,7 +1,9 @@
 package appsync
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GraphQLApi_AdditionalAuthenticationProvider AWS CloudFormation Resource (AWS::AppSync::GraphQLApi.AdditionalAuthenticationProvider)
@@ -11,7 +13,7 @@ type GraphQLApi_AdditionalAuthenticationProvider struct {
 	// AuthenticationType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype
-	AuthenticationType string `json:"AuthenticationType,omitempty"`
+	AuthenticationType *types.Value `json:"AuthenticationType,omitempty"`
 
 	// OpenIDConnectConfig AWS CloudFormation Property
 	// Required: false

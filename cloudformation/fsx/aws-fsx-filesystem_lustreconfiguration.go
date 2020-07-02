@@ -1,42 +1,64 @@
 package fsx
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FileSystem_LustreConfiguration AWS CloudFormation Resource (AWS::FSx::FileSystem.LustreConfiguration)
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html
 type FileSystem_LustreConfiguration struct {
 
+	// AutoImportPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-autoimportpolicy
+	AutoImportPolicy *types.Value `json:"AutoImportPolicy,omitempty"`
+
+	// AutomaticBackupRetentionDays AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays
+	AutomaticBackupRetentionDays *types.Value `json:"AutomaticBackupRetentionDays,omitempty"`
+
+	// CopyTagsToBackups AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups
+	CopyTagsToBackups *types.Value `json:"CopyTagsToBackups,omitempty"`
+
+	// DailyAutomaticBackupStartTime AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime
+	DailyAutomaticBackupStartTime *types.Value `json:"DailyAutomaticBackupStartTime,omitempty"`
+
 	// DeploymentType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-deploymenttype
-	DeploymentType string `json:"DeploymentType,omitempty"`
+	DeploymentType *types.Value `json:"DeploymentType,omitempty"`
 
 	// ExportPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-exportpath
-	ExportPath string `json:"ExportPath,omitempty"`
+	ExportPath *types.Value `json:"ExportPath,omitempty"`
 
 	// ImportPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-importpath
-	ImportPath string `json:"ImportPath,omitempty"`
+	ImportPath *types.Value `json:"ImportPath,omitempty"`
 
 	// ImportedFileChunkSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize
-	ImportedFileChunkSize int `json:"ImportedFileChunkSize,omitempty"`
+	ImportedFileChunkSize *types.Value `json:"ImportedFileChunkSize,omitempty"`
 
 	// PerUnitStorageThroughput AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput
-	PerUnitStorageThroughput int `json:"PerUnitStorageThroughput,omitempty"`
+	PerUnitStorageThroughput *types.Value `json:"PerUnitStorageThroughput,omitempty"`
 
 	// WeeklyMaintenanceStartTime AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime
-	WeeklyMaintenanceStartTime string `json:"WeeklyMaintenanceStartTime,omitempty"`
+	WeeklyMaintenanceStartTime *types.Value `json:"WeeklyMaintenanceStartTime,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

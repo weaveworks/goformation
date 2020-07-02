@@ -1,7 +1,7 @@
 package ses
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ReceiptRule_Action AWS CloudFormation Resource (AWS::SES::ReceiptRule.Action)

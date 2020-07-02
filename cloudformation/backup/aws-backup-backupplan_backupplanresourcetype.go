@@ -1,7 +1,9 @@
 package backup
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupPlan_BackupPlanResourceType AWS CloudFormation Resource (AWS::Backup::BackupPlan.BackupPlanResourceType)
@@ -11,7 +13,7 @@ type BackupPlan_BackupPlanResourceType struct {
 	// BackupPlanName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-backupplanname
-	BackupPlanName string `json:"BackupPlanName,omitempty"`
+	BackupPlanName *types.Value `json:"BackupPlanName,omitempty"`
 
 	// BackupPlanRule AWS CloudFormation Property
 	// Required: true

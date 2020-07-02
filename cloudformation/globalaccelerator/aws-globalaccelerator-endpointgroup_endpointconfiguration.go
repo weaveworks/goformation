@@ -1,7 +1,9 @@
 package globalaccelerator
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EndpointGroup_EndpointConfiguration AWS CloudFormation Resource (AWS::GlobalAccelerator::EndpointGroup.EndpointConfiguration)
@@ -11,17 +13,17 @@ type EndpointGroup_EndpointConfiguration struct {
 	// ClientIPPreservationEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-clientippreservationenabled
-	ClientIPPreservationEnabled bool `json:"ClientIPPreservationEnabled,omitempty"`
+	ClientIPPreservationEnabled *types.Value `json:"ClientIPPreservationEnabled,omitempty"`
 
 	// EndpointId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-endpointid
-	EndpointId string `json:"EndpointId,omitempty"`
+	EndpointId *types.Value `json:"EndpointId,omitempty"`
 
 	// Weight AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-weight
-	Weight int `json:"Weight,omitempty"`
+	Weight *types.Value `json:"Weight,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

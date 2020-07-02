@@ -1,7 +1,9 @@
 package greengrass
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FunctionDefinitionVersion_FunctionConfiguration AWS CloudFormation Resource (AWS::Greengrass::FunctionDefinitionVersion.FunctionConfiguration)
@@ -11,7 +13,7 @@ type FunctionDefinitionVersion_FunctionConfiguration struct {
 	// EncodingType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-encodingtype
-	EncodingType string `json:"EncodingType,omitempty"`
+	EncodingType *types.Value `json:"EncodingType,omitempty"`
 
 	// Environment AWS CloudFormation Property
 	// Required: false
@@ -21,27 +23,27 @@ type FunctionDefinitionVersion_FunctionConfiguration struct {
 	// ExecArgs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-execargs
-	ExecArgs string `json:"ExecArgs,omitempty"`
+	ExecArgs *types.Value `json:"ExecArgs,omitempty"`
 
 	// Executable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-executable
-	Executable string `json:"Executable,omitempty"`
+	Executable *types.Value `json:"Executable,omitempty"`
 
 	// MemorySize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-memorysize
-	MemorySize int `json:"MemorySize,omitempty"`
+	MemorySize *types.Value `json:"MemorySize,omitempty"`
 
 	// Pinned AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-pinned
-	Pinned bool `json:"Pinned,omitempty"`
+	Pinned *types.Value `json:"Pinned,omitempty"`
 
 	// Timeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-timeout
-	Timeout int `json:"Timeout,omitempty"`
+	Timeout *types.Value `json:"Timeout,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

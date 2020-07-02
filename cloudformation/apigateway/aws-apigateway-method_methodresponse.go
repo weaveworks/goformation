@@ -1,7 +1,9 @@
 package apigateway
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Method_MethodResponse AWS CloudFormation Resource (AWS::ApiGateway::Method.MethodResponse)
@@ -11,17 +13,17 @@ type Method_MethodResponse struct {
 	// ResponseModels AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels
-	ResponseModels map[string]string `json:"ResponseModels,omitempty"`
+	ResponseModels map[string]*types.Value `json:"ResponseModels,omitempty"`
 
 	// ResponseParameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters
-	ResponseParameters map[string]bool `json:"ResponseParameters,omitempty"`
+	ResponseParameters map[string]*types.Value `json:"ResponseParameters,omitempty"`
 
 	// StatusCode AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode
-	StatusCode string `json:"StatusCode,omitempty"`
+	StatusCode *types.Value `json:"StatusCode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

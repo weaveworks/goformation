@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_RegistryCredential AWS CloudFormation Resource (AWS::CodeBuild::Project.RegistryCredential)
@@ -11,12 +13,12 @@ type Project_RegistryCredential struct {
 	// Credential AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential
-	Credential string `json:"Credential,omitempty"`
+	Credential *types.Value `json:"Credential,omitempty"`
 
 	// CredentialProvider AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider
-	CredentialProvider string `json:"CredentialProvider,omitempty"`
+	CredentialProvider *types.Value `json:"CredentialProvider,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
