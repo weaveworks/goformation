@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PackagingConfiguration_DashManifest AWS CloudFormation Resource (AWS::MediaPackage::PackagingConfiguration.DashManifest)
@@ -11,22 +13,22 @@ type PackagingConfiguration_DashManifest struct {
 	// ManifestLayout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestlayout
-	ManifestLayout string `json:"ManifestLayout,omitempty"`
+	ManifestLayout *types.Value `json:"ManifestLayout,omitempty"`
 
 	// ManifestName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestname
-	ManifestName string `json:"ManifestName,omitempty"`
+	ManifestName *types.Value `json:"ManifestName,omitempty"`
 
 	// MinBufferTimeSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-minbuffertimeseconds
-	MinBufferTimeSeconds int `json:"MinBufferTimeSeconds,omitempty"`
+	MinBufferTimeSeconds *types.Value `json:"MinBufferTimeSeconds,omitempty"`
 
 	// Profile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-profile
-	Profile string `json:"Profile,omitempty"`
+	Profile *types.Value `json:"Profile,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false

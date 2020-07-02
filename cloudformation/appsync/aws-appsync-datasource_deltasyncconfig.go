@@ -1,7 +1,9 @@
 package appsync
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_DeltaSyncConfig AWS CloudFormation Resource (AWS::AppSync::DataSource.DeltaSyncConfig)
@@ -11,17 +13,17 @@ type DataSource_DeltaSyncConfig struct {
 	// BaseTableTTL AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-basetablettl
-	BaseTableTTL string `json:"BaseTableTTL,omitempty"`
+	BaseTableTTL *types.Value `json:"BaseTableTTL,omitempty"`
 
 	// DeltaSyncTableName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-deltasynctablename
-	DeltaSyncTableName string `json:"DeltaSyncTableName,omitempty"`
+	DeltaSyncTableName *types.Value `json:"DeltaSyncTableName,omitempty"`
 
 	// DeltaSyncTableTTL AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-deltasynctablettl
-	DeltaSyncTableTTL string `json:"DeltaSyncTableTTL,omitempty"`
+	DeltaSyncTableTTL *types.Value `json:"DeltaSyncTableTTL,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

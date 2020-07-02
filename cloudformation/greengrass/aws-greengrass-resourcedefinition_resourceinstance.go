@@ -1,7 +1,9 @@
 package greengrass
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResourceDefinition_ResourceInstance AWS CloudFormation Resource (AWS::Greengrass::ResourceDefinition.ResourceInstance)
@@ -11,12 +13,12 @@ type ResourceDefinition_ResourceInstance struct {
 	// Id AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-id
-	Id string `json:"Id,omitempty"`
+	Id *types.Value `json:"Id,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// ResourceDataContainer AWS CloudFormation Property
 	// Required: true

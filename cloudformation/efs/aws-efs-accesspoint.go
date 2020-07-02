@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AccessPoint AWS CloudFormation Resource (AWS::EFS::AccessPoint)
@@ -20,12 +22,12 @@ type AccessPoint struct {
 	// ClientToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-clienttoken
-	ClientToken string `json:"ClientToken,omitempty"`
+	ClientToken *types.Value `json:"ClientToken,omitempty"`
 
 	// FileSystemId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-filesystemid
-	FileSystemId string `json:"FileSystemId,omitempty"`
+	FileSystemId *types.Value `json:"FileSystemId,omitempty"`
 
 	// PosixUser AWS CloudFormation Property
 	// Required: false

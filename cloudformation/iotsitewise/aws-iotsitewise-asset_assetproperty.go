@@ -1,7 +1,9 @@
 package iotsitewise
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Asset_AssetProperty AWS CloudFormation Resource (AWS::IoTSiteWise::Asset.AssetProperty)
@@ -11,17 +13,17 @@ type Asset_AssetProperty struct {
 	// Alias AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-alias
-	Alias string `json:"Alias,omitempty"`
+	Alias *types.Value `json:"Alias,omitempty"`
 
 	// LogicalId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-logicalid
-	LogicalId string `json:"LogicalId,omitempty"`
+	LogicalId *types.Value `json:"LogicalId,omitempty"`
 
 	// NotificationState AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-notificationstate
-	NotificationState string `json:"NotificationState,omitempty"`
+	NotificationState *types.Value `json:"NotificationState,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

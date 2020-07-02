@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_ConnectorOAuthRequest AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.ConnectorOAuthRequest)
@@ -11,12 +13,12 @@ type ConnectorProfile_ConnectorOAuthRequest struct {
 	// AuthCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-authcode
-	AuthCode string `json:"AuthCode,omitempty"`
+	AuthCode *types.Value `json:"AuthCode,omitempty"`
 
 	// RedirectUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-redirecturi
-	RedirectUri string `json:"RedirectUri,omitempty"`
+	RedirectUri *types.Value `json:"RedirectUri,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

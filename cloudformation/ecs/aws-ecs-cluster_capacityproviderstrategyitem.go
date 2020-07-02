@@ -1,7 +1,9 @@
 package ecs
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_CapacityProviderStrategyItem AWS CloudFormation Resource (AWS::ECS::Cluster.CapacityProviderStrategyItem)
@@ -11,17 +13,17 @@ type Cluster_CapacityProviderStrategyItem struct {
 	// Base AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-base
-	Base int `json:"Base,omitempty"`
+	Base *types.Value `json:"Base,omitempty"`
 
 	// CapacityProvider AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-capacityprovider
-	CapacityProvider string `json:"CapacityProvider,omitempty"`
+	CapacityProvider *types.Value `json:"CapacityProvider,omitempty"`
 
 	// Weight AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-weight
-	Weight int `json:"Weight,omitempty"`
+	Weight *types.Value `json:"Weight,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

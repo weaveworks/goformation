@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RuleGroup_ForwardedIPConfiguration AWS CloudFormation Resource (AWS::WAFv2::RuleGroup.ForwardedIPConfiguration)
@@ -11,12 +13,12 @@ type RuleGroup_ForwardedIPConfiguration struct {
 	// FallbackBehavior AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-forwardedipconfiguration.html#cfn-wafv2-rulegroup-forwardedipconfiguration-fallbackbehavior
-	FallbackBehavior string `json:"FallbackBehavior,omitempty"`
+	FallbackBehavior *types.Value `json:"FallbackBehavior,omitempty"`
 
 	// HeaderName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-forwardedipconfiguration.html#cfn-wafv2-rulegroup-forwardedipconfiguration-headername
-	HeaderName string `json:"HeaderName,omitempty"`
+	HeaderName *types.Value `json:"HeaderName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

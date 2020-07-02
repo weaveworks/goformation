@@ -1,7 +1,9 @@
 package workspaces
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectionAlias_ConnectionAliasAssociation AWS CloudFormation Resource (AWS::WorkSpaces::ConnectionAlias.ConnectionAliasAssociation)
@@ -11,22 +13,22 @@ type ConnectionAlias_ConnectionAliasAssociation struct {
 	// AssociatedAccountId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-connectionalias-connectionaliasassociation.html#cfn-workspaces-connectionalias-connectionaliasassociation-associatedaccountid
-	AssociatedAccountId string `json:"AssociatedAccountId,omitempty"`
+	AssociatedAccountId *types.Value `json:"AssociatedAccountId,omitempty"`
 
 	// AssociationStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-connectionalias-connectionaliasassociation.html#cfn-workspaces-connectionalias-connectionaliasassociation-associationstatus
-	AssociationStatus string `json:"AssociationStatus,omitempty"`
+	AssociationStatus *types.Value `json:"AssociationStatus,omitempty"`
 
 	// ConnectionIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-connectionalias-connectionaliasassociation.html#cfn-workspaces-connectionalias-connectionaliasassociation-connectionidentifier
-	ConnectionIdentifier string `json:"ConnectionIdentifier,omitempty"`
+	ConnectionIdentifier *types.Value `json:"ConnectionIdentifier,omitempty"`
 
 	// ResourceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-connectionalias-connectionaliasassociation.html#cfn-workspaces-connectionalias-connectionaliasassociation-resourceid
-	ResourceId string `json:"ResourceId,omitempty"`
+	ResourceId *types.Value `json:"ResourceId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

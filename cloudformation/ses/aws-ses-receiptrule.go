@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ReceiptRule AWS CloudFormation Resource (AWS::SES::ReceiptRule)
@@ -15,7 +17,7 @@ type ReceiptRule struct {
 	// After AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-after
-	After string `json:"After,omitempty"`
+	After *types.Value `json:"After,omitempty"`
 
 	// Rule AWS CloudFormation Property
 	// Required: true
@@ -25,7 +27,7 @@ type ReceiptRule struct {
 	// RuleSetName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rulesetname
-	RuleSetName string `json:"RuleSetName,omitempty"`
+	RuleSetName *types.Value `json:"RuleSetName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

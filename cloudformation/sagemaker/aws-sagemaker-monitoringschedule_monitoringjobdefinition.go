@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // MonitoringSchedule_MonitoringJobDefinition AWS CloudFormation Resource (AWS::SageMaker::MonitoringSchedule.MonitoringJobDefinition)
@@ -46,7 +48,7 @@ type MonitoringSchedule_MonitoringJobDefinition struct {
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// StoppingCondition AWS CloudFormation Property
 	// Required: false

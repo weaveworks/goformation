@@ -1,7 +1,9 @@
 package events
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Rule_BatchRetryStrategy AWS CloudFormation Resource (AWS::Events::Rule.BatchRetryStrategy)
@@ -11,7 +13,7 @@ type Rule_BatchRetryStrategy struct {
 	// Attempts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html#cfn-events-rule-batchretrystrategy-attempts
-	Attempts int `json:"Attempts,omitempty"`
+	Attempts *types.Value `json:"Attempts,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

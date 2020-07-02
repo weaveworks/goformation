@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine_CloudWatchLogsLogGroup AWS CloudFormation Resource (AWS::Serverless::StateMachine.CloudWatchLogsLogGroup)
@@ -11,7 +13,7 @@ type StateMachine_CloudWatchLogsLogGroup struct {
 	// LogGroupArn AWS CloudFormation Property
 	// Required: true
 	// See: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup.html
-	LogGroupArn string `json:"LogGroupArn,omitempty"`
+	LogGroupArn *types.Value `json:"LogGroupArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

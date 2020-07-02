@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_SalesforceStandardObjectConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.SalesforceStandardObjectConfiguration)
@@ -11,12 +13,12 @@ type DataSource_SalesforceStandardObjectConfiguration struct {
 	// DocumentDataFieldName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectconfiguration.html#cfn-kendra-datasource-salesforcestandardobjectconfiguration-documentdatafieldname
-	DocumentDataFieldName string `json:"DocumentDataFieldName,omitempty"`
+	DocumentDataFieldName *types.Value `json:"DocumentDataFieldName,omitempty"`
 
 	// DocumentTitleFieldName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectconfiguration.html#cfn-kendra-datasource-salesforcestandardobjectconfiguration-documenttitlefieldname
-	DocumentTitleFieldName string `json:"DocumentTitleFieldName,omitempty"`
+	DocumentTitleFieldName *types.Value `json:"DocumentTitleFieldName,omitempty"`
 
 	// FieldMappings AWS CloudFormation Property
 	// Required: false
@@ -26,7 +28,7 @@ type DataSource_SalesforceStandardObjectConfiguration struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectconfiguration.html#cfn-kendra-datasource-salesforcestandardobjectconfiguration-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

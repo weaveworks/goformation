@@ -1,7 +1,9 @@
 package gamelift
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GameServerGroup_InstanceDefinition AWS CloudFormation Resource (AWS::GameLift::GameServerGroup.InstanceDefinition)
@@ -11,12 +13,12 @@ type GameServerGroup_InstanceDefinition struct {
 	// InstanceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html#cfn-gamelift-gameservergroup-instancedefinition-instancetype
-	InstanceType string `json:"InstanceType,omitempty"`
+	InstanceType *types.Value `json:"InstanceType,omitempty"`
 
 	// WeightedCapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html#cfn-gamelift-gameservergroup-instancedefinition-weightedcapacity
-	WeightedCapacity string `json:"WeightedCapacity,omitempty"`
+	WeightedCapacity *types.Value `json:"WeightedCapacity,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_ArchiveGroupSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.ArchiveGroupSettings)
@@ -16,7 +18,7 @@ type Channel_ArchiveGroupSettings struct {
 	// RolloverInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivegroupsettings.html#cfn-medialive-channel-archivegroupsettings-rolloverinterval
-	RolloverInterval int `json:"RolloverInterval,omitempty"`
+	RolloverInterval *types.Value `json:"RolloverInterval,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

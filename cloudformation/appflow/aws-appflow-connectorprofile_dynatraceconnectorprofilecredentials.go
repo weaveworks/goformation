@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_DynatraceConnectorProfileCredentials AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.DynatraceConnectorProfileCredentials)
@@ -11,7 +13,7 @@ type ConnectorProfile_DynatraceConnectorProfileCredentials struct {
 	// ApiToken AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-dynatraceconnectorprofilecredentials-apitoken
-	ApiToken string `json:"ApiToken,omitempty"`
+	ApiToken *types.Value `json:"ApiToken,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

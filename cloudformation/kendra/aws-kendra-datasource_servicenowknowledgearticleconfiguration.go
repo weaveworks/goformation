@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_ServiceNowKnowledgeArticleConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.ServiceNowKnowledgeArticleConfiguration)
@@ -11,17 +13,17 @@ type DataSource_ServiceNowKnowledgeArticleConfiguration struct {
 	// CrawlAttachments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-crawlattachments
-	CrawlAttachments bool `json:"CrawlAttachments,omitempty"`
+	CrawlAttachments *types.Value `json:"CrawlAttachments,omitempty"`
 
 	// DocumentDataFieldName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-documentdatafieldname
-	DocumentDataFieldName string `json:"DocumentDataFieldName,omitempty"`
+	DocumentDataFieldName *types.Value `json:"DocumentDataFieldName,omitempty"`
 
 	// DocumentTitleFieldName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-documenttitlefieldname
-	DocumentTitleFieldName string `json:"DocumentTitleFieldName,omitempty"`
+	DocumentTitleFieldName *types.Value `json:"DocumentTitleFieldName,omitempty"`
 
 	// ExcludeAttachmentFilePatterns AWS CloudFormation Property
 	// Required: false

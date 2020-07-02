@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_EbuTtDDestinationSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.EbuTtDDestinationSettings)
@@ -11,17 +13,17 @@ type Channel_EbuTtDDestinationSettings struct {
 	// FillLineGap AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html#cfn-medialive-channel-ebuttddestinationsettings-filllinegap
-	FillLineGap string `json:"FillLineGap,omitempty"`
+	FillLineGap *types.Value `json:"FillLineGap,omitempty"`
 
 	// FontFamily AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html#cfn-medialive-channel-ebuttddestinationsettings-fontfamily
-	FontFamily string `json:"FontFamily,omitempty"`
+	FontFamily *types.Value `json:"FontFamily,omitempty"`
 
 	// StyleControl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html#cfn-medialive-channel-ebuttddestinationsettings-stylecontrol
-	StyleControl string `json:"StyleControl,omitempty"`
+	StyleControl *types.Value `json:"StyleControl,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

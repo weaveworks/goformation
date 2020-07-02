@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_DocumentsMetadataConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.DocumentsMetadataConfiguration)
@@ -11,7 +13,7 @@ type DataSource_DocumentsMetadataConfiguration struct {
 	// S3Prefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-documentsmetadataconfiguration.html#cfn-kendra-datasource-documentsmetadataconfiguration-s3prefix
-	S3Prefix string `json:"S3Prefix,omitempty"`
+	S3Prefix *types.Value `json:"S3Prefix,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

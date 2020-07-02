@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EC2Fleet AWS CloudFormation Resource (AWS::EC2::EC2Fleet)
@@ -15,7 +17,7 @@ type EC2Fleet struct {
 	// ExcessCapacityTerminationPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-excesscapacityterminationpolicy
-	ExcessCapacityTerminationPolicy string `json:"ExcessCapacityTerminationPolicy,omitempty"`
+	ExcessCapacityTerminationPolicy *types.Value `json:"ExcessCapacityTerminationPolicy,omitempty"`
 
 	// LaunchTemplateConfigs AWS CloudFormation Property
 	// Required: true
@@ -30,7 +32,7 @@ type EC2Fleet struct {
 	// ReplaceUnhealthyInstances AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-replaceunhealthyinstances
-	ReplaceUnhealthyInstances bool `json:"ReplaceUnhealthyInstances,omitempty"`
+	ReplaceUnhealthyInstances *types.Value `json:"ReplaceUnhealthyInstances,omitempty"`
 
 	// SpotOptions AWS CloudFormation Property
 	// Required: false
@@ -50,22 +52,22 @@ type EC2Fleet struct {
 	// TerminateInstancesWithExpiration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-terminateinstanceswithexpiration
-	TerminateInstancesWithExpiration bool `json:"TerminateInstancesWithExpiration,omitempty"`
+	TerminateInstancesWithExpiration *types.Value `json:"TerminateInstancesWithExpiration,omitempty"`
 
 	// Type AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// ValidFrom AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-validfrom
-	ValidFrom string `json:"ValidFrom,omitempty"`
+	ValidFrom *types.Value `json:"ValidFrom,omitempty"`
 
 	// ValidUntil AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-validuntil
-	ValidUntil string `json:"ValidUntil,omitempty"`
+	ValidUntil *types.Value `json:"ValidUntil,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

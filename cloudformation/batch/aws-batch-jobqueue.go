@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobQueue AWS CloudFormation Resource (AWS::Batch::JobQueue)
@@ -20,17 +22,17 @@ type JobQueue struct {
 	// JobQueueName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuename
-	JobQueueName string `json:"JobQueueName,omitempty"`
+	JobQueueName *types.Value `json:"JobQueueName,omitempty"`
 
 	// Priority AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-priority
-	Priority int `json:"Priority"`
+	Priority *types.Value `json:"Priority"`
 
 	// State AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-state
-	State string `json:"State,omitempty"`
+	State *types.Value `json:"State,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_DatadogConnectorProfileProperties AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.DatadogConnectorProfileProperties)
@@ -11,7 +13,7 @@ type ConnectorProfile_DatadogConnectorProfileProperties struct {
 	// InstanceUrl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofileproperties.html#cfn-appflow-connectorprofile-datadogconnectorprofileproperties-instanceurl
-	InstanceUrl string `json:"InstanceUrl,omitempty"`
+	InstanceUrl *types.Value `json:"InstanceUrl,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

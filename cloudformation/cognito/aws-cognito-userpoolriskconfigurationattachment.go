@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPoolRiskConfigurationAttachment AWS CloudFormation Resource (AWS::Cognito::UserPoolRiskConfigurationAttachment)
@@ -20,7 +22,7 @@ type UserPoolRiskConfigurationAttachment struct {
 	// ClientId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-clientid
-	ClientId string `json:"ClientId,omitempty"`
+	ClientId *types.Value `json:"ClientId,omitempty"`
 
 	// CompromisedCredentialsRiskConfiguration AWS CloudFormation Property
 	// Required: false
@@ -35,7 +37,7 @@ type UserPoolRiskConfigurationAttachment struct {
 	// UserPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-userpoolid
-	UserPoolId string `json:"UserPoolId,omitempty"`
+	UserPoolId *types.Value `json:"UserPoolId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

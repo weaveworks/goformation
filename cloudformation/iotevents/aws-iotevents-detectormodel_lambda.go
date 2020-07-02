@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_Lambda AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.Lambda)
@@ -11,7 +13,7 @@ type DetectorModel_Lambda struct {
 	// FunctionArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-functionarn
-	FunctionArn string `json:"FunctionArn,omitempty"`
+	FunctionArn *types.Value `json:"FunctionArn,omitempty"`
 
 	// Payload AWS CloudFormation Property
 	// Required: false

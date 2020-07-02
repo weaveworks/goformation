@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Index_Search AWS CloudFormation Resource (AWS::Kendra::Index.Search)
@@ -11,22 +13,22 @@ type Index_Search struct {
 	// Displayable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-search.html#cfn-kendra-index-search-displayable
-	Displayable bool `json:"Displayable,omitempty"`
+	Displayable *types.Value `json:"Displayable,omitempty"`
 
 	// Facetable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-search.html#cfn-kendra-index-search-facetable
-	Facetable bool `json:"Facetable,omitempty"`
+	Facetable *types.Value `json:"Facetable,omitempty"`
 
 	// Searchable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-search.html#cfn-kendra-index-search-searchable
-	Searchable bool `json:"Searchable,omitempty"`
+	Searchable *types.Value `json:"Searchable,omitempty"`
 
 	// Sortable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-search.html#cfn-kendra-index-search-sortable
-	Sortable bool `json:"Sortable,omitempty"`
+	Sortable *types.Value `json:"Sortable,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

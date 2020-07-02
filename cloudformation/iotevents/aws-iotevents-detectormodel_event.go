@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_Event AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.Event)
@@ -16,12 +18,12 @@ type DetectorModel_Event struct {
 	// Condition AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-condition
-	Condition string `json:"Condition,omitempty"`
+	Condition *types.Value `json:"Condition,omitempty"`
 
 	// EventName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname
-	EventName string `json:"EventName,omitempty"`
+	EventName *types.Value `json:"EventName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

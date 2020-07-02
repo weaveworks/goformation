@@ -1,7 +1,9 @@
 package imagebuilder
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ImageRecipe_ComponentConfiguration AWS CloudFormation Resource (AWS::ImageBuilder::ImageRecipe.ComponentConfiguration)
@@ -11,7 +13,7 @@ type ImageRecipe_ComponentConfiguration struct {
 	// ComponentArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html#cfn-imagebuilder-imagerecipe-componentconfiguration-componentarn
-	ComponentArn string `json:"ComponentArn,omitempty"`
+	ComponentArn *types.Value `json:"ComponentArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_OutputLocationRef AWS CloudFormation Resource (AWS::MediaLive::Channel.OutputLocationRef)
@@ -11,7 +13,7 @@ type Channel_OutputLocationRef struct {
 	// DestinationRefId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputlocationref.html#cfn-medialive-channel-outputlocationref-destinationrefid
-	DestinationRefId string `json:"DestinationRefId,omitempty"`
+	DestinationRefId *types.Value `json:"DestinationRefId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

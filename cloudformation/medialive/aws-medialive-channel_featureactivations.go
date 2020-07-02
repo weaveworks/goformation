@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_FeatureActivations AWS CloudFormation Resource (AWS::MediaLive::Channel.FeatureActivations)
@@ -11,7 +13,7 @@ type Channel_FeatureActivations struct {
 	// InputPrepareScheduleActions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-featureactivations.html#cfn-medialive-channel-featureactivations-inputpreparescheduleactions
-	InputPrepareScheduleActions string `json:"InputPrepareScheduleActions,omitempty"`
+	InputPrepareScheduleActions *types.Value `json:"InputPrepareScheduleActions,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

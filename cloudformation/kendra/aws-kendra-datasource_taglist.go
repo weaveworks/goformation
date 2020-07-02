@@ -1,8 +1,8 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_TagList AWS CloudFormation Resource (AWS::Kendra::DataSource.TagList)
@@ -12,7 +12,7 @@ type DataSource_TagList struct {
 	// TagList AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-taglist.html#cfn-kendra-datasource-taglist-taglist
-	TagList []tags.Tag `json:"TagList,omitempty"`
+	TagList []cloudformation.Tag `json:"TagList,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

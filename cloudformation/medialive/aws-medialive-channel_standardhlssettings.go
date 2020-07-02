@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_StandardHlsSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.StandardHlsSettings)
@@ -11,7 +13,7 @@ type Channel_StandardHlsSettings struct {
 	// AudioRenditionSets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-standardhlssettings.html#cfn-medialive-channel-standardhlssettings-audiorenditionsets
-	AudioRenditionSets string `json:"AudioRenditionSets,omitempty"`
+	AudioRenditionSets *types.Value `json:"AudioRenditionSets,omitempty"`
 
 	// M3u8Settings AWS CloudFormation Property
 	// Required: false

@@ -1,7 +1,9 @@
 package gamelift
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GameServerGroup_VpcSubnets AWS CloudFormation Resource (AWS::GameLift::GameServerGroup.VpcSubnets)
@@ -11,7 +13,7 @@ type GameServerGroup_VpcSubnets struct {
 	// VpcSubnets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-vpcsubnets.html#cfn-gamelift-gameservergroup-vpcsubnets-vpcsubnets
-	VpcSubnets []string `json:"VpcSubnets,omitempty"`
+	VpcSubnets *types.Value `json:"VpcSubnets,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

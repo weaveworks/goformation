@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_InputSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.InputSettings)
@@ -21,22 +23,22 @@ type Channel_InputSettings struct {
 	// DeblockFilter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputsettings.html#cfn-medialive-channel-inputsettings-deblockfilter
-	DeblockFilter string `json:"DeblockFilter,omitempty"`
+	DeblockFilter *types.Value `json:"DeblockFilter,omitempty"`
 
 	// DenoiseFilter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputsettings.html#cfn-medialive-channel-inputsettings-denoisefilter
-	DenoiseFilter string `json:"DenoiseFilter,omitempty"`
+	DenoiseFilter *types.Value `json:"DenoiseFilter,omitempty"`
 
 	// FilterStrength AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputsettings.html#cfn-medialive-channel-inputsettings-filterstrength
-	FilterStrength int `json:"FilterStrength,omitempty"`
+	FilterStrength *types.Value `json:"FilterStrength,omitempty"`
 
 	// InputFilter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputsettings.html#cfn-medialive-channel-inputsettings-inputfilter
-	InputFilter string `json:"InputFilter,omitempty"`
+	InputFilter *types.Value `json:"InputFilter,omitempty"`
 
 	// NetworkInputSettings AWS CloudFormation Property
 	// Required: false
@@ -46,12 +48,12 @@ type Channel_InputSettings struct {
 	// Smpte2038DataPreference AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputsettings.html#cfn-medialive-channel-inputsettings-smpte2038datapreference
-	Smpte2038DataPreference string `json:"Smpte2038DataPreference,omitempty"`
+	Smpte2038DataPreference *types.Value `json:"Smpte2038DataPreference,omitempty"`
 
 	// SourceEndBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputsettings.html#cfn-medialive-channel-inputsettings-sourceendbehavior
-	SourceEndBehavior string `json:"SourceEndBehavior,omitempty"`
+	SourceEndBehavior *types.Value `json:"SourceEndBehavior,omitempty"`
 
 	// VideoSelector AWS CloudFormation Property
 	// Required: false

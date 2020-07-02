@@ -1,7 +1,9 @@
 package dynamodb
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_KeySchema AWS CloudFormation Resource (AWS::DynamoDB::Table.KeySchema)
@@ -11,12 +13,12 @@ type Table_KeySchema struct {
 	// AttributeName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-attributename
-	AttributeName string `json:"AttributeName,omitempty"`
+	AttributeName *types.Value `json:"AttributeName,omitempty"`
 
 	// KeyType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-keytype
-	KeyType string `json:"KeyType,omitempty"`
+	KeyType *types.Value `json:"KeyType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

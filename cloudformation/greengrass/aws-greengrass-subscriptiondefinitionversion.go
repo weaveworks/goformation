@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // SubscriptionDefinitionVersion AWS CloudFormation Resource (AWS::Greengrass::SubscriptionDefinitionVersion)
@@ -15,7 +17,7 @@ type SubscriptionDefinitionVersion struct {
 	// SubscriptionDefinitionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html#cfn-greengrass-subscriptiondefinitionversion-subscriptiondefinitionid
-	SubscriptionDefinitionId string `json:"SubscriptionDefinitionId,omitempty"`
+	SubscriptionDefinitionId *types.Value `json:"SubscriptionDefinitionId,omitempty"`
 
 	// Subscriptions AWS CloudFormation Property
 	// Required: true

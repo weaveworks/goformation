@@ -1,7 +1,7 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Authorizer_Tags AWS CloudFormation Resource (AWS::IoT::Authorizer.Tags)

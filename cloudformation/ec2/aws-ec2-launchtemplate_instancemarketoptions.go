@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LaunchTemplate_InstanceMarketOptions AWS CloudFormation Resource (AWS::EC2::LaunchTemplate.InstanceMarketOptions)
@@ -11,7 +13,7 @@ type LaunchTemplate_InstanceMarketOptions struct {
 	// MarketType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype
-	MarketType string `json:"MarketType,omitempty"`
+	MarketType *types.Value `json:"MarketType,omitempty"`
 
 	// SpotOptions AWS CloudFormation Property
 	// Required: false

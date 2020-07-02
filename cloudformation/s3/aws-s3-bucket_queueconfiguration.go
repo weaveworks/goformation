@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_QueueConfiguration AWS CloudFormation Resource (AWS::S3::Bucket.QueueConfiguration)
@@ -11,7 +13,7 @@ type Bucket_QueueConfiguration struct {
 	// Event AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-event
-	Event string `json:"Event,omitempty"`
+	Event *types.Value `json:"Event,omitempty"`
 
 	// Filter AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type Bucket_QueueConfiguration struct {
 	// Queue AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-queue
-	Queue string `json:"Queue,omitempty"`
+	Queue *types.Value `json:"Queue,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

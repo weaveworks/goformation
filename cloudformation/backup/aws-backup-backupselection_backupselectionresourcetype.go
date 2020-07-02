@@ -1,7 +1,9 @@
 package backup
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupSelection_BackupSelectionResourceType AWS CloudFormation Resource (AWS::Backup::BackupSelection.BackupSelectionResourceType)
@@ -11,7 +13,7 @@ type BackupSelection_BackupSelectionResourceType struct {
 	// IamRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn
-	IamRoleArn string `json:"IamRoleArn,omitempty"`
+	IamRoleArn *types.Value `json:"IamRoleArn,omitempty"`
 
 	// ListOfTags AWS CloudFormation Property
 	// Required: false
@@ -21,12 +23,12 @@ type BackupSelection_BackupSelectionResourceType struct {
 	// Resources AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-resources
-	Resources []string `json:"Resources,omitempty"`
+	Resources *types.Value `json:"Resources,omitempty"`
 
 	// SelectionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-selectionname
-	SelectionName string `json:"SelectionName,omitempty"`
+	SelectionName *types.Value `json:"SelectionName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

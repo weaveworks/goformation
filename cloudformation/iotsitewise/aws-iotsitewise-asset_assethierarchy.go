@@ -1,7 +1,9 @@
 package iotsitewise
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Asset_AssetHierarchy AWS CloudFormation Resource (AWS::IoTSiteWise::Asset.AssetHierarchy)
@@ -11,12 +13,12 @@ type Asset_AssetHierarchy struct {
 	// ChildAssetId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-childassetid
-	ChildAssetId string `json:"ChildAssetId,omitempty"`
+	ChildAssetId *types.Value `json:"ChildAssetId,omitempty"`
 
 	// LogicalId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-logicalid
-	LogicalId string `json:"LogicalId,omitempty"`
+	LogicalId *types.Value `json:"LogicalId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

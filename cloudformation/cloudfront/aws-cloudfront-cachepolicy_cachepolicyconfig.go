@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CachePolicy_CachePolicyConfig AWS CloudFormation Resource (AWS::CloudFront::CachePolicy.CachePolicyConfig)
@@ -11,27 +13,27 @@ type CachePolicy_CachePolicyConfig struct {
 	// Comment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-comment
-	Comment string `json:"Comment,omitempty"`
+	Comment *types.Value `json:"Comment,omitempty"`
 
 	// DefaultTTL AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl
-	DefaultTTL float64 `json:"DefaultTTL"`
+	DefaultTTL *types.Value `json:"DefaultTTL"`
 
 	// MaxTTL AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl
-	MaxTTL float64 `json:"MaxTTL"`
+	MaxTTL *types.Value `json:"MaxTTL"`
 
 	// MinTTL AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-minttl
-	MinTTL float64 `json:"MinTTL"`
+	MinTTL *types.Value `json:"MinTTL"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// ParametersInCacheKeyAndForwardedToOrigin AWS CloudFormation Property
 	// Required: true

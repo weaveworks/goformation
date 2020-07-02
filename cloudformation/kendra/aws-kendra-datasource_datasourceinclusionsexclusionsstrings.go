@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_DataSourceInclusionsExclusionsStrings AWS CloudFormation Resource (AWS::Kendra::DataSource.DataSourceInclusionsExclusionsStrings)
@@ -11,7 +13,7 @@ type DataSource_DataSourceInclusionsExclusionsStrings struct {
 	// DataSourceInclusionsExclusionsStrings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.html#cfn-kendra-datasource-datasourceinclusionsexclusionsstrings-datasourceinclusionsexclusionsstrings
-	DataSourceInclusionsExclusionsStrings []string `json:"DataSourceInclusionsExclusionsStrings,omitempty"`
+	DataSourceInclusionsExclusionsStrings *types.Value `json:"DataSourceInclusionsExclusionsStrings,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

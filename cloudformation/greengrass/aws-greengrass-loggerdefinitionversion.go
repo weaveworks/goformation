@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LoggerDefinitionVersion AWS CloudFormation Resource (AWS::Greengrass::LoggerDefinitionVersion)
@@ -15,7 +17,7 @@ type LoggerDefinitionVersion struct {
 	// LoggerDefinitionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html#cfn-greengrass-loggerdefinitionversion-loggerdefinitionid
-	LoggerDefinitionId string `json:"LoggerDefinitionId,omitempty"`
+	LoggerDefinitionId *types.Value `json:"LoggerDefinitionId,omitempty"`
 
 	// Loggers AWS CloudFormation Property
 	// Required: true

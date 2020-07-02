@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CachePolicy_CookiesConfig AWS CloudFormation Resource (AWS::CloudFront::CachePolicy.CookiesConfig)
@@ -11,12 +13,12 @@ type CachePolicy_CookiesConfig struct {
 	// CookieBehavior AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookiebehavior
-	CookieBehavior string `json:"CookieBehavior,omitempty"`
+	CookieBehavior *types.Value `json:"CookieBehavior,omitempty"`
 
 	// Cookies AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookies
-	Cookies []string `json:"Cookies,omitempty"`
+	Cookies *types.Value `json:"Cookies,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

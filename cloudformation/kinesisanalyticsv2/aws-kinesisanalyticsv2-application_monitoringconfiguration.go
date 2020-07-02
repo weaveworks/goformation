@@ -1,7 +1,9 @@
 package kinesisanalyticsv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_MonitoringConfiguration AWS CloudFormation Resource (AWS::KinesisAnalyticsV2::Application.MonitoringConfiguration)
@@ -11,17 +13,17 @@ type Application_MonitoringConfiguration struct {
 	// ConfigurationType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype
-	ConfigurationType string `json:"ConfigurationType,omitempty"`
+	ConfigurationType *types.Value `json:"ConfigurationType,omitempty"`
 
 	// LogLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel
-	LogLevel string `json:"LogLevel,omitempty"`
+	LogLevel *types.Value `json:"LogLevel,omitempty"`
 
 	// MetricsLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel
-	MetricsLevel string `json:"MetricsLevel,omitempty"`
+	MetricsLevel *types.Value `json:"MetricsLevel,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

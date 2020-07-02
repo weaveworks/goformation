@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // IntegrationResponse AWS CloudFormation Resource (AWS::ApiGatewayV2::IntegrationResponse)
@@ -15,22 +17,22 @@ type IntegrationResponse struct {
 	// ApiId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html#cfn-apigatewayv2-integrationresponse-apiid
-	ApiId string `json:"ApiId,omitempty"`
+	ApiId *types.Value `json:"ApiId,omitempty"`
 
 	// ContentHandlingStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html#cfn-apigatewayv2-integrationresponse-contenthandlingstrategy
-	ContentHandlingStrategy string `json:"ContentHandlingStrategy,omitempty"`
+	ContentHandlingStrategy *types.Value `json:"ContentHandlingStrategy,omitempty"`
 
 	// IntegrationId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html#cfn-apigatewayv2-integrationresponse-integrationid
-	IntegrationId string `json:"IntegrationId,omitempty"`
+	IntegrationId *types.Value `json:"IntegrationId,omitempty"`
 
 	// IntegrationResponseKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html#cfn-apigatewayv2-integrationresponse-integrationresponsekey
-	IntegrationResponseKey string `json:"IntegrationResponseKey,omitempty"`
+	IntegrationResponseKey *types.Value `json:"IntegrationResponseKey,omitempty"`
 
 	// ResponseParameters AWS CloudFormation Property
 	// Required: false
@@ -45,7 +47,7 @@ type IntegrationResponse struct {
 	// TemplateSelectionExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html#cfn-apigatewayv2-integrationresponse-templateselectionexpression
-	TemplateSelectionExpression string `json:"TemplateSelectionExpression,omitempty"`
+	TemplateSelectionExpression *types.Value `json:"TemplateSelectionExpression,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

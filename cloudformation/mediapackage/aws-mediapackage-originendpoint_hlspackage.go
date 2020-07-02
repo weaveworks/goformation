@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_HlsPackage AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.HlsPackage)
@@ -11,17 +13,17 @@ type OriginEndpoint_HlsPackage struct {
 	// AdMarkers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-admarkers
-	AdMarkers string `json:"AdMarkers,omitempty"`
+	AdMarkers *types.Value `json:"AdMarkers,omitempty"`
 
 	// AdTriggers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers
-	AdTriggers []string `json:"AdTriggers,omitempty"`
+	AdTriggers *types.Value `json:"AdTriggers,omitempty"`
 
 	// AdsOnDeliveryRestrictions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions
-	AdsOnDeliveryRestrictions string `json:"AdsOnDeliveryRestrictions,omitempty"`
+	AdsOnDeliveryRestrictions *types.Value `json:"AdsOnDeliveryRestrictions,omitempty"`
 
 	// Encryption AWS CloudFormation Property
 	// Required: false
@@ -31,27 +33,27 @@ type OriginEndpoint_HlsPackage struct {
 	// IncludeIframeOnlyStream AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream
-	IncludeIframeOnlyStream bool `json:"IncludeIframeOnlyStream,omitempty"`
+	IncludeIframeOnlyStream *types.Value `json:"IncludeIframeOnlyStream,omitempty"`
 
 	// PlaylistType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype
-	PlaylistType string `json:"PlaylistType,omitempty"`
+	PlaylistType *types.Value `json:"PlaylistType,omitempty"`
 
 	// PlaylistWindowSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds
-	PlaylistWindowSeconds int `json:"PlaylistWindowSeconds,omitempty"`
+	PlaylistWindowSeconds *types.Value `json:"PlaylistWindowSeconds,omitempty"`
 
 	// ProgramDateTimeIntervalSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds
-	ProgramDateTimeIntervalSeconds int `json:"ProgramDateTimeIntervalSeconds,omitempty"`
+	ProgramDateTimeIntervalSeconds *types.Value `json:"ProgramDateTimeIntervalSeconds,omitempty"`
 
 	// SegmentDurationSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds
-	SegmentDurationSeconds int `json:"SegmentDurationSeconds,omitempty"`
+	SegmentDurationSeconds *types.Value `json:"SegmentDurationSeconds,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false
@@ -61,7 +63,7 @@ type OriginEndpoint_HlsPackage struct {
 	// UseAudioRenditionGroup AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup
-	UseAudioRenditionGroup bool `json:"UseAudioRenditionGroup,omitempty"`
+	UseAudioRenditionGroup *types.Value `json:"UseAudioRenditionGroup,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

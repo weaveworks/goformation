@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_OneDriveConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.OneDriveConfiguration)
@@ -31,12 +33,12 @@ type DataSource_OneDriveConfiguration struct {
 	// SecretArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveconfiguration.html#cfn-kendra-datasource-onedriveconfiguration-secretarn
-	SecretArn string `json:"SecretArn,omitempty"`
+	SecretArn *types.Value `json:"SecretArn,omitempty"`
 
 	// TenantDomain AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveconfiguration.html#cfn-kendra-datasource-onedriveconfiguration-tenantdomain
-	TenantDomain string `json:"TenantDomain,omitempty"`
+	TenantDomain *types.Value `json:"TenantDomain,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

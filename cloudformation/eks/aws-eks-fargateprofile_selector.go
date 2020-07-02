@@ -1,7 +1,9 @@
 package eks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FargateProfile_Selector AWS CloudFormation Resource (AWS::EKS::FargateProfile.Selector)
@@ -16,7 +18,7 @@ type FargateProfile_Selector struct {
 	// Namespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-fargateprofile-selector.html#cfn-eks-fargateprofile-selector-namespace
-	Namespace string `json:"Namespace,omitempty"`
+	Namespace *types.Value `json:"Namespace,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

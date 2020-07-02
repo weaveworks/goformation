@@ -1,7 +1,9 @@
 package iotanalytics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_RetentionPeriod AWS CloudFormation Resource (AWS::IoTAnalytics::Channel.RetentionPeriod)
@@ -11,12 +13,12 @@ type Channel_RetentionPeriod struct {
 	// NumberOfDays AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-retentionperiod.html#cfn-iotanalytics-channel-retentionperiod-numberofdays
-	NumberOfDays int `json:"NumberOfDays,omitempty"`
+	NumberOfDays *types.Value `json:"NumberOfDays,omitempty"`
 
 	// Unlimited AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-retentionperiod.html#cfn-iotanalytics-channel-retentionperiod-unlimited
-	Unlimited bool `json:"Unlimited,omitempty"`
+	Unlimited *types.Value `json:"Unlimited,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

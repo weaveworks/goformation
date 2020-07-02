@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_InforNexusConnectorProfileCredentials AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.InforNexusConnectorProfileCredentials)
@@ -11,22 +13,22 @@ type ConnectorProfile_InforNexusConnectorProfileCredentials struct {
 	// AccessKeyId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-accesskeyid
-	AccessKeyId string `json:"AccessKeyId,omitempty"`
+	AccessKeyId *types.Value `json:"AccessKeyId,omitempty"`
 
 	// Datakey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-datakey
-	Datakey string `json:"Datakey,omitempty"`
+	Datakey *types.Value `json:"Datakey,omitempty"`
 
 	// SecretAccessKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-secretaccesskey
-	SecretAccessKey string `json:"SecretAccessKey,omitempty"`
+	SecretAccessKey *types.Value `json:"SecretAccessKey,omitempty"`
 
 	// UserId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-userid
-	UserId string `json:"UserId,omitempty"`
+	UserId *types.Value `json:"UserId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

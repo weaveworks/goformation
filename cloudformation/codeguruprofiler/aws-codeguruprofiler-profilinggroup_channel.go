@@ -1,7 +1,9 @@
 package codeguruprofiler
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ProfilingGroup_Channel AWS CloudFormation Resource (AWS::CodeGuruProfiler::ProfilingGroup.Channel)
@@ -11,12 +13,12 @@ type ProfilingGroup_Channel struct {
 	// channelId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeguruprofiler-profilinggroup-channel.html#cfn-codeguruprofiler-profilinggroup-channel-channelid
-	channelId string `json:"channelId,omitempty"`
+	channelId *types.Value `json:"channelId,omitempty"`
 
 	// channelUri AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeguruprofiler-profilinggroup-channel.html#cfn-codeguruprofiler-profilinggroup-channel-channeluri
-	channelUri string `json:"channelUri,omitempty"`
+	channelUri *types.Value `json:"channelUri,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PackagingGroup_Authorization AWS CloudFormation Resource (AWS::MediaPackage::PackagingGroup.Authorization)
@@ -11,12 +13,12 @@ type PackagingGroup_Authorization struct {
 	// CdnIdentifierSecret AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packaginggroup-authorization.html#cfn-mediapackage-packaginggroup-authorization-cdnidentifiersecret
-	CdnIdentifierSecret string `json:"CdnIdentifierSecret,omitempty"`
+	CdnIdentifierSecret *types.Value `json:"CdnIdentifierSecret,omitempty"`
 
 	// SecretsRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packaginggroup-authorization.html#cfn-mediapackage-packaginggroup-authorization-secretsrolearn
-	SecretsRoleArn string `json:"SecretsRoleArn,omitempty"`
+	SecretsRoleArn *types.Value `json:"SecretsRoleArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_TrendmicroConnectorProfileCredentials AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.TrendmicroConnectorProfileCredentials)
@@ -11,7 +13,7 @@ type ConnectorProfile_TrendmicroConnectorProfileCredentials struct {
 	// ApiSecretKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html#cfn-appflow-connectorprofile-trendmicroconnectorprofilecredentials-apisecretkey
-	ApiSecretKey string `json:"ApiSecretKey,omitempty"`
+	ApiSecretKey *types.Value `json:"ApiSecretKey,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

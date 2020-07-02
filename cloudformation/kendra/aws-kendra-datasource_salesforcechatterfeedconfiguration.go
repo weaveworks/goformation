@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_SalesforceChatterFeedConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.SalesforceChatterFeedConfiguration)
@@ -11,12 +13,12 @@ type DataSource_SalesforceChatterFeedConfiguration struct {
 	// DocumentDataFieldName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcechatterfeedconfiguration.html#cfn-kendra-datasource-salesforcechatterfeedconfiguration-documentdatafieldname
-	DocumentDataFieldName string `json:"DocumentDataFieldName,omitempty"`
+	DocumentDataFieldName *types.Value `json:"DocumentDataFieldName,omitempty"`
 
 	// DocumentTitleFieldName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcechatterfeedconfiguration.html#cfn-kendra-datasource-salesforcechatterfeedconfiguration-documenttitlefieldname
-	DocumentTitleFieldName string `json:"DocumentTitleFieldName,omitempty"`
+	DocumentTitleFieldName *types.Value `json:"DocumentTitleFieldName,omitempty"`
 
 	// FieldMappings AWS CloudFormation Property
 	// Required: false

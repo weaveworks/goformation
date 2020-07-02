@@ -1,7 +1,9 @@
 package elasticsearch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Domain_AdvancedSecurityOptionsInput AWS CloudFormation Resource (AWS::Elasticsearch::Domain.AdvancedSecurityOptionsInput)
@@ -11,12 +13,12 @@ type Domain_AdvancedSecurityOptionsInput struct {
 	// Enabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled
-	Enabled bool `json:"Enabled,omitempty"`
+	Enabled *types.Value `json:"Enabled,omitempty"`
 
 	// InternalUserDatabaseEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled
-	InternalUserDatabaseEnabled bool `json:"InternalUserDatabaseEnabled,omitempty"`
+	InternalUserDatabaseEnabled *types.Value `json:"InternalUserDatabaseEnabled,omitempty"`
 
 	// MasterUserOptions AWS CloudFormation Property
 	// Required: false

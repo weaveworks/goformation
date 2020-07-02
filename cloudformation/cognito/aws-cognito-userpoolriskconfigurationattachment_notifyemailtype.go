@@ -1,7 +1,9 @@
 package cognito
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPoolRiskConfigurationAttachment_NotifyEmailType AWS CloudFormation Resource (AWS::Cognito::UserPoolRiskConfigurationAttachment.NotifyEmailType)
@@ -11,17 +13,17 @@ type UserPoolRiskConfigurationAttachment_NotifyEmailType struct {
 	// HtmlBody AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-htmlbody
-	HtmlBody string `json:"HtmlBody,omitempty"`
+	HtmlBody *types.Value `json:"HtmlBody,omitempty"`
 
 	// Subject AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject
-	Subject string `json:"Subject,omitempty"`
+	Subject *types.Value `json:"Subject,omitempty"`
 
 	// TextBody AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody
-	TextBody string `json:"TextBody,omitempty"`
+	TextBody *types.Value `json:"TextBody,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

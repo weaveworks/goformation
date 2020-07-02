@@ -1,7 +1,9 @@
 package cloudformation
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StackSet_StackInstances AWS CloudFormation Resource (AWS::CloudFormation::StackSet.StackInstances)
@@ -21,7 +23,7 @@ type StackSet_StackInstances struct {
 	// Regions AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html#cfn-cloudformation-stackset-stackinstances-regions
-	Regions []string `json:"Regions,omitempty"`
+	Regions *types.Value `json:"Regions,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

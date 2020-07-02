@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_StreamSelection AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.StreamSelection)
@@ -11,17 +13,17 @@ type OriginEndpoint_StreamSelection struct {
 	// MaxVideoBitsPerSecond AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-maxvideobitspersecond
-	MaxVideoBitsPerSecond int `json:"MaxVideoBitsPerSecond,omitempty"`
+	MaxVideoBitsPerSecond *types.Value `json:"MaxVideoBitsPerSecond,omitempty"`
 
 	// MinVideoBitsPerSecond AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond
-	MinVideoBitsPerSecond int `json:"MinVideoBitsPerSecond,omitempty"`
+	MinVideoBitsPerSecond *types.Value `json:"MinVideoBitsPerSecond,omitempty"`
 
 	// StreamOrder AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder
-	StreamOrder string `json:"StreamOrder,omitempty"`
+	StreamOrder *types.Value `json:"StreamOrder,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

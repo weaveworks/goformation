@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StreamingDistribution_StreamingDistributionConfig AWS CloudFormation Resource (AWS::CloudFront::StreamingDistribution.StreamingDistributionConfig)
@@ -11,17 +13,17 @@ type StreamingDistribution_StreamingDistributionConfig struct {
 	// Aliases AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases
-	Aliases []string `json:"Aliases,omitempty"`
+	Aliases *types.Value `json:"Aliases,omitempty"`
 
 	// Comment AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment
-	Comment string `json:"Comment,omitempty"`
+	Comment *types.Value `json:"Comment,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled
-	Enabled bool `json:"Enabled"`
+	Enabled *types.Value `json:"Enabled"`
 
 	// Logging AWS CloudFormation Property
 	// Required: false
@@ -31,7 +33,7 @@ type StreamingDistribution_StreamingDistributionConfig struct {
 	// PriceClass AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass
-	PriceClass string `json:"PriceClass,omitempty"`
+	PriceClass *types.Value `json:"PriceClass,omitempty"`
 
 	// S3Origin AWS CloudFormation Property
 	// Required: true

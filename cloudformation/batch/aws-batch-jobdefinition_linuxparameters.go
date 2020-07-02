@@ -1,7 +1,9 @@
 package batch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobDefinition_LinuxParameters AWS CloudFormation Resource (AWS::Batch::JobDefinition.LinuxParameters)
@@ -16,22 +18,22 @@ type JobDefinition_LinuxParameters struct {
 	// InitProcessEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html#cfn-batch-jobdefinition-containerproperties-linuxparameters-initprocessenabled
-	InitProcessEnabled bool `json:"InitProcessEnabled,omitempty"`
+	InitProcessEnabled *types.Value `json:"InitProcessEnabled,omitempty"`
 
 	// MaxSwap AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html#cfn-batch-jobdefinition-containerproperties-linuxparameters-maxswap
-	MaxSwap int `json:"MaxSwap,omitempty"`
+	MaxSwap *types.Value `json:"MaxSwap,omitempty"`
 
 	// SharedMemorySize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html#cfn-batch-jobdefinition-containerproperties-linuxparameters-sharedmemorysize
-	SharedMemorySize int `json:"SharedMemorySize,omitempty"`
+	SharedMemorySize *types.Value `json:"SharedMemorySize,omitempty"`
 
 	// Swappiness AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html#cfn-batch-jobdefinition-containerproperties-linuxparameters-swappiness
-	Swappiness int `json:"Swappiness,omitempty"`
+	Swappiness *types.Value `json:"Swappiness,omitempty"`
 
 	// Tmpfs AWS CloudFormation Property
 	// Required: false

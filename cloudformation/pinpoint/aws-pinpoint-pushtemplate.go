@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PushTemplate AWS CloudFormation Resource (AWS::Pinpoint::PushTemplate)
@@ -35,7 +37,7 @@ type PushTemplate struct {
 	// DefaultSubstitutions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html#cfn-pinpoint-pushtemplate-defaultsubstitutions
-	DefaultSubstitutions string `json:"DefaultSubstitutions,omitempty"`
+	DefaultSubstitutions *types.Value `json:"DefaultSubstitutions,omitempty"`
 
 	// GCM AWS CloudFormation Property
 	// Required: false
@@ -50,12 +52,12 @@ type PushTemplate struct {
 	// TemplateDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html#cfn-pinpoint-pushtemplate-templatedescription
-	TemplateDescription string `json:"TemplateDescription,omitempty"`
+	TemplateDescription *types.Value `json:"TemplateDescription,omitempty"`
 
 	// TemplateName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html#cfn-pinpoint-pushtemplate-templatename
-	TemplateName string `json:"TemplateName,omitempty"`
+	TemplateName *types.Value `json:"TemplateName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

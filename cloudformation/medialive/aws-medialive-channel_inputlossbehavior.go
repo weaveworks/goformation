@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_InputLossBehavior AWS CloudFormation Resource (AWS::MediaLive::Channel.InputLossBehavior)
@@ -11,12 +13,12 @@ type Channel_InputLossBehavior struct {
 	// BlackFrameMsec AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html#cfn-medialive-channel-inputlossbehavior-blackframemsec
-	BlackFrameMsec int `json:"BlackFrameMsec,omitempty"`
+	BlackFrameMsec *types.Value `json:"BlackFrameMsec,omitempty"`
 
 	// InputLossImageColor AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html#cfn-medialive-channel-inputlossbehavior-inputlossimagecolor
-	InputLossImageColor string `json:"InputLossImageColor,omitempty"`
+	InputLossImageColor *types.Value `json:"InputLossImageColor,omitempty"`
 
 	// InputLossImageSlate AWS CloudFormation Property
 	// Required: false
@@ -26,12 +28,12 @@ type Channel_InputLossBehavior struct {
 	// InputLossImageType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html#cfn-medialive-channel-inputlossbehavior-inputlossimagetype
-	InputLossImageType string `json:"InputLossImageType,omitempty"`
+	InputLossImageType *types.Value `json:"InputLossImageType,omitempty"`
 
 	// RepeatFrameMsec AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html#cfn-medialive-channel-inputlossbehavior-repeatframemsec
-	RepeatFrameMsec int `json:"RepeatFrameMsec,omitempty"`
+	RepeatFrameMsec *types.Value `json:"RepeatFrameMsec,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_MssPackage AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.MssPackage)
@@ -16,12 +18,12 @@ type OriginEndpoint_MssPackage struct {
 	// ManifestWindowSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds
-	ManifestWindowSeconds int `json:"ManifestWindowSeconds,omitempty"`
+	ManifestWindowSeconds *types.Value `json:"ManifestWindowSeconds,omitempty"`
 
 	// SegmentDurationSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds
-	SegmentDurationSeconds int `json:"SegmentDurationSeconds,omitempty"`
+	SegmentDurationSeconds *types.Value `json:"SegmentDurationSeconds,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false

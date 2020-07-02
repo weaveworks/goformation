@@ -1,7 +1,9 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TopicRule_PutAssetPropertyValueEntry AWS CloudFormation Resource (AWS::IoT::TopicRule.PutAssetPropertyValueEntry)
@@ -11,22 +13,22 @@ type TopicRule_PutAssetPropertyValueEntry struct {
 	// AssetId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-assetid
-	AssetId string `json:"AssetId,omitempty"`
+	AssetId *types.Value `json:"AssetId,omitempty"`
 
 	// EntryId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-entryid
-	EntryId string `json:"EntryId,omitempty"`
+	EntryId *types.Value `json:"EntryId,omitempty"`
 
 	// PropertyAlias AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-propertyalias
-	PropertyAlias string `json:"PropertyAlias,omitempty"`
+	PropertyAlias *types.Value `json:"PropertyAlias,omitempty"`
 
 	// PropertyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-propertyid
-	PropertyId string `json:"PropertyId,omitempty"`
+	PropertyId *types.Value `json:"PropertyId,omitempty"`
 
 	// PropertyValues AWS CloudFormation Property
 	// Required: true

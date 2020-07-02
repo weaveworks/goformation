@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Workspace AWS CloudFormation Resource (AWS::WorkSpaces::Workspace)
@@ -16,37 +18,37 @@ type Workspace struct {
 	// BundleId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-bundleid
-	BundleId string `json:"BundleId,omitempty"`
+	BundleId *types.Value `json:"BundleId,omitempty"`
 
 	// DirectoryId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-directoryid
-	DirectoryId string `json:"DirectoryId,omitempty"`
+	DirectoryId *types.Value `json:"DirectoryId,omitempty"`
 
 	// RootVolumeEncryptionEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-rootvolumeencryptionenabled
-	RootVolumeEncryptionEnabled bool `json:"RootVolumeEncryptionEnabled,omitempty"`
+	RootVolumeEncryptionEnabled *types.Value `json:"RootVolumeEncryptionEnabled,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// UserName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username
-	UserName string `json:"UserName,omitempty"`
+	UserName *types.Value `json:"UserName,omitempty"`
 
 	// UserVolumeEncryptionEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-uservolumeencryptionenabled
-	UserVolumeEncryptionEnabled bool `json:"UserVolumeEncryptionEnabled,omitempty"`
+	UserVolumeEncryptionEnabled *types.Value `json:"UserVolumeEncryptionEnabled,omitempty"`
 
 	// VolumeEncryptionKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-volumeencryptionkey
-	VolumeEncryptionKey string `json:"VolumeEncryptionKey,omitempty"`
+	VolumeEncryptionKey *types.Value `json:"VolumeEncryptionKey,omitempty"`
 
 	// WorkspaceProperties AWS CloudFormation Property
 	// Required: false

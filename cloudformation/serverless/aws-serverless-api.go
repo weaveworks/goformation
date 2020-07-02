@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Api AWS CloudFormation Resource (AWS::Serverless::Api)
@@ -25,17 +27,17 @@ type Api struct {
 	// BinaryMediaTypes AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	BinaryMediaTypes []string `json:"BinaryMediaTypes,omitempty"`
+	BinaryMediaTypes *types.Value `json:"BinaryMediaTypes,omitempty"`
 
 	// CacheClusterEnabled AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	CacheClusterEnabled bool `json:"CacheClusterEnabled,omitempty"`
+	CacheClusterEnabled *types.Value `json:"CacheClusterEnabled,omitempty"`
 
 	// CacheClusterSize AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	CacheClusterSize string `json:"CacheClusterSize,omitempty"`
+	CacheClusterSize *types.Value `json:"CacheClusterSize,omitempty"`
 
 	// Cors AWS CloudFormation Property
 	// Required: false
@@ -55,7 +57,7 @@ type Api struct {
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	EndpointConfiguration string `json:"EndpointConfiguration,omitempty"`
+	EndpointConfiguration *types.Value `json:"EndpointConfiguration,omitempty"`
 
 	// MethodSettings AWS CloudFormation Property
 	// Required: false
@@ -65,27 +67,27 @@ type Api struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// OpenApiVersion AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	OpenApiVersion string `json:"OpenApiVersion,omitempty"`
+	OpenApiVersion *types.Value `json:"OpenApiVersion,omitempty"`
 
 	// StageName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	StageName string `json:"StageName,omitempty"`
+	StageName *types.Value `json:"StageName,omitempty"`
 
 	// TracingEnabled AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	TracingEnabled bool `json:"TracingEnabled,omitempty"`
+	TracingEnabled *types.Value `json:"TracingEnabled,omitempty"`
 
 	// Variables AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	Variables map[string]string `json:"Variables,omitempty"`
+	Variables map[string]*types.Value `json:"Variables,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

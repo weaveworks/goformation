@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine_ScheduleEvent AWS CloudFormation Resource (AWS::Serverless::StateMachine.ScheduleEvent)
@@ -11,12 +13,12 @@ type StateMachine_ScheduleEvent struct {
 	// Input AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule
-	Input string `json:"Input,omitempty"`
+	Input *types.Value `json:"Input,omitempty"`
 
 	// Schedule AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule
-	Schedule string `json:"Schedule,omitempty"`
+	Schedule *types.Value `json:"Schedule,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

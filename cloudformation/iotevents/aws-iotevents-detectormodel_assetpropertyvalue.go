@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_AssetPropertyValue AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.AssetPropertyValue)
@@ -11,7 +13,7 @@ type DetectorModel_AssetPropertyValue struct {
 	// Quality AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-quality
-	Quality string `json:"Quality,omitempty"`
+	Quality *types.Value `json:"Quality,omitempty"`
 
 	// Timestamp AWS CloudFormation Property
 	// Required: false

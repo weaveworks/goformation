@@ -1,7 +1,9 @@
 package pinpoint
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Segment_GPSPoint AWS CloudFormation Resource (AWS::Pinpoint::Segment.GPSPoint)
@@ -16,7 +18,7 @@ type Segment_GPSPoint struct {
 	// RangeInKilometers AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint.html#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-rangeinkilometers
-	RangeInKilometers float64 `json:"RangeInKilometers"`
+	RangeInKilometers *types.Value `json:"RangeInKilometers"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

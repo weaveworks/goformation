@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // NotebookInstanceLifecycleConfig AWS CloudFormation Resource (AWS::SageMaker::NotebookInstanceLifecycleConfig)
@@ -15,7 +17,7 @@ type NotebookInstanceLifecycleConfig struct {
 	// NotebookInstanceLifecycleConfigName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname
-	NotebookInstanceLifecycleConfigName string `json:"NotebookInstanceLifecycleConfigName,omitempty"`
+	NotebookInstanceLifecycleConfigName *types.Value `json:"NotebookInstanceLifecycleConfigName,omitempty"`
 
 	// OnCreate AWS CloudFormation Property
 	// Required: false

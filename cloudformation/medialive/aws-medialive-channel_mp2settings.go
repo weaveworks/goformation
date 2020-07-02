@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_Mp2Settings AWS CloudFormation Resource (AWS::MediaLive::Channel.Mp2Settings)
@@ -11,17 +13,17 @@ type Channel_Mp2Settings struct {
 	// Bitrate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html#cfn-medialive-channel-mp2settings-bitrate
-	Bitrate float64 `json:"Bitrate,omitempty"`
+	Bitrate *types.Value `json:"Bitrate,omitempty"`
 
 	// CodingMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html#cfn-medialive-channel-mp2settings-codingmode
-	CodingMode string `json:"CodingMode,omitempty"`
+	CodingMode *types.Value `json:"CodingMode,omitempty"`
 
 	// SampleRate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html#cfn-medialive-channel-mp2settings-samplerate
-	SampleRate float64 `json:"SampleRate,omitempty"`
+	SampleRate *types.Value `json:"SampleRate,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

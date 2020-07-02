@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_KeySAMPT AWS CloudFormation Resource (AWS::Serverless::Function.KeySAMPT)
@@ -11,7 +13,7 @@ type Function_KeySAMPT struct {
 	// KeyId AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst
-	KeyId string `json:"KeyId,omitempty"`
+	KeyId *types.Value `json:"KeyId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

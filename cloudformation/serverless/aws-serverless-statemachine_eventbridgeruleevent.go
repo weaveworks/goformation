@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine_EventBridgeRuleEvent AWS CloudFormation Resource (AWS::Serverless::StateMachine.EventBridgeRuleEvent)
@@ -11,17 +13,17 @@ type StateMachine_EventBridgeRuleEvent struct {
 	// EventBusName AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-statemachine-cloudwatchevent.html
-	EventBusName string `json:"EventBusName,omitempty"`
+	EventBusName *types.Value `json:"EventBusName,omitempty"`
 
 	// Input AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-statemachine-cloudwatchevent.html
-	Input string `json:"Input,omitempty"`
+	Input *types.Value `json:"Input,omitempty"`
 
 	// InputPath AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-statemachine-cloudwatchevent.html
-	InputPath string `json:"InputPath,omitempty"`
+	InputPath *types.Value `json:"InputPath,omitempty"`
 
 	// Pattern AWS CloudFormation Property
 	// Required: true

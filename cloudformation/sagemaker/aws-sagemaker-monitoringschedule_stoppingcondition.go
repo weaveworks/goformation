@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // MonitoringSchedule_StoppingCondition AWS CloudFormation Resource (AWS::SageMaker::MonitoringSchedule.StoppingCondition)
@@ -11,7 +13,7 @@ type MonitoringSchedule_StoppingCondition struct {
 	// MaxRuntimeInSeconds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html#cfn-sagemaker-monitoringschedule-stoppingcondition-maxruntimeinseconds
-	MaxRuntimeInSeconds int `json:"MaxRuntimeInSeconds"`
+	MaxRuntimeInSeconds *types.Value `json:"MaxRuntimeInSeconds"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

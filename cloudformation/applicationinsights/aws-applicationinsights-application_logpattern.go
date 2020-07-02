@@ -1,7 +1,9 @@
 package applicationinsights
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_LogPattern AWS CloudFormation Resource (AWS::ApplicationInsights::Application.LogPattern)
@@ -11,17 +13,17 @@ type Application_LogPattern struct {
 	// Pattern AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-pattern
-	Pattern string `json:"Pattern,omitempty"`
+	Pattern *types.Value `json:"Pattern,omitempty"`
 
 	// PatternName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-patternname
-	PatternName string `json:"PatternName,omitempty"`
+	PatternName *types.Value `json:"PatternName,omitempty"`
 
 	// Rank AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-rank
-	Rank int `json:"Rank"`
+	Rank *types.Value `json:"Rank"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

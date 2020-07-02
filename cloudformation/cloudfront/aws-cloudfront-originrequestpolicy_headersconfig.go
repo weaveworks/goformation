@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginRequestPolicy_HeadersConfig AWS CloudFormation Resource (AWS::CloudFront::OriginRequestPolicy.HeadersConfig)
@@ -11,12 +13,12 @@ type OriginRequestPolicy_HeadersConfig struct {
 	// HeaderBehavior AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headerbehavior
-	HeaderBehavior string `json:"HeaderBehavior,omitempty"`
+	HeaderBehavior *types.Value `json:"HeaderBehavior,omitempty"`
 
 	// Headers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headers
-	Headers []string `json:"Headers,omitempty"`
+	Headers *types.Value `json:"Headers,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

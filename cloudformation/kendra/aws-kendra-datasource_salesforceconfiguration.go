@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_SalesforceConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.SalesforceConfiguration)
@@ -16,7 +18,7 @@ type DataSource_SalesforceConfiguration struct {
 	// CrawlAttachments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html#cfn-kendra-datasource-salesforceconfiguration-crawlattachments
-	CrawlAttachments bool `json:"CrawlAttachments,omitempty"`
+	CrawlAttachments *types.Value `json:"CrawlAttachments,omitempty"`
 
 	// ExcludeAttachmentFilePatterns AWS CloudFormation Property
 	// Required: false
@@ -36,12 +38,12 @@ type DataSource_SalesforceConfiguration struct {
 	// SecretArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html#cfn-kendra-datasource-salesforceconfiguration-secretarn
-	SecretArn string `json:"SecretArn,omitempty"`
+	SecretArn *types.Value `json:"SecretArn,omitempty"`
 
 	// ServerUrl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html#cfn-kendra-datasource-salesforceconfiguration-serverurl
-	ServerUrl string `json:"ServerUrl,omitempty"`
+	ServerUrl *types.Value `json:"ServerUrl,omitempty"`
 
 	// StandardObjectAttachmentConfiguration AWS CloudFormation Property
 	// Required: false

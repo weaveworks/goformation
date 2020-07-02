@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Flow_PrefixConfig AWS CloudFormation Resource (AWS::AppFlow::Flow.PrefixConfig)
@@ -11,12 +13,12 @@ type Flow_PrefixConfig struct {
 	// PrefixFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixformat
-	PrefixFormat string `json:"PrefixFormat,omitempty"`
+	PrefixFormat *types.Value `json:"PrefixFormat,omitempty"`
 
 	// PrefixType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixtype
-	PrefixType string `json:"PrefixType,omitempty"`
+	PrefixType *types.Value `json:"PrefixType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

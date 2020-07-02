@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_FrameCaptureSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.FrameCaptureSettings)
@@ -11,12 +13,12 @@ type Channel_FrameCaptureSettings struct {
 	// CaptureInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturesettings.html#cfn-medialive-channel-framecapturesettings-captureinterval
-	CaptureInterval int `json:"CaptureInterval,omitempty"`
+	CaptureInterval *types.Value `json:"CaptureInterval,omitempty"`
 
 	// CaptureIntervalUnits AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturesettings.html#cfn-medialive-channel-framecapturesettings-captureintervalunits
-	CaptureIntervalUnits string `json:"CaptureIntervalUnits,omitempty"`
+	CaptureIntervalUnits *types.Value `json:"CaptureIntervalUnits,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

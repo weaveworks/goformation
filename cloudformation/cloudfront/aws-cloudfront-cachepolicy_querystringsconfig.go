@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CachePolicy_QueryStringsConfig AWS CloudFormation Resource (AWS::CloudFront::CachePolicy.QueryStringsConfig)
@@ -11,12 +13,12 @@ type CachePolicy_QueryStringsConfig struct {
 	// QueryStringBehavior AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-querystringsconfig.html#cfn-cloudfront-cachepolicy-querystringsconfig-querystringbehavior
-	QueryStringBehavior string `json:"QueryStringBehavior,omitempty"`
+	QueryStringBehavior *types.Value `json:"QueryStringBehavior,omitempty"`
 
 	// QueryStrings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-querystringsconfig.html#cfn-cloudfront-cachepolicy-querystringsconfig-querystrings
-	QueryStrings []string `json:"QueryStrings,omitempty"`
+	QueryStrings *types.Value `json:"QueryStrings,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

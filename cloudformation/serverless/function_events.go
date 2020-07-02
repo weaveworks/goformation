@@ -4,14 +4,15 @@ import (
 	"encoding/json"
 	"sort"
 
-	"github.com/awslabs/goformation/v4/cloudformation/utils"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+	"github.com/weaveworks/goformation/v4/cloudformation/utils"
 )
 
 // Function_Events is a helper struct that can hold either a String or String value
 type Function_Events struct {
-	String *string
+	String **types.Value
 
-	StringArray *[]string
+	StringArray *[]*types.Value
 }
 
 func (r Function_Events) value() interface{} {
@@ -49,10 +50,22 @@ func (r *Function_Events) UnmarshalJSON(b []byte) error {
 	switch val := typecheck.(type) {
 
 	case string:
-		r.String = &val
+		v, err := types.NewValueFromPrimitive(val)
+		if err != nil {
+			return err
+		}
+		r.String = &v
 
 	case []string:
-		r.StringArray = &val
+		var values []*types.Value
+		for _, vv := range val {
+			vvv, err := types.NewValueFromPrimitive(vv)
+			if err != nil {
+				return err
+			}
+			values = append(values, vvv)
+		}
+		r.StringArray = &values
 
 	case map[string]interface{}:
 		val = val // This ensures val is used to stop an error

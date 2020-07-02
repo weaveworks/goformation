@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Api AWS CloudFormation Resource (AWS::ApiGatewayV2::Api)
@@ -15,12 +17,12 @@ type Api struct {
 	// ApiKeySelectionExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-apikeyselectionexpression
-	ApiKeySelectionExpression string `json:"ApiKeySelectionExpression,omitempty"`
+	ApiKeySelectionExpression *types.Value `json:"ApiKeySelectionExpression,omitempty"`
 
 	// BasePath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-basepath
-	BasePath string `json:"BasePath,omitempty"`
+	BasePath *types.Value `json:"BasePath,omitempty"`
 
 	// Body AWS CloudFormation Property
 	// Required: false
@@ -40,47 +42,47 @@ type Api struct {
 	// CredentialsArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-credentialsarn
-	CredentialsArn string `json:"CredentialsArn,omitempty"`
+	CredentialsArn *types.Value `json:"CredentialsArn,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// DisableExecuteApiEndpoint AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-disableexecuteapiendpoint
-	DisableExecuteApiEndpoint bool `json:"DisableExecuteApiEndpoint,omitempty"`
+	DisableExecuteApiEndpoint *types.Value `json:"DisableExecuteApiEndpoint,omitempty"`
 
 	// DisableSchemaValidation AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-disableschemavalidation
-	DisableSchemaValidation bool `json:"DisableSchemaValidation,omitempty"`
+	DisableSchemaValidation *types.Value `json:"DisableSchemaValidation,omitempty"`
 
 	// FailOnWarnings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-failonwarnings
-	FailOnWarnings bool `json:"FailOnWarnings,omitempty"`
+	FailOnWarnings *types.Value `json:"FailOnWarnings,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// ProtocolType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-protocoltype
-	ProtocolType string `json:"ProtocolType,omitempty"`
+	ProtocolType *types.Value `json:"ProtocolType,omitempty"`
 
 	// RouteKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-routekey
-	RouteKey string `json:"RouteKey,omitempty"`
+	RouteKey *types.Value `json:"RouteKey,omitempty"`
 
 	// RouteSelectionExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-routeselectionexpression
-	RouteSelectionExpression string `json:"RouteSelectionExpression,omitempty"`
+	RouteSelectionExpression *types.Value `json:"RouteSelectionExpression,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -90,12 +92,12 @@ type Api struct {
 	// Target AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-target
-	Target string `json:"Target,omitempty"`
+	Target *types.Value `json:"Target,omitempty"`
 
 	// Version AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-version
-	Version string `json:"Version,omitempty"`
+	Version *types.Value `json:"Version,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

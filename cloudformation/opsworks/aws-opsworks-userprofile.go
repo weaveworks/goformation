@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserProfile AWS CloudFormation Resource (AWS::OpsWorks::UserProfile)
@@ -15,22 +17,22 @@ type UserProfile struct {
 	// AllowSelfManagement AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement
-	AllowSelfManagement bool `json:"AllowSelfManagement,omitempty"`
+	AllowSelfManagement *types.Value `json:"AllowSelfManagement,omitempty"`
 
 	// IamUserArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn
-	IamUserArn string `json:"IamUserArn,omitempty"`
+	IamUserArn *types.Value `json:"IamUserArn,omitempty"`
 
 	// SshPublicKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey
-	SshPublicKey string `json:"SshPublicKey,omitempty"`
+	SshPublicKey *types.Value `json:"SshPublicKey,omitempty"`
 
 	// SshUsername AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername
-	SshUsername string `json:"SshUsername,omitempty"`
+	SshUsername *types.Value `json:"SshUsername,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

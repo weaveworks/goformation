@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // MonitoringSchedule_MonitoringExecutionSummary AWS CloudFormation Resource (AWS::SageMaker::MonitoringSchedule.MonitoringExecutionSummary)
@@ -11,42 +13,42 @@ type MonitoringSchedule_MonitoringExecutionSummary struct {
 	// CreationTime AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-creationtime
-	CreationTime string `json:"CreationTime,omitempty"`
+	CreationTime *types.Value `json:"CreationTime,omitempty"`
 
 	// EndpointName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-endpointname
-	EndpointName string `json:"EndpointName,omitempty"`
+	EndpointName *types.Value `json:"EndpointName,omitempty"`
 
 	// FailureReason AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-failurereason
-	FailureReason string `json:"FailureReason,omitempty"`
+	FailureReason *types.Value `json:"FailureReason,omitempty"`
 
 	// LastModifiedTime AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-lastmodifiedtime
-	LastModifiedTime string `json:"LastModifiedTime,omitempty"`
+	LastModifiedTime *types.Value `json:"LastModifiedTime,omitempty"`
 
 	// MonitoringExecutionStatus AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-monitoringexecutionstatus
-	MonitoringExecutionStatus string `json:"MonitoringExecutionStatus,omitempty"`
+	MonitoringExecutionStatus *types.Value `json:"MonitoringExecutionStatus,omitempty"`
 
 	// MonitoringScheduleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-monitoringschedulename
-	MonitoringScheduleName string `json:"MonitoringScheduleName,omitempty"`
+	MonitoringScheduleName *types.Value `json:"MonitoringScheduleName,omitempty"`
 
 	// ProcessingJobArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-processingjobarn
-	ProcessingJobArn string `json:"ProcessingJobArn,omitempty"`
+	ProcessingJobArn *types.Value `json:"ProcessingJobArn,omitempty"`
 
 	// ScheduledTime AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html#cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-scheduledtime
-	ScheduledTime string `json:"ScheduledTime,omitempty"`
+	ScheduledTime *types.Value `json:"ScheduledTime,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package iotsitewise
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AssetModel_PropertyType AWS CloudFormation Resource (AWS::IoTSiteWise::AssetModel.PropertyType)
@@ -26,7 +28,7 @@ type AssetModel_PropertyType struct {
 	// TypeName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-propertytype.html#cfn-iotsitewise-assetmodel-propertytype-typename
-	TypeName string `json:"TypeName,omitempty"`
+	TypeName *types.Value `json:"TypeName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

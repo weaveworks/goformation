@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PackagingConfiguration_HlsEncryption AWS CloudFormation Resource (AWS::MediaPackage::PackagingConfiguration.HlsEncryption)
@@ -11,12 +13,12 @@ type PackagingConfiguration_HlsEncryption struct {
 	// ConstantInitializationVector AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-constantinitializationvector
-	ConstantInitializationVector string `json:"ConstantInitializationVector,omitempty"`
+	ConstantInitializationVector *types.Value `json:"ConstantInitializationVector,omitempty"`
 
 	// EncryptionMethod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-encryptionmethod
-	EncryptionMethod string `json:"EncryptionMethod,omitempty"`
+	EncryptionMethod *types.Value `json:"EncryptionMethod,omitempty"`
 
 	// SpekeKeyProvider AWS CloudFormation Property
 	// Required: true

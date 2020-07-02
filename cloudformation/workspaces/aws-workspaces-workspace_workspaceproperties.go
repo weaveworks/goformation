@@ -1,7 +1,9 @@
 package workspaces
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Workspace_WorkspaceProperties AWS CloudFormation Resource (AWS::WorkSpaces::Workspace.WorkspaceProperties)
@@ -11,27 +13,27 @@ type Workspace_WorkspaceProperties struct {
 	// ComputeTypeName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-computetypename
-	ComputeTypeName string `json:"ComputeTypeName,omitempty"`
+	ComputeTypeName *types.Value `json:"ComputeTypeName,omitempty"`
 
 	// RootVolumeSizeGib AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-rootvolumesizegib
-	RootVolumeSizeGib int `json:"RootVolumeSizeGib,omitempty"`
+	RootVolumeSizeGib *types.Value `json:"RootVolumeSizeGib,omitempty"`
 
 	// RunningMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-runningmode
-	RunningMode string `json:"RunningMode,omitempty"`
+	RunningMode *types.Value `json:"RunningMode,omitempty"`
 
 	// RunningModeAutoStopTimeoutInMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-runningmodeautostoptimeoutinminutes
-	RunningModeAutoStopTimeoutInMinutes int `json:"RunningModeAutoStopTimeoutInMinutes,omitempty"`
+	RunningModeAutoStopTimeoutInMinutes *types.Value `json:"RunningModeAutoStopTimeoutInMinutes,omitempty"`
 
 	// UserVolumeSizeGib AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-uservolumesizegib
-	UserVolumeSizeGib int `json:"UserVolumeSizeGib,omitempty"`
+	UserVolumeSizeGib *types.Value `json:"UserVolumeSizeGib,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

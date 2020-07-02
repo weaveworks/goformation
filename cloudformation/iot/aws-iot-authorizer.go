@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Authorizer AWS CloudFormation Resource (AWS::IoT::Authorizer)
@@ -15,22 +17,22 @@ type Authorizer struct {
 	// AuthorizerFunctionArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-authorizerfunctionarn
-	AuthorizerFunctionArn string `json:"AuthorizerFunctionArn,omitempty"`
+	AuthorizerFunctionArn *types.Value `json:"AuthorizerFunctionArn,omitempty"`
 
 	// AuthorizerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-authorizername
-	AuthorizerName string `json:"AuthorizerName,omitempty"`
+	AuthorizerName *types.Value `json:"AuthorizerName,omitempty"`
 
 	// SigningDisabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-signingdisabled
-	SigningDisabled bool `json:"SigningDisabled,omitempty"`
+	SigningDisabled *types.Value `json:"SigningDisabled,omitempty"`
 
 	// Status AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-status
-	Status string `json:"Status,omitempty"`
+	Status *types.Value `json:"Status,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -40,7 +42,7 @@ type Authorizer struct {
 	// TokenKeyName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-tokenkeyname
-	TokenKeyName string `json:"TokenKeyName,omitempty"`
+	TokenKeyName *types.Value `json:"TokenKeyName,omitempty"`
 
 	// TokenSigningPublicKeys AWS CloudFormation Property
 	// Required: false

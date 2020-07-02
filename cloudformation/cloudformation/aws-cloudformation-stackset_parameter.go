@@ -1,7 +1,9 @@
 package cloudformation
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StackSet_Parameter AWS CloudFormation Resource (AWS::CloudFormation::StackSet.Parameter)
@@ -11,12 +13,12 @@ type StackSet_Parameter struct {
 	// ParameterKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey
-	ParameterKey string `json:"ParameterKey,omitempty"`
+	ParameterKey *types.Value `json:"ParameterKey,omitempty"`
 
 	// ParameterValue AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parametervalue
-	ParameterValue string `json:"ParameterValue,omitempty"`
+	ParameterValue *types.Value `json:"ParameterValue,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

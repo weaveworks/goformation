@@ -1,7 +1,9 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DomainConfiguration_ServerCertificateSummary AWS CloudFormation Resource (AWS::IoT::DomainConfiguration.ServerCertificateSummary)
@@ -11,17 +13,17 @@ type DomainConfiguration_ServerCertificateSummary struct {
 	// ServerCertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatearn
-	ServerCertificateArn string `json:"ServerCertificateArn,omitempty"`
+	ServerCertificateArn *types.Value `json:"ServerCertificateArn,omitempty"`
 
 	// ServerCertificateStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatestatus
-	ServerCertificateStatus string `json:"ServerCertificateStatus,omitempty"`
+	ServerCertificateStatus *types.Value `json:"ServerCertificateStatus,omitempty"`
 
 	// ServerCertificateStatusDetail AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatestatusdetail
-	ServerCertificateStatusDetail string `json:"ServerCertificateStatusDetail,omitempty"`
+	ServerCertificateStatusDetail *types.Value `json:"ServerCertificateStatusDetail,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

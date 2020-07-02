@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_SalesforceKnowledgeArticleStateList AWS CloudFormation Resource (AWS::Kendra::DataSource.SalesforceKnowledgeArticleStateList)
@@ -11,7 +13,7 @@ type DataSource_SalesforceKnowledgeArticleStateList struct {
 	// SalesforceKnowledgeArticleStateList AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceknowledgearticlestatelist.html#cfn-kendra-datasource-salesforceknowledgearticlestatelist-salesforceknowledgearticlestatelist
-	SalesforceKnowledgeArticleStateList []string `json:"SalesforceKnowledgeArticleStateList,omitempty"`
+	SalesforceKnowledgeArticleStateList *types.Value `json:"SalesforceKnowledgeArticleStateList,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

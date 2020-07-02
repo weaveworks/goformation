@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile)
@@ -15,7 +17,7 @@ type ConnectorProfile struct {
 	// ConnectionMode AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectionmode
-	ConnectionMode string `json:"ConnectionMode,omitempty"`
+	ConnectionMode *types.Value `json:"ConnectionMode,omitempty"`
 
 	// ConnectorProfileConfig AWS CloudFormation Property
 	// Required: false
@@ -25,17 +27,17 @@ type ConnectorProfile struct {
 	// ConnectorProfileName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofilename
-	ConnectorProfileName string `json:"ConnectorProfileName,omitempty"`
+	ConnectorProfileName *types.Value `json:"ConnectorProfileName,omitempty"`
 
 	// ConnectorType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectortype
-	ConnectorType string `json:"ConnectorType,omitempty"`
+	ConnectorType *types.Value `json:"ConnectorType,omitempty"`
 
 	// KMSArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-kmsarn
-	KMSArn string `json:"KMSArn,omitempty"`
+	KMSArn *types.Value `json:"KMSArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

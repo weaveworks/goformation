@@ -1,7 +1,9 @@
 package backup
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BackupPlan_AdvancedBackupSettingResourceType AWS CloudFormation Resource (AWS::Backup::BackupPlan.AdvancedBackupSettingResourceType)
@@ -16,7 +18,7 @@ type BackupPlan_AdvancedBackupSettingResourceType struct {
 	// ResourceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-advancedbackupsettingresourcetype.html#cfn-backup-backupplan-advancedbackupsettingresourcetype-resourcetype
-	ResourceType string `json:"ResourceType,omitempty"`
+	ResourceType *types.Value `json:"ResourceType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

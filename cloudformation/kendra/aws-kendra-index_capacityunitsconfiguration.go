@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Index_CapacityUnitsConfiguration AWS CloudFormation Resource (AWS::Kendra::Index.CapacityUnitsConfiguration)
@@ -11,12 +13,12 @@ type Index_CapacityUnitsConfiguration struct {
 	// QueryCapacityUnits AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-capacityunitsconfiguration.html#cfn-kendra-index-capacityunitsconfiguration-querycapacityunits
-	QueryCapacityUnits int `json:"QueryCapacityUnits"`
+	QueryCapacityUnits *types.Value `json:"QueryCapacityUnits"`
 
 	// StorageCapacityUnits AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-capacityunitsconfiguration.html#cfn-kendra-index-capacityunitsconfiguration-storagecapacityunits
-	StorageCapacityUnits int `json:"StorageCapacityUnits"`
+	StorageCapacityUnits *types.Value `json:"StorageCapacityUnits"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

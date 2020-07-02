@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_AutomaticInputFailoverSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.AutomaticInputFailoverSettings)
@@ -11,12 +13,12 @@ type Channel_AutomaticInputFailoverSettings struct {
 	// InputPreference AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-automaticinputfailoversettings.html#cfn-medialive-channel-automaticinputfailoversettings-inputpreference
-	InputPreference string `json:"InputPreference,omitempty"`
+	InputPreference *types.Value `json:"InputPreference,omitempty"`
 
 	// SecondaryInputId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-automaticinputfailoversettings.html#cfn-medialive-channel-automaticinputfailoversettings-secondaryinputid
-	SecondaryInputId string `json:"SecondaryInputId,omitempty"`
+	SecondaryInputId *types.Value `json:"SecondaryInputId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

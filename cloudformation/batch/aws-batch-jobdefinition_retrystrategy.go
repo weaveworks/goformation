@@ -1,7 +1,9 @@
 package batch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobDefinition_RetryStrategy AWS CloudFormation Resource (AWS::Batch::JobDefinition.RetryStrategy)
@@ -11,7 +13,7 @@ type JobDefinition_RetryStrategy struct {
 	// Attempts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-retrystrategy.html#cfn-batch-jobdefinition-retrystrategy-attempts
-	Attempts int `json:"Attempts,omitempty"`
+	Attempts *types.Value `json:"Attempts,omitempty"`
 
 	// EvaluateOnExit AWS CloudFormation Property
 	// Required: false

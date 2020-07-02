@@ -1,7 +1,9 @@
 package rds
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DBProxyTargetGroup_ConnectionPoolConfigurationInfoFormat AWS CloudFormation Resource (AWS::RDS::DBProxyTargetGroup.ConnectionPoolConfigurationInfoFormat)
@@ -11,27 +13,27 @@ type DBProxyTargetGroup_ConnectionPoolConfigurationInfoFormat struct {
 	// ConnectionBorrowTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-connectionborrowtimeout
-	ConnectionBorrowTimeout int `json:"ConnectionBorrowTimeout,omitempty"`
+	ConnectionBorrowTimeout *types.Value `json:"ConnectionBorrowTimeout,omitempty"`
 
 	// InitQuery AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-initquery
-	InitQuery string `json:"InitQuery,omitempty"`
+	InitQuery *types.Value `json:"InitQuery,omitempty"`
 
 	// MaxConnectionsPercent AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-maxconnectionspercent
-	MaxConnectionsPercent int `json:"MaxConnectionsPercent,omitempty"`
+	MaxConnectionsPercent *types.Value `json:"MaxConnectionsPercent,omitempty"`
 
 	// MaxIdleConnectionsPercent AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-maxidleconnectionspercent
-	MaxIdleConnectionsPercent int `json:"MaxIdleConnectionsPercent,omitempty"`
+	MaxIdleConnectionsPercent *types.Value `json:"MaxIdleConnectionsPercent,omitempty"`
 
 	// SessionPinningFilters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-sessionpinningfilters
-	SessionPinningFilters []string `json:"SessionPinningFilters,omitempty"`
+	SessionPinningFilters *types.Value `json:"SessionPinningFilters,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

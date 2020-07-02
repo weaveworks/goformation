@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_DvbSdtSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.DvbSdtSettings)
@@ -11,22 +13,22 @@ type Channel_DvbSdtSettings struct {
 	// OutputSdt AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html#cfn-medialive-channel-dvbsdtsettings-outputsdt
-	OutputSdt string `json:"OutputSdt,omitempty"`
+	OutputSdt *types.Value `json:"OutputSdt,omitempty"`
 
 	// RepInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html#cfn-medialive-channel-dvbsdtsettings-repinterval
-	RepInterval int `json:"RepInterval,omitempty"`
+	RepInterval *types.Value `json:"RepInterval,omitempty"`
 
 	// ServiceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html#cfn-medialive-channel-dvbsdtsettings-servicename
-	ServiceName string `json:"ServiceName,omitempty"`
+	ServiceName *types.Value `json:"ServiceName,omitempty"`
 
 	// ServiceProviderName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html#cfn-medialive-channel-dvbsdtsettings-serviceprovidername
-	ServiceProviderName string `json:"ServiceProviderName,omitempty"`
+	ServiceProviderName *types.Value `json:"ServiceProviderName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package events
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Rule_RedshiftDataParameters AWS CloudFormation Resource (AWS::Events::Rule.RedshiftDataParameters)
@@ -11,32 +13,32 @@ type Rule_RedshiftDataParameters struct {
 	// Database AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-database
-	Database string `json:"Database,omitempty"`
+	Database *types.Value `json:"Database,omitempty"`
 
 	// DbUser AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-dbuser
-	DbUser string `json:"DbUser,omitempty"`
+	DbUser *types.Value `json:"DbUser,omitempty"`
 
 	// SecretManagerArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-secretmanagerarn
-	SecretManagerArn string `json:"SecretManagerArn,omitempty"`
+	SecretManagerArn *types.Value `json:"SecretManagerArn,omitempty"`
 
 	// Sql AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sql
-	Sql string `json:"Sql,omitempty"`
+	Sql *types.Value `json:"Sql,omitempty"`
 
 	// StatementName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-statementname
-	StatementName string `json:"StatementName,omitempty"`
+	StatementName *types.Value `json:"StatementName,omitempty"`
 
 	// WithEvent AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-withevent
-	WithEvent bool `json:"WithEvent,omitempty"`
+	WithEvent *types.Value `json:"WithEvent,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Flow_S3OutputFormatConfig AWS CloudFormation Resource (AWS::AppFlow::Flow.S3OutputFormatConfig)
@@ -16,7 +18,7 @@ type Flow_S3OutputFormatConfig struct {
 	// FileType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-filetype
-	FileType string `json:"FileType,omitempty"`
+	FileType *types.Value `json:"FileType,omitempty"`
 
 	// PrefixConfig AWS CloudFormation Property
 	// Required: false

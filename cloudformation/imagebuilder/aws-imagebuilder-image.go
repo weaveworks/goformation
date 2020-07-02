@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Image AWS CloudFormation Resource (AWS::ImageBuilder::Image)
@@ -15,17 +17,17 @@ type Image struct {
 	// DistributionConfigurationArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-distributionconfigurationarn
-	DistributionConfigurationArn string `json:"DistributionConfigurationArn,omitempty"`
+	DistributionConfigurationArn *types.Value `json:"DistributionConfigurationArn,omitempty"`
 
 	// EnhancedImageMetadataEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-enhancedimagemetadataenabled
-	EnhancedImageMetadataEnabled bool `json:"EnhancedImageMetadataEnabled,omitempty"`
+	EnhancedImageMetadataEnabled *types.Value `json:"EnhancedImageMetadataEnabled,omitempty"`
 
 	// ImageRecipeArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagerecipearn
-	ImageRecipeArn string `json:"ImageRecipeArn,omitempty"`
+	ImageRecipeArn *types.Value `json:"ImageRecipeArn,omitempty"`
 
 	// ImageTestsConfiguration AWS CloudFormation Property
 	// Required: false
@@ -35,12 +37,12 @@ type Image struct {
 	// InfrastructureConfigurationArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn
-	InfrastructureConfigurationArn string `json:"InfrastructureConfigurationArn,omitempty"`
+	InfrastructureConfigurationArn *types.Value `json:"InfrastructureConfigurationArn,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-tags
-	Tags map[string]string `json:"Tags,omitempty"`
+	Tags map[string]*types.Value `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

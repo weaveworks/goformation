@@ -1,7 +1,7 @@
 package lambda
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EventSourceMapping_DestinationConfig AWS CloudFormation Resource (AWS::Lambda::EventSourceMapping.DestinationConfig)

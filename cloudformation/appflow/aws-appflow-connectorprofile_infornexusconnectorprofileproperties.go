@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_InforNexusConnectorProfileProperties AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.InforNexusConnectorProfileProperties)
@@ -11,7 +13,7 @@ type ConnectorProfile_InforNexusConnectorProfileProperties struct {
 	// InstanceUrl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html#cfn-appflow-connectorprofile-infornexusconnectorprofileproperties-instanceurl
-	InstanceUrl string `json:"InstanceUrl,omitempty"`
+	InstanceUrl *types.Value `json:"InstanceUrl,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_DvbNitSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.DvbNitSettings)
@@ -11,17 +13,17 @@ type Channel_DvbNitSettings struct {
 	// NetworkId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbnitsettings.html#cfn-medialive-channel-dvbnitsettings-networkid
-	NetworkId int `json:"NetworkId,omitempty"`
+	NetworkId *types.Value `json:"NetworkId,omitempty"`
 
 	// NetworkName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbnitsettings.html#cfn-medialive-channel-dvbnitsettings-networkname
-	NetworkName string `json:"NetworkName,omitempty"`
+	NetworkName *types.Value `json:"NetworkName,omitempty"`
 
 	// RepInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbnitsettings.html#cfn-medialive-channel-dvbnitsettings-repinterval
-	RepInterval int `json:"RepInterval,omitempty"`
+	RepInterval *types.Value `json:"RepInterval,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

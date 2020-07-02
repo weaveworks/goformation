@@ -1,7 +1,9 @@
 package appsync
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FunctionConfiguration_SyncConfig AWS CloudFormation Resource (AWS::AppSync::FunctionConfiguration.SyncConfig)
@@ -11,12 +13,12 @@ type FunctionConfiguration_SyncConfig struct {
 	// ConflictDetection AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html#cfn-appsync-functionconfiguration-syncconfig-conflictdetection
-	ConflictDetection string `json:"ConflictDetection,omitempty"`
+	ConflictDetection *types.Value `json:"ConflictDetection,omitempty"`
 
 	// ConflictHandler AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html#cfn-appsync-functionconfiguration-syncconfig-conflicthandler
-	ConflictHandler string `json:"ConflictHandler,omitempty"`
+	ConflictHandler *types.Value `json:"ConflictHandler,omitempty"`
 
 	// LambdaConflictHandlerConfig AWS CloudFormation Property
 	// Required: false

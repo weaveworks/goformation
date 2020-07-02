@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // VPCCidrBlock AWS CloudFormation Resource (AWS::EC2::VPCCidrBlock)
@@ -15,17 +17,17 @@ type VPCCidrBlock struct {
 	// AmazonProvidedIpv6CidrBlock AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock
-	AmazonProvidedIpv6CidrBlock bool `json:"AmazonProvidedIpv6CidrBlock,omitempty"`
+	AmazonProvidedIpv6CidrBlock *types.Value `json:"AmazonProvidedIpv6CidrBlock,omitempty"`
 
 	// CidrBlock AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-cidrblock
-	CidrBlock string `json:"CidrBlock,omitempty"`
+	CidrBlock *types.Value `json:"CidrBlock,omitempty"`
 
 	// VpcId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-vpcid
-	VpcId string `json:"VpcId,omitempty"`
+	VpcId *types.Value `json:"VpcId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

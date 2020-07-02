@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // BucketPolicy AWS CloudFormation Resource (AWS::S3::BucketPolicy)
@@ -15,7 +17,7 @@ type BucketPolicy struct {
 	// Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-bucket
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *types.Value `json:"Bucket,omitempty"`
 
 	// PolicyDocument AWS CloudFormation Property
 	// Required: true

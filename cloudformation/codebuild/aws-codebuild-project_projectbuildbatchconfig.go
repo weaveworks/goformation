@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_ProjectBuildBatchConfig AWS CloudFormation Resource (AWS::CodeBuild::Project.ProjectBuildBatchConfig)
@@ -11,7 +13,7 @@ type Project_ProjectBuildBatchConfig struct {
 	// CombineArtifacts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts
-	CombineArtifacts bool `json:"CombineArtifacts,omitempty"`
+	CombineArtifacts *types.Value `json:"CombineArtifacts,omitempty"`
 
 	// Restrictions AWS CloudFormation Property
 	// Required: false
@@ -21,12 +23,12 @@ type Project_ProjectBuildBatchConfig struct {
 	// ServiceRole AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-servicerole
-	ServiceRole string `json:"ServiceRole,omitempty"`
+	ServiceRole *types.Value `json:"ServiceRole,omitempty"`
 
 	// TimeoutInMins AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins
-	TimeoutInMins int `json:"TimeoutInMins,omitempty"`
+	TimeoutInMins *types.Value `json:"TimeoutInMins,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

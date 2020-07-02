@@ -1,7 +1,9 @@
 package apigatewayv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ApiGatewayManagedOverrides_StageOverrides AWS CloudFormation Resource (AWS::ApiGatewayV2::ApiGatewayManagedOverrides.StageOverrides)
@@ -16,7 +18,7 @@ type ApiGatewayManagedOverrides_StageOverrides struct {
 	// AutoDeploy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-stageoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-autodeploy
-	AutoDeploy bool `json:"AutoDeploy,omitempty"`
+	AutoDeploy *types.Value `json:"AutoDeploy,omitempty"`
 
 	// DefaultRouteSettings AWS CloudFormation Property
 	// Required: false
@@ -26,7 +28,7 @@ type ApiGatewayManagedOverrides_StageOverrides struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-stageoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// RouteSettings AWS CloudFormation Property
 	// Required: false

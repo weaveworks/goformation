@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EndpointConfig_CaptureContentTypeHeader AWS CloudFormation Resource (AWS::SageMaker::EndpointConfig.CaptureContentTypeHeader)
@@ -11,12 +13,12 @@ type EndpointConfig_CaptureContentTypeHeader struct {
 	// CsvContentTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader.html#cfn-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader-csvcontenttypes
-	CsvContentTypes []string `json:"CsvContentTypes,omitempty"`
+	CsvContentTypes *types.Value `json:"CsvContentTypes,omitempty"`
 
 	// JsonContentTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader.html#cfn-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader-jsoncontenttypes
-	JsonContentTypes []string `json:"JsonContentTypes,omitempty"`
+	JsonContentTypes *types.Value `json:"JsonContentTypes,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

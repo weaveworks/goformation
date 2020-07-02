@@ -1,7 +1,9 @@
 package apigatewayv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DomainName_DomainNameConfiguration AWS CloudFormation Resource (AWS::ApiGatewayV2::DomainName.DomainNameConfiguration)
@@ -11,22 +13,22 @@ type DomainName_DomainNameConfiguration struct {
 	// CertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn
-	CertificateArn string `json:"CertificateArn,omitempty"`
+	CertificateArn *types.Value `json:"CertificateArn,omitempty"`
 
 	// CertificateName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename
-	CertificateName string `json:"CertificateName,omitempty"`
+	CertificateName *types.Value `json:"CertificateName,omitempty"`
 
 	// EndpointType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype
-	EndpointType string `json:"EndpointType,omitempty"`
+	EndpointType *types.Value `json:"EndpointType,omitempty"`
 
 	// SecurityPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy
-	SecurityPolicy string `json:"SecurityPolicy,omitempty"`
+	SecurityPolicy *types.Value `json:"SecurityPolicy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

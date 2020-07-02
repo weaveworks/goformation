@@ -1,7 +1,9 @@
 package appmesh
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GatewayRoute_GatewayRouteVirtualService AWS CloudFormation Resource (AWS::AppMesh::GatewayRoute.GatewayRouteVirtualService)
@@ -11,7 +13,7 @@ type GatewayRoute_GatewayRouteVirtualService struct {
 	// VirtualServiceName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutevirtualservice.html#cfn-appmesh-gatewayroute-gatewayroutevirtualservice-virtualservicename
-	VirtualServiceName string `json:"VirtualServiceName,omitempty"`
+	VirtualServiceName *types.Value `json:"VirtualServiceName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

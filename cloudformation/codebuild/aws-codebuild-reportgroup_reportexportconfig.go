@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ReportGroup_ReportExportConfig AWS CloudFormation Resource (AWS::CodeBuild::ReportGroup.ReportExportConfig)
@@ -11,7 +13,7 @@ type ReportGroup_ReportExportConfig struct {
 	// ExportConfigType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-reportexportconfig.html#cfn-codebuild-reportgroup-reportexportconfig-exportconfigtype
-	ExportConfigType string `json:"ExportConfigType,omitempty"`
+	ExportConfigType *types.Value `json:"ExportConfigType,omitempty"`
 
 	// S3Destination AWS CloudFormation Property
 	// Required: false

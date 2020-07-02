@@ -1,7 +1,7 @@
 package gamelift
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GameServerGroup_InstanceDefinitions AWS CloudFormation Resource (AWS::GameLift::GameServerGroup.InstanceDefinitions)

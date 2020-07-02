@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Authorizer AWS CloudFormation Resource (AWS::ApiGatewayV2::Authorizer)
@@ -15,47 +17,47 @@ type Authorizer struct {
 	// ApiId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-apiid
-	ApiId string `json:"ApiId,omitempty"`
+	ApiId *types.Value `json:"ApiId,omitempty"`
 
 	// AuthorizerCredentialsArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-authorizercredentialsarn
-	AuthorizerCredentialsArn string `json:"AuthorizerCredentialsArn,omitempty"`
+	AuthorizerCredentialsArn *types.Value `json:"AuthorizerCredentialsArn,omitempty"`
 
 	// AuthorizerPayloadFormatVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-authorizerpayloadformatversion
-	AuthorizerPayloadFormatVersion string `json:"AuthorizerPayloadFormatVersion,omitempty"`
+	AuthorizerPayloadFormatVersion *types.Value `json:"AuthorizerPayloadFormatVersion,omitempty"`
 
 	// AuthorizerResultTtlInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-authorizerresultttlinseconds
-	AuthorizerResultTtlInSeconds int `json:"AuthorizerResultTtlInSeconds,omitempty"`
+	AuthorizerResultTtlInSeconds *types.Value `json:"AuthorizerResultTtlInSeconds,omitempty"`
 
 	// AuthorizerType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-authorizertype
-	AuthorizerType string `json:"AuthorizerType,omitempty"`
+	AuthorizerType *types.Value `json:"AuthorizerType,omitempty"`
 
 	// AuthorizerUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-authorizeruri
-	AuthorizerUri string `json:"AuthorizerUri,omitempty"`
+	AuthorizerUri *types.Value `json:"AuthorizerUri,omitempty"`
 
 	// EnableSimpleResponses AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-enablesimpleresponses
-	EnableSimpleResponses bool `json:"EnableSimpleResponses,omitempty"`
+	EnableSimpleResponses *types.Value `json:"EnableSimpleResponses,omitempty"`
 
 	// IdentitySource AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-identitysource
-	IdentitySource []string `json:"IdentitySource,omitempty"`
+	IdentitySource *types.Value `json:"IdentitySource,omitempty"`
 
 	// IdentityValidationExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-identityvalidationexpression
-	IdentityValidationExpression string `json:"IdentityValidationExpression,omitempty"`
+	IdentityValidationExpression *types.Value `json:"IdentityValidationExpression,omitempty"`
 
 	// JwtConfiguration AWS CloudFormation Property
 	// Required: false
@@ -65,7 +67,7 @@ type Authorizer struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

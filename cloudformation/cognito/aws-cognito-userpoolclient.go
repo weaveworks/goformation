@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPoolClient AWS CloudFormation Resource (AWS::Cognito::UserPoolClient)
@@ -15,22 +17,22 @@ type UserPoolClient struct {
 	// AccessTokenValidity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-accesstokenvalidity
-	AccessTokenValidity int `json:"AccessTokenValidity,omitempty"`
+	AccessTokenValidity *types.Value `json:"AccessTokenValidity,omitempty"`
 
 	// AllowedOAuthFlows AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflows
-	AllowedOAuthFlows []string `json:"AllowedOAuthFlows,omitempty"`
+	AllowedOAuthFlows *types.Value `json:"AllowedOAuthFlows,omitempty"`
 
 	// AllowedOAuthFlowsUserPoolClient AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient
-	AllowedOAuthFlowsUserPoolClient bool `json:"AllowedOAuthFlowsUserPoolClient,omitempty"`
+	AllowedOAuthFlowsUserPoolClient *types.Value `json:"AllowedOAuthFlowsUserPoolClient,omitempty"`
 
 	// AllowedOAuthScopes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes
-	AllowedOAuthScopes []string `json:"AllowedOAuthScopes,omitempty"`
+	AllowedOAuthScopes *types.Value `json:"AllowedOAuthScopes,omitempty"`
 
 	// AnalyticsConfiguration AWS CloudFormation Property
 	// Required: false
@@ -40,57 +42,57 @@ type UserPoolClient struct {
 	// CallbackURLs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-callbackurls
-	CallbackURLs []string `json:"CallbackURLs,omitempty"`
+	CallbackURLs *types.Value `json:"CallbackURLs,omitempty"`
 
 	// ClientName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-clientname
-	ClientName string `json:"ClientName,omitempty"`
+	ClientName *types.Value `json:"ClientName,omitempty"`
 
 	// DefaultRedirectURI AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-defaultredirecturi
-	DefaultRedirectURI string `json:"DefaultRedirectURI,omitempty"`
+	DefaultRedirectURI *types.Value `json:"DefaultRedirectURI,omitempty"`
 
 	// ExplicitAuthFlows AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows
-	ExplicitAuthFlows []string `json:"ExplicitAuthFlows,omitempty"`
+	ExplicitAuthFlows *types.Value `json:"ExplicitAuthFlows,omitempty"`
 
 	// GenerateSecret AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret
-	GenerateSecret bool `json:"GenerateSecret,omitempty"`
+	GenerateSecret *types.Value `json:"GenerateSecret,omitempty"`
 
 	// IdTokenValidity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-idtokenvalidity
-	IdTokenValidity int `json:"IdTokenValidity,omitempty"`
+	IdTokenValidity *types.Value `json:"IdTokenValidity,omitempty"`
 
 	// LogoutURLs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-logouturls
-	LogoutURLs []string `json:"LogoutURLs,omitempty"`
+	LogoutURLs *types.Value `json:"LogoutURLs,omitempty"`
 
 	// PreventUserExistenceErrors AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-preventuserexistenceerrors
-	PreventUserExistenceErrors string `json:"PreventUserExistenceErrors,omitempty"`
+	PreventUserExistenceErrors *types.Value `json:"PreventUserExistenceErrors,omitempty"`
 
 	// ReadAttributes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes
-	ReadAttributes []string `json:"ReadAttributes,omitempty"`
+	ReadAttributes *types.Value `json:"ReadAttributes,omitempty"`
 
 	// RefreshTokenValidity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity
-	RefreshTokenValidity int `json:"RefreshTokenValidity,omitempty"`
+	RefreshTokenValidity *types.Value `json:"RefreshTokenValidity,omitempty"`
 
 	// SupportedIdentityProviders AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders
-	SupportedIdentityProviders []string `json:"SupportedIdentityProviders,omitempty"`
+	SupportedIdentityProviders *types.Value `json:"SupportedIdentityProviders,omitempty"`
 
 	// TokenValidityUnits AWS CloudFormation Property
 	// Required: false
@@ -100,12 +102,12 @@ type UserPoolClient struct {
 	// UserPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-userpoolid
-	UserPoolId string `json:"UserPoolId,omitempty"`
+	UserPoolId *types.Value `json:"UserPoolId,omitempty"`
 
 	// WriteAttributes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-writeattributes
-	WriteAttributes []string `json:"WriteAttributes,omitempty"`
+	WriteAttributes *types.Value `json:"WriteAttributes,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

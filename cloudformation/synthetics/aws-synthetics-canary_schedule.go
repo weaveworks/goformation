@@ -1,7 +1,9 @@
 package synthetics
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Canary_Schedule AWS CloudFormation Resource (AWS::Synthetics::Canary.Schedule)
@@ -11,12 +13,12 @@ type Canary_Schedule struct {
 	// DurationInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-durationinseconds
-	DurationInSeconds string `json:"DurationInSeconds,omitempty"`
+	DurationInSeconds *types.Value `json:"DurationInSeconds,omitempty"`
 
 	// Expression AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression
-	Expression string `json:"Expression,omitempty"`
+	Expression *types.Value `json:"Expression,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

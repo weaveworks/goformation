@@ -1,7 +1,9 @@
 package cloudformation
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StackSet_DeploymentTargets AWS CloudFormation Resource (AWS::CloudFormation::StackSet.DeploymentTargets)
@@ -11,12 +13,12 @@ type StackSet_DeploymentTargets struct {
 	// Accounts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accounts
-	Accounts []string `json:"Accounts,omitempty"`
+	Accounts *types.Value `json:"Accounts,omitempty"`
 
 	// OrganizationalUnitIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-organizationalunitids
-	OrganizationalUnitIds []string `json:"OrganizationalUnitIds,omitempty"`
+	OrganizationalUnitIds *types.Value `json:"OrganizationalUnitIds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

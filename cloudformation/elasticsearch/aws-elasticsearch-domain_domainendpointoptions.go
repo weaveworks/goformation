@@ -1,7 +1,9 @@
 package elasticsearch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Domain_DomainEndpointOptions AWS CloudFormation Resource (AWS::Elasticsearch::Domain.DomainEndpointOptions)
@@ -11,12 +13,12 @@ type Domain_DomainEndpointOptions struct {
 	// EnforceHTTPS AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-enforcehttps
-	EnforceHTTPS bool `json:"EnforceHTTPS,omitempty"`
+	EnforceHTTPS *types.Value `json:"EnforceHTTPS,omitempty"`
 
 	// TLSSecurityPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-tlssecuritypolicy
-	TLSSecurityPolicy string `json:"TLSSecurityPolicy,omitempty"`
+	TLSSecurityPolicy *types.Value `json:"TLSSecurityPolicy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

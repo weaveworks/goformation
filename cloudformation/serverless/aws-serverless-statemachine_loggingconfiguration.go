@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine_LoggingConfiguration AWS CloudFormation Resource (AWS::Serverless::StateMachine.LoggingConfiguration)
@@ -16,12 +18,12 @@ type StateMachine_LoggingConfiguration struct {
 	// IncludeExecutionData AWS CloudFormation Property
 	// Required: true
 	// See: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html
-	IncludeExecutionData bool `json:"IncludeExecutionData"`
+	IncludeExecutionData *types.Value `json:"IncludeExecutionData"`
 
 	// Level AWS CloudFormation Property
 	// Required: true
 	// See: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html
-	Level string `json:"Level,omitempty"`
+	Level *types.Value `json:"Level,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

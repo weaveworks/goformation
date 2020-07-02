@@ -1,7 +1,9 @@
 package efs
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AccessPoint_PosixUser AWS CloudFormation Resource (AWS::EFS::AccessPoint.PosixUser)
@@ -11,17 +13,17 @@ type AccessPoint_PosixUser struct {
 	// Gid AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-gid
-	Gid string `json:"Gid,omitempty"`
+	Gid *types.Value `json:"Gid,omitempty"`
 
 	// SecondaryGids AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-secondarygids
-	SecondaryGids []string `json:"SecondaryGids,omitempty"`
+	SecondaryGids *types.Value `json:"SecondaryGids,omitempty"`
 
 	// Uid AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-uid
-	Uid string `json:"Uid,omitempty"`
+	Uid *types.Value `json:"Uid,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

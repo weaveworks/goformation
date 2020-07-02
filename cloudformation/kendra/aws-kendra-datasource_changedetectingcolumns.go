@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_ChangeDetectingColumns AWS CloudFormation Resource (AWS::Kendra::DataSource.ChangeDetectingColumns)
@@ -11,7 +13,7 @@ type DataSource_ChangeDetectingColumns struct {
 	// ChangeDetectingColumns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-changedetectingcolumns.html#cfn-kendra-datasource-changedetectingcolumns-changedetectingcolumns
-	ChangeDetectingColumns []string `json:"ChangeDetectingColumns,omitempty"`
+	ChangeDetectingColumns *types.Value `json:"ChangeDetectingColumns,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

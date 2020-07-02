@@ -1,7 +1,9 @@
 package iotsitewise
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AssetModel_Transform AWS CloudFormation Resource (AWS::IoTSiteWise::AssetModel.Transform)
@@ -11,7 +13,7 @@ type AssetModel_Transform struct {
 	// Expression AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-transform.html#cfn-iotsitewise-assetmodel-transform-expression
-	Expression string `json:"Expression,omitempty"`
+	Expression *types.Value `json:"Expression,omitempty"`
 
 	// Variables AWS CloudFormation Property
 	// Required: true

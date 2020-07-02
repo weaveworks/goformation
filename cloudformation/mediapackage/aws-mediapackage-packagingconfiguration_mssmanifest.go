@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PackagingConfiguration_MssManifest AWS CloudFormation Resource (AWS::MediaPackage::PackagingConfiguration.MssManifest)
@@ -11,7 +13,7 @@ type PackagingConfiguration_MssManifest struct {
 	// ManifestName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-mssmanifest.html#cfn-mediapackage-packagingconfiguration-mssmanifest-manifestname
-	ManifestName string `json:"ManifestName,omitempty"`
+	ManifestName *types.Value `json:"ManifestName,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false

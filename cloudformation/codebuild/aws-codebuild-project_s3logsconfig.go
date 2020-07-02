@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_S3LogsConfig AWS CloudFormation Resource (AWS::CodeBuild::Project.S3LogsConfig)
@@ -11,17 +13,17 @@ type Project_S3LogsConfig struct {
 	// EncryptionDisabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-encryptiondisabled
-	EncryptionDisabled bool `json:"EncryptionDisabled,omitempty"`
+	EncryptionDisabled *types.Value `json:"EncryptionDisabled,omitempty"`
 
 	// Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location
-	Location string `json:"Location,omitempty"`
+	Location *types.Value `json:"Location,omitempty"`
 
 	// Status AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status
-	Status string `json:"Status,omitempty"`
+	Status *types.Value `json:"Status,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

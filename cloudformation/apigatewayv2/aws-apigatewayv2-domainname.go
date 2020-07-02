@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DomainName AWS CloudFormation Resource (AWS::ApiGatewayV2::DomainName)
@@ -15,7 +17,7 @@ type DomainName struct {
 	// DomainName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *types.Value `json:"DomainName,omitempty"`
 
 	// DomainNameConfigurations AWS CloudFormation Property
 	// Required: false

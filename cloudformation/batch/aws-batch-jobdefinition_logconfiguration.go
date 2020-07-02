@@ -1,7 +1,9 @@
 package batch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobDefinition_LogConfiguration AWS CloudFormation Resource (AWS::Batch::JobDefinition.LogConfiguration)
@@ -11,7 +13,7 @@ type JobDefinition_LogConfiguration struct {
 	// LogDriver AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-logconfiguration.html#cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver
-	LogDriver string `json:"LogDriver,omitempty"`
+	LogDriver *types.Value `json:"LogDriver,omitempty"`
 
 	// Options AWS CloudFormation Property
 	// Required: false

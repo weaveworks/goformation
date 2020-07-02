@@ -1,7 +1,9 @@
 package budgets
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Budget_Subscriber AWS CloudFormation Resource (AWS::Budgets::Budget.Subscriber)
@@ -11,12 +13,12 @@ type Budget_Subscriber struct {
 	// Address AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address
-	Address string `json:"Address,omitempty"`
+	Address *types.Value `json:"Address,omitempty"`
 
 	// SubscriptionType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype
-	SubscriptionType string `json:"SubscriptionType,omitempty"`
+	SubscriptionType *types.Value `json:"SubscriptionType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

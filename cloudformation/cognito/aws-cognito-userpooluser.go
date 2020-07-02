@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPoolUser AWS CloudFormation Resource (AWS::Cognito::UserPoolUser)
@@ -20,17 +22,17 @@ type UserPoolUser struct {
 	// DesiredDeliveryMediums AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums
-	DesiredDeliveryMediums []string `json:"DesiredDeliveryMediums,omitempty"`
+	DesiredDeliveryMediums *types.Value `json:"DesiredDeliveryMediums,omitempty"`
 
 	// ForceAliasCreation AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-forcealiascreation
-	ForceAliasCreation bool `json:"ForceAliasCreation,omitempty"`
+	ForceAliasCreation *types.Value `json:"ForceAliasCreation,omitempty"`
 
 	// MessageAction AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-messageaction
-	MessageAction string `json:"MessageAction,omitempty"`
+	MessageAction *types.Value `json:"MessageAction,omitempty"`
 
 	// UserAttributes AWS CloudFormation Property
 	// Required: false
@@ -40,12 +42,12 @@ type UserPoolUser struct {
 	// UserPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userpoolid
-	UserPoolId string `json:"UserPoolId,omitempty"`
+	UserPoolId *types.Value `json:"UserPoolId,omitempty"`
 
 	// Username AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-username
-	Username string `json:"Username,omitempty"`
+	Username *types.Value `json:"Username,omitempty"`
 
 	// ValidationData AWS CloudFormation Property
 	// Required: false

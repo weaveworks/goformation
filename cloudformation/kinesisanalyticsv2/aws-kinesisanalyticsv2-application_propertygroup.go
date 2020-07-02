@@ -1,7 +1,9 @@
 package kinesisanalyticsv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_PropertyGroup AWS CloudFormation Resource (AWS::KinesisAnalyticsV2::Application.PropertyGroup)
@@ -11,7 +13,7 @@ type Application_PropertyGroup struct {
 	// PropertyGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid
-	PropertyGroupId string `json:"PropertyGroupId,omitempty"`
+	PropertyGroupId *types.Value `json:"PropertyGroupId,omitempty"`
 
 	// PropertyMap AWS CloudFormation Property
 	// Required: false

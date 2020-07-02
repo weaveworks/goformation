@@ -1,7 +1,9 @@
 package kinesisfirehose
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DeliveryStream_SplunkDestinationConfiguration AWS CloudFormation Resource (AWS::KinesisFirehose::DeliveryStream.SplunkDestinationConfiguration)
@@ -16,22 +18,22 @@ type DeliveryStream_SplunkDestinationConfiguration struct {
 	// HECAcknowledgmentTimeoutInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds
-	HECAcknowledgmentTimeoutInSeconds int `json:"HECAcknowledgmentTimeoutInSeconds,omitempty"`
+	HECAcknowledgmentTimeoutInSeconds *types.Value `json:"HECAcknowledgmentTimeoutInSeconds,omitempty"`
 
 	// HECEndpoint AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpoint
-	HECEndpoint string `json:"HECEndpoint,omitempty"`
+	HECEndpoint *types.Value `json:"HECEndpoint,omitempty"`
 
 	// HECEndpointType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype
-	HECEndpointType string `json:"HECEndpointType,omitempty"`
+	HECEndpointType *types.Value `json:"HECEndpointType,omitempty"`
 
 	// HECToken AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hectoken
-	HECToken string `json:"HECToken,omitempty"`
+	HECToken *types.Value `json:"HECToken,omitempty"`
 
 	// ProcessingConfiguration AWS CloudFormation Property
 	// Required: false
@@ -46,7 +48,7 @@ type DeliveryStream_SplunkDestinationConfiguration struct {
 	// S3BackupMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode
-	S3BackupMode string `json:"S3BackupMode,omitempty"`
+	S3BackupMode *types.Value `json:"S3BackupMode,omitempty"`
 
 	// S3Configuration AWS CloudFormation Property
 	// Required: true

@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LayerVersion AWS CloudFormation Resource (AWS::Serverless::LayerVersion)
@@ -15,32 +17,32 @@ type LayerVersion struct {
 	// CompatibleRuntimes AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
-	CompatibleRuntimes []string `json:"CompatibleRuntimes,omitempty"`
+	CompatibleRuntimes *types.Value `json:"CompatibleRuntimes,omitempty"`
 
 	// ContentUri AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
-	ContentUri string `json:"ContentUri,omitempty"`
+	ContentUri *types.Value `json:"ContentUri,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// LayerName AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
-	LayerName string `json:"LayerName,omitempty"`
+	LayerName *types.Value `json:"LayerName,omitempty"`
 
 	// LicenseInfo AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
-	LicenseInfo string `json:"LicenseInfo,omitempty"`
+	LicenseInfo *types.Value `json:"LicenseInfo,omitempty"`
 
 	// RetentionPolicy AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
-	RetentionPolicy string `json:"RetentionPolicy,omitempty"`
+	RetentionPolicy *types.Value `json:"RetentionPolicy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

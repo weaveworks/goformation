@@ -1,7 +1,9 @@
 package applicationinsights
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_LogPatternSet AWS CloudFormation Resource (AWS::ApplicationInsights::Application.LogPatternSet)
@@ -16,7 +18,7 @@ type Application_LogPatternSet struct {
 	// PatternSetName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-patternsetname
-	PatternSetName string `json:"PatternSetName,omitempty"`
+	PatternSetName *types.Value `json:"PatternSetName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

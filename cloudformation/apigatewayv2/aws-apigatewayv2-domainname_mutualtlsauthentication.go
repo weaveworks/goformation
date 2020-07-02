@@ -1,7 +1,9 @@
 package apigatewayv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DomainName_MutualTlsAuthentication AWS CloudFormation Resource (AWS::ApiGatewayV2::DomainName.MutualTlsAuthentication)
@@ -11,12 +13,12 @@ type DomainName_MutualTlsAuthentication struct {
 	// TruststoreUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreuri
-	TruststoreUri string `json:"TruststoreUri,omitempty"`
+	TruststoreUri *types.Value `json:"TruststoreUri,omitempty"`
 
 	// TruststoreVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreversion
-	TruststoreVersion string `json:"TruststoreVersion,omitempty"`
+	TruststoreVersion *types.Value `json:"TruststoreVersion,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

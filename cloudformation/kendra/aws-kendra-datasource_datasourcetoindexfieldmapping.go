@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_DataSourceToIndexFieldMapping AWS CloudFormation Resource (AWS::Kendra::DataSource.DataSourceToIndexFieldMapping)
@@ -11,17 +13,17 @@ type DataSource_DataSourceToIndexFieldMapping struct {
 	// DataSourceFieldName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourcetoindexfieldmapping.html#cfn-kendra-datasource-datasourcetoindexfieldmapping-datasourcefieldname
-	DataSourceFieldName string `json:"DataSourceFieldName,omitempty"`
+	DataSourceFieldName *types.Value `json:"DataSourceFieldName,omitempty"`
 
 	// DateFieldFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourcetoindexfieldmapping.html#cfn-kendra-datasource-datasourcetoindexfieldmapping-datefieldformat
-	DateFieldFormat string `json:"DateFieldFormat,omitempty"`
+	DateFieldFormat *types.Value `json:"DateFieldFormat,omitempty"`
 
 	// IndexFieldName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourcetoindexfieldmapping.html#cfn-kendra-datasource-datasourcetoindexfieldmapping-indexfieldname
-	IndexFieldName string `json:"IndexFieldName,omitempty"`
+	IndexFieldName *types.Value `json:"IndexFieldName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

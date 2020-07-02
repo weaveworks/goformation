@@ -1,7 +1,9 @@
 package gamelift
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GameServerGroup_AutoScalingPolicy AWS CloudFormation Resource (AWS::GameLift::GameServerGroup.AutoScalingPolicy)
@@ -11,7 +13,7 @@ type GameServerGroup_AutoScalingPolicy struct {
 	// EstimatedInstanceWarmup AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-autoscalingpolicy.html#cfn-gamelift-gameservergroup-autoscalingpolicy-estimatedinstancewarmup
-	EstimatedInstanceWarmup float64 `json:"EstimatedInstanceWarmup,omitempty"`
+	EstimatedInstanceWarmup *types.Value `json:"EstimatedInstanceWarmup,omitempty"`
 
 	// TargetTrackingConfiguration AWS CloudFormation Property
 	// Required: true

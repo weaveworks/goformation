@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_StaticKeySettings AWS CloudFormation Resource (AWS::MediaLive::Channel.StaticKeySettings)
@@ -16,7 +18,7 @@ type Channel_StaticKeySettings struct {
 	// StaticKeyValue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-statickeysettings.html#cfn-medialive-channel-statickeysettings-statickeyvalue
-	StaticKeyValue string `json:"StaticKeyValue,omitempty"`
+	StaticKeyValue *types.Value `json:"StaticKeyValue,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

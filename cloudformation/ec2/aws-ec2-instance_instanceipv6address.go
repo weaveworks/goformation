@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Instance_InstanceIpv6Address AWS CloudFormation Resource (AWS::EC2::Instance.InstanceIpv6Address)
@@ -11,7 +13,7 @@ type Instance_InstanceIpv6Address struct {
 	// Ipv6Address AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html#cfn-ec2-instance-instanceipv6address-ipv6address
-	Ipv6Address string `json:"Ipv6Address,omitempty"`
+	Ipv6Address *types.Value `json:"Ipv6Address,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_AudioNormalizationSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.AudioNormalizationSettings)
@@ -11,17 +13,17 @@ type Channel_AudioNormalizationSettings struct {
 	// Algorithm AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-algorithm
-	Algorithm string `json:"Algorithm,omitempty"`
+	Algorithm *types.Value `json:"Algorithm,omitempty"`
 
 	// AlgorithmControl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-algorithmcontrol
-	AlgorithmControl string `json:"AlgorithmControl,omitempty"`
+	AlgorithmControl *types.Value `json:"AlgorithmControl,omitempty"`
 
 	// TargetLkfs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-targetlkfs
-	TargetLkfs float64 `json:"TargetLkfs,omitempty"`
+	TargetLkfs *types.Value `json:"TargetLkfs,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

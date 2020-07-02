@@ -1,7 +1,9 @@
 package batch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // JobDefinition_EvaluateOnExit AWS CloudFormation Resource (AWS::Batch::JobDefinition.EvaluateOnExit)
@@ -11,22 +13,22 @@ type JobDefinition_EvaluateOnExit struct {
 	// Action AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-evaluateonexit.html#cfn-batch-jobdefinition-evaluateonexit-action
-	Action string `json:"Action,omitempty"`
+	Action *types.Value `json:"Action,omitempty"`
 
 	// OnExitCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-evaluateonexit.html#cfn-batch-jobdefinition-evaluateonexit-onexitcode
-	OnExitCode string `json:"OnExitCode,omitempty"`
+	OnExitCode *types.Value `json:"OnExitCode,omitempty"`
 
 	// OnReason AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-evaluateonexit.html#cfn-batch-jobdefinition-evaluateonexit-onreason
-	OnReason string `json:"OnReason,omitempty"`
+	OnReason *types.Value `json:"OnReason,omitempty"`
 
 	// OnStatusReason AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-evaluateonexit.html#cfn-batch-jobdefinition-evaluateonexit-onstatusreason
-	OnStatusReason string `json:"OnStatusReason,omitempty"`
+	OnStatusReason *types.Value `json:"OnStatusReason,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

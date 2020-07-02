@@ -1,7 +1,9 @@
 package qldb
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Stream_KinesisConfiguration AWS CloudFormation Resource (AWS::QLDB::Stream.KinesisConfiguration)
@@ -11,12 +13,12 @@ type Stream_KinesisConfiguration struct {
 	// AggregationEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qldb-stream-kinesisconfiguration.html#cfn-qldb-stream-kinesisconfiguration-aggregationenabled
-	AggregationEnabled bool `json:"AggregationEnabled,omitempty"`
+	AggregationEnabled *types.Value `json:"AggregationEnabled,omitempty"`
 
 	// StreamArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qldb-stream-kinesisconfiguration.html#cfn-qldb-stream-kinesisconfiguration-streamarn
-	StreamArn string `json:"StreamArn,omitempty"`
+	StreamArn *types.Value `json:"StreamArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

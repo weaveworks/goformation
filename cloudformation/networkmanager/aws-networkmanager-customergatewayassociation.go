@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // CustomerGatewayAssociation AWS CloudFormation Resource (AWS::NetworkManager::CustomerGatewayAssociation)
@@ -15,22 +17,22 @@ type CustomerGatewayAssociation struct {
 	// CustomerGatewayArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-customergatewayarn
-	CustomerGatewayArn string `json:"CustomerGatewayArn,omitempty"`
+	CustomerGatewayArn *types.Value `json:"CustomerGatewayArn,omitempty"`
 
 	// DeviceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-deviceid
-	DeviceId string `json:"DeviceId,omitempty"`
+	DeviceId *types.Value `json:"DeviceId,omitempty"`
 
 	// GlobalNetworkId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-globalnetworkid
-	GlobalNetworkId string `json:"GlobalNetworkId,omitempty"`
+	GlobalNetworkId *types.Value `json:"GlobalNetworkId,omitempty"`
 
 	// LinkId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-linkid
-	LinkId string `json:"LinkId,omitempty"`
+	LinkId *types.Value `json:"LinkId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

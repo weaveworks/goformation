@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_AclConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.AclConfiguration)
@@ -11,7 +13,7 @@ type DataSource_AclConfiguration struct {
 	// AllowedGroupsColumnName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-aclconfiguration.html#cfn-kendra-datasource-aclconfiguration-allowedgroupscolumnname
-	AllowedGroupsColumnName string `json:"AllowedGroupsColumnName,omitempty"`
+	AllowedGroupsColumnName *types.Value `json:"AllowedGroupsColumnName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

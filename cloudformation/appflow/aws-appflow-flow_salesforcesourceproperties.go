@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Flow_SalesforceSourceProperties AWS CloudFormation Resource (AWS::AppFlow::Flow.SalesforceSourceProperties)
@@ -11,17 +13,17 @@ type Flow_SalesforceSourceProperties struct {
 	// EnableDynamicFieldUpdate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcesourceproperties.html#cfn-appflow-flow-salesforcesourceproperties-enabledynamicfieldupdate
-	EnableDynamicFieldUpdate bool `json:"EnableDynamicFieldUpdate,omitempty"`
+	EnableDynamicFieldUpdate *types.Value `json:"EnableDynamicFieldUpdate,omitempty"`
 
 	// IncludeDeletedRecords AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcesourceproperties.html#cfn-appflow-flow-salesforcesourceproperties-includedeletedrecords
-	IncludeDeletedRecords bool `json:"IncludeDeletedRecords,omitempty"`
+	IncludeDeletedRecords *types.Value `json:"IncludeDeletedRecords,omitempty"`
 
 	// Object AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcesourceproperties.html#cfn-appflow-flow-salesforcesourceproperties-object
-	Object string `json:"Object,omitempty"`
+	Object *types.Value `json:"Object,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

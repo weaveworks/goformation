@@ -1,7 +1,9 @@
 package greengrass
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // FunctionDefinitionVersion_Execution AWS CloudFormation Resource (AWS::Greengrass::FunctionDefinitionVersion.Execution)
@@ -11,7 +13,7 @@ type FunctionDefinitionVersion_Execution struct {
 	// IsolationMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html#cfn-greengrass-functiondefinitionversion-execution-isolationmode
-	IsolationMode string `json:"IsolationMode,omitempty"`
+	IsolationMode *types.Value `json:"IsolationMode,omitempty"`
 
 	// RunAs AWS CloudFormation Property
 	// Required: false

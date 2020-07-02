@@ -1,7 +1,9 @@
 package greengrass
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResourceDefinition_ResourceDownloadOwnerSetting AWS CloudFormation Resource (AWS::Greengrass::ResourceDefinition.ResourceDownloadOwnerSetting)
@@ -11,12 +13,12 @@ type ResourceDefinition_ResourceDownloadOwnerSetting struct {
 	// GroupOwner AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.html#cfn-greengrass-resourcedefinition-resourcedownloadownersetting-groupowner
-	GroupOwner string `json:"GroupOwner,omitempty"`
+	GroupOwner *types.Value `json:"GroupOwner,omitempty"`
 
 	// GroupPermission AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.html#cfn-greengrass-resourcedefinition-resourcedownloadownersetting-grouppermission
-	GroupPermission string `json:"GroupPermission,omitempty"`
+	GroupPermission *types.Value `json:"GroupPermission,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

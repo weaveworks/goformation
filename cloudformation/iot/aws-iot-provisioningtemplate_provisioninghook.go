@@ -1,7 +1,9 @@
 package iot
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ProvisioningTemplate_ProvisioningHook AWS CloudFormation Resource (AWS::IoT::ProvisioningTemplate.ProvisioningHook)
@@ -11,12 +13,12 @@ type ProvisioningTemplate_ProvisioningHook struct {
 	// PayloadVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-provisioningtemplate-provisioninghook.html#cfn-iot-provisioningtemplate-provisioninghook-payloadversion
-	PayloadVersion string `json:"PayloadVersion,omitempty"`
+	PayloadVersion *types.Value `json:"PayloadVersion,omitempty"`
 
 	// TargetArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-provisioningtemplate-provisioninghook.html#cfn-iot-provisioningtemplate-provisioninghook-targetarn
-	TargetArn string `json:"TargetArn,omitempty"`
+	TargetArn *types.Value `json:"TargetArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

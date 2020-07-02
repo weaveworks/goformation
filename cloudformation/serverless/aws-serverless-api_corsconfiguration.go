@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Api_CorsConfiguration AWS CloudFormation Resource (AWS::Serverless::Api.CorsConfiguration)
@@ -11,27 +13,27 @@ type Api_CorsConfiguration struct {
 	// AllowCredentials AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration
-	AllowCredentials bool `json:"AllowCredentials,omitempty"`
+	AllowCredentials *types.Value `json:"AllowCredentials,omitempty"`
 
 	// AllowHeaders AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration
-	AllowHeaders string `json:"AllowHeaders,omitempty"`
+	AllowHeaders *types.Value `json:"AllowHeaders,omitempty"`
 
 	// AllowMethods AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration
-	AllowMethods string `json:"AllowMethods,omitempty"`
+	AllowMethods *types.Value `json:"AllowMethods,omitempty"`
 
 	// AllowOrigin AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration
-	AllowOrigin string `json:"AllowOrigin,omitempty"`
+	AllowOrigin *types.Value `json:"AllowOrigin,omitempty"`
 
 	// MaxAge AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration
-	MaxAge string `json:"MaxAge,omitempty"`
+	MaxAge *types.Value `json:"MaxAge,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package emr
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // InstanceFleetConfig_OnDemandProvisioningSpecification AWS CloudFormation Resource (AWS::EMR::InstanceFleetConfig.OnDemandProvisioningSpecification)
@@ -11,7 +13,7 @@ type InstanceFleetConfig_OnDemandProvisioningSpecification struct {
 	// AllocationStrategy AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy
-	AllocationStrategy string `json:"AllocationStrategy,omitempty"`
+	AllocationStrategy *types.Value `json:"AllocationStrategy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

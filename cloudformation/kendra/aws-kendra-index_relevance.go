@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Index_Relevance AWS CloudFormation Resource (AWS::Kendra::Index.Relevance)
@@ -11,22 +13,22 @@ type Index_Relevance struct {
 	// Duration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-duration
-	Duration string `json:"Duration,omitempty"`
+	Duration *types.Value `json:"Duration,omitempty"`
 
 	// Freshness AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-freshness
-	Freshness bool `json:"Freshness,omitempty"`
+	Freshness *types.Value `json:"Freshness,omitempty"`
 
 	// Importance AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-importance
-	Importance int `json:"Importance,omitempty"`
+	Importance *types.Value `json:"Importance,omitempty"`
 
 	// RankOrder AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-rankorder
-	RankOrder string `json:"RankOrder,omitempty"`
+	RankOrder *types.Value `json:"RankOrder,omitempty"`
 
 	// ValueImportanceItems AWS CloudFormation Property
 	// Required: false

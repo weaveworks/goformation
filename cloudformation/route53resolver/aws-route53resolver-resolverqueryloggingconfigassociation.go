@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResolverQueryLoggingConfigAssociation AWS CloudFormation Resource (AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation)
@@ -15,12 +17,12 @@ type ResolverQueryLoggingConfigAssociation struct {
 	// ResolverQueryLogConfigId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html#cfn-route53resolver-resolverqueryloggingconfigassociation-resolverquerylogconfigid
-	ResolverQueryLogConfigId string `json:"ResolverQueryLogConfigId,omitempty"`
+	ResolverQueryLogConfigId *types.Value `json:"ResolverQueryLogConfigId,omitempty"`
 
 	// ResourceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html#cfn-route53resolver-resolverqueryloggingconfigassociation-resourceid
-	ResourceId string `json:"ResourceId,omitempty"`
+	ResourceId *types.Value `json:"ResourceId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

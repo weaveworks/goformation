@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RotationSchedule AWS CloudFormation Resource (AWS::SecretsManager::RotationSchedule)
@@ -20,7 +22,7 @@ type RotationSchedule struct {
 	// RotationLambdaARN AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotationlambdaarn
-	RotationLambdaARN string `json:"RotationLambdaARN,omitempty"`
+	RotationLambdaARN *types.Value `json:"RotationLambdaARN,omitempty"`
 
 	// RotationRules AWS CloudFormation Property
 	// Required: false
@@ -30,7 +32,7 @@ type RotationSchedule struct {
 	// SecretId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-secretid
-	SecretId string `json:"SecretId,omitempty"`
+	SecretId *types.Value `json:"SecretId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

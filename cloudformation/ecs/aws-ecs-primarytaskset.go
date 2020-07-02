@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PrimaryTaskSet AWS CloudFormation Resource (AWS::ECS::PrimaryTaskSet)
@@ -15,17 +17,17 @@ type PrimaryTaskSet struct {
 	// Cluster AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html#cfn-ecs-primarytaskset-cluster
-	Cluster string `json:"Cluster,omitempty"`
+	Cluster *types.Value `json:"Cluster,omitempty"`
 
 	// Service AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html#cfn-ecs-primarytaskset-service
-	Service string `json:"Service,omitempty"`
+	Service *types.Value `json:"Service,omitempty"`
 
 	// TaskSetId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html#cfn-ecs-primarytaskset-tasksetid
-	TaskSetId string `json:"TaskSetId,omitempty"`
+	TaskSetId *types.Value `json:"TaskSetId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

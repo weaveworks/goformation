@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_SharePointConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.SharePointConfiguration)
@@ -11,12 +13,12 @@ type DataSource_SharePointConfiguration struct {
 	// CrawlAttachments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html#cfn-kendra-datasource-sharepointconfiguration-crawlattachments
-	CrawlAttachments bool `json:"CrawlAttachments,omitempty"`
+	CrawlAttachments *types.Value `json:"CrawlAttachments,omitempty"`
 
 	// DocumentTitleFieldName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html#cfn-kendra-datasource-sharepointconfiguration-documenttitlefieldname
-	DocumentTitleFieldName string `json:"DocumentTitleFieldName,omitempty"`
+	DocumentTitleFieldName *types.Value `json:"DocumentTitleFieldName,omitempty"`
 
 	// ExclusionPatterns AWS CloudFormation Property
 	// Required: false
@@ -36,22 +38,22 @@ type DataSource_SharePointConfiguration struct {
 	// SecretArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html#cfn-kendra-datasource-sharepointconfiguration-secretarn
-	SecretArn string `json:"SecretArn,omitempty"`
+	SecretArn *types.Value `json:"SecretArn,omitempty"`
 
 	// SharePointVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html#cfn-kendra-datasource-sharepointconfiguration-sharepointversion
-	SharePointVersion string `json:"SharePointVersion,omitempty"`
+	SharePointVersion *types.Value `json:"SharePointVersion,omitempty"`
 
 	// Urls AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html#cfn-kendra-datasource-sharepointconfiguration-urls
-	Urls []string `json:"Urls,omitempty"`
+	Urls *types.Value `json:"Urls,omitempty"`
 
 	// UseChangeLog AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html#cfn-kendra-datasource-sharepointconfiguration-usechangelog
-	UseChangeLog bool `json:"UseChangeLog,omitempty"`
+	UseChangeLog *types.Value `json:"UseChangeLog,omitempty"`
 
 	// VpcConfiguration AWS CloudFormation Property
 	// Required: false

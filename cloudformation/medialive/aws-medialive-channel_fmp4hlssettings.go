@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_Fmp4HlsSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.Fmp4HlsSettings)
@@ -11,17 +13,17 @@ type Channel_Fmp4HlsSettings struct {
 	// AudioRenditionSets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html#cfn-medialive-channel-fmp4hlssettings-audiorenditionsets
-	AudioRenditionSets string `json:"AudioRenditionSets,omitempty"`
+	AudioRenditionSets *types.Value `json:"AudioRenditionSets,omitempty"`
 
 	// NielsenId3Behavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html#cfn-medialive-channel-fmp4hlssettings-nielsenid3behavior
-	NielsenId3Behavior string `json:"NielsenId3Behavior,omitempty"`
+	NielsenId3Behavior *types.Value `json:"NielsenId3Behavior,omitempty"`
 
 	// TimedMetadataBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html#cfn-medialive-channel-fmp4hlssettings-timedmetadatabehavior
-	TimedMetadataBehavior string `json:"TimedMetadataBehavior,omitempty"`
+	TimedMetadataBehavior *types.Value `json:"TimedMetadataBehavior,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

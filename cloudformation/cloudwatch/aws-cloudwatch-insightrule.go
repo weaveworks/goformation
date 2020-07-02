@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // InsightRule AWS CloudFormation Resource (AWS::CloudWatch::InsightRule)
@@ -15,17 +17,17 @@ type InsightRule struct {
 	// RuleBody AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulebody
-	RuleBody string `json:"RuleBody,omitempty"`
+	RuleBody *types.Value `json:"RuleBody,omitempty"`
 
 	// RuleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulename
-	RuleName string `json:"RuleName,omitempty"`
+	RuleName *types.Value `json:"RuleName,omitempty"`
 
 	// RuleState AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulestate
-	RuleState string `json:"RuleState,omitempty"`
+	RuleState *types.Value `json:"RuleState,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

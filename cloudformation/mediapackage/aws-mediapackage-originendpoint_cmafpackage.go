@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_CmafPackage AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.CmafPackage)
@@ -21,12 +23,12 @@ type OriginEndpoint_CmafPackage struct {
 	// SegmentDurationSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-segmentdurationseconds
-	SegmentDurationSeconds int `json:"SegmentDurationSeconds,omitempty"`
+	SegmentDurationSeconds *types.Value `json:"SegmentDurationSeconds,omitempty"`
 
 	// SegmentPrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-segmentprefix
-	SegmentPrefix string `json:"SegmentPrefix,omitempty"`
+	SegmentPrefix *types.Value `json:"SegmentPrefix,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false

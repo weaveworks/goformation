@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_Ac3Settings AWS CloudFormation Resource (AWS::MediaLive::Channel.Ac3Settings)
@@ -11,37 +13,37 @@ type Channel_Ac3Settings struct {
 	// Bitrate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-bitrate
-	Bitrate float64 `json:"Bitrate,omitempty"`
+	Bitrate *types.Value `json:"Bitrate,omitempty"`
 
 	// BitstreamMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-bitstreammode
-	BitstreamMode string `json:"BitstreamMode,omitempty"`
+	BitstreamMode *types.Value `json:"BitstreamMode,omitempty"`
 
 	// CodingMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-codingmode
-	CodingMode string `json:"CodingMode,omitempty"`
+	CodingMode *types.Value `json:"CodingMode,omitempty"`
 
 	// Dialnorm AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-dialnorm
-	Dialnorm int `json:"Dialnorm,omitempty"`
+	Dialnorm *types.Value `json:"Dialnorm,omitempty"`
 
 	// DrcProfile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-drcprofile
-	DrcProfile string `json:"DrcProfile,omitempty"`
+	DrcProfile *types.Value `json:"DrcProfile,omitempty"`
 
 	// LfeFilter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-lfefilter
-	LfeFilter string `json:"LfeFilter,omitempty"`
+	LfeFilter *types.Value `json:"LfeFilter,omitempty"`
 
 	// MetadataControl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-metadatacontrol
-	MetadataControl string `json:"MetadataControl,omitempty"`
+	MetadataControl *types.Value `json:"MetadataControl,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

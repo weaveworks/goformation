@@ -1,7 +1,7 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Input_InputDefinition AWS CloudFormation Resource (AWS::IoTEvents::Input.InputDefinition)

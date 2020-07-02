@@ -1,7 +1,9 @@
 package events
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Rule_BatchParameters AWS CloudFormation Resource (AWS::Events::Rule.BatchParameters)
@@ -16,12 +18,12 @@ type Rule_BatchParameters struct {
 	// JobDefinition AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobdefinition
-	JobDefinition string `json:"JobDefinition,omitempty"`
+	JobDefinition *types.Value `json:"JobDefinition,omitempty"`
 
 	// JobName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobname
-	JobName string `json:"JobName,omitempty"`
+	JobName *types.Value `json:"JobName,omitempty"`
 
 	// RetryStrategy AWS CloudFormation Property
 	// Required: false

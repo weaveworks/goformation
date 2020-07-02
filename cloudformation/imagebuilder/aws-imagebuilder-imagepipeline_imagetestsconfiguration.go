@@ -1,7 +1,9 @@
 package imagebuilder
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ImagePipeline_ImageTestsConfiguration AWS CloudFormation Resource (AWS::ImageBuilder::ImagePipeline.ImageTestsConfiguration)
@@ -11,12 +13,12 @@ type ImagePipeline_ImageTestsConfiguration struct {
 	// ImageTestsEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-imagetestsenabled
-	ImageTestsEnabled bool `json:"ImageTestsEnabled,omitempty"`
+	ImageTestsEnabled *types.Value `json:"ImageTestsEnabled,omitempty"`
 
 	// TimeoutMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes
-	TimeoutMinutes int `json:"TimeoutMinutes,omitempty"`
+	TimeoutMinutes *types.Value `json:"TimeoutMinutes,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

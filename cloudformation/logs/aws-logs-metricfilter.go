@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // MetricFilter AWS CloudFormation Resource (AWS::Logs::MetricFilter)
@@ -15,12 +17,12 @@ type MetricFilter struct {
 	// FilterPattern AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-filterpattern
-	FilterPattern string `json:"FilterPattern,omitempty"`
+	FilterPattern *types.Value `json:"FilterPattern,omitempty"`
 
 	// LogGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-loggroupname
-	LogGroupName string `json:"LogGroupName,omitempty"`
+	LogGroupName *types.Value `json:"LogGroupName,omitempty"`
 
 	// MetricTransformations AWS CloudFormation Property
 	// Required: true

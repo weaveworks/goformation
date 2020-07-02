@@ -1,7 +1,9 @@
 package applicationinsights
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_AlarmMetric AWS CloudFormation Resource (AWS::ApplicationInsights::Application.AlarmMetric)
@@ -11,7 +13,7 @@ type Application_AlarmMetric struct {
 	// AlarmMetricName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html#cfn-applicationinsights-application-alarmmetric-alarmmetricname
-	AlarmMetricName string `json:"AlarmMetricName,omitempty"`
+	AlarmMetricName *types.Value `json:"AlarmMetricName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AssessmentTemplate AWS CloudFormation Resource (AWS::Inspector::AssessmentTemplate)
@@ -16,27 +18,27 @@ type AssessmentTemplate struct {
 	// AssessmentTargetArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-assessmenttargetarn
-	AssessmentTargetArn string `json:"AssessmentTargetArn,omitempty"`
+	AssessmentTargetArn *types.Value `json:"AssessmentTargetArn,omitempty"`
 
 	// AssessmentTemplateName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-assessmenttemplatename
-	AssessmentTemplateName string `json:"AssessmentTemplateName,omitempty"`
+	AssessmentTemplateName *types.Value `json:"AssessmentTemplateName,omitempty"`
 
 	// DurationInSeconds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-durationinseconds
-	DurationInSeconds int `json:"DurationInSeconds"`
+	DurationInSeconds *types.Value `json:"DurationInSeconds"`
 
 	// RulesPackageArns AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-rulespackagearns
-	RulesPackageArns []string `json:"RulesPackageArns,omitempty"`
+	RulesPackageArns *types.Value `json:"RulesPackageArns,omitempty"`
 
 	// UserAttributesForFindings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-userattributesforfindings
-	UserAttributesForFindings []tags.Tag `json:"UserAttributesForFindings,omitempty"`
+	UserAttributesForFindings []cloudformation.Tag `json:"UserAttributesForFindings,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

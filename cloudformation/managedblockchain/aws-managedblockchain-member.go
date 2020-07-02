@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Member AWS CloudFormation Resource (AWS::ManagedBlockchain::Member)
@@ -15,7 +17,7 @@ type Member struct {
 	// InvitationId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html#cfn-managedblockchain-member-invitationid
-	InvitationId string `json:"InvitationId,omitempty"`
+	InvitationId *types.Value `json:"InvitationId,omitempty"`
 
 	// MemberConfiguration AWS CloudFormation Property
 	// Required: true
@@ -30,7 +32,7 @@ type Member struct {
 	// NetworkId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html#cfn-managedblockchain-member-networkid
-	NetworkId string `json:"NetworkId,omitempty"`
+	NetworkId *types.Value `json:"NetworkId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

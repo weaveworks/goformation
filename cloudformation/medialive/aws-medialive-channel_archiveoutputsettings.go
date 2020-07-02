@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_ArchiveOutputSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.ArchiveOutputSettings)
@@ -16,12 +18,12 @@ type Channel_ArchiveOutputSettings struct {
 	// Extension AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archiveoutputsettings.html#cfn-medialive-channel-archiveoutputsettings-extension
-	Extension string `json:"Extension,omitempty"`
+	Extension *types.Value `json:"Extension,omitempty"`
 
 	// NameModifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archiveoutputsettings.html#cfn-medialive-channel-archiveoutputsettings-namemodifier
-	NameModifier string `json:"NameModifier,omitempty"`
+	NameModifier *types.Value `json:"NameModifier,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

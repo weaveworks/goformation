@@ -1,7 +1,9 @@
 package s3
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Bucket_Transition AWS CloudFormation Resource (AWS::S3::Bucket.Transition)
@@ -11,7 +13,7 @@ type Bucket_Transition struct {
 	// StorageClass AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass
-	StorageClass string `json:"StorageClass,omitempty"`
+	StorageClass *types.Value `json:"StorageClass,omitempty"`
 
 	// TransitionDate AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type Bucket_Transition struct {
 	// TransitionInDays AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays
-	TransitionInDays int `json:"TransitionInDays,omitempty"`
+	TransitionInDays *types.Value `json:"TransitionInDays,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_FecOutputSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.FecOutputSettings)
@@ -11,17 +13,17 @@ type Channel_FecOutputSettings struct {
 	// ColumnDepth AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html#cfn-medialive-channel-fecoutputsettings-columndepth
-	ColumnDepth int `json:"ColumnDepth,omitempty"`
+	ColumnDepth *types.Value `json:"ColumnDepth,omitempty"`
 
 	// IncludeFec AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html#cfn-medialive-channel-fecoutputsettings-includefec
-	IncludeFec string `json:"IncludeFec,omitempty"`
+	IncludeFec *types.Value `json:"IncludeFec,omitempty"`
 
 	// RowLength AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html#cfn-medialive-channel-fecoutputsettings-rowlength
-	RowLength int `json:"RowLength,omitempty"`
+	RowLength *types.Value `json:"RowLength,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

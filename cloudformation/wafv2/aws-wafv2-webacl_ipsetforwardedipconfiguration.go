@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WebACL_IPSetForwardedIPConfiguration AWS CloudFormation Resource (AWS::WAFv2::WebACL.IPSetForwardedIPConfiguration)
@@ -11,17 +13,17 @@ type WebACL_IPSetForwardedIPConfiguration struct {
 	// FallbackBehavior AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetforwardedipconfiguration.html#cfn-wafv2-webacl-ipsetforwardedipconfiguration-fallbackbehavior
-	FallbackBehavior string `json:"FallbackBehavior,omitempty"`
+	FallbackBehavior *types.Value `json:"FallbackBehavior,omitempty"`
 
 	// HeaderName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetforwardedipconfiguration.html#cfn-wafv2-webacl-ipsetforwardedipconfiguration-headername
-	HeaderName string `json:"HeaderName,omitempty"`
+	HeaderName *types.Value `json:"HeaderName,omitempty"`
 
 	// Position AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetforwardedipconfiguration.html#cfn-wafv2-webacl-ipsetforwardedipconfiguration-position
-	Position string `json:"Position,omitempty"`
+	Position *types.Value `json:"Position,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

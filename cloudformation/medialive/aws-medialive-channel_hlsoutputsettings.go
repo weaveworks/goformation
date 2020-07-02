@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_HlsOutputSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.HlsOutputSettings)
@@ -11,7 +13,7 @@ type Channel_HlsOutputSettings struct {
 	// H265PackagingType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html#cfn-medialive-channel-hlsoutputsettings-h265packagingtype
-	H265PackagingType string `json:"H265PackagingType,omitempty"`
+	H265PackagingType *types.Value `json:"H265PackagingType,omitempty"`
 
 	// HlsSettings AWS CloudFormation Property
 	// Required: false
@@ -21,12 +23,12 @@ type Channel_HlsOutputSettings struct {
 	// NameModifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html#cfn-medialive-channel-hlsoutputsettings-namemodifier
-	NameModifier string `json:"NameModifier,omitempty"`
+	NameModifier *types.Value `json:"NameModifier,omitempty"`
 
 	// SegmentModifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html#cfn-medialive-channel-hlsoutputsettings-segmentmodifier
-	SegmentModifier string `json:"SegmentModifier,omitempty"`
+	SegmentModifier *types.Value `json:"SegmentModifier,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

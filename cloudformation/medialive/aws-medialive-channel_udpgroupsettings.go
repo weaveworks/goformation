@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_UdpGroupSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.UdpGroupSettings)
@@ -11,17 +13,17 @@ type Channel_UdpGroupSettings struct {
 	// InputLossAction AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html#cfn-medialive-channel-udpgroupsettings-inputlossaction
-	InputLossAction string `json:"InputLossAction,omitempty"`
+	InputLossAction *types.Value `json:"InputLossAction,omitempty"`
 
 	// TimedMetadataId3Frame AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html#cfn-medialive-channel-udpgroupsettings-timedmetadataid3frame
-	TimedMetadataId3Frame string `json:"TimedMetadataId3Frame,omitempty"`
+	TimedMetadataId3Frame *types.Value `json:"TimedMetadataId3Frame,omitempty"`
 
 	// TimedMetadataId3Period AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html#cfn-medialive-channel-udpgroupsettings-timedmetadataid3period
-	TimedMetadataId3Period int `json:"TimedMetadataId3Period,omitempty"`
+	TimedMetadataId3Period *types.Value `json:"TimedMetadataId3Period,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

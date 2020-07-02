@@ -1,7 +1,9 @@
 package ecs
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TaskDefinition_AuthorizationConfig AWS CloudFormation Resource (AWS::ECS::TaskDefinition.AuthorizationConfig)
@@ -11,12 +13,12 @@ type TaskDefinition_AuthorizationConfig struct {
 	// AccessPointId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-authorizationconfig.html#cfn-ecs-taskdefinition-authorizationconfig-accesspointid
-	AccessPointId string `json:"AccessPointId,omitempty"`
+	AccessPointId *types.Value `json:"AccessPointId,omitempty"`
 
 	// IAM AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-authorizationconfig.html#cfn-ecs-taskdefinition-authorizationconfig-iam
-	IAM string `json:"IAM,omitempty"`
+	IAM *types.Value `json:"IAM,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

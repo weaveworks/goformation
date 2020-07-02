@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ComputeEnvironment AWS CloudFormation Resource (AWS::Batch::ComputeEnvironment)
@@ -15,7 +17,7 @@ type ComputeEnvironment struct {
 	// ComputeEnvironmentName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeenvironmentname
-	ComputeEnvironmentName string `json:"ComputeEnvironmentName,omitempty"`
+	ComputeEnvironmentName *types.Value `json:"ComputeEnvironmentName,omitempty"`
 
 	// ComputeResources AWS CloudFormation Property
 	// Required: false
@@ -25,12 +27,12 @@ type ComputeEnvironment struct {
 	// ServiceRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-servicerole
-	ServiceRole string `json:"ServiceRole,omitempty"`
+	ServiceRole *types.Value `json:"ServiceRole,omitempty"`
 
 	// State AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-state
-	State string `json:"State,omitempty"`
+	State *types.Value `json:"State,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -40,7 +42,7 @@ type ComputeEnvironment struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-type
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

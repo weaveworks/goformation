@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Assignment AWS CloudFormation Resource (AWS::SSO::Assignment)
@@ -15,32 +17,32 @@ type Assignment struct {
 	// InstanceArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html#cfn-sso-assignment-instancearn
-	InstanceArn string `json:"InstanceArn,omitempty"`
+	InstanceArn *types.Value `json:"InstanceArn,omitempty"`
 
 	// PermissionSetArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html#cfn-sso-assignment-permissionsetarn
-	PermissionSetArn string `json:"PermissionSetArn,omitempty"`
+	PermissionSetArn *types.Value `json:"PermissionSetArn,omitempty"`
 
 	// PrincipalId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html#cfn-sso-assignment-principalid
-	PrincipalId string `json:"PrincipalId,omitempty"`
+	PrincipalId *types.Value `json:"PrincipalId,omitempty"`
 
 	// PrincipalType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html#cfn-sso-assignment-principaltype
-	PrincipalType string `json:"PrincipalType,omitempty"`
+	PrincipalType *types.Value `json:"PrincipalType,omitempty"`
 
 	// TargetId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html#cfn-sso-assignment-targetid
-	TargetId string `json:"TargetId,omitempty"`
+	TargetId *types.Value `json:"TargetId,omitempty"`
 
 	// TargetType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html#cfn-sso-assignment-targettype
-	TargetType string `json:"TargetType,omitempty"`
+	TargetType *types.Value `json:"TargetType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

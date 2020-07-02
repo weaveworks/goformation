@@ -1,7 +1,9 @@
 package apigatewayv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Integration_TlsConfig AWS CloudFormation Resource (AWS::ApiGatewayV2::Integration.TlsConfig)
@@ -11,7 +13,7 @@ type Integration_TlsConfig struct {
 	// ServerNameToVerify AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html#cfn-apigatewayv2-integration-tlsconfig-servernametoverify
-	ServerNameToVerify string `json:"ServerNameToVerify,omitempty"`
+	ServerNameToVerify *types.Value `json:"ServerNameToVerify,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

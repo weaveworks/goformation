@@ -1,7 +1,9 @@
 package cognito
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // UserPoolClient_TokenValidityUnits AWS CloudFormation Resource (AWS::Cognito::UserPoolClient.TokenValidityUnits)
@@ -11,17 +13,17 @@ type UserPoolClient_TokenValidityUnits struct {
 	// AccessToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken
-	AccessToken string `json:"AccessToken,omitempty"`
+	AccessToken *types.Value `json:"AccessToken,omitempty"`
 
 	// IdToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken
-	IdToken string `json:"IdToken,omitempty"`
+	IdToken *types.Value `json:"IdToken,omitempty"`
 
 	// RefreshToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken
-	RefreshToken string `json:"RefreshToken,omitempty"`
+	RefreshToken *types.Value `json:"RefreshToken,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

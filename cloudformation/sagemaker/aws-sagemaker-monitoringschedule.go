@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // MonitoringSchedule AWS CloudFormation Resource (AWS::SageMaker::MonitoringSchedule)
@@ -16,22 +18,22 @@ type MonitoringSchedule struct {
 	// CreationTime AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-creationtime
-	CreationTime string `json:"CreationTime,omitempty"`
+	CreationTime *types.Value `json:"CreationTime,omitempty"`
 
 	// EndpointName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-endpointname
-	EndpointName string `json:"EndpointName,omitempty"`
+	EndpointName *types.Value `json:"EndpointName,omitempty"`
 
 	// FailureReason AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-failurereason
-	FailureReason string `json:"FailureReason,omitempty"`
+	FailureReason *types.Value `json:"FailureReason,omitempty"`
 
 	// LastModifiedTime AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-lastmodifiedtime
-	LastModifiedTime string `json:"LastModifiedTime,omitempty"`
+	LastModifiedTime *types.Value `json:"LastModifiedTime,omitempty"`
 
 	// LastMonitoringExecutionSummary AWS CloudFormation Property
 	// Required: false
@@ -41,7 +43,7 @@ type MonitoringSchedule struct {
 	// MonitoringScheduleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-monitoringschedulearn
-	MonitoringScheduleArn string `json:"MonitoringScheduleArn,omitempty"`
+	MonitoringScheduleArn *types.Value `json:"MonitoringScheduleArn,omitempty"`
 
 	// MonitoringScheduleConfig AWS CloudFormation Property
 	// Required: true
@@ -51,17 +53,17 @@ type MonitoringSchedule struct {
 	// MonitoringScheduleName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-monitoringschedulename
-	MonitoringScheduleName string `json:"MonitoringScheduleName,omitempty"`
+	MonitoringScheduleName *types.Value `json:"MonitoringScheduleName,omitempty"`
 
 	// MonitoringScheduleStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-monitoringschedulestatus
-	MonitoringScheduleStatus string `json:"MonitoringScheduleStatus,omitempty"`
+	MonitoringScheduleStatus *types.Value `json:"MonitoringScheduleStatus,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

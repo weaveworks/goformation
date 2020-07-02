@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine AWS CloudFormation Resource (AWS::Serverless::StateMachine)
@@ -20,7 +22,7 @@ type StateMachine struct {
 	// DefinitionSubstitutions AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html
-	DefinitionSubstitutions map[string]string `json:"DefinitionSubstitutions,omitempty"`
+	DefinitionSubstitutions map[string]*types.Value `json:"DefinitionSubstitutions,omitempty"`
 
 	// DefinitionUri AWS CloudFormation Property
 	// Required: false
@@ -40,7 +42,7 @@ type StateMachine struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Policies AWS CloudFormation Property
 	// Required: false
@@ -50,17 +52,17 @@ type StateMachine struct {
 	// Role AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html
-	Role string `json:"Role,omitempty"`
+	Role *types.Value `json:"Role,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html
-	Tags map[string]string `json:"Tags,omitempty"`
+	Tags map[string]*types.Value `json:"Tags,omitempty"`
 
 	// Type AWS CloudFormation Property
 	// Required: false
 	// See: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html
-	Type string `json:"Type,omitempty"`
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

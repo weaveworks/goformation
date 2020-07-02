@@ -1,7 +1,9 @@
 package lambda
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_Code AWS CloudFormation Resource (AWS::Lambda::Function.Code)
@@ -11,22 +13,22 @@ type Function_Code struct {
 	// S3Bucket AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket
-	S3Bucket string `json:"S3Bucket,omitempty"`
+	S3Bucket *types.Value `json:"S3Bucket,omitempty"`
 
 	// S3Key AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3key
-	S3Key string `json:"S3Key,omitempty"`
+	S3Key *types.Value `json:"S3Key,omitempty"`
 
 	// S3ObjectVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3objectversion
-	S3ObjectVersion string `json:"S3ObjectVersion,omitempty"`
+	S3ObjectVersion *types.Value `json:"S3ObjectVersion,omitempty"`
 
 	// ZipFile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
-	ZipFile string `json:"ZipFile,omitempty"`
+	ZipFile *types.Value `json:"ZipFile,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

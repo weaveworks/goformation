@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_GlobalConfiguration AWS CloudFormation Resource (AWS::MediaLive::Channel.GlobalConfiguration)
@@ -11,12 +13,12 @@ type Channel_GlobalConfiguration struct {
 	// InitialAudioGain AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html#cfn-medialive-channel-globalconfiguration-initialaudiogain
-	InitialAudioGain int `json:"InitialAudioGain,omitempty"`
+	InitialAudioGain *types.Value `json:"InitialAudioGain,omitempty"`
 
 	// InputEndAction AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html#cfn-medialive-channel-globalconfiguration-inputendaction
-	InputEndAction string `json:"InputEndAction,omitempty"`
+	InputEndAction *types.Value `json:"InputEndAction,omitempty"`
 
 	// InputLossBehavior AWS CloudFormation Property
 	// Required: false
@@ -26,17 +28,17 @@ type Channel_GlobalConfiguration struct {
 	// OutputLockingMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html#cfn-medialive-channel-globalconfiguration-outputlockingmode
-	OutputLockingMode string `json:"OutputLockingMode,omitempty"`
+	OutputLockingMode *types.Value `json:"OutputLockingMode,omitempty"`
 
 	// OutputTimingSource AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html#cfn-medialive-channel-globalconfiguration-outputtimingsource
-	OutputTimingSource string `json:"OutputTimingSource,omitempty"`
+	OutputTimingSource *types.Value `json:"OutputTimingSource,omitempty"`
 
 	// SupportLowFramerateInputs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html#cfn-medialive-channel-globalconfiguration-supportlowframerateinputs
-	SupportLowFramerateInputs string `json:"SupportLowFramerateInputs,omitempty"`
+	SupportLowFramerateInputs *types.Value `json:"SupportLowFramerateInputs,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

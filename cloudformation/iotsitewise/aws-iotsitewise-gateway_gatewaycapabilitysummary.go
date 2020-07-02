@@ -1,7 +1,9 @@
 package iotsitewise
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Gateway_GatewayCapabilitySummary AWS CloudFormation Resource (AWS::IoTSiteWise::Gateway.GatewayCapabilitySummary)
@@ -11,12 +13,12 @@ type Gateway_GatewayCapabilitySummary struct {
 	// CapabilityConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilityconfiguration
-	CapabilityConfiguration string `json:"CapabilityConfiguration,omitempty"`
+	CapabilityConfiguration *types.Value `json:"CapabilityConfiguration,omitempty"`
 
 	// CapabilityNamespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace
-	CapabilityNamespace string `json:"CapabilityNamespace,omitempty"`
+	CapabilityNamespace *types.Value `json:"CapabilityNamespace,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package guardduty
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Detector_CFNS3LogsConfiguration AWS CloudFormation Resource (AWS::GuardDuty::Detector.CFNS3LogsConfiguration)
@@ -11,7 +13,7 @@ type Detector_CFNS3LogsConfiguration struct {
 	// Enable AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html#cfn-guardduty-detector-cfns3logsconfiguration-enable
-	Enable bool `json:"Enable,omitempty"`
+	Enable *types.Value `json:"Enable,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

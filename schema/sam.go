@@ -26671,6 +26671,9 @@ var SamSchema = `{
             "properties": {
                 "CapacityReservationId": {
                     "type": "string"
+                },
+                "CapacityReservationResourceGroupArn": {
+                    "type": "string"
                 }
             },
             "type": "object"
@@ -26930,6 +26933,9 @@ var SamSchema = `{
         "AWS::EC2::LaunchTemplate.NetworkInterface": {
             "additionalProperties": false,
             "properties": {
+                "AssociateCarrierIpAddress": {
+                    "type": "boolean"
+                },
                 "AssociatePublicIpAddress": {
                     "type": "boolean"
                 },
@@ -26959,6 +26965,9 @@ var SamSchema = `{
                         "$ref": "#/definitions/AWS::EC2::LaunchTemplate.Ipv6Add"
                     },
                     "type": "array"
+                },
+                "NetworkCardIndex": {
+                    "type": "number"
                 },
                 "NetworkInterfaceId": {
                     "type": "string"
@@ -69347,6 +69356,12 @@ var SamSchema = `{
                         "CorsConfiguration": {
                             "$ref": "#/definitions/AWS::S3::Bucket.CorsConfiguration"
                         },
+                        "IntelligentTieringConfigurations": {
+                            "items": {
+                                "$ref": "#/definitions/AWS::S3::Bucket.IntelligentTieringConfiguration"
+                            },
+                            "type": "array"
+                        },
                         "InventoryConfigurations": {
                             "items": {
                                 "$ref": "#/definitions/AWS::S3::Bucket.InventoryConfiguration"
@@ -69373,6 +69388,9 @@ var SamSchema = `{
                         },
                         "ObjectLockEnabled": {
                             "type": "boolean"
+                        },
+                        "OwnershipControls": {
+                            "$ref": "#/definitions/AWS::S3::Bucket.OwnershipControls"
                         },
                         "PublicAccessBlockConfiguration": {
                             "$ref": "#/definitions/AWS::S3::Bucket.PublicAccessBlockConfiguration"
@@ -69636,6 +69654,38 @@ var SamSchema = `{
             ],
             "type": "object"
         },
+        "AWS::S3::Bucket.IntelligentTieringConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "Id": {
+                    "type": "string"
+                },
+                "Prefix": {
+                    "type": "string"
+                },
+                "Status": {
+                    "type": "string"
+                },
+                "TagFilters": {
+                    "items": {
+                        "$ref": "#/definitions/AWS::S3::Bucket.TagFilter"
+                    },
+                    "type": "array"
+                },
+                "Tierings": {
+                    "items": {
+                        "$ref": "#/definitions/AWS::S3::Bucket.Tiering"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Id",
+                "Status",
+                "Tierings"
+            ],
+            "type": "object"
+        },
         "AWS::S3::Bucket.InventoryConfiguration": {
             "additionalProperties": false,
             "properties": {
@@ -69824,6 +69874,30 @@ var SamSchema = `{
             "properties": {
                 "DefaultRetention": {
                     "$ref": "#/definitions/AWS::S3::Bucket.DefaultRetention"
+                }
+            },
+            "type": "object"
+        },
+        "AWS::S3::Bucket.OwnershipControls": {
+            "additionalProperties": false,
+            "properties": {
+                "Rules": {
+                    "items": {
+                        "$ref": "#/definitions/AWS::S3::Bucket.OwnershipControlsRule"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Rules"
+            ],
+            "type": "object"
+        },
+        "AWS::S3::Bucket.OwnershipControlsRule": {
+            "additionalProperties": false,
+            "properties": {
+                "ObjectOwnership": {
+                    "type": "string"
                 }
             },
             "type": "object"
@@ -70205,6 +70279,22 @@ var SamSchema = `{
             "required": [
                 "Key",
                 "Value"
+            ],
+            "type": "object"
+        },
+        "AWS::S3::Bucket.Tiering": {
+            "additionalProperties": false,
+            "properties": {
+                "AccessTier": {
+                    "type": "string"
+                },
+                "Days": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "AccessTier",
+                "Days"
             ],
             "type": "object"
         },

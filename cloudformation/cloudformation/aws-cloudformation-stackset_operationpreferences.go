@@ -1,7 +1,9 @@
 package cloudformation
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StackSet_OperationPreferences AWS CloudFormation Resource (AWS::CloudFormation::StackSet.OperationPreferences)
@@ -11,27 +13,27 @@ type StackSet_OperationPreferences struct {
 	// FailureToleranceCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-failuretolerancecount
-	FailureToleranceCount int `json:"FailureToleranceCount,omitempty"`
+	FailureToleranceCount *types.Value `json:"FailureToleranceCount,omitempty"`
 
 	// FailureTolerancePercentage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-failuretolerancepercentage
-	FailureTolerancePercentage int `json:"FailureTolerancePercentage,omitempty"`
+	FailureTolerancePercentage *types.Value `json:"FailureTolerancePercentage,omitempty"`
 
 	// MaxConcurrentCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-maxconcurrentcount
-	MaxConcurrentCount int `json:"MaxConcurrentCount,omitempty"`
+	MaxConcurrentCount *types.Value `json:"MaxConcurrentCount,omitempty"`
 
 	// MaxConcurrentPercentage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-maxconcurrentpercentage
-	MaxConcurrentPercentage int `json:"MaxConcurrentPercentage,omitempty"`
+	MaxConcurrentPercentage *types.Value `json:"MaxConcurrentPercentage,omitempty"`
 
 	// RegionOrder AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-regionorder
-	RegionOrder []string `json:"RegionOrder,omitempty"`
+	RegionOrder *types.Value `json:"RegionOrder,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

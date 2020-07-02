@@ -1,7 +1,9 @@
 package cloudfront
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Distribution_CacheBehavior AWS CloudFormation Resource (AWS::CloudFront::Distribution.CacheBehavior)
@@ -11,32 +13,32 @@ type Distribution_CacheBehavior struct {
 	// AllowedMethods AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-allowedmethods
-	AllowedMethods []string `json:"AllowedMethods,omitempty"`
+	AllowedMethods *types.Value `json:"AllowedMethods,omitempty"`
 
 	// CachePolicyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-cachepolicyid
-	CachePolicyId string `json:"CachePolicyId,omitempty"`
+	CachePolicyId *types.Value `json:"CachePolicyId,omitempty"`
 
 	// CachedMethods AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-cachedmethods
-	CachedMethods []string `json:"CachedMethods,omitempty"`
+	CachedMethods *types.Value `json:"CachedMethods,omitempty"`
 
 	// Compress AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-compress
-	Compress bool `json:"Compress,omitempty"`
+	Compress *types.Value `json:"Compress,omitempty"`
 
 	// DefaultTTL AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-defaultttl
-	DefaultTTL float64 `json:"DefaultTTL,omitempty"`
+	DefaultTTL *types.Value `json:"DefaultTTL,omitempty"`
 
 	// FieldLevelEncryptionId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid
-	FieldLevelEncryptionId string `json:"FieldLevelEncryptionId,omitempty"`
+	FieldLevelEncryptionId *types.Value `json:"FieldLevelEncryptionId,omitempty"`
 
 	// ForwardedValues AWS CloudFormation Property
 	// Required: false
@@ -51,47 +53,47 @@ type Distribution_CacheBehavior struct {
 	// MaxTTL AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-maxttl
-	MaxTTL float64 `json:"MaxTTL,omitempty"`
+	MaxTTL *types.Value `json:"MaxTTL,omitempty"`
 
 	// MinTTL AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-minttl
-	MinTTL float64 `json:"MinTTL,omitempty"`
+	MinTTL *types.Value `json:"MinTTL,omitempty"`
 
 	// OriginRequestPolicyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-originrequestpolicyid
-	OriginRequestPolicyId string `json:"OriginRequestPolicyId,omitempty"`
+	OriginRequestPolicyId *types.Value `json:"OriginRequestPolicyId,omitempty"`
 
 	// PathPattern AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-pathpattern
-	PathPattern string `json:"PathPattern,omitempty"`
+	PathPattern *types.Value `json:"PathPattern,omitempty"`
 
 	// RealtimeLogConfigArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn
-	RealtimeLogConfigArn string `json:"RealtimeLogConfigArn,omitempty"`
+	RealtimeLogConfigArn *types.Value `json:"RealtimeLogConfigArn,omitempty"`
 
 	// SmoothStreaming AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-smoothstreaming
-	SmoothStreaming bool `json:"SmoothStreaming,omitempty"`
+	SmoothStreaming *types.Value `json:"SmoothStreaming,omitempty"`
 
 	// TargetOriginId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-targetoriginid
-	TargetOriginId string `json:"TargetOriginId,omitempty"`
+	TargetOriginId *types.Value `json:"TargetOriginId,omitempty"`
 
 	// TrustedSigners AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-trustedsigners
-	TrustedSigners []string `json:"TrustedSigners,omitempty"`
+	TrustedSigners *types.Value `json:"TrustedSigners,omitempty"`
 
 	// ViewerProtocolPolicy AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-viewerprotocolpolicy
-	ViewerProtocolPolicy string `json:"ViewerProtocolPolicy,omitempty"`
+	ViewerProtocolPolicy *types.Value `json:"ViewerProtocolPolicy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package applicationinsights
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_SubComponentTypeConfiguration AWS CloudFormation Resource (AWS::ApplicationInsights::Application.SubComponentTypeConfiguration)
@@ -16,7 +18,7 @@ type Application_SubComponentTypeConfiguration struct {
 	// SubComponentType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponenttypeconfiguration.html#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponenttype
-	SubComponentType string `json:"SubComponentType,omitempty"`
+	SubComponentType *types.Value `json:"SubComponentType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

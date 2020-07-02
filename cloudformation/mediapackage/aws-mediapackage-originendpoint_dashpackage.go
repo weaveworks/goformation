@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_DashPackage AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.DashPackage)
@@ -11,12 +13,12 @@ type OriginEndpoint_DashPackage struct {
 	// AdTriggers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-adtriggers
-	AdTriggers []string `json:"AdTriggers,omitempty"`
+	AdTriggers *types.Value `json:"AdTriggers,omitempty"`
 
 	// AdsOnDeliveryRestrictions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-adsondeliveryrestrictions
-	AdsOnDeliveryRestrictions string `json:"AdsOnDeliveryRestrictions,omitempty"`
+	AdsOnDeliveryRestrictions *types.Value `json:"AdsOnDeliveryRestrictions,omitempty"`
 
 	// Encryption AWS CloudFormation Property
 	// Required: false
@@ -26,42 +28,42 @@ type OriginEndpoint_DashPackage struct {
 	// ManifestLayout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-manifestlayout
-	ManifestLayout string `json:"ManifestLayout,omitempty"`
+	ManifestLayout *types.Value `json:"ManifestLayout,omitempty"`
 
 	// ManifestWindowSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-manifestwindowseconds
-	ManifestWindowSeconds int `json:"ManifestWindowSeconds,omitempty"`
+	ManifestWindowSeconds *types.Value `json:"ManifestWindowSeconds,omitempty"`
 
 	// MinBufferTimeSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-minbuffertimeseconds
-	MinBufferTimeSeconds int `json:"MinBufferTimeSeconds,omitempty"`
+	MinBufferTimeSeconds *types.Value `json:"MinBufferTimeSeconds,omitempty"`
 
 	// MinUpdatePeriodSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-minupdateperiodseconds
-	MinUpdatePeriodSeconds int `json:"MinUpdatePeriodSeconds,omitempty"`
+	MinUpdatePeriodSeconds *types.Value `json:"MinUpdatePeriodSeconds,omitempty"`
 
 	// PeriodTriggers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-periodtriggers
-	PeriodTriggers []string `json:"PeriodTriggers,omitempty"`
+	PeriodTriggers *types.Value `json:"PeriodTriggers,omitempty"`
 
 	// Profile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-profile
-	Profile string `json:"Profile,omitempty"`
+	Profile *types.Value `json:"Profile,omitempty"`
 
 	// SegmentDurationSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-segmentdurationseconds
-	SegmentDurationSeconds int `json:"SegmentDurationSeconds,omitempty"`
+	SegmentDurationSeconds *types.Value `json:"SegmentDurationSeconds,omitempty"`
 
 	// SegmentTemplateFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-segmenttemplateformat
-	SegmentTemplateFormat string `json:"SegmentTemplateFormat,omitempty"`
+	SegmentTemplateFormat *types.Value `json:"SegmentTemplateFormat,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false
@@ -71,7 +73,7 @@ type OriginEndpoint_DashPackage struct {
 	// SuggestedPresentationDelaySeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-suggestedpresentationdelayseconds
-	SuggestedPresentationDelaySeconds int `json:"SuggestedPresentationDelaySeconds,omitempty"`
+	SuggestedPresentationDelaySeconds *types.Value `json:"SuggestedPresentationDelaySeconds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_FunctionSAMPT AWS CloudFormation Resource (AWS::Serverless::Function.FunctionSAMPT)
@@ -11,7 +13,7 @@ type Function_FunctionSAMPT struct {
 	// FunctionName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst
-	FunctionName string `json:"FunctionName,omitempty"`
+	FunctionName *types.Value `json:"FunctionName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

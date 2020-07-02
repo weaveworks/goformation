@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_DatabaseConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.DatabaseConfiguration)
@@ -26,7 +28,7 @@ type DataSource_DatabaseConfiguration struct {
 	// DatabaseEngineType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-databaseconfiguration.html#cfn-kendra-datasource-databaseconfiguration-databaseenginetype
-	DatabaseEngineType string `json:"DatabaseEngineType,omitempty"`
+	DatabaseEngineType *types.Value `json:"DatabaseEngineType,omitempty"`
 
 	// SqlConfiguration AWS CloudFormation Property
 	// Required: false

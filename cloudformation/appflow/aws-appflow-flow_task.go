@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Flow_Task AWS CloudFormation Resource (AWS::AppFlow::Flow.Task)
@@ -16,12 +18,12 @@ type Flow_Task struct {
 	// DestinationField AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-destinationfield
-	DestinationField string `json:"DestinationField,omitempty"`
+	DestinationField *types.Value `json:"DestinationField,omitempty"`
 
 	// SourceFields AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-sourcefields
-	SourceFields []string `json:"SourceFields,omitempty"`
+	SourceFields *types.Value `json:"SourceFields,omitempty"`
 
 	// TaskProperties AWS CloudFormation Property
 	// Required: false
@@ -31,7 +33,7 @@ type Flow_Task struct {
 	// TaskType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-tasktype
-	TaskType string `json:"TaskType,omitempty"`
+	TaskType *types.Value `json:"TaskType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

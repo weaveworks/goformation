@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_Output AWS CloudFormation Resource (AWS::MediaLive::Channel.Output)
@@ -11,17 +13,17 @@ type Channel_Output struct {
 	// AudioDescriptionNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html#cfn-medialive-channel-output-audiodescriptionnames
-	AudioDescriptionNames []string `json:"AudioDescriptionNames,omitempty"`
+	AudioDescriptionNames *types.Value `json:"AudioDescriptionNames,omitempty"`
 
 	// CaptionDescriptionNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html#cfn-medialive-channel-output-captiondescriptionnames
-	CaptionDescriptionNames []string `json:"CaptionDescriptionNames,omitempty"`
+	CaptionDescriptionNames *types.Value `json:"CaptionDescriptionNames,omitempty"`
 
 	// OutputName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html#cfn-medialive-channel-output-outputname
-	OutputName string `json:"OutputName,omitempty"`
+	OutputName *types.Value `json:"OutputName,omitempty"`
 
 	// OutputSettings AWS CloudFormation Property
 	// Required: false
@@ -31,7 +33,7 @@ type Channel_Output struct {
 	// VideoDescriptionName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html#cfn-medialive-channel-output-videodescriptionname
-	VideoDescriptionName string `json:"VideoDescriptionName,omitempty"`
+	VideoDescriptionName *types.Value `json:"VideoDescriptionName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

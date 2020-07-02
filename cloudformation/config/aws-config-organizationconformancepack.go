@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OrganizationConformancePack AWS CloudFormation Resource (AWS::Config::OrganizationConformancePack)
@@ -20,32 +22,32 @@ type OrganizationConformancePack struct {
 	// DeliveryS3Bucket AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-deliverys3bucket
-	DeliveryS3Bucket string `json:"DeliveryS3Bucket,omitempty"`
+	DeliveryS3Bucket *types.Value `json:"DeliveryS3Bucket,omitempty"`
 
 	// DeliveryS3KeyPrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-deliverys3keyprefix
-	DeliveryS3KeyPrefix string `json:"DeliveryS3KeyPrefix,omitempty"`
+	DeliveryS3KeyPrefix *types.Value `json:"DeliveryS3KeyPrefix,omitempty"`
 
 	// ExcludedAccounts AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-excludedaccounts
-	ExcludedAccounts []string `json:"ExcludedAccounts,omitempty"`
+	ExcludedAccounts *types.Value `json:"ExcludedAccounts,omitempty"`
 
 	// OrganizationConformancePackName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-organizationconformancepackname
-	OrganizationConformancePackName string `json:"OrganizationConformancePackName,omitempty"`
+	OrganizationConformancePackName *types.Value `json:"OrganizationConformancePackName,omitempty"`
 
 	// TemplateBody AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-templatebody
-	TemplateBody string `json:"TemplateBody,omitempty"`
+	TemplateBody *types.Value `json:"TemplateBody,omitempty"`
 
 	// TemplateS3Uri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-templates3uri
-	TemplateS3Uri string `json:"TemplateS3Uri,omitempty"`
+	TemplateS3Uri *types.Value `json:"TemplateS3Uri,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

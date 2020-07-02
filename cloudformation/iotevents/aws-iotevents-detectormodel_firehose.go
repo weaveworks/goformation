@@ -1,7 +1,9 @@
 package iotevents
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DetectorModel_Firehose AWS CloudFormation Resource (AWS::IoTEvents::DetectorModel.Firehose)
@@ -11,7 +13,7 @@ type DetectorModel_Firehose struct {
 	// DeliveryStreamName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-deliverystreamname
-	DeliveryStreamName string `json:"DeliveryStreamName,omitempty"`
+	DeliveryStreamName *types.Value `json:"DeliveryStreamName,omitempty"`
 
 	// Payload AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type DetectorModel_Firehose struct {
 	// Separator AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-separator
-	Separator string `json:"Separator,omitempty"`
+	Separator *types.Value `json:"Separator,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

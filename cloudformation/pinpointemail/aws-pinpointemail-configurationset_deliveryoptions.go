@@ -1,7 +1,9 @@
 package pinpointemail
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConfigurationSet_DeliveryOptions AWS CloudFormation Resource (AWS::PinpointEmail::ConfigurationSet.DeliveryOptions)
@@ -11,7 +13,7 @@ type ConfigurationSet_DeliveryOptions struct {
 	// SendingPoolName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-deliveryoptions.html#cfn-pinpointemail-configurationset-deliveryoptions-sendingpoolname
-	SendingPoolName string `json:"SendingPoolName,omitempty"`
+	SendingPoolName *types.Value `json:"SendingPoolName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

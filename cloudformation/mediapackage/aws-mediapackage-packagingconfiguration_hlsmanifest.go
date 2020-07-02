@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // PackagingConfiguration_HlsManifest AWS CloudFormation Resource (AWS::MediaPackage::PackagingConfiguration.HlsManifest)
@@ -11,27 +13,27 @@ type PackagingConfiguration_HlsManifest struct {
 	// AdMarkers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-admarkers
-	AdMarkers string `json:"AdMarkers,omitempty"`
+	AdMarkers *types.Value `json:"AdMarkers,omitempty"`
 
 	// IncludeIframeOnlyStream AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-includeiframeonlystream
-	IncludeIframeOnlyStream bool `json:"IncludeIframeOnlyStream,omitempty"`
+	IncludeIframeOnlyStream *types.Value `json:"IncludeIframeOnlyStream,omitempty"`
 
 	// ManifestName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-manifestname
-	ManifestName string `json:"ManifestName,omitempty"`
+	ManifestName *types.Value `json:"ManifestName,omitempty"`
 
 	// ProgramDateTimeIntervalSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-programdatetimeintervalseconds
-	ProgramDateTimeIntervalSeconds int `json:"ProgramDateTimeIntervalSeconds,omitempty"`
+	ProgramDateTimeIntervalSeconds *types.Value `json:"ProgramDateTimeIntervalSeconds,omitempty"`
 
 	// RepeatExtXKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-repeatextxkey
-	RepeatExtXKey bool `json:"RepeatExtXKey,omitempty"`
+	RepeatExtXKey *types.Value `json:"RepeatExtXKey,omitempty"`
 
 	// StreamSelection AWS CloudFormation Property
 	// Required: false

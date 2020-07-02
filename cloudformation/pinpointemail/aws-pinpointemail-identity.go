@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Identity AWS CloudFormation Resource (AWS::PinpointEmail::Identity)
@@ -15,12 +17,12 @@ type Identity struct {
 	// DkimSigningEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html#cfn-pinpointemail-identity-dkimsigningenabled
-	DkimSigningEnabled bool `json:"DkimSigningEnabled,omitempty"`
+	DkimSigningEnabled *types.Value `json:"DkimSigningEnabled,omitempty"`
 
 	// FeedbackForwardingEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html#cfn-pinpointemail-identity-feedbackforwardingenabled
-	FeedbackForwardingEnabled bool `json:"FeedbackForwardingEnabled,omitempty"`
+	FeedbackForwardingEnabled *types.Value `json:"FeedbackForwardingEnabled,omitempty"`
 
 	// MailFromAttributes AWS CloudFormation Property
 	// Required: false
@@ -30,7 +32,7 @@ type Identity struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html#cfn-pinpointemail-identity-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

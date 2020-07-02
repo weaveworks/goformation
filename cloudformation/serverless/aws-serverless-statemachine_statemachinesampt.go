@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // StateMachine_StateMachineSAMPT AWS CloudFormation Resource (AWS::Serverless::StateMachine.StateMachineSAMPT)
@@ -11,7 +13,7 @@ type StateMachine_StateMachineSAMPT struct {
 	// StateMachineName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst
-	StateMachineName string `json:"StateMachineName,omitempty"`
+	StateMachineName *types.Value `json:"StateMachineName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_AmplitudeConnectorProfileCredentials AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.AmplitudeConnectorProfileCredentials)
@@ -11,12 +13,12 @@ type ConnectorProfile_AmplitudeConnectorProfileCredentials struct {
 	// ApiKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-apikey
-	ApiKey string `json:"ApiKey,omitempty"`
+	ApiKey *types.Value `json:"ApiKey,omitempty"`
 
 	// SecretKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-secretkey
-	SecretKey string `json:"SecretKey,omitempty"`
+	SecretKey *types.Value `json:"SecretKey,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

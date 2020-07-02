@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RuleGroup_VisibilityConfig AWS CloudFormation Resource (AWS::WAFv2::RuleGroup.VisibilityConfig)
@@ -11,17 +13,17 @@ type RuleGroup_VisibilityConfig struct {
 	// CloudWatchMetricsEnabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-cloudwatchmetricsenabled
-	CloudWatchMetricsEnabled bool `json:"CloudWatchMetricsEnabled"`
+	CloudWatchMetricsEnabled *types.Value `json:"CloudWatchMetricsEnabled"`
 
 	// MetricName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-metricname
-	MetricName string `json:"MetricName,omitempty"`
+	MetricName *types.Value `json:"MetricName,omitempty"`
 
 	// SampledRequestsEnabled AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-sampledrequestsenabled
-	SampledRequestsEnabled bool `json:"SampledRequestsEnabled"`
+	SampledRequestsEnabled *types.Value `json:"SampledRequestsEnabled"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

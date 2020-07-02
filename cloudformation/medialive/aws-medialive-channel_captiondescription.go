@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_CaptionDescription AWS CloudFormation Resource (AWS::MediaLive::Channel.CaptionDescription)
@@ -11,7 +13,7 @@ type Channel_CaptionDescription struct {
 	// CaptionSelectorName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-captionselectorname
-	CaptionSelectorName string `json:"CaptionSelectorName,omitempty"`
+	CaptionSelectorName *types.Value `json:"CaptionSelectorName,omitempty"`
 
 	// DestinationSettings AWS CloudFormation Property
 	// Required: false
@@ -21,17 +23,17 @@ type Channel_CaptionDescription struct {
 	// LanguageCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-languagecode
-	LanguageCode string `json:"LanguageCode,omitempty"`
+	LanguageCode *types.Value `json:"LanguageCode,omitempty"`
 
 	// LanguageDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-languagedescription
-	LanguageDescription string `json:"LanguageDescription,omitempty"`
+	LanguageDescription *types.Value `json:"LanguageDescription,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

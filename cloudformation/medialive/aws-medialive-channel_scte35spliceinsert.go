@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_Scte35SpliceInsert AWS CloudFormation Resource (AWS::MediaLive::Channel.Scte35SpliceInsert)
@@ -11,17 +13,17 @@ type Channel_Scte35SpliceInsert struct {
 	// AdAvailOffset AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html#cfn-medialive-channel-scte35spliceinsert-adavailoffset
-	AdAvailOffset int `json:"AdAvailOffset,omitempty"`
+	AdAvailOffset *types.Value `json:"AdAvailOffset,omitempty"`
 
 	// NoRegionalBlackoutFlag AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html#cfn-medialive-channel-scte35spliceinsert-noregionalblackoutflag
-	NoRegionalBlackoutFlag string `json:"NoRegionalBlackoutFlag,omitempty"`
+	NoRegionalBlackoutFlag *types.Value `json:"NoRegionalBlackoutFlag,omitempty"`
 
 	// WebDeliveryAllowedFlag AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html#cfn-medialive-channel-scte35spliceinsert-webdeliveryallowedflag
-	WebDeliveryAllowedFlag string `json:"WebDeliveryAllowedFlag,omitempty"`
+	WebDeliveryAllowedFlag *types.Value `json:"WebDeliveryAllowedFlag,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

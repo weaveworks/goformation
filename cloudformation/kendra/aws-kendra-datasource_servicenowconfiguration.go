@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_ServiceNowConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.ServiceNowConfiguration)
@@ -11,7 +13,7 @@ type DataSource_ServiceNowConfiguration struct {
 	// HostUrl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowconfiguration.html#cfn-kendra-datasource-servicenowconfiguration-hosturl
-	HostUrl string `json:"HostUrl,omitempty"`
+	HostUrl *types.Value `json:"HostUrl,omitempty"`
 
 	// KnowledgeArticleConfiguration AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type DataSource_ServiceNowConfiguration struct {
 	// SecretArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowconfiguration.html#cfn-kendra-datasource-servicenowconfiguration-secretarn
-	SecretArn string `json:"SecretArn,omitempty"`
+	SecretArn *types.Value `json:"SecretArn,omitempty"`
 
 	// ServiceCatalogConfiguration AWS CloudFormation Property
 	// Required: false
@@ -31,7 +33,7 @@ type DataSource_ServiceNowConfiguration struct {
 	// ServiceNowBuildVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowconfiguration.html#cfn-kendra-datasource-servicenowconfiguration-servicenowbuildversion
-	ServiceNowBuildVersion string `json:"ServiceNowBuildVersion,omitempty"`
+	ServiceNowBuildVersion *types.Value `json:"ServiceNowBuildVersion,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

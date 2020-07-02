@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_HlsEncryption AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.HlsEncryption)
@@ -11,22 +13,22 @@ type OriginEndpoint_HlsEncryption struct {
 	// ConstantInitializationVector AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-constantinitializationvector
-	ConstantInitializationVector string `json:"ConstantInitializationVector,omitempty"`
+	ConstantInitializationVector *types.Value `json:"ConstantInitializationVector,omitempty"`
 
 	// EncryptionMethod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod
-	EncryptionMethod string `json:"EncryptionMethod,omitempty"`
+	EncryptionMethod *types.Value `json:"EncryptionMethod,omitempty"`
 
 	// KeyRotationIntervalSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds
-	KeyRotationIntervalSeconds int `json:"KeyRotationIntervalSeconds,omitempty"`
+	KeyRotationIntervalSeconds *types.Value `json:"KeyRotationIntervalSeconds,omitempty"`
 
 	// RepeatExtXKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey
-	RepeatExtXKey bool `json:"RepeatExtXKey,omitempty"`
+	RepeatExtXKey *types.Value `json:"RepeatExtXKey,omitempty"`
 
 	// SpekeKeyProvider AWS CloudFormation Property
 	// Required: true

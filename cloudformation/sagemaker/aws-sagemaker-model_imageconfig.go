@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Model_ImageConfig AWS CloudFormation Resource (AWS::SageMaker::Model.ImageConfig)
@@ -11,7 +13,7 @@ type Model_ImageConfig struct {
 	// RepositoryAccessMode AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig.html#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryaccessmode
-	RepositoryAccessMode string `json:"RepositoryAccessMode,omitempty"`
+	RepositoryAccessMode *types.Value `json:"RepositoryAccessMode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package amazonmq
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Broker_LdapServerMetadata AWS CloudFormation Resource (AWS::AmazonMQ::Broker.LdapServerMetadata)
@@ -11,57 +13,57 @@ type Broker_LdapServerMetadata struct {
 	// Hosts AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-hosts
-	Hosts []string `json:"Hosts,omitempty"`
+	Hosts *types.Value `json:"Hosts,omitempty"`
 
 	// RoleBase AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolebase
-	RoleBase string `json:"RoleBase,omitempty"`
+	RoleBase *types.Value `json:"RoleBase,omitempty"`
 
 	// RoleName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolename
-	RoleName string `json:"RoleName,omitempty"`
+	RoleName *types.Value `json:"RoleName,omitempty"`
 
 	// RoleSearchMatching AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolesearchmatching
-	RoleSearchMatching string `json:"RoleSearchMatching,omitempty"`
+	RoleSearchMatching *types.Value `json:"RoleSearchMatching,omitempty"`
 
 	// RoleSearchSubtree AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolesearchsubtree
-	RoleSearchSubtree bool `json:"RoleSearchSubtree,omitempty"`
+	RoleSearchSubtree *types.Value `json:"RoleSearchSubtree,omitempty"`
 
 	// ServiceAccountPassword AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-serviceaccountpassword
-	ServiceAccountPassword string `json:"ServiceAccountPassword,omitempty"`
+	ServiceAccountPassword *types.Value `json:"ServiceAccountPassword,omitempty"`
 
 	// ServiceAccountUsername AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-serviceaccountusername
-	ServiceAccountUsername string `json:"ServiceAccountUsername,omitempty"`
+	ServiceAccountUsername *types.Value `json:"ServiceAccountUsername,omitempty"`
 
 	// UserBase AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-userbase
-	UserBase string `json:"UserBase,omitempty"`
+	UserBase *types.Value `json:"UserBase,omitempty"`
 
 	// UserRoleName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-userrolename
-	UserRoleName string `json:"UserRoleName,omitempty"`
+	UserRoleName *types.Value `json:"UserRoleName,omitempty"`
 
 	// UserSearchMatching AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-usersearchmatching
-	UserSearchMatching string `json:"UserSearchMatching,omitempty"`
+	UserSearchMatching *types.Value `json:"UserSearchMatching,omitempty"`
 
 	// UserSearchSubtree AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-usersearchsubtree
-	UserSearchSubtree bool `json:"UserSearchSubtree,omitempty"`
+	UserSearchSubtree *types.Value `json:"UserSearchSubtree,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

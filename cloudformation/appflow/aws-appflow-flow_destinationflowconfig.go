@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Flow_DestinationFlowConfig AWS CloudFormation Resource (AWS::AppFlow::Flow.DestinationFlowConfig)
@@ -11,12 +13,12 @@ type Flow_DestinationFlowConfig struct {
 	// ConnectorProfileName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectorprofilename
-	ConnectorProfileName string `json:"ConnectorProfileName,omitempty"`
+	ConnectorProfileName *types.Value `json:"ConnectorProfileName,omitempty"`
 
 	// ConnectorType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectortype
-	ConnectorType string `json:"ConnectorType,omitempty"`
+	ConnectorType *types.Value `json:"ConnectorType,omitempty"`
 
 	// DestinationConnectorProperties AWS CloudFormation Property
 	// Required: true

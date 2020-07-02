@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DomainConfiguration AWS CloudFormation Resource (AWS::IoT::DomainConfiguration)
@@ -20,27 +22,27 @@ type DomainConfiguration struct {
 	// DomainConfigurationName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainconfigurationname
-	DomainConfigurationName string `json:"DomainConfigurationName,omitempty"`
+	DomainConfigurationName *types.Value `json:"DomainConfigurationName,omitempty"`
 
 	// DomainConfigurationStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainconfigurationstatus
-	DomainConfigurationStatus string `json:"DomainConfigurationStatus,omitempty"`
+	DomainConfigurationStatus *types.Value `json:"DomainConfigurationStatus,omitempty"`
 
 	// DomainName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *types.Value `json:"DomainName,omitempty"`
 
 	// ServerCertificateArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servercertificatearns
-	ServerCertificateArns []string `json:"ServerCertificateArns,omitempty"`
+	ServerCertificateArns *types.Value `json:"ServerCertificateArns,omitempty"`
 
 	// ServiceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servicetype
-	ServiceType string `json:"ServiceType,omitempty"`
+	ServiceType *types.Value `json:"ServiceType,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -50,7 +52,7 @@ type DomainConfiguration struct {
 	// ValidationCertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-validationcertificatearn
-	ValidationCertificateArn string `json:"ValidationCertificateArn,omitempty"`
+	ValidationCertificateArn *types.Value `json:"ValidationCertificateArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

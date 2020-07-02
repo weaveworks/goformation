@@ -1,7 +1,9 @@
 package codecommit
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Repository_Code AWS CloudFormation Resource (AWS::CodeCommit::Repository.Code)
@@ -11,7 +13,7 @@ type Repository_Code struct {
 	// BranchName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-code.html#cfn-codecommit-repository-code-branchname
-	BranchName string `json:"BranchName,omitempty"`
+	BranchName *types.Value `json:"BranchName,omitempty"`
 
 	// S3 AWS CloudFormation Property
 	// Required: true

@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_DynamoDBEvent AWS CloudFormation Resource (AWS::Serverless::Function.DynamoDBEvent)
@@ -11,12 +13,12 @@ type Function_DynamoDBEvent struct {
 	// BatchSize AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	BatchSize int `json:"BatchSize,omitempty"`
+	BatchSize *types.Value `json:"BatchSize,omitempty"`
 
 	// BisectBatchOnFunctionError AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	BisectBatchOnFunctionError bool `json:"BisectBatchOnFunctionError,omitempty"`
+	BisectBatchOnFunctionError *types.Value `json:"BisectBatchOnFunctionError,omitempty"`
 
 	// DestinationConfig AWS CloudFormation Property
 	// Required: false
@@ -26,37 +28,37 @@ type Function_DynamoDBEvent struct {
 	// Enabled AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	Enabled bool `json:"Enabled,omitempty"`
+	Enabled *types.Value `json:"Enabled,omitempty"`
 
 	// MaximumBatchingWindowInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	MaximumBatchingWindowInSeconds int `json:"MaximumBatchingWindowInSeconds,omitempty"`
+	MaximumBatchingWindowInSeconds *types.Value `json:"MaximumBatchingWindowInSeconds,omitempty"`
 
 	// MaximumRecordAgeInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	MaximumRecordAgeInSeconds int `json:"MaximumRecordAgeInSeconds,omitempty"`
+	MaximumRecordAgeInSeconds *types.Value `json:"MaximumRecordAgeInSeconds,omitempty"`
 
 	// MaximumRetryAttempts AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	MaximumRetryAttempts int `json:"MaximumRetryAttempts,omitempty"`
+	MaximumRetryAttempts *types.Value `json:"MaximumRetryAttempts,omitempty"`
 
 	// ParallelizationFactor AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	ParallelizationFactor int `json:"ParallelizationFactor,omitempty"`
+	ParallelizationFactor *types.Value `json:"ParallelizationFactor,omitempty"`
 
 	// StartingPosition AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	StartingPosition string `json:"StartingPosition,omitempty"`
+	StartingPosition *types.Value `json:"StartingPosition,omitempty"`
 
 	// Stream AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
-	Stream string `json:"Stream,omitempty"`
+	Stream *types.Value `json:"Stream,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_AacSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.AacSettings)
@@ -11,47 +13,47 @@ type Channel_AacSettings struct {
 	// Bitrate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-bitrate
-	Bitrate float64 `json:"Bitrate,omitempty"`
+	Bitrate *types.Value `json:"Bitrate,omitempty"`
 
 	// CodingMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-codingmode
-	CodingMode string `json:"CodingMode,omitempty"`
+	CodingMode *types.Value `json:"CodingMode,omitempty"`
 
 	// InputType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-inputtype
-	InputType string `json:"InputType,omitempty"`
+	InputType *types.Value `json:"InputType,omitempty"`
 
 	// Profile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-profile
-	Profile string `json:"Profile,omitempty"`
+	Profile *types.Value `json:"Profile,omitempty"`
 
 	// RateControlMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-ratecontrolmode
-	RateControlMode string `json:"RateControlMode,omitempty"`
+	RateControlMode *types.Value `json:"RateControlMode,omitempty"`
 
 	// RawFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-rawformat
-	RawFormat string `json:"RawFormat,omitempty"`
+	RawFormat *types.Value `json:"RawFormat,omitempty"`
 
 	// SampleRate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-samplerate
-	SampleRate float64 `json:"SampleRate,omitempty"`
+	SampleRate *types.Value `json:"SampleRate,omitempty"`
 
 	// Spec AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-spec
-	Spec string `json:"Spec,omitempty"`
+	Spec *types.Value `json:"Spec,omitempty"`
 
 	// VbrQuality AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html#cfn-medialive-channel-aacsettings-vbrquality
-	VbrQuality string `json:"VbrQuality,omitempty"`
+	VbrQuality *types.Value `json:"VbrQuality,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

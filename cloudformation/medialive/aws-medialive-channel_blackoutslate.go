@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_BlackoutSlate AWS CloudFormation Resource (AWS::MediaLive::Channel.BlackoutSlate)
@@ -16,7 +18,7 @@ type Channel_BlackoutSlate struct {
 	// NetworkEndBlackout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html#cfn-medialive-channel-blackoutslate-networkendblackout
-	NetworkEndBlackout string `json:"NetworkEndBlackout,omitempty"`
+	NetworkEndBlackout *types.Value `json:"NetworkEndBlackout,omitempty"`
 
 	// NetworkEndBlackoutImage AWS CloudFormation Property
 	// Required: false
@@ -26,12 +28,12 @@ type Channel_BlackoutSlate struct {
 	// NetworkId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html#cfn-medialive-channel-blackoutslate-networkid
-	NetworkId string `json:"NetworkId,omitempty"`
+	NetworkId *types.Value `json:"NetworkId,omitempty"`
 
 	// State AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html#cfn-medialive-channel-blackoutslate-state
-	State string `json:"State,omitempty"`
+	State *types.Value `json:"State,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

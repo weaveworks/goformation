@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // TransitGateway AWS CloudFormation Resource (AWS::EC2::TransitGateway)
@@ -16,47 +18,47 @@ type TransitGateway struct {
 	// AmazonSideAsn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-amazonsideasn
-	AmazonSideAsn int `json:"AmazonSideAsn,omitempty"`
+	AmazonSideAsn *types.Value `json:"AmazonSideAsn,omitempty"`
 
 	// AutoAcceptSharedAttachments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-autoacceptsharedattachments
-	AutoAcceptSharedAttachments string `json:"AutoAcceptSharedAttachments,omitempty"`
+	AutoAcceptSharedAttachments *types.Value `json:"AutoAcceptSharedAttachments,omitempty"`
 
 	// DefaultRouteTableAssociation AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetableassociation
-	DefaultRouteTableAssociation string `json:"DefaultRouteTableAssociation,omitempty"`
+	DefaultRouteTableAssociation *types.Value `json:"DefaultRouteTableAssociation,omitempty"`
 
 	// DefaultRouteTablePropagation AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetablepropagation
-	DefaultRouteTablePropagation string `json:"DefaultRouteTablePropagation,omitempty"`
+	DefaultRouteTablePropagation *types.Value `json:"DefaultRouteTablePropagation,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// DnsSupport AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-dnssupport
-	DnsSupport string `json:"DnsSupport,omitempty"`
+	DnsSupport *types.Value `json:"DnsSupport,omitempty"`
 
 	// MulticastSupport AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-multicastsupport
-	MulticastSupport string `json:"MulticastSupport,omitempty"`
+	MulticastSupport *types.Value `json:"MulticastSupport,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VpnEcmpSupport AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-vpnecmpsupport
-	VpnEcmpSupport string `json:"VpnEcmpSupport,omitempty"`
+	VpnEcmpSupport *types.Value `json:"VpnEcmpSupport,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_ColumnConfiguration AWS CloudFormation Resource (AWS::Kendra::DataSource.ColumnConfiguration)
@@ -16,17 +18,17 @@ type DataSource_ColumnConfiguration struct {
 	// DocumentDataColumnName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-columnconfiguration.html#cfn-kendra-datasource-columnconfiguration-documentdatacolumnname
-	DocumentDataColumnName string `json:"DocumentDataColumnName,omitempty"`
+	DocumentDataColumnName *types.Value `json:"DocumentDataColumnName,omitempty"`
 
 	// DocumentIdColumnName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-columnconfiguration.html#cfn-kendra-datasource-columnconfiguration-documentidcolumnname
-	DocumentIdColumnName string `json:"DocumentIdColumnName,omitempty"`
+	DocumentIdColumnName *types.Value `json:"DocumentIdColumnName,omitempty"`
 
 	// DocumentTitleColumnName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-columnconfiguration.html#cfn-kendra-datasource-columnconfiguration-documenttitlecolumnname
-	DocumentTitleColumnName string `json:"DocumentTitleColumnName,omitempty"`
+	DocumentTitleColumnName *types.Value `json:"DocumentTitleColumnName,omitempty"`
 
 	// FieldMappings AWS CloudFormation Property
 	// Required: false

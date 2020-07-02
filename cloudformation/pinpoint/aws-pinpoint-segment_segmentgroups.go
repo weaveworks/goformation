@@ -1,7 +1,9 @@
 package pinpoint
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Segment_SegmentGroups AWS CloudFormation Resource (AWS::Pinpoint::Segment.SegmentGroups)
@@ -16,7 +18,7 @@ type Segment_SegmentGroups struct {
 	// Include AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-include
-	Include string `json:"Include,omitempty"`
+	Include *types.Value `json:"Include,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

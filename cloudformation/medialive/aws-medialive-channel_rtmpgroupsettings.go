@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_RtmpGroupSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.RtmpGroupSettings)
@@ -11,32 +13,32 @@ type Channel_RtmpGroupSettings struct {
 	// AuthenticationScheme AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html#cfn-medialive-channel-rtmpgroupsettings-authenticationscheme
-	AuthenticationScheme string `json:"AuthenticationScheme,omitempty"`
+	AuthenticationScheme *types.Value `json:"AuthenticationScheme,omitempty"`
 
 	// CacheFullBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html#cfn-medialive-channel-rtmpgroupsettings-cachefullbehavior
-	CacheFullBehavior string `json:"CacheFullBehavior,omitempty"`
+	CacheFullBehavior *types.Value `json:"CacheFullBehavior,omitempty"`
 
 	// CacheLength AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html#cfn-medialive-channel-rtmpgroupsettings-cachelength
-	CacheLength int `json:"CacheLength,omitempty"`
+	CacheLength *types.Value `json:"CacheLength,omitempty"`
 
 	// CaptionData AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html#cfn-medialive-channel-rtmpgroupsettings-captiondata
-	CaptionData string `json:"CaptionData,omitempty"`
+	CaptionData *types.Value `json:"CaptionData,omitempty"`
 
 	// InputLossAction AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html#cfn-medialive-channel-rtmpgroupsettings-inputlossaction
-	InputLossAction string `json:"InputLossAction,omitempty"`
+	InputLossAction *types.Value `json:"InputLossAction,omitempty"`
 
 	// RestartDelay AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html#cfn-medialive-channel-rtmpgroupsettings-restartdelay
-	RestartDelay int `json:"RestartDelay,omitempty"`
+	RestartDelay *types.Value `json:"RestartDelay,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ClientVpnEndpoint_FederatedAuthenticationRequest AWS CloudFormation Resource (AWS::EC2::ClientVpnEndpoint.FederatedAuthenticationRequest)
@@ -11,12 +13,12 @@ type ClientVpnEndpoint_FederatedAuthenticationRequest struct {
 	// SAMLProviderArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html#cfn-ec2-clientvpnendpoint-federatedauthenticationrequest-samlproviderarn
-	SAMLProviderArn string `json:"SAMLProviderArn,omitempty"`
+	SAMLProviderArn *types.Value `json:"SAMLProviderArn,omitempty"`
 
 	// SelfServiceSAMLProviderArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html#cfn-ec2-clientvpnendpoint-federatedauthenticationrequest-selfservicesamlproviderarn
-	SelfServiceSAMLProviderArn string `json:"SelfServiceSAMLProviderArn,omitempty"`
+	SelfServiceSAMLProviderArn *types.Value `json:"SelfServiceSAMLProviderArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

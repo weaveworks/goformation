@@ -1,7 +1,9 @@
 package ssm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ResourceDataSync_SyncSource AWS CloudFormation Resource (AWS::SSM::ResourceDataSync.SyncSource)
@@ -16,17 +18,17 @@ type ResourceDataSync_SyncSource struct {
 	// IncludeFutureRegions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-syncsource.html#cfn-ssm-resourcedatasync-syncsource-includefutureregions
-	IncludeFutureRegions bool `json:"IncludeFutureRegions,omitempty"`
+	IncludeFutureRegions *types.Value `json:"IncludeFutureRegions,omitempty"`
 
 	// SourceRegions AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-syncsource.html#cfn-ssm-resourcedatasync-syncsource-sourceregions
-	SourceRegions []string `json:"SourceRegions,omitempty"`
+	SourceRegions *types.Value `json:"SourceRegions,omitempty"`
 
 	// SourceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-syncsource.html#cfn-ssm-resourcedatasync-syncsource-sourcetype
-	SourceType string `json:"SourceType,omitempty"`
+	SourceType *types.Value `json:"SourceType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

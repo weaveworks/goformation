@@ -1,7 +1,9 @@
 package ec2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LaunchTemplate_CapacityReservationSpecification AWS CloudFormation Resource (AWS::EC2::LaunchTemplate.CapacityReservationSpecification)
@@ -11,7 +13,7 @@ type LaunchTemplate_CapacityReservationSpecification struct {
 	// CapacityReservationPreference AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification.html#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference
-	CapacityReservationPreference string `json:"CapacityReservationPreference,omitempty"`
+	CapacityReservationPreference *types.Value `json:"CapacityReservationPreference,omitempty"`
 
 	// CapacityReservationTarget AWS CloudFormation Property
 	// Required: false

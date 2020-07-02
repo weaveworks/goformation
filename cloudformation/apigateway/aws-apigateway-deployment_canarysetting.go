@@ -1,7 +1,9 @@
 package apigateway
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Deployment_CanarySetting AWS CloudFormation Resource (AWS::ApiGateway::Deployment.CanarySetting)
@@ -11,17 +13,17 @@ type Deployment_CanarySetting struct {
 	// PercentTraffic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic
-	PercentTraffic float64 `json:"PercentTraffic,omitempty"`
+	PercentTraffic *types.Value `json:"PercentTraffic,omitempty"`
 
 	// StageVariableOverrides AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides
-	StageVariableOverrides map[string]string `json:"StageVariableOverrides,omitempty"`
+	StageVariableOverrides map[string]*types.Value `json:"StageVariableOverrides,omitempty"`
 
 	// UseStageCache AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache
-	UseStageCache bool `json:"UseStageCache,omitempty"`
+	UseStageCache *types.Value `json:"UseStageCache,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

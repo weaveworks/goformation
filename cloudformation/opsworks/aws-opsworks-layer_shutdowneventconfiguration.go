@@ -1,7 +1,9 @@
 package opsworks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Layer_ShutdownEventConfiguration AWS CloudFormation Resource (AWS::OpsWorks::Layer.ShutdownEventConfiguration)
@@ -11,12 +13,12 @@ type Layer_ShutdownEventConfiguration struct {
 	// DelayUntilElbConnectionsDrained AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained
-	DelayUntilElbConnectionsDrained bool `json:"DelayUntilElbConnectionsDrained,omitempty"`
+	DelayUntilElbConnectionsDrained *types.Value `json:"DelayUntilElbConnectionsDrained,omitempty"`
 
 	// ExecutionTimeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout
-	ExecutionTimeout int `json:"ExecutionTimeout,omitempty"`
+	ExecutionTimeout *types.Value `json:"ExecutionTimeout,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package applicationinsights
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Application_CustomComponent AWS CloudFormation Resource (AWS::ApplicationInsights::Application.CustomComponent)
@@ -11,12 +13,12 @@ type Application_CustomComponent struct {
 	// ComponentName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-componentname
-	ComponentName string `json:"ComponentName,omitempty"`
+	ComponentName *types.Value `json:"ComponentName,omitempty"`
 
 	// ResourceList AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-resourcelist
-	ResourceList []string `json:"ResourceList,omitempty"`
+	ResourceList *types.Value `json:"ResourceList,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

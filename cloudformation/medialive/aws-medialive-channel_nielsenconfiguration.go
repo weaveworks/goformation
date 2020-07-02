@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_NielsenConfiguration AWS CloudFormation Resource (AWS::MediaLive::Channel.NielsenConfiguration)
@@ -11,12 +13,12 @@ type Channel_NielsenConfiguration struct {
 	// DistributorId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenconfiguration.html#cfn-medialive-channel-nielsenconfiguration-distributorid
-	DistributorId string `json:"DistributorId,omitempty"`
+	DistributorId *types.Value `json:"DistributorId,omitempty"`
 
 	// NielsenPcmToId3Tagging AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenconfiguration.html#cfn-medialive-channel-nielsenconfiguration-nielsenpcmtoid3tagging
-	NielsenPcmToId3Tagging string `json:"NielsenPcmToId3Tagging,omitempty"`
+	NielsenPcmToId3Tagging *types.Value `json:"NielsenPcmToId3Tagging,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

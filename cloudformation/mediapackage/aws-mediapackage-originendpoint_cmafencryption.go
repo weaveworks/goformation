@@ -1,7 +1,9 @@
 package mediapackage
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // OriginEndpoint_CmafEncryption AWS CloudFormation Resource (AWS::MediaPackage::OriginEndpoint.CmafEncryption)
@@ -11,7 +13,7 @@ type OriginEndpoint_CmafEncryption struct {
 	// KeyRotationIntervalSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds
-	KeyRotationIntervalSeconds int `json:"KeyRotationIntervalSeconds,omitempty"`
+	KeyRotationIntervalSeconds *types.Value `json:"KeyRotationIntervalSeconds,omitempty"`
 
 	// SpekeKeyProvider AWS CloudFormation Property
 	// Required: true

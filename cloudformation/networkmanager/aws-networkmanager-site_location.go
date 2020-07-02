@@ -1,7 +1,9 @@
 package networkmanager
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Site_Location AWS CloudFormation Resource (AWS::NetworkManager::Site.Location)
@@ -11,17 +13,17 @@ type Site_Location struct {
 	// Address AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-address
-	Address string `json:"Address,omitempty"`
+	Address *types.Value `json:"Address,omitempty"`
 
 	// Latitude AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-latitude
-	Latitude string `json:"Latitude,omitempty"`
+	Latitude *types.Value `json:"Latitude,omitempty"`
 
 	// Longitude AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-longitude
-	Longitude string `json:"Longitude,omitempty"`
+	Longitude *types.Value `json:"Longitude,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_SalesforceConnectorProfileCredentials AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.SalesforceConnectorProfileCredentials)
@@ -11,7 +13,7 @@ type ConnectorProfile_SalesforceConnectorProfileCredentials struct {
 	// AccessToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken
-	AccessToken string `json:"AccessToken,omitempty"`
+	AccessToken *types.Value `json:"AccessToken,omitempty"`
 
 	// ConnectorOAuthRequest AWS CloudFormation Property
 	// Required: false
@@ -21,7 +23,7 @@ type ConnectorProfile_SalesforceConnectorProfileCredentials struct {
 	// RefreshToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken
-	RefreshToken string `json:"RefreshToken,omitempty"`
+	RefreshToken *types.Value `json:"RefreshToken,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

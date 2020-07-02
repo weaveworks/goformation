@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // GameServerGroup AWS CloudFormation Resource (AWS::GameLift::GameServerGroup)
@@ -20,22 +22,22 @@ type GameServerGroup struct {
 	// BalancingStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-balancingstrategy
-	BalancingStrategy string `json:"BalancingStrategy,omitempty"`
+	BalancingStrategy *types.Value `json:"BalancingStrategy,omitempty"`
 
 	// DeleteOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-deleteoption
-	DeleteOption string `json:"DeleteOption,omitempty"`
+	DeleteOption *types.Value `json:"DeleteOption,omitempty"`
 
 	// GameServerGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-gameservergroupname
-	GameServerGroupName string `json:"GameServerGroupName,omitempty"`
+	GameServerGroupName *types.Value `json:"GameServerGroupName,omitempty"`
 
 	// GameServerProtectionPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-gameserverprotectionpolicy
-	GameServerProtectionPolicy string `json:"GameServerProtectionPolicy,omitempty"`
+	GameServerProtectionPolicy *types.Value `json:"GameServerProtectionPolicy,omitempty"`
 
 	// InstanceDefinitions AWS CloudFormation Property
 	// Required: true
@@ -50,17 +52,17 @@ type GameServerGroup struct {
 	// MaxSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-maxsize
-	MaxSize float64 `json:"MaxSize,omitempty"`
+	MaxSize *types.Value `json:"MaxSize,omitempty"`
 
 	// MinSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-minsize
-	MinSize float64 `json:"MinSize,omitempty"`
+	MinSize *types.Value `json:"MinSize,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

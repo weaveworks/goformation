@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // WaitCondition AWS CloudFormation Resource (AWS::CloudFormation::WaitCondition)
@@ -15,17 +17,17 @@ type WaitCondition struct {
 	// Count AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-count
-	Count int `json:"Count,omitempty"`
+	Count *types.Value `json:"Count,omitempty"`
 
 	// Handle AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-handle
-	Handle string `json:"Handle,omitempty"`
+	Handle *types.Value `json:"Handle,omitempty"`
 
 	// Timeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-timeout
-	Timeout string `json:"Timeout,omitempty"`
+	Timeout *types.Value `json:"Timeout,omitempty"`
 
 	// AWSCloudFormationCreationPolicy represents a CloudFormation CreationPolicy
 	AWSCloudFormationCreationPolicy *policies.CreationPolicy `json:"-"`

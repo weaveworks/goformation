@@ -1,7 +1,9 @@
 package kendra
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // DataSource_OneDriveUserList AWS CloudFormation Resource (AWS::Kendra::DataSource.OneDriveUserList)
@@ -11,7 +13,7 @@ type DataSource_OneDriveUserList struct {
 	// OneDriveUserList AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveuserlist.html#cfn-kendra-datasource-onedriveuserlist-onedriveuserlist
-	OneDriveUserList []string `json:"OneDriveUserList,omitempty"`
+	OneDriveUserList *types.Value `json:"OneDriveUserList,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

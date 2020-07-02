@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
-	"github.com/awslabs/goformation/v4/cloudformation/tags"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RestApi AWS CloudFormation Resource (AWS::ApiGateway::RestApi)
@@ -16,12 +18,12 @@ type RestApi struct {
 	// ApiKeySourceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype
-	ApiKeySourceType string `json:"ApiKeySourceType,omitempty"`
+	ApiKeySourceType *types.Value `json:"ApiKeySourceType,omitempty"`
 
 	// BinaryMediaTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes
-	BinaryMediaTypes []string `json:"BinaryMediaTypes,omitempty"`
+	BinaryMediaTypes *types.Value `json:"BinaryMediaTypes,omitempty"`
 
 	// Body AWS CloudFormation Property
 	// Required: false
@@ -36,12 +38,12 @@ type RestApi struct {
 	// CloneFrom AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-clonefrom
-	CloneFrom string `json:"CloneFrom,omitempty"`
+	CloneFrom *types.Value `json:"CloneFrom,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-description
-	Description string `json:"Description,omitempty"`
+	Description *types.Value `json:"Description,omitempty"`
 
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
@@ -51,22 +53,22 @@ type RestApi struct {
 	// FailOnWarnings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-failonwarnings
-	FailOnWarnings bool `json:"FailOnWarnings,omitempty"`
+	FailOnWarnings *types.Value `json:"FailOnWarnings,omitempty"`
 
 	// MinimumCompressionSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize
-	MinimumCompressionSize int `json:"MinimumCompressionSize,omitempty"`
+	MinimumCompressionSize *types.Value `json:"MinimumCompressionSize,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-name
-	Name string `json:"Name,omitempty"`
+	Name *types.Value `json:"Name,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters
-	Parameters map[string]string `json:"Parameters,omitempty"`
+	Parameters map[string]*types.Value `json:"Parameters,omitempty"`
 
 	// Policy AWS CloudFormation Property
 	// Required: false
@@ -76,7 +78,7 @@ type RestApi struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-tags
-	Tags []tags.Tag `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

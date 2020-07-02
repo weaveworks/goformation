@@ -1,7 +1,9 @@
 package appflow
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // ConnectorProfile_DatadogConnectorProfileCredentials AWS CloudFormation Resource (AWS::AppFlow::ConnectorProfile.DatadogConnectorProfileCredentials)
@@ -11,12 +13,12 @@ type ConnectorProfile_DatadogConnectorProfileCredentials struct {
 	// ApiKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-apikey
-	ApiKey string `json:"ApiKey,omitempty"`
+	ApiKey *types.Value `json:"ApiKey,omitempty"`
 
 	// ApplicationKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-applicationkey
-	ApplicationKey string `json:"ApplicationKey,omitempty"`
+	ApplicationKey *types.Value `json:"ApplicationKey,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

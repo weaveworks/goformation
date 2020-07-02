@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_TopicSAMPT AWS CloudFormation Resource (AWS::Serverless::Function.TopicSAMPT)
@@ -11,7 +13,7 @@ type Function_TopicSAMPT struct {
 	// TopicName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst
-	TopicName string `json:"TopicName,omitempty"`
+	TopicName *types.Value `json:"TopicName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

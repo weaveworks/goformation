@@ -1,7 +1,9 @@
 package opsworks
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Layer_Recipes AWS CloudFormation Resource (AWS::OpsWorks::Layer.Recipes)
@@ -11,27 +13,27 @@ type Layer_Recipes struct {
 	// Configure AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure
-	Configure []string `json:"Configure,omitempty"`
+	Configure *types.Value `json:"Configure,omitempty"`
 
 	// Deploy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy
-	Deploy []string `json:"Deploy,omitempty"`
+	Deploy *types.Value `json:"Deploy,omitempty"`
 
 	// Setup AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup
-	Setup []string `json:"Setup,omitempty"`
+	Setup *types.Value `json:"Setup,omitempty"`
 
 	// Shutdown AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown
-	Shutdown []string `json:"Shutdown,omitempty"`
+	Shutdown *types.Value `json:"Shutdown,omitempty"`
 
 	// Undeploy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy
-	Undeploy []string `json:"Undeploy,omitempty"`
+	Undeploy *types.Value `json:"Undeploy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

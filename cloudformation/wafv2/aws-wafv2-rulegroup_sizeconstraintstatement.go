@@ -1,7 +1,9 @@
 package wafv2
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // RuleGroup_SizeConstraintStatement AWS CloudFormation Resource (AWS::WAFv2::RuleGroup.SizeConstraintStatement)
@@ -11,7 +13,7 @@ type RuleGroup_SizeConstraintStatement struct {
 	// ComparisonOperator AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sizeconstraintstatement.html#cfn-wafv2-rulegroup-sizeconstraintstatement-comparisonoperator
-	ComparisonOperator string `json:"ComparisonOperator,omitempty"`
+	ComparisonOperator *types.Value `json:"ComparisonOperator,omitempty"`
 
 	// FieldToMatch AWS CloudFormation Property
 	// Required: true
@@ -21,7 +23,7 @@ type RuleGroup_SizeConstraintStatement struct {
 	// Size AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sizeconstraintstatement.html#cfn-wafv2-rulegroup-sizeconstraintstatement-size
-	Size int `json:"Size"`
+	Size *types.Value `json:"Size"`
 
 	// TextTransformations AWS CloudFormation Property
 	// Required: true

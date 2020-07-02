@@ -1,7 +1,9 @@
 package dynamodb
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Table_StreamSpecification AWS CloudFormation Resource (AWS::DynamoDB::Table.StreamSpecification)
@@ -11,7 +13,7 @@ type Table_StreamSpecification struct {
 	// StreamViewType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-streamspecification.html#cfn-dynamodb-streamspecification-streamviewtype
-	StreamViewType string `json:"StreamViewType,omitempty"`
+	StreamViewType *types.Value `json:"StreamViewType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

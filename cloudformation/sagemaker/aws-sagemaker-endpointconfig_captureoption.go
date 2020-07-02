@@ -1,7 +1,9 @@
 package sagemaker
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // EndpointConfig_CaptureOption AWS CloudFormation Resource (AWS::SageMaker::EndpointConfig.CaptureOption)
@@ -11,7 +13,7 @@ type EndpointConfig_CaptureOption struct {
 	// CaptureMode AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html#cfn-sagemaker-endpointconfig-captureoption-capturemode
-	CaptureMode string `json:"CaptureMode,omitempty"`
+	CaptureMode *types.Value `json:"CaptureMode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -1,7 +1,9 @@
 package autoscaling
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // LaunchConfiguration_MetadataOption AWS CloudFormation Resource (AWS::AutoScaling::LaunchConfiguration.MetadataOption)
@@ -11,17 +13,17 @@ type LaunchConfiguration_MetadataOption struct {
 	// HttpEndpoint AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfig-metadataoption.html#cfn-autoscaling-launchconfig-metadataoption-httpendpoint
-	HttpEndpoint string `json:"HttpEndpoint,omitempty"`
+	HttpEndpoint *types.Value `json:"HttpEndpoint,omitempty"`
 
 	// HttpPutResponseHopLimit AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfig-metadataoption.html#cfn-autoscaling-launchconfig-metadataoption-httpputresponsehoplimit
-	HttpPutResponseHopLimit int `json:"HttpPutResponseHopLimit,omitempty"`
+	HttpPutResponseHopLimit *types.Value `json:"HttpPutResponseHopLimit,omitempty"`
 
 	// HttpTokens AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfig-metadataoption.html#cfn-autoscaling-launchconfig-metadataoption-httptokens
-	HttpTokens string `json:"HttpTokens,omitempty"`
+	HttpTokens *types.Value `json:"HttpTokens,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

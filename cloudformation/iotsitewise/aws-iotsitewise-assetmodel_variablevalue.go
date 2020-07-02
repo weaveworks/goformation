@@ -1,7 +1,9 @@
 package iotsitewise
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // AssetModel_VariableValue AWS CloudFormation Resource (AWS::IoTSiteWise::AssetModel.VariableValue)
@@ -11,12 +13,12 @@ type AssetModel_VariableValue struct {
 	// HierarchyLogicalId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-variablevalue.html#cfn-iotsitewise-assetmodel-variablevalue-hierarchylogicalid
-	HierarchyLogicalId string `json:"HierarchyLogicalId,omitempty"`
+	HierarchyLogicalId *types.Value `json:"HierarchyLogicalId,omitempty"`
 
 	// PropertyLogicalId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-variablevalue.html#cfn-iotsitewise-assetmodel-variablevalue-propertylogicalid
-	PropertyLogicalId string `json:"PropertyLogicalId,omitempty"`
+	PropertyLogicalId *types.Value `json:"PropertyLogicalId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

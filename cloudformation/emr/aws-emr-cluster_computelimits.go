@@ -1,7 +1,9 @@
 package emr
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Cluster_ComputeLimits AWS CloudFormation Resource (AWS::EMR::Cluster.ComputeLimits)
@@ -11,27 +13,27 @@ type Cluster_ComputeLimits struct {
 	// MaximumCapacityUnits AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-computelimits.html#cfn-elasticmapreduce-cluster-computelimits-maximumcapacityunits
-	MaximumCapacityUnits int `json:"MaximumCapacityUnits"`
+	MaximumCapacityUnits *types.Value `json:"MaximumCapacityUnits"`
 
 	// MaximumCoreCapacityUnits AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-computelimits.html#cfn-elasticmapreduce-cluster-computelimits-maximumcorecapacityunits
-	MaximumCoreCapacityUnits int `json:"MaximumCoreCapacityUnits,omitempty"`
+	MaximumCoreCapacityUnits *types.Value `json:"MaximumCoreCapacityUnits,omitempty"`
 
 	// MaximumOnDemandCapacityUnits AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-computelimits.html#cfn-elasticmapreduce-cluster-computelimits-maximumondemandcapacityunits
-	MaximumOnDemandCapacityUnits int `json:"MaximumOnDemandCapacityUnits,omitempty"`
+	MaximumOnDemandCapacityUnits *types.Value `json:"MaximumOnDemandCapacityUnits,omitempty"`
 
 	// MinimumCapacityUnits AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-computelimits.html#cfn-elasticmapreduce-cluster-computelimits-minimumcapacityunits
-	MinimumCapacityUnits int `json:"MinimumCapacityUnits"`
+	MinimumCapacityUnits *types.Value `json:"MinimumCapacityUnits"`
 
 	// UnitType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-computelimits.html#cfn-elasticmapreduce-cluster-computelimits-unittype
-	UnitType string `json:"UnitType,omitempty"`
+	UnitType *types.Value `json:"UnitType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

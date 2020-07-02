@@ -1,7 +1,9 @@
 package serverless
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Function_IoTRuleEvent AWS CloudFormation Resource (AWS::Serverless::Function.IoTRuleEvent)
@@ -11,12 +13,12 @@ type Function_IoTRuleEvent struct {
 	// AwsIotSqlVersion AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule
-	AwsIotSqlVersion string `json:"AwsIotSqlVersion,omitempty"`
+	AwsIotSqlVersion *types.Value `json:"AwsIotSqlVersion,omitempty"`
 
 	// Sql AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule
-	Sql string `json:"Sql,omitempty"`
+	Sql *types.Value `json:"Sql,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

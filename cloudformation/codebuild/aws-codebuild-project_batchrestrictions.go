@@ -1,7 +1,9 @@
 package codebuild
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Project_BatchRestrictions AWS CloudFormation Resource (AWS::CodeBuild::Project.BatchRestrictions)
@@ -11,12 +13,12 @@ type Project_BatchRestrictions struct {
 	// ComputeTypesAllowed AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-computetypesallowed
-	ComputeTypesAllowed []string `json:"ComputeTypesAllowed,omitempty"`
+	ComputeTypesAllowed *types.Value `json:"ComputeTypesAllowed,omitempty"`
 
 	// MaximumBuildsAllowed AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed
-	MaximumBuildsAllowed int `json:"MaximumBuildsAllowed,omitempty"`
+	MaximumBuildsAllowed *types.Value `json:"MaximumBuildsAllowed,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

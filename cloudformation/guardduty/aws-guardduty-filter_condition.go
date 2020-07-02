@@ -1,7 +1,9 @@
 package guardduty
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Filter_Condition AWS CloudFormation Resource (AWS::GuardDuty::Filter.Condition)
@@ -11,27 +13,27 @@ type Filter_Condition struct {
 	// Eq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-eq
-	Eq []string `json:"Eq,omitempty"`
+	Eq *types.Value `json:"Eq,omitempty"`
 
 	// Gte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-gte
-	Gte int `json:"Gte,omitempty"`
+	Gte *types.Value `json:"Gte,omitempty"`
 
 	// Lt AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lt
-	Lt int `json:"Lt,omitempty"`
+	Lt *types.Value `json:"Lt,omitempty"`
 
 	// Lte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lte
-	Lte int `json:"Lte,omitempty"`
+	Lte *types.Value `json:"Lte,omitempty"`
 
 	// Neq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-neq
-	Neq []string `json:"Neq,omitempty"`
+	Neq *types.Value `json:"Neq,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

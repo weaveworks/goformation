@@ -1,7 +1,9 @@
 package medialive
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Channel_HlsInputSettings AWS CloudFormation Resource (AWS::MediaLive::Channel.HlsInputSettings)
@@ -11,22 +13,22 @@ type Channel_HlsInputSettings struct {
 	// Bandwidth AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsinputsettings.html#cfn-medialive-channel-hlsinputsettings-bandwidth
-	Bandwidth int `json:"Bandwidth,omitempty"`
+	Bandwidth *types.Value `json:"Bandwidth,omitempty"`
 
 	// BufferSegments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsinputsettings.html#cfn-medialive-channel-hlsinputsettings-buffersegments
-	BufferSegments int `json:"BufferSegments,omitempty"`
+	BufferSegments *types.Value `json:"BufferSegments,omitempty"`
 
 	// Retries AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsinputsettings.html#cfn-medialive-channel-hlsinputsettings-retries
-	Retries int `json:"Retries,omitempty"`
+	Retries *types.Value `json:"Retries,omitempty"`
 
 	// RetryInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsinputsettings.html#cfn-medialive-channel-hlsinputsettings-retryinterval
-	RetryInterval int `json:"RetryInterval,omitempty"`
+	RetryInterval *types.Value `json:"RetryInterval,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

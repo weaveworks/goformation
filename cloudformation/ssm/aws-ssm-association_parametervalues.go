@@ -1,12 +1,19 @@
-package ecs
+package ssm
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
-// TaskDefinition_Options AWS CloudFormation Resource (AWS::ECS::TaskDefinition.Options)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-options.html
-type TaskDefinition_Options struct {
+// Association_ParameterValues AWS CloudFormation Resource (AWS::SSM::Association.ParameterValues)
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html
+type Association_ParameterValues struct {
+
+	// ParameterValues AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html#cfn-ssm-association-parametervalues-parametervalues
+	ParameterValues *types.Value `json:"ParameterValues,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
@@ -25,6 +32,6 @@ type TaskDefinition_Options struct {
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
-func (r *TaskDefinition_Options) AWSCloudFormationType() string {
-	return "AWS::ECS::TaskDefinition.Options"
+func (r *Association_ParameterValues) AWSCloudFormationType() string {
+	return "AWS::SSM::Association.ParameterValues"
 }

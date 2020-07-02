@@ -1,7 +1,9 @@
 package elasticsearch
 
 import (
-	"github.com/awslabs/goformation/v4/cloudformation/policies"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
+	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
 // Domain_SnapshotOptions AWS CloudFormation Resource (AWS::Elasticsearch::Domain.SnapshotOptions)
@@ -11,7 +13,7 @@ type Domain_SnapshotOptions struct {
 	// AutomatedSnapshotStartHour AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-snapshotoptions.html#cfn-elasticsearch-domain-snapshotoptions-automatedsnapshotstarthour
-	AutomatedSnapshotStartHour int `json:"AutomatedSnapshotStartHour,omitempty"`
+	AutomatedSnapshotStartHour *types.Value `json:"AutomatedSnapshotStartHour,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
