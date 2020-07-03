@@ -1,4 +1,4 @@
-module github.com/awslabs/goformation/v4
+module github.com/weaveworks/goformation/v4
 
 require (
 	github.com/imdario/mergo v0.3.11
