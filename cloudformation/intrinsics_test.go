@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"github.com/awslabs/goformation/v4"
-	"github.com/awslabs/goformation/v4/cloudformation"
-	"github.com/awslabs/goformation/v4/intrinsics"
+	"github.com/weaveworks/goformation/v4/cloudformation"
+	"github.com/weaveworks/goformation/v4/intrinsics"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
