@@ -16,7 +16,7 @@ Resources:
       CodeUri: 
         Bucket: testbucket
         Key: testkey.zip
-        Version: 5
+        Version: 5.5
 
   CodeUriWithString:
     Type: AWS::Serverless::Function
