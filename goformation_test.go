@@ -9,13 +9,15 @@ import (
 
 	"github.com/weaveworks/goformation/v4"
 	"github.com/weaveworks/goformation/v4/cloudformation"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/lambda"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 	"github.com/weaveworks/goformation/v4/cloudformation/route53"
 	"github.com/weaveworks/goformation/v4/cloudformation/s3"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/serverless"
 	"github.com/weaveworks/goformation/v4/cloudformation/sns"
-	"github.com/weaveworks/goformation/v4/intrinsics"
+	. "github.com/weaveworks/goformation/v4/cloudformation/types"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -29,14 +31,14 @@ func Example_to_json() {
 
 	// Create an Amazon SNS topic, with a unique name based off the current timestamp
 	template.Resources["MyTopic"] = &sns.Topic{
-		TopicName: "my-topic-1575143839",
+		TopicName: NewString("my-topic-1575143839"),
 	}
 
 	// Create a subscription, connected to our topic, that forwards notifications to an email address
 	template.Resources["MyTopicSubscription"] = &sns.Subscription{
-		TopicArn: cloudformation.Ref("MyTopic"),
-		Protocol: "email",
-		Endpoint: "some.email@example.com",
+		TopicArn: MakeRef("MyTopic"),
+		Protocol: NewString("email"),
+		Endpoint: NewString("some.email@example.com"),
 	}
 
 	// Let's see the JSON AWS CloudFormation template
@@ -52,20 +54,20 @@ func Example_to_json() {
 	//   "AWSTemplateFormatVersion": "2010-09-09",
 	//   "Resources": {
 	//     "MyTopic": {
+	//       "Type": "AWS::SNS::Topic",
 	//       "Properties": {
 	//         "TopicName": "my-topic-1575143839"
-	//       },
-	//       "Type": "AWS::SNS::Topic"
+	//       }
 	//     },
 	//     "MyTopicSubscription": {
+	//       "Type": "AWS::SNS::Subscription",
 	//       "Properties": {
 	//         "Endpoint": "some.email@example.com",
 	//         "Protocol": "email",
 	//         "TopicArn": {
 	//           "Ref": "MyTopic"
 	//         }
-	//       },
-	//       "Type": "AWS::SNS::Subscription"
+	//       }
 	//     }
 	//   }
 	// }
@@ -78,14 +80,14 @@ func Example_to_yaml() {
 
 	// Create an Amazon SNS topic, with a unique name based off the current timestamp
 	template.Resources["MyTopic"] = &sns.Topic{
-		TopicName: "my-topic-1575143970",
+		TopicName: NewString("my-topic-1575143970"),
 	}
 
 	// Create a subscription, connected to our topic, that forwards notifications to an email address
 	template.Resources["MyTopicSubscription"] = &sns.Subscription{
-		TopicArn: cloudformation.Ref("MyTopic"),
-		Protocol: "email",
-		Endpoint: "some.email@example.com",
+		TopicArn: MakeRef("MyTopic"),
+		Protocol: NewString("email"),
+		Endpoint: NewString("some.email@example.com"),
 	}
 
 	// Let's see the YAML AWS CloudFormation template
@@ -170,16 +172,16 @@ var _ = Describe("Goformation", func() {
 
 		It("should correctly parse all of the function properties", func() {
 
-			Expect(f.Handler).To(Equal("file.method"))
-			Expect(f.Runtime).To(Equal("nodejs"))
-			Expect(f.FunctionName).To(Equal("functionname"))
-			Expect(f.Description).To(Equal("description"))
-			Expect(f.MemorySize).To(Equal(128))
-			Expect(f.Timeout).To(Equal(30))
-			Expect(f.Role).To(Equal("aws::arn::123456789012::some/role"))
-			Expect((*f.Policies.SAMPolicyTemplateArray)[0].DynamoDBCrudPolicy.TableName).To(Equal("table_arn"))
+			Expect(f.Handler).To(Equal(NewString("file.method")))
+			Expect(f.Runtime).To(Equal(NewString("nodejs")))
+			Expect(f.FunctionName).To(Equal(NewString("functionname")))
+			Expect(f.Description).To(Equal(NewString("description")))
+			Expect(f.MemorySize).To(Equal(NewInteger(128)))
+			Expect(f.Timeout).To(Equal(NewInteger(30)))
+			Expect(f.Role).To(Equal(NewString("aws::arn::123456789012::some/role")))
+			Expect((*f.Policies.SAMPolicyTemplateArray)[0].DynamoDBCrudPolicy.TableName).To(Equal(NewString("table_arn")))
 			Expect(f.Environment).ToNot(BeNil())
-			Expect(f.Environment.Variables).To(HaveKeyWithValue("NAME", "VALUE"))
+			Expect(f.Environment.Variables).To(HaveKeyWithValue("NAME", NewString("VALUE")))
 
 		})
 
@@ -187,27 +189,27 @@ var _ = Describe("Goformation", func() {
 
 			Expect(f.Events).ToNot(BeNil())
 			Expect(f.Events).To(HaveKey("TestApi"))
-			Expect(f.Events["TestApi"].Type).To(Equal("Api"))
+			Expect(f.Events["TestApi"].Type).To(Equal(NewString("Api")))
 			Expect(f.Events["TestApi"].Properties.ApiEvent).ToNot(BeNil())
 
 			event := f.Events["TestApi"].Properties.ApiEvent
-			Expect(event.Method).To(Equal("any"))
-			Expect(event.Path).To(Equal("/testing"))
+			Expect(event.Method).To(Equal(NewString("any")))
+			Expect(event.Path).To(Equal(NewString("/testing")))
 
 		})
 
 		It("should correctly parse all of the function S3 event source", func() {
 			Expect(f.Events).ToNot(BeNil())
 			Expect(f.Events).To(HaveKey("TestS3"))
-			Expect(f.Events["TestS3"].Type).To(Equal("S3"))
+			Expect(f.Events["TestS3"].Type).To(Equal(NewString("S3")))
 			Expect(f.Events["TestS3"].Properties.S3Event).ToNot(BeNil())
 
 			event := f.Events["TestS3"].Properties.S3Event
-			Expect(event.Bucket).To(Equal("my-photo-bucket"))
-			Expect(event.Events.String).To(PointTo(Equal("s3:ObjectCreated:*")))
+			Expect(event.Bucket).To(Equal(NewString("my-photo-bucket")))
+			Expect(event.Events.String).To(PointTo(BeEquivalentTo(NewString("s3:ObjectCreated:*"))))
 			Expect(event.Filter.S3Key.Rules).To(HaveLen(1))
-			Expect(event.Filter.S3Key.Rules[0].Name).To(Equal("prefix|suffix"))
-			Expect(event.Filter.S3Key.Rules[0].Value).To(Equal("my-prefix|my-suffix"))
+			Expect(event.Filter.S3Key.Rules[0].Name).To(Equal(NewString("prefix|suffix")))
+			Expect(event.Filter.S3Key.Rules[0].Value).To(Equal(NewString("my-prefix|my-suffix")))
 
 		})
 
@@ -233,9 +235,9 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct tag properties set", func() {
-			Expect(asg.Tags[0].PropagateAtLaunch).To(Equal(true))
-			Expect(asg.Tags[0].Key).To(Equal("Name"))
-			Expect(asg.Tags[0].Value).To(Equal("aws-ecs-integ-ecs/EcsCluster/DefaultAutoScalingGroup"))
+			Expect(asg.Tags[0].PropagateAtLaunch).To(Equal(NewBoolean(true)))
+			Expect(asg.Tags[0].Key).To(Equal(NewString("Name")))
+			Expect(asg.Tags[0].Value).To(Equal(NewString("aws-ecs-integ-ecs/EcsCluster/DefaultAutoScalingGroup")))
 		})
 
 	})
@@ -281,18 +283,18 @@ var _ = Describe("Goformation", func() {
 			template := cloudformation.NewTemplate()
 
 			template.Resources["MySNSTopic"] = &sns.Topic{
-				DisplayName: "test-sns-topic-display-name",
-				TopicName:   "test-sns-topic-name",
+				DisplayName: NewString("test-sns-topic-display-name"),
+				TopicName:   NewString("test-sns-topic-name"),
 				Subscription: []sns.Topic_Subscription{
 					sns.Topic_Subscription{
-						Endpoint: "test-sns-topic-subscription-endpoint",
-						Protocol: "test-sns-topic-subscription-protocol",
+						Endpoint: NewString("test-sns-topic-subscription-endpoint"),
+						Protocol: NewString("test-sns-topic-subscription-protocol"),
 					},
 				},
 			}
 
 			template.Resources["MyRoute53HostedZone"] = &route53.HostedZone{
-				Name: "example.com",
+				Name: NewString("example.com"),
 			}
 
 			topics := template.GetAllSNSTopicResources()
@@ -308,11 +310,11 @@ var _ = Describe("Goformation", func() {
 			})
 
 			It("should have the correct AWS::SNS::Topic values", func() {
-				Expect(topic.DisplayName).To(Equal("test-sns-topic-display-name"))
-				Expect(topic.TopicName).To(Equal("test-sns-topic-name"))
+				Expect(topic.DisplayName).To(Equal(NewString("test-sns-topic-display-name")))
+				Expect(topic.TopicName).To(Equal(NewString("test-sns-topic-name")))
 				Expect(topic.Subscription).To(HaveLen(1))
-				Expect(topic.Subscription[0].Endpoint).To(Equal("test-sns-topic-subscription-endpoint"))
-				Expect(topic.Subscription[0].Protocol).To(Equal("test-sns-topic-subscription-protocol"))
+				Expect(topic.Subscription[0].Endpoint).To(Equal(NewString("test-sns-topic-subscription-endpoint")))
+				Expect(topic.Subscription[0].Protocol).To(Equal(NewString("test-sns-topic-subscription-protocol")))
 			})
 
 			zones := template.GetAllRoute53HostedZoneResources()
@@ -328,7 +330,7 @@ var _ = Describe("Goformation", func() {
 			})
 
 			It("should have the correct AWS::Route53::HostedZone values", func() {
-				Expect(zone.Name).To(Equal("example.com"))
+				Expect(zone.Name).To(Equal(NewString("example.com")))
 			})
 
 		})
@@ -340,18 +342,18 @@ var _ = Describe("Goformation", func() {
 			expected := cloudformation.NewTemplate()
 
 			expected.Resources["MySNSTopic"] = &sns.Topic{
-				DisplayName: "test-sns-topic-display-name",
-				TopicName:   "test-sns-topic-name",
+				DisplayName: NewString("test-sns-topic-display-name"),
+				TopicName:   NewString("test-sns-topic-name"),
 				Subscription: []sns.Topic_Subscription{
 					sns.Topic_Subscription{
-						Endpoint: "test-sns-topic-subscription-endpoint",
-						Protocol: "test-sns-topic-subscription-protocol",
+						Endpoint: NewString("test-sns-topic-subscription-endpoint"),
+						Protocol: NewString("test-sns-topic-subscription-protocol"),
 					},
 				},
 			}
 
 			expected.Resources["MyRoute53HostedZone"] = &route53.HostedZone{
-				Name: "example.com",
+				Name: NewString("example.com"),
 			}
 
 			result, err := goformation.ParseJSON(template)
@@ -372,11 +374,11 @@ var _ = Describe("Goformation", func() {
 			})
 
 			It("should have the correct AWS::SNS::Topic values", func() {
-				Expect(topic.DisplayName).To(Equal("test-sns-topic-display-name"))
-				Expect(topic.TopicName).To(Equal("test-sns-topic-name"))
+				Expect(topic.DisplayName).To(Equal(NewString("test-sns-topic-display-name")))
+				Expect(topic.TopicName).To(Equal(NewString("test-sns-topic-name")))
 				Expect(topic.Subscription).To(HaveLen(1))
-				Expect(topic.Subscription[0].Endpoint).To(Equal("test-sns-topic-subscription-endpoint"))
-				Expect(topic.Subscription[0].Protocol).To(Equal("test-sns-topic-subscription-protocol"))
+				Expect(topic.Subscription[0].Endpoint).To(Equal(NewString("test-sns-topic-subscription-endpoint")))
+				Expect(topic.Subscription[0].Protocol).To(Equal(NewString("test-sns-topic-subscription-protocol")))
 			})
 
 			zones := result.GetAllRoute53HostedZoneResources()
@@ -392,7 +394,7 @@ var _ = Describe("Goformation", func() {
 			})
 
 			It("should have the correct AWS::Route53::HostedZone values", func() {
-				Expect(zone.Name).To(Equal("example.com"))
+				Expect(zone.Name).To(Equal(NewString("example.com")))
 			})
 
 		})
@@ -445,8 +447,6 @@ var _ = Describe("Goformation", func() {
 		}
 	})
 
-	// pmaddox@ 2017-08-17:
-	// Commented out until we have support for YAML tag intrinsic functions (e.g. !Sub)
 	Context("with a YAML template containing intrinsic tags (e.g. !Sub)", func() {
 
 		template, err := goformation.Open("test/yaml/yaml-intrinsic-tags.yaml")
@@ -462,8 +462,8 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("it should have the correct values", func() {
-			Expect(function.Runtime).To(Equal("4.3"))
-			Expect(function.Timeout).To(Equal(10))
+			Expect(function.Runtime).To(Equal(MakeFnSubString("${ParamNotExists}4.3")))
+			Expect(function.Timeout).To(Equal(MakeRef("TimeoutParam")))
 		})
 
 	})
@@ -486,13 +486,13 @@ var _ = Describe("Goformation", func() {
 
 		api1 := apis["RestApiWithCorsConfiguration"]
 		It("should parse a Cors configuration object", func() {
-			Expect(api1.Cors.CorsConfiguration.AllowHeaders).To(Equal("'Authorization,authorization'"))
-			Expect(api1.Cors.CorsConfiguration.AllowOrigin).To(Equal("'*'"))
+			Expect(api1.Cors.CorsConfiguration.AllowHeaders).To(Equal(NewString("'Authorization,authorization'")))
+			Expect(api1.Cors.CorsConfiguration.AllowOrigin).To(Equal(NewString("'*'")))
 		})
 
 		api2 := apis["RestApiWithCorsString"]
 		It("should parse a Cors string", func() {
-			Expect(api2.Cors.String).To(PointTo(Equal("'www.example.com'")))
+			Expect(api2.Cors.String).To(PointTo(Equal(NewString("'www.example.com'"))))
 		})
 
 	})
@@ -516,18 +516,18 @@ var _ = Describe("Goformation", func() {
 
 		f1 := functions["CodeUriWithS3LocationSpecifiedAsString"]
 		It("should parse a CodeUri property with an S3 location specified as a string", func() {
-			Expect(f1.CodeUri.String).To(PointTo(Equal("s3://testbucket/testkey.zip")))
+			Expect(f1.CodeUri.String).To(PointTo(Equal(NewString("s3://testbucket/testkey.zip"))))
 		})
 
 		f2 := functions["CodeUriWithS3LocationSpecifiedAsObject"]
 		It("should parse a CodeUri property with an S3 location specified as an object", func() {
-			Expect(f2.CodeUri.S3Location.Key).To(Equal("testkey.zip"))
-			Expect(f2.CodeUri.S3Location.Version).To(Equal(5))
+			Expect(f2.CodeUri.S3Location.Key).To(Equal(NewString("testkey.zip")))
+			Expect(f2.CodeUri.S3Location.Version).To(Equal(NewDouble(5.5)))
 		})
 
 		f3 := functions["CodeUriWithString"]
 		It("should parse a CodeUri property with a string", func() {
-			Expect(f3.CodeUri.String).To(PointTo(Equal("./testfolder")))
+			Expect(f3.CodeUri.String).To(PointTo(Equal(NewString("./testfolder"))))
 		})
 
 	})
@@ -537,7 +537,7 @@ var _ = Describe("Goformation", func() {
 		template := &cloudformation.Template{
 			Resources: cloudformation.Resources{
 				"MyLambdaFunction": &lambda.Function{
-					Handler: "nodejs6.10",
+					Handler: NewString("nodejs6.10"),
 				},
 			},
 		}
@@ -554,7 +554,7 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct Handler property", func() {
-			Expect(function.Handler).To(Equal("nodejs6.10"))
+			Expect(function.Handler).To(Equal(NewString("nodejs6.10")))
 		})
 
 	})
@@ -566,12 +566,12 @@ var _ = Describe("Goformation", func() {
 			template := &cloudformation.Template{
 				Resources: cloudformation.Resources{
 					"MySAMFunction": &serverless.Function{
-						Handler: "nodejs6.10",
+						Handler: NewString("nodejs6.10"),
 						CodeUri: &serverless.Function_CodeUri{
 							S3Location: &serverless.Function_S3Location{
-								Bucket:  "test-bucket",
-								Key:     "test-key",
-								Version: 100,
+								Bucket:  NewString("test-bucket"),
+								Key:     NewString("test-key"),
+								Version: NewInteger(100),
 							},
 						},
 					},
@@ -585,20 +585,20 @@ var _ = Describe("Goformation", func() {
 			})
 
 			It("should have the correct S3 bucket/key/version", func() {
-				Expect(function.CodeUri.S3Location.Bucket).To(Equal("test-bucket"))
-				Expect(function.CodeUri.S3Location.Key).To(Equal("test-key"))
-				Expect(function.CodeUri.S3Location.Version).To(Equal(100))
+				Expect(function.CodeUri.S3Location.Bucket).To(Equal(NewString("test-bucket")))
+				Expect(function.CodeUri.S3Location.Key).To(Equal(NewString("test-key")))
+				Expect(function.CodeUri.S3Location.Version).To(Equal(NewInteger(100)))
 			})
 
 		})
 
 		Context("that has a CodeUri property set as a string", func() {
 
-			codeuri := "./some-folder"
+			codeuri := NewString("./some-folder")
 			template := &cloudformation.Template{
 				Resources: cloudformation.Resources{
 					"MySAMFunction": &serverless.Function{
-						Handler: "nodejs6.10",
+						Handler: NewString("nodejs6.10"),
 						CodeUri: &serverless.Function_CodeUri{
 							String: &codeuri,
 						},
@@ -613,7 +613,7 @@ var _ = Describe("Goformation", func() {
 			})
 
 			It("should have the correct CodeUri", func() {
-				Expect(function.CodeUri.String).To(PointTo(Equal("./some-folder")))
+				Expect(function.CodeUri.String).To(PointTo(Equal(NewString("./some-folder"))))
 			})
 
 		})
@@ -640,11 +640,11 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct value for the primary key name", func() {
-			Expect(table.PrimaryKey.Name).To(Equal("test-primary-key-name"))
+			Expect(table.PrimaryKey.Name).To(Equal(NewString("test-primary-key-name")))
 		})
 
 		It("should have the correct value for the primary key type", func() {
-			Expect(table.PrimaryKey.Type).To(Equal("test-primary-key-type"))
+			Expect(table.PrimaryKey.Type).To(Equal(NewString("test-primary-key-type")))
 		})
 
 		It("should have provisioned throughput set", func() {
@@ -652,11 +652,11 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct value for ReadCapacityUnits", func() {
-			Expect(table.ProvisionedThroughput.ReadCapacityUnits).To(Equal(100))
+			Expect(table.ProvisionedThroughput.ReadCapacityUnits).To(Equal(NewInteger(100)))
 		})
 
 		It("should have the correct value for WriteCapacityUnits", func() {
-			Expect(table.ProvisionedThroughput.WriteCapacityUnits).To(Equal(200))
+			Expect(table.ProvisionedThroughput.WriteCapacityUnits).To(Equal(NewInteger(200)))
 		})
 
 		It("should have a table named 'TestSimpleTableNoProperties'", func() {
@@ -686,27 +686,27 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct value for Name", func() {
-			Expect(api1.Name).To(Equal("test-name"))
+			Expect(api1.Name).To(Equal(NewString("test-name")))
 		})
 
 		It("should have the correct value for StageName", func() {
-			Expect(api1.StageName).To(Equal("test-stage-name"))
+			Expect(api1.StageName).To(Equal(NewString("test-stage-name")))
 		})
 
 		It("should have the correct value for DefinitionUri", func() {
-			Expect(api1.DefinitionUri.String).To(PointTo(Equal("test-definition-uri")))
+			Expect(api1.DefinitionUri.String).To(PointTo(Equal(NewString("test-definition-uri"))))
 		})
 
 		It("should have the correct value for CacheClusterEnabled", func() {
-			Expect(api1.CacheClusterEnabled).To(Equal(true))
+			Expect(api1.CacheClusterEnabled).To(Equal(NewBoolean(true)))
 		})
 
 		It("should have the correct value for CacheClusterSize", func() {
-			Expect(api1.CacheClusterSize).To(Equal("test-cache-cluster-size"))
+			Expect(api1.CacheClusterSize).To(Equal(NewString("test-cache-cluster-size")))
 		})
 
 		It("should have the correct value for Variables", func() {
-			Expect(api1.Variables).To(HaveKeyWithValue("NAME", "VALUE"))
+			Expect(api1.Variables).To(HaveKeyWithValue("NAME", NewString("VALUE")))
 		})
 
 		api2, err := template.GetServerlessApiWithName("ServerlessApiWithDefinitionUriAsS3Location")
@@ -716,9 +716,9 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct value for DefinitionUri", func() {
-			Expect(api2.DefinitionUri.S3Location.Bucket).To(Equal("test-bucket"))
-			Expect(api2.DefinitionUri.S3Location.Key).To(Equal("test-key"))
-			Expect(api2.DefinitionUri.S3Location.Version).To(Equal(1))
+			Expect(api2.DefinitionUri.S3Location.Bucket).To(Equal(NewString("test-bucket")))
+			Expect(api2.DefinitionUri.S3Location.Key).To(Equal(NewString("test-key")))
+			Expect(api2.DefinitionUri.S3Location.Version).To(Equal(NewInteger(1)))
 		})
 
 		api3, err := template.GetServerlessApiWithName("ServerlessApiWithDefinitionBodyAsJSON")
@@ -752,8 +752,8 @@ var _ = Describe("Goformation", func() {
 		})
 
 		It("should have the correct value for AccessLogSetting", func() {
-			Expect(api5.AccessLogSetting.DestinationArn).To(Equal("arn:test"))
-			Expect(api5.AccessLogSetting.Format).To(Equal("{customKey: $context.Key}"))
+			Expect(api5.AccessLogSetting.DestinationArn).To(Equal(NewString("arn:test")))
+			Expect(api5.AccessLogSetting.Format).To(Equal(NewString("{customKey: $context.Key}")))
 		})
 
 	})
@@ -794,32 +794,10 @@ var _ = Describe("Goformation", func() {
 
 	})
 
-	Context("with a YAML template with paramter overrides", func() {
-
-		template, err := goformation.OpenWithOptions("test/yaml/aws-serverless-function-env-vars.yaml", &intrinsics.ProcessorOptions{
-			ParameterOverrides: map[string]interface{}{"ExampleParameter": "SomeNewValue"},
-		})
-
-		It("should successfully validate the SAM template", func() {
-			Expect(err).To(BeNil())
-			Expect(template).ShouldNot(BeNil())
-		})
-
-		function, err := template.GetServerlessFunctionWithName("IntrinsicEnvironmentVariableTestFunction")
-		It("should have a function named 'IntrinsicEnvironmentVariableTestFunction'", func() {
-			Expect(function).To(Not(BeNil()))
-			Expect(err).To(BeNil())
-		})
-
-		It("it should have the correct values", func() {
-			Expect(function.Environment.Variables).To(HaveKeyWithValue("REF_ENV_VAR", "SomeNewValue"))
-		})
-	})
-
 	Context("with a SNS event source", func() {
 		event := serverless.Function_Properties{
 			SNSEvent: &serverless.Function_SNSEvent{
-				Topic: "MyTopic",
+				Topic: NewString("MyTopic"),
 			},
 		}
 
@@ -848,10 +826,10 @@ var _ = Describe("Goformation", func() {
 		template := &cloudformation.Template{
 			Resources: cloudformation.Resources{
 				"TestBucket": &s3.Bucket{
-					BucketName: "test-bucket",
+					BucketName: NewString("test-bucket"),
 				},
 				"TestBucketPolicy": &s3.BucketPolicy{
-					Bucket: cloudformation.Ref("TestBucket"),
+					Bucket: MakeRef("TestBucket"),
 				},
 			},
 		}
@@ -914,133 +892,123 @@ var _ = Describe("Goformation", func() {
 
 		tests := []struct {
 			Name     string
-			Input    string
-			Expected map[string]interface{}
+			Input    *Value
+			Expected *Value
 		}{
 			{
 				Name:  "Ref",
-				Input: cloudformation.Ref("test-reference"),
-				Expected: map[string]interface{}{
-					"Ref": "test-reference",
-				},
+				Input: MakeRef("test-reference"),
+				Expected: MakeRef(
+					"test-reference",
+				),
 			},
 			{
 				Name:  "Fn::GetAtt",
-				Input: cloudformation.GetAtt("resource", "property"),
-				Expected: map[string]interface{}{
-					"Fn::GetAtt": []interface{}{"resource", "property"},
-				},
+				Input: MakeFnGetAtt("resource", NewString("property")),
+				Expected: MakeFnGetAttString(
+					"resource", "property",
+				),
 			},
 			{
 				Name:  "Fn::ImportValue",
-				Input: cloudformation.ImportValue("test-import"),
-				Expected: map[string]interface{}{
-					"Fn::ImportValue": "test-import",
-				},
+				Input: MakeFnImportValue(NewString("test-import")),
+				Expected: MakeFnImportValueString(
+					"test-import",
+				),
 			},
 			{
+				Name:  "Fn::Cidr",
+				Input: MakeFnCIDR(NewString("test-ip-block"), NewInteger(2), NewInteger(3)),
+				Expected: MakeFnCIDR(
+					NewString("test-ip-block"), NewInteger(2), NewInteger(3),
+				),
+			},
+			{
+				Name: "Fn::Join",
+				Input: MakeFnJoin("test-delimiter", []*Value{
+					NewString("test-join-value-1"), NewString("test-join-value-2"),
+				}),
+				Expected: MakeFnJoin(
+					"test-delimiter",
+					[]*Value{
+						NewString("test-join-value-1"),
+						NewString("test-join-value-2"),
+					},
+				),
+			},
+			{
+				Name: "Fn::Select",
+				Input: MakeFnSelect(NewString(""), NewStringSlice(
+					"test-select-value-1", "test-select-value-2",
+				)),
+				Expected: MakeFnSelect(NewString(""), NewStringSlice(
+					"test-select-value-1", "test-select-value-2",
+				)),
+			},
+			{
+				Name:  "Fn::Split",
+				Input: MakeFnSplit("test-delimiter", NewString("test-split-source")),
+				Expected: MakeFnSplit("test-delimiter", NewString("test-split-source")),
+			},
+			{
+				Name:  "Fn::Sub",
+				Input: MakeFnSubString("test-sub"),
+				Expected: MakeFnSubString(
+					"test-sub",
+				),
+			},
+			{
+				Name:  "Fn::Equals",
+				Input: MakeFnEquals(NewString("test-equals-value1"), NewString("test-equals-value2")),
+				Expected: MakeFnEquals(NewString("test-equals-value1"), NewString("test-equals-value2")),
+			},
+			{
+				Name:  "Fn::FindInMap",
+				Input: MakeFnFindInMap(NewString("test-map"), NewString("test-top-level-key"), NewString("test-second-level-key")),
+				Expected: MakeFnFindInMap(NewString("test-map"), NewString("test-top-level-key"), NewString("test-second-level-key")),
+			},
+			/*{
 				Name:  "Fn::Base64",
-				Input: cloudformation.Base64("test-base64"),
+				Input: MakeFnBase64("test-base64"),
 				Expected: map[string]interface{}{
 					"Fn::Base64": "test-base64",
 				},
 			},
 			{
-				Name:  "Fn::Cidr",
-				Input: cloudformation.CIDR("test-ip-block", "test-count", "test-cidr-bits"),
-				Expected: map[string]interface{}{
-					"Fn::Cidr": []interface{}{"test-ip-block", "test-count", "test-cidr-bits"},
-				},
-			},
-			{
-				Name:  "Fn::FindInMap",
-				Input: cloudformation.FindInMap("test-map", "test-top-level-key", "test-second-level-key"),
-				Expected: map[string]interface{}{
-					"Fn::FindInMap": []interface{}{"test-map", "test-top-level-key", "test-second-level-key"},
-				},
-			},
-			{
 				Name:  "Fn::GetAZs",
-				Input: cloudformation.GetAZs("test-region"),
+				Input: MakeFnGetAZs("test-region"),
 				Expected: map[string]interface{}{
 					"Fn::GetAZs": "test-region",
 				},
 			},
 			{
-				Name:  "Fn::Join",
-				Input: cloudformation.Join("test-delimiter", []string{"test-join-value-1", "test-join-value-2"}),
-				Expected: map[string]interface{}{
-					"Fn::Join": []interface{}{
-						"test-delimiter",
-						[]interface{}{
-							"test-join-value-1",
-							"test-join-value-2",
-						},
-					},
-				},
-			},
-			{
-				Name:  "Fn::Select",
-				Input: cloudformation.Select("test-index", []string{"test-select-value-1", "test-select-value-2"}),
-				Expected: map[string]interface{}{
-					"Fn::Select": []interface{}{
-						"test-index",
-						[]interface{}{
-							"test-select-value-1",
-							"test-select-value-2",
-						},
-					},
-				},
-			},
-			{
-				Name:  "Fn::Split",
-				Input: cloudformation.Split("test-delimiter", "test-split-source"),
-				Expected: map[string]interface{}{
-					"Fn::Split": []interface{}{"test-delimiter", "test-split-source"},
-				},
-			},
-			{
-				Name:  "Fn::Sub",
-				Input: cloudformation.Sub("test-sub"),
-				Expected: map[string]interface{}{
-					"Fn::Sub": "test-sub",
-				},
-			},
-			{
 				Name:  "Fn::And",
-				Input: cloudformation.And([]string{"test-and-first", "test-and-second", "test-and-third"}),
+				Input: MakeFnAnd([]string{"test-and-first", "test-and-second", "test-and-third"}),
 				Expected: map[string]interface{}{
 					"Fn::And": []interface{}{"test-and-first", "test-and-second", "test-and-third"},
 				},
 			},
 			{
-				Name:  "Fn::Equals",
-				Input: cloudformation.Equals("test-equals-value1", "test-equals-value2"),
-				Expected: map[string]interface{}{
-					"Fn::Equals": []interface{}{"test-equals-value1", "test-equals-value2"},
-				},
-			},
-			{
 				Name:  "Fn::If",
-				Input: cloudformation.If("test-if-value1", "test-iftrue-value", "test-ifnottrue-value"),
+				Input: MakeFnIf("test-if-value1", "test-iftrue-value", "test-ifnottrue-value"),
 				Expected: map[string]interface{}{
 					"Fn::If": []interface{}{"test-if-value1", "test-iftrue-value", "test-ifnottrue-value"},
 				},
 			},
 			{
 				Name:  "Fn::Not",
-				Input: cloudformation.Not([]string{"test-not-value1", "test-not-value2", "test-not-value3"}),
+				Input: MakeFnNot([]string{"test-not-value1", "test-not-value2", "test-not-value3"}),
 				Expected: map[string]interface{}{
 					"Fn::Not": []interface{}{"test-not-value1", "test-not-value2", "test-not-value3"},
 				},
 			},
 			{
 				Name:  "Fn::Or",
-				Input: cloudformation.Or([]string{"test-or-value1", "test-or-value2", "test-or-value3"}),
+				Input: MakeFnOr([]string{"test-or-value1", "test-or-value2", "test-or-value3"}),
 				Expected: map[string]interface{}{
 					"Fn::Or": []interface{}{"test-or-value1", "test-or-value2", "test-or-value3"},
 				},
-			},
+			},*/
 		}
 
 		for _, test := range tests {
@@ -1048,17 +1016,22 @@ var _ = Describe("Goformation", func() {
 			It(test.Name+" should have the correct values", func() {
 
 				template := &cloudformation.Template{
-					Description: test.Input,
+					Resources: cloudformation.Resources{
+						"TestBucket": &s3.Bucket{
+							BucketName: test.Input,
+						},
+					},
 				}
 
 				data, _ := template.JSON()
-				var result map[string]interface{}
-				json.Unmarshal(data, &result)
-
-				desc, ok := result["Description"].(map[string]interface{})
+				var result cloudformation.Template
+				err := json.Unmarshal(data, &result)
+				Expect(err).ToNot(HaveOccurred())
+				bucketResource, ok := result.Resources["TestBucket"]
 				Expect(ok).To(BeTrue())
-				Expect(desc).To(HaveLen(1))
-				Expect(desc).To(BeEquivalentTo(test.Expected))
+				bucket, ok := bucketResource.(*s3.Bucket)
+				Expect(ok).To(BeTrue())
+				Expect(bucket.BucketName).To(Equal(test.Expected))
 
 			})
 		}
@@ -1070,8 +1043,8 @@ var _ = Describe("Goformation", func() {
 		template := &cloudformation.Template{
 			Resources: cloudformation.Resources{
 				"TestBucket": &s3.Bucket{
-					BucketName: cloudformation.Join("/", []string{
-						cloudformation.Join("-", []string{"test", "bucket"}),
+					BucketName: MakeFnJoin("/", []*Value{
+						MakeFnJoin("-", []*Value{NewString("test"), NewString("bucket")}),
 					}),
 				},
 			},
@@ -1131,10 +1104,10 @@ var _ = Describe("Goformation", func() {
 		template := &cloudformation.Template{
 			Resources: cloudformation.Resources{
 				"TestBucket": &s3.Bucket{
-					BucketName: "test-bucket",
+					BucketName: NewString("test-bucket"),
 				},
 				"TestBucketPolicy": &s3.BucketPolicy{
-					Bucket: cloudformation.GetAtt("TestBucket", "WebsiteURL"),
+					Bucket: MakeFnGetAtt("TestBucket", NewString("WebsiteURL")),
 				},
 			},
 		}
@@ -1199,11 +1172,11 @@ var _ = Describe("Goformation", func() {
 
 		template := &cloudformation.Template{
 			Conditions: map[string]interface{}{
-				"MyCondition": cloudformation.Equals(cloudformation.Ref("MyParam"), "test"),
+				"MyCondition": MakeFnEquals(MakeRef("MyParam"), NewString("test")),
 			},
 			Resources: cloudformation.Resources{
 				"MySNSTopic": &sns.Topic{
-					TopicName:                  "test-sns-topic-name",
+					TopicName:                  NewString("test-sns-topic-name"),
 					AWSCloudFormationCondition: "MyCondition",
 				},
 			},
