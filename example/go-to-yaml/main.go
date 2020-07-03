@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/sns"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
 )
 
 func main() {
@@ -16,14 +17,14 @@ func main() {
 
 	// Create an Amazon SNS topic, with a unique name based off the current timestamp
 	template.Resources["MyTopic"] = &sns.Topic{
-		TopicName: "my-topic-" + strconv.FormatInt(time.Now().Unix(), 10),
+		TopicName: types.NewString("my-topic-" + strconv.FormatInt(time.Now().Unix(), 10)),
 	}
 
 	// Create a subscription, connected to our topic, that forwards notifications to an email address
 	template.Resources["MyTopicSubscription"] = &sns.Subscription{
-		TopicArn: cloudformation.Ref("MyTopic"),
-		Protocol: "email",
-		Endpoint: "some.email@example.com",
+		TopicArn: types.MakeRef("MyTopic"),
+		Protocol: types.NewString("email"),
+		Endpoint: types.NewString("some.email@example.com"),
 	}
 
 	// Let's see the JSON
