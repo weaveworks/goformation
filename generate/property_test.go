@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 
 	"github.com/weaveworks/goformation/v4/cloudformation/serverless"
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -15,33 +16,33 @@ var _ = Describe("Goformation Code Generator", func() {
 		Context("specified as a Go struct", func() {
 
 			property := &serverless.Function_S3Location{
-				Bucket:  "test-bucket",
-				Key:     "test-key",
-				Version: 123,
+				Bucket:  types.NewString("test-bucket"),
+				Key:     types.NewString("test-key"),
+				Version: types.NewInteger(123),
 			}
 			expected := []byte(`{"Bucket":"test-bucket","Key":"test-key","Version":123}`)
 
 			result, err := json.Marshal(property)
 			It("should marshal to JSON successfully", func() {
+				Expect(err).ToNot(HaveOccurred())
 				Expect(result).To(Equal(expected))
-				Expect(err).To(BeNil())
 			})
 
 		})
 		Context("specified as JSON", func() {
 
 			property := []byte(`{"Bucket":"test-bucket","Key":"test-key","Version":123}`)
-			expected := &serverless.Function_S3Location{
-				Bucket:  "test-bucket",
-				Key:     "test-key",
-				Version: 123,
+			expected := serverless.Function_S3Location{
+				Bucket:  types.NewString("test-bucket"),
+				Key:     types.NewString("test-key"),
+				Version: types.NewDouble(123),
 			}
 
-			result := &serverless.Function_S3Location{}
-			err := json.Unmarshal(property, result)
+			result := serverless.Function_S3Location{}
+			err := json.Unmarshal(property, &result)
 			It("should unmarshal to a Go struct successfully", func() {
+				Expect(err).ToNot(HaveOccurred())
 				Expect(result).To(Equal(expected))
-				Expect(err).To(BeNil())
 			})
 
 		})
@@ -88,8 +89,8 @@ var _ = Describe("Goformation Code Generator", func() {
 				expected := []byte(`{"BatchSize":10,"Stream":"arn"}`)
 
 				result := &serverless.Function_Properties{
-					SQSEvent:     &serverless.Function_SQSEvent{BatchSize: 10},
-					KinesisEvent: &serverless.Function_KinesisEvent{BatchSize: 10, Stream: "arn"},
+					SQSEvent:     &serverless.Function_SQSEvent{BatchSize: types.NewInteger(10)},
+					KinesisEvent: &serverless.Function_KinesisEvent{BatchSize: types.NewInteger(10), Stream: types.NewString("arn")},
 				}
 
 				output, err := result.MarshalJSON()
@@ -107,7 +108,7 @@ var _ = Describe("Goformation Code Generator", func() {
 
 			Context("specified as a Go struct", func() {
 
-				value := "test-primitive-value"
+				value := types.NewString("test-primitive-value")
 				property := &serverless.Function_CodeUri{
 					String: &value,
 				}
@@ -124,7 +125,7 @@ var _ = Describe("Goformation Code Generator", func() {
 			Context("specified as JSON", func() {
 
 				property := []byte(`"test-primitive-value"`)
-				value := "test-primitive-value"
+				value := types.NewString("test-primitive-value")
 				expected := &serverless.Function_CodeUri{
 					String: &value,
 				}
@@ -146,9 +147,9 @@ var _ = Describe("Goformation Code Generator", func() {
 
 				property := &serverless.Function_CodeUri{
 					S3Location: &serverless.Function_S3Location{
-						Bucket:  "test-bucket",
-						Key:     "test-key",
-						Version: 123,
+						Bucket:  types.NewString("test-bucket"),
+						Key:     types.NewString("test-key"),
+						Version: types.NewInteger(123),
 					},
 				}
 
@@ -168,9 +169,9 @@ var _ = Describe("Goformation Code Generator", func() {
 
 				expected := &serverless.Function_CodeUri{
 					S3Location: &serverless.Function_S3Location{
-						Bucket:  "test-bucket",
-						Key:     "test-key",
-						Version: 123,
+						Bucket:  types.NewString("test-bucket"),
+						Key:     types.NewString("test-key"),
+						Version: types.NewDouble(123),
 					},
 				}
 
