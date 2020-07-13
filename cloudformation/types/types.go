@@ -99,7 +99,13 @@ func (v String) MarshalJSON() ([]byte, error) {
 
 type Slice []*Value
 
-func NewSlice(v ...*Value) *Value { return NewValue(Slice(v)) }
+// NewSlice returns nil if it would otherwise be empty
+func NewSlice(v ...*Value) *Value {
+	if len(v) == 0 {
+		return nil
+	}
+	return NewValue(Slice(v))
+}
 
 func (v Slice) MarshalJSON() ([]byte, error) {
 	return json.Marshal([]*Value(v))
