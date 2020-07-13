@@ -107,6 +107,9 @@ func (v Slice) MarshalJSON() ([]byte, error) {
 
 func NewStringSlice(ss ...string) *Value {
 	var vs []*Value
+	if len(ss) == 0 {
+		return nil
+	}
 	for _, s := range ss {
 		vs = append(vs, NewString(s))
 	}
