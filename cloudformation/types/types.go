@@ -1,6 +1,7 @@
 package types
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"reflect"
@@ -28,6 +29,19 @@ func NewValueFromPrimitive(raw interface{}) (*Value, error) {
 		return NewString(p), nil
 	case float64:
 		return NewDouble(p), nil
+	case json.Number:
+		i, err := p.Int64()
+		if err == nil {
+			if i <= int64(^uint(0) >> 1) {
+				return NewInteger(int(i)), nil
+			}
+			return NewLong(i), nil
+		}
+		f, err := p.Float64()
+		if err == nil {
+			return NewDouble(f), nil
+		}
+		return NewString(p.String()), nil
 	case int:
 		return NewInteger(p), nil
 	case int64:
@@ -70,7 +84,9 @@ func (v *Value) String() string {
 
 func (v *Value) UnmarshalJSON(b []byte) error {
 	var raw interface{}
-	if err := json.Unmarshal(b, &raw); err != nil {
+	decoder := json.NewDecoder(bytes.NewReader(b))
+	decoder.UseNumber()
+	if err := decoder.Decode(&raw); err != nil {
 		return err
 	}
 
@@ -86,7 +102,6 @@ func (v Value) MarshalJSON() ([]byte, error) {
 	return v.value.MarshalJSON()
 }
 
-
 type String string
 
 func NewString(v string) *Value { return NewValue(String(v)) }
@@ -95,7 +110,6 @@ func (v String) MarshalJSON() ([]byte, error) {
 	x := string(v)
 	return json.Marshal(&x)
 }
-
 
 type Slice []*Value
 
@@ -119,7 +133,6 @@ func NewStringSlice(ss ...string) *Value {
 	return NewSlice(vs...)
 }
 
-
 type AnythingMap map[string]interface{}
 
 func (v AnythingMap) MarshalJSON() ([]byte, error) {
@@ -136,7 +149,6 @@ func (v AnythingMap) Convert(obj interface{}) error {
 	return json.Unmarshal(data, obj)
 }
 
-
 type Long int64
 
 func NewLong(v int64) *Value { return NewValue(Long(v)) }
@@ -145,7 +157,6 @@ func (v Long) MarshalJSON() ([]byte, error) {
 	x := int64(v)
 	return json.Marshal(&x)
 }
-
 
 type Integer int
 
@@ -156,7 +167,6 @@ func (v Integer) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&x)
 }
 
-
 type Double float64
 
 func NewDouble(v float64) *Value { return NewValue(Double(v)) }
@@ -165,7 +175,6 @@ func (v Double) MarshalJSON() ([]byte, error) {
 	x := float64(v)
 	return json.Marshal(&x)
 }
-
 
 type Boolean bool
 
