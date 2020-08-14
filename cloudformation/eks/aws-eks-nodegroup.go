@@ -84,6 +84,8 @@ type Nodegroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-version
 	Version *types.Value `json:"Version,omitempty"`
 
+	LaunchTemplate *Nodegroup_LaunchTemplate `json:"LaunchTemplate,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 
@@ -103,6 +105,11 @@ type Nodegroup struct {
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *Nodegroup) AWSCloudFormationType() string {
 	return "AWS::EKS::Nodegroup"
+}
+
+type Nodegroup_LaunchTemplate struct {
+	ID      *types.Value `json:"Id,omitempty"`
+	Version *types.Value `json:"Version,omitempty"`
 }
 
 // MarshalJSON is a custom JSON marshalling hook that embeds this object into
