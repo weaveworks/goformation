@@ -10,6 +10,10 @@ import (
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
+type Cluster_KubernetesNetworkConfig struct {
+	ServiceIpv4Cidr *types.Value `json:"ServiceIpv4Cidr,omitempty"`
+}
+
 // Cluster AWS CloudFormation Resource (AWS::EKS::Cluster)
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html
 type Cluster struct {
@@ -18,6 +22,8 @@ type Cluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig
 	EncryptionConfig []Cluster_EncryptionConfig `json:"EncryptionConfig,omitempty"`
+
+	KubernetesNetworkConfig *Cluster_KubernetesNetworkConfig `json:"KubernetesNetworkConfig,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
