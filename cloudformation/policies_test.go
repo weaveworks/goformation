@@ -38,8 +38,8 @@ var _ = Describe("Goformation", func() {
 				Name: "AutoScalingReplacingUpdate",
 				Input: &policies.UpdatePolicy{
 					AutoScalingRollingUpdate: &policies.AutoScalingRollingUpdate{
-						MaxBatchSize:                  *types.NewInteger(10),
-						MinInstancesInService:         *types.NewInteger(11),
+						MaxBatchSize:                  types.NewInteger(10),
+						MinInstancesInService:         types.NewInteger(11),
 						MinSuccessfulInstancesPercent: float64(12),
 						PauseTime:                     "test-pause-time",
 						SuspendProcesses:              []string{"test-suspend1", "test-suspend2"},
