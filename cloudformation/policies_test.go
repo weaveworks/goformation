@@ -37,9 +37,9 @@ var _ = Describe("Goformation", func() {
 				Name: "AutoScalingReplacingUpdate",
 				Input: &policies.UpdatePolicy{
 					AutoScalingRollingUpdate: &policies.AutoScalingRollingUpdate{
-						MaxBatchSize:                  10,
-						MinInstancesInService:         11,
-						MinSuccessfulInstancesPercent: 12,
+						MaxBatchSize:                  "10",
+						MinInstancesInService:         "11",
+						MinSuccessfulInstancesPercent: "12",
 						PauseTime:                     "test-pause-time",
 						SuspendProcesses:              []string{"test-suspend1", "test-suspend2"},
 						WaitOnResourceSignals:         true,
@@ -47,9 +47,9 @@ var _ = Describe("Goformation", func() {
 				},
 				Expected: map[string]interface{}{
 					"AutoScalingRollingUpdate": map[string]interface{}{
-						"MaxBatchSize":                  float64(10),
-						"MinInstancesInService":         float64(11),
-						"MinSuccessfulInstancesPercent": float64(12),
+						"MaxBatchSize":                  "10",
+						"MinInstancesInService":         "11",
+						"MinSuccessfulInstancesPercent": "12",
 						"PauseTime":                     "test-pause-time",
 						"SuspendProcesses":              []interface{}{"test-suspend1", "test-suspend2"},
 						"WaitOnResourceSignals":         true,

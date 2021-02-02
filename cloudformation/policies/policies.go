@@ -81,13 +81,13 @@ type AutoScalingReplacingUpdate struct {
 type AutoScalingRollingUpdate struct {
 
 	// MaxBatchSize specifies the maximum number of instances that AWS CloudFormation updates.
-	MaxBatchSize float64 `json:"MaxBatchSize,omitempty"`
+	MaxBatchSize string `json:"MaxBatchSize,omitempty"`
 
 	// MinInstancesInService specifies the minimum number of instances that must be in service within the Auto Scaling group while AWS CloudFormation updates old instances.
-	MinInstancesInService float64 `json:"MinInstancesInService,omitempty"`
+	MinInstancesInService string `json:"MinInstancesInService,omitempty"`
 
 	// MinSuccessfulInstancesPercent specifies the percentage of instances in an Auto Scaling rolling update that must signal success for an update to succeed. You can specify a value from 0 to 100. AWS CloudFormation rounds to the nearest tenth of a percent. For example, if you update five instances with a minimum successful percentage of 50, three instances must signal success.
-	MinSuccessfulInstancesPercent float64 `json:"MinSuccessfulInstancesPercent,omitempty"`
+	MinSuccessfulInstancesPercent string `json:"MinSuccessfulInstancesPercent,omitempty"`
 
 	// PauseTime is the amount of time that AWS CloudFormation pauses after making a change to a batch of instances to give those instances time to start software applications. For example, you might need to specify PauseTime when scaling up the number of instances in an Auto Scaling group.
 	PauseTime string `json:"PauseTime,omitempty"`
