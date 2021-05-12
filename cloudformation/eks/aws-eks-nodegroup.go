@@ -94,6 +94,11 @@ type Nodegroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-taints
 	Taints []*Nodegroup_Taints `json:"Taints,omitempty"`
 
+	// UpdateConfig AWS CloudFormation Property
+	// Required: false
+	// TODO @nikimanoledaki: Add link to docs
+	UpdateConfig *Nodegroup_UpdateConfig `json:"UpdateConfig,omitempty"`
+
 	// Version AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-version
