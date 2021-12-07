@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation/types"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -23,6 +24,11 @@ type VpcLink struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-name
 	Name *types.Value `json:"Name,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-tags
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// TargetArns AWS CloudFormation Property
 	// Required: true

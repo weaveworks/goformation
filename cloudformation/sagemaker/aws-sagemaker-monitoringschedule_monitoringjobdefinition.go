@@ -18,7 +18,7 @@ type MonitoringSchedule_MonitoringJobDefinition struct {
 	// Environment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment
-	Environment *MonitoringSchedule_Environment `json:"Environment,omitempty"`
+	Environment map[string]*types.Value `json:"Environment,omitempty"`
 
 	// MonitoringAppSpecification AWS CloudFormation Property
 	// Required: true
@@ -28,7 +28,7 @@ type MonitoringSchedule_MonitoringJobDefinition struct {
 	// MonitoringInputs AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs
-	MonitoringInputs *MonitoringSchedule_MonitoringInputs `json:"MonitoringInputs,omitempty"`
+	MonitoringInputs []MonitoringSchedule_MonitoringInput `json:"MonitoringInputs,omitempty"`
 
 	// MonitoringOutputConfig AWS CloudFormation Property
 	// Required: true

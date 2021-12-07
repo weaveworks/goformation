@@ -16,9 +16,14 @@ import (
 type NatGateway struct {
 
 	// AllocationId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-allocationid
 	AllocationId *types.Value `json:"AllocationId,omitempty"`
+
+	// ConnectivityType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-connectivitytype
+	ConnectivityType *types.Value `json:"ConnectivityType,omitempty"`
 
 	// SubnetId AWS CloudFormation Property
 	// Required: true

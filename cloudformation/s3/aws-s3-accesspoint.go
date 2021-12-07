@@ -19,20 +19,10 @@ type AccessPoint struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-bucket
 	Bucket *types.Value `json:"Bucket,omitempty"`
 
-	// CreationDate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-creationdate
-	CreationDate *types.Value `json:"CreationDate,omitempty"`
-
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-name
 	Name *types.Value `json:"Name,omitempty"`
-
-	// NetworkOrigin AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-networkorigin
-	NetworkOrigin *types.Value `json:"NetworkOrigin,omitempty"`
 
 	// Policy AWS CloudFormation Property
 	// Required: false

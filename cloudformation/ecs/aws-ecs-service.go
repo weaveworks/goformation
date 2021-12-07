@@ -45,6 +45,11 @@ type Service struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags
 	EnableECSManagedTags *types.Value `json:"EnableECSManagedTags,omitempty"`
 
+	// EnableExecuteCommand AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableexecutecommand
+	EnableExecuteCommand *types.Value `json:"EnableExecuteCommand,omitempty"`
+
 	// HealthCheckGracePeriodSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds
@@ -94,11 +99,6 @@ type Service struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy
 	SchedulingStrategy *types.Value `json:"SchedulingStrategy,omitempty"`
-
-	// ServiceArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-servicearn
-	ServiceArn *types.Value `json:"ServiceArn,omitempty"`
 
 	// ServiceName AWS CloudFormation Property
 	// Required: false

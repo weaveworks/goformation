@@ -16,7 +16,7 @@ type MaintenanceWindowTask_Target struct {
 	Key *types.Value `json:"Key,omitempty"`
 
 	// Values AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values
 	Values *types.Value `json:"Values,omitempty"`
 

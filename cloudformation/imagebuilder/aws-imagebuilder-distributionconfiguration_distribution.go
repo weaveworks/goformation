@@ -15,6 +15,16 @@ type DistributionConfiguration_Distribution struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration
 	AmiDistributionConfiguration interface{} `json:"AmiDistributionConfiguration,omitempty"`
 
+	// ContainerDistributionConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration
+	ContainerDistributionConfiguration interface{} `json:"ContainerDistributionConfiguration,omitempty"`
+
+	// LaunchTemplateConfigurations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations
+	LaunchTemplateConfigurations []DistributionConfiguration_LaunchTemplateConfiguration `json:"LaunchTemplateConfigurations,omitempty"`
+
 	// LicenseConfigurationArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns

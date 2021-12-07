@@ -35,10 +35,20 @@ type Key struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy
 	KeyPolicy interface{} `json:"KeyPolicy,omitempty"`
 
+	// KeySpec AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyspec
+	KeySpec *types.Value `json:"KeySpec,omitempty"`
+
 	// KeyUsage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyusage
 	KeyUsage *types.Value `json:"KeyUsage,omitempty"`
+
+	// MultiRegion AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-multiregion
+	MultiRegion *types.Value `json:"MultiRegion,omitempty"`
 
 	// PendingWindowInDays AWS CloudFormation Property
 	// Required: false

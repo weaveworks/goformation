@@ -14,10 +14,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html
 type NotificationRule struct {
 
+	// CreatedBy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-createdby
+	CreatedBy *types.Value `json:"CreatedBy,omitempty"`
+
 	// DetailType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-detailtype
 	DetailType *types.Value `json:"DetailType,omitempty"`
+
+	// EventTypeId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-eventtypeid
+	EventTypeId *types.Value `json:"EventTypeId,omitempty"`
 
 	// EventTypeIds AWS CloudFormation Property
 	// Required: true
@@ -43,6 +53,11 @@ type NotificationRule struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-tags
 	Tags interface{} `json:"Tags,omitempty"`
+
+	// TargetAddress AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targetaddress
+	TargetAddress *types.Value `json:"TargetAddress,omitempty"`
 
 	// Targets AWS CloudFormation Property
 	// Required: true

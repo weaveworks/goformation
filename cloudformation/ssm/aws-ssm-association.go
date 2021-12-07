@@ -29,6 +29,11 @@ type Association struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-automationtargetparametername
 	AutomationTargetParameterName *types.Value `json:"AutomationTargetParameterName,omitempty"`
 
+	// CalendarNames AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-calendarnames
+	CalendarNames *types.Value `json:"CalendarNames,omitempty"`
+
 	// ComplianceSeverity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-complianceseverity

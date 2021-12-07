@@ -1,6 +1,8 @@
 package appmesh
 
 import (
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -22,6 +24,11 @@ type GatewayRoute_GatewayRouteSpec struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutespec.html#cfn-appmesh-gatewayroute-gatewayroutespec-httproute
 	HttpRoute *GatewayRoute_HttpGatewayRoute `json:"HttpRoute,omitempty"`
+
+	// Priority AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutespec.html#cfn-appmesh-gatewayroute-gatewayroutespec-priority
+	Priority *types.Value `json:"Priority,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

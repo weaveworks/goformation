@@ -28,17 +28,22 @@ type DataSource_ServiceNowKnowledgeArticleConfiguration struct {
 	// ExcludeAttachmentFilePatterns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-excludeattachmentfilepatterns
-	ExcludeAttachmentFilePatterns *DataSource_DataSourceInclusionsExclusionsStrings `json:"ExcludeAttachmentFilePatterns,omitempty"`
+	ExcludeAttachmentFilePatterns *types.Value `json:"ExcludeAttachmentFilePatterns,omitempty"`
 
 	// FieldMappings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-fieldmappings
-	FieldMappings *DataSource_DataSourceToIndexFieldMappingList `json:"FieldMappings,omitempty"`
+	FieldMappings []DataSource_DataSourceToIndexFieldMapping `json:"FieldMappings,omitempty"`
+
+	// FilterQuery AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-filterquery
+	FilterQuery *types.Value `json:"FilterQuery,omitempty"`
 
 	// IncludeAttachmentFilePatterns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html#cfn-kendra-datasource-servicenowknowledgearticleconfiguration-includeattachmentfilepatterns
-	IncludeAttachmentFilePatterns *DataSource_DataSourceInclusionsExclusionsStrings `json:"IncludeAttachmentFilePatterns,omitempty"`
+	IncludeAttachmentFilePatterns *types.Value `json:"IncludeAttachmentFilePatterns,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -23,12 +23,12 @@ type DataSource_SalesforceConfiguration struct {
 	// ExcludeAttachmentFilePatterns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html#cfn-kendra-datasource-salesforceconfiguration-excludeattachmentfilepatterns
-	ExcludeAttachmentFilePatterns *DataSource_DataSourceInclusionsExclusionsStrings `json:"ExcludeAttachmentFilePatterns,omitempty"`
+	ExcludeAttachmentFilePatterns *types.Value `json:"ExcludeAttachmentFilePatterns,omitempty"`
 
 	// IncludeAttachmentFilePatterns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html#cfn-kendra-datasource-salesforceconfiguration-includeattachmentfilepatterns
-	IncludeAttachmentFilePatterns *DataSource_DataSourceInclusionsExclusionsStrings `json:"IncludeAttachmentFilePatterns,omitempty"`
+	IncludeAttachmentFilePatterns *types.Value `json:"IncludeAttachmentFilePatterns,omitempty"`
 
 	// KnowledgeArticleConfiguration AWS CloudFormation Property
 	// Required: false
@@ -53,7 +53,7 @@ type DataSource_SalesforceConfiguration struct {
 	// StandardObjectConfigurations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html#cfn-kendra-datasource-salesforceconfiguration-standardobjectconfigurations
-	StandardObjectConfigurations *DataSource_SalesforceStandardObjectConfigurationList `json:"StandardObjectConfigurations,omitempty"`
+	StandardObjectConfigurations []DataSource_SalesforceStandardObjectConfiguration `json:"StandardObjectConfigurations,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

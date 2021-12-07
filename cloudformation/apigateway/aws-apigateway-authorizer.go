@@ -45,7 +45,7 @@ type Authorizer struct {
 	IdentityValidationExpression *types.Value `json:"IdentityValidationExpression,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-name
 	Name *types.Value `json:"Name,omitempty"`
 

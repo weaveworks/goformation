@@ -34,10 +34,25 @@ type JobDefinition struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-parameters
 	Parameters interface{} `json:"Parameters,omitempty"`
 
+	// PlatformCapabilities AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-platformcapabilities
+	PlatformCapabilities *types.Value `json:"PlatformCapabilities,omitempty"`
+
+	// PropagateTags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-propagatetags
+	PropagateTags *types.Value `json:"PropagateTags,omitempty"`
+
 	// RetryStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-retrystrategy
 	RetryStrategy *JobDefinition_RetryStrategy `json:"RetryStrategy,omitempty"`
+
+	// SchedulingPriority AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-schedulingpriority
+	SchedulingPriority *types.Value `json:"SchedulingPriority,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

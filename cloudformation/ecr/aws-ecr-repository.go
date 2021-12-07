@@ -15,10 +15,15 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html
 type Repository struct {
 
+	// EncryptionConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-encryptionconfiguration
+	EncryptionConfiguration *Repository_EncryptionConfiguration `json:"EncryptionConfiguration,omitempty"`
+
 	// ImageScanningConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-imagescanningconfiguration
-	ImageScanningConfiguration interface{} `json:"ImageScanningConfiguration,omitempty"`
+	ImageScanningConfiguration *Repository_ImageScanningConfiguration `json:"ImageScanningConfiguration,omitempty"`
 
 	// ImageTagMutability AWS CloudFormation Property
 	// Required: false

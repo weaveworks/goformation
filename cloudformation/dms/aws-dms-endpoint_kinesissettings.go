@@ -10,10 +10,40 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html
 type Endpoint_KinesisSettings struct {
 
+	// IncludeControlDetails AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includecontroldetails
+	IncludeControlDetails *types.Value `json:"IncludeControlDetails,omitempty"`
+
+	// IncludeNullAndEmpty AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includenullandempty
+	IncludeNullAndEmpty *types.Value `json:"IncludeNullAndEmpty,omitempty"`
+
+	// IncludeTableAlterOperations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetablealteroperations
+	IncludeTableAlterOperations *types.Value `json:"IncludeTableAlterOperations,omitempty"`
+
+	// IncludeTransactionDetails AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetransactiondetails
+	IncludeTransactionDetails *types.Value `json:"IncludeTransactionDetails,omitempty"`
+
 	// MessageFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-messageformat
 	MessageFormat *types.Value `json:"MessageFormat,omitempty"`
+
+	// NoHexPrefix AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-nohexprefix
+	NoHexPrefix *types.Value `json:"NoHexPrefix,omitempty"`
+
+	// PartitionIncludeSchemaTable AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-partitionincludeschematable
+	PartitionIncludeSchemaTable *types.Value `json:"PartitionIncludeSchemaTable,omitempty"`
 
 	// ServiceAccessRoleArn AWS CloudFormation Property
 	// Required: false

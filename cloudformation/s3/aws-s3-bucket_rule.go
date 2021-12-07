@@ -25,10 +25,20 @@ type Bucket_Rule struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-expirationindays
 	ExpirationInDays *types.Value `json:"ExpirationInDays,omitempty"`
 
+	// ExpiredObjectDeleteMarker AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-rule-expiredobjectdeletemarker
+	ExpiredObjectDeleteMarker *types.Value `json:"ExpiredObjectDeleteMarker,omitempty"`
+
 	// Id AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-id
 	Id *types.Value `json:"Id,omitempty"`
+
+	// NoncurrentVersionExpiration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpiration
+	NoncurrentVersionExpiration *Bucket_NoncurrentVersionExpiration `json:"NoncurrentVersionExpiration,omitempty"`
 
 	// NoncurrentVersionExpirationInDays AWS CloudFormation Property
 	// Required: false
@@ -44,6 +54,16 @@ type Bucket_Rule struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions
 	NoncurrentVersionTransitions []Bucket_NoncurrentVersionTransition `json:"NoncurrentVersionTransitions,omitempty"`
+
+	// ObjectSizeGreaterThan AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-objectsizegreaterthan
+	ObjectSizeGreaterThan *types.Value `json:"ObjectSizeGreaterThan,omitempty"`
+
+	// ObjectSizeLessThan AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-objectsizelessthan
+	ObjectSizeLessThan *types.Value `json:"ObjectSizeLessThan,omitempty"`
 
 	// Prefix AWS CloudFormation Property
 	// Required: false

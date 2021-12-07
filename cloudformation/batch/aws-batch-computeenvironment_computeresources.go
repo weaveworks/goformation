@@ -25,6 +25,11 @@ type ComputeEnvironment_ComputeResources struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-desiredvcpus
 	DesiredvCpus *types.Value `json:"DesiredvCpus,omitempty"`
 
+	// Ec2Configuration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-ec2configuration
+	Ec2Configuration []ComputeEnvironment_Ec2ConfigurationObject `json:"Ec2Configuration,omitempty"`
+
 	// Ec2KeyPair AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-ec2keypair
@@ -36,12 +41,12 @@ type ComputeEnvironment_ComputeResources struct {
 	ImageId *types.Value `json:"ImageId,omitempty"`
 
 	// InstanceRole AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-instancerole
 	InstanceRole *types.Value `json:"InstanceRole,omitempty"`
 
 	// InstanceTypes AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-instancetypes
 	InstanceTypes *types.Value `json:"InstanceTypes,omitempty"`
 
@@ -56,9 +61,9 @@ type ComputeEnvironment_ComputeResources struct {
 	MaxvCpus *types.Value `json:"MaxvCpus"`
 
 	// MinvCpus AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-minvcpus
-	MinvCpus *types.Value `json:"MinvCpus"`
+	MinvCpus *types.Value `json:"MinvCpus,omitempty"`
 
 	// PlacementGroup AWS CloudFormation Property
 	// Required: false

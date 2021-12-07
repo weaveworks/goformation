@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation/types"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -42,7 +43,7 @@ type GameServerGroup struct {
 	// InstanceDefinitions AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions
-	InstanceDefinitions *GameServerGroup_InstanceDefinitions `json:"InstanceDefinitions,omitempty"`
+	InstanceDefinitions []GameServerGroup_InstanceDefinition `json:"InstanceDefinitions,omitempty"`
 
 	// LaunchTemplate AWS CloudFormation Property
 	// Required: true
@@ -67,12 +68,12 @@ type GameServerGroup struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-tags
-	Tags *GameServerGroup_Tags `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// VpcSubnets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-vpcsubnets
-	VpcSubnets *GameServerGroup_VpcSubnets `json:"VpcSubnets,omitempty"`
+	VpcSubnets *types.Value `json:"VpcSubnets,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

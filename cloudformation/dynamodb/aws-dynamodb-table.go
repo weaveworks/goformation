@@ -25,6 +25,11 @@ type Table struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-billingmode
 	BillingMode *types.Value `json:"BillingMode,omitempty"`
 
+	// ContributorInsightsSpecification AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-contributorinsightsspecification-enabled
+	ContributorInsightsSpecification *Table_ContributorInsightsSpecification `json:"ContributorInsightsSpecification,omitempty"`
+
 	// GlobalSecondaryIndexes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi
@@ -34,6 +39,11 @@ type Table struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema
 	KeySchema []Table_KeySchema `json:"KeySchema,omitempty"`
+
+	// KinesisStreamSpecification AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-kinesisstreamspecification
+	KinesisStreamSpecification *Table_KinesisStreamSpecification `json:"KinesisStreamSpecification,omitempty"`
 
 	// LocalSecondaryIndexes AWS CloudFormation Property
 	// Required: false
@@ -59,6 +69,11 @@ type Table struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification
 	StreamSpecification *Table_StreamSpecification `json:"StreamSpecification,omitempty"`
+
+	// TableClass AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tableclass
+	TableClass *types.Value `json:"TableClass,omitempty"`
 
 	// TableName AWS CloudFormation Property
 	// Required: false

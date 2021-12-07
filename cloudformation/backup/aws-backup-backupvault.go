@@ -27,12 +27,17 @@ type BackupVault struct {
 	// BackupVaultTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags
-	BackupVaultTags interface{} `json:"BackupVaultTags,omitempty"`
+	BackupVaultTags map[string]*types.Value `json:"BackupVaultTags,omitempty"`
 
 	// EncryptionKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-encryptionkeyarn
 	EncryptionKeyArn *types.Value `json:"EncryptionKeyArn,omitempty"`
+
+	// LockConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-lockconfiguration
+	LockConfiguration *BackupVault_LockConfigurationType `json:"LockConfiguration,omitempty"`
 
 	// Notifications AWS CloudFormation Property
 	// Required: false

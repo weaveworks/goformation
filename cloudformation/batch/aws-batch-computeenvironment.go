@@ -25,7 +25,7 @@ type ComputeEnvironment struct {
 	ComputeResources *ComputeEnvironment_ComputeResources `json:"ComputeResources,omitempty"`
 
 	// ServiceRole AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-servicerole
 	ServiceRole *types.Value `json:"ServiceRole,omitempty"`
 
@@ -43,6 +43,11 @@ type ComputeEnvironment struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-type
 	Type *types.Value `json:"Type,omitempty"`
+
+	// UnmanagedvCpus AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-unmanagedvcpus
+	UnmanagedvCpus *types.Value `json:"UnmanagedvCpus,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

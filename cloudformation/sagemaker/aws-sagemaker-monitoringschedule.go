@@ -15,11 +15,6 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html
 type MonitoringSchedule struct {
 
-	// CreationTime AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-creationtime
-	CreationTime *types.Value `json:"CreationTime,omitempty"`
-
 	// EndpointName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-endpointname
@@ -30,20 +25,10 @@ type MonitoringSchedule struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-failurereason
 	FailureReason *types.Value `json:"FailureReason,omitempty"`
 
-	// LastModifiedTime AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-lastmodifiedtime
-	LastModifiedTime *types.Value `json:"LastModifiedTime,omitempty"`
-
 	// LastMonitoringExecutionSummary AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-lastmonitoringexecutionsummary
 	LastMonitoringExecutionSummary *MonitoringSchedule_MonitoringExecutionSummary `json:"LastMonitoringExecutionSummary,omitempty"`
-
-	// MonitoringScheduleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html#cfn-sagemaker-monitoringschedule-monitoringschedulearn
-	MonitoringScheduleArn *types.Value `json:"MonitoringScheduleArn,omitempty"`
 
 	// MonitoringScheduleConfig AWS CloudFormation Property
 	// Required: true
