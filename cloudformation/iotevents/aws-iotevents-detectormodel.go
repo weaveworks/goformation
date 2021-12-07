@@ -16,7 +16,7 @@ import (
 type DetectorModel struct {
 
 	// DetectorModelDefinition AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-detectormodeldefinition
 	DetectorModelDefinition *DetectorModel_DetectorModelDefinition `json:"DetectorModelDefinition,omitempty"`
 
@@ -41,7 +41,7 @@ type DetectorModel struct {
 	Key *types.Value `json:"Key,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-rolearn
 	RoleArn *types.Value `json:"RoleArn,omitempty"`
 

@@ -45,6 +45,11 @@ type RestApi struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-description
 	Description *types.Value `json:"Description,omitempty"`
 
+	// DisableExecuteApiEndpoint AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-disableexecuteapiendpoint
+	DisableExecuteApiEndpoint *types.Value `json:"DisableExecuteApiEndpoint,omitempty"`
+
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration
@@ -59,6 +64,11 @@ type RestApi struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize
 	MinimumCompressionSize *types.Value `json:"MinimumCompressionSize,omitempty"`
+
+	// Mode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-mode
+	Mode *types.Value `json:"Mode,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

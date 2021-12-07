@@ -14,20 +14,40 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html
 type GameSessionQueue struct {
 
+	// CustomEventData AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-customeventdata
+	CustomEventData *types.Value `json:"CustomEventData,omitempty"`
+
 	// Destinations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-destinations
 	Destinations []GameSessionQueue_Destination `json:"Destinations,omitempty"`
+
+	// FilterConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-filterconfiguration
+	FilterConfiguration *GameSessionQueue_FilterConfiguration `json:"FilterConfiguration,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-name
 	Name *types.Value `json:"Name,omitempty"`
 
+	// NotificationTarget AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-notificationtarget
+	NotificationTarget *types.Value `json:"NotificationTarget,omitempty"`
+
 	// PlayerLatencyPolicies AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies
 	PlayerLatencyPolicies []GameSessionQueue_PlayerLatencyPolicy `json:"PlayerLatencyPolicies,omitempty"`
+
+	// PriorityConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-priorityconfiguration
+	PriorityConfiguration *GameSessionQueue_PriorityConfiguration `json:"PriorityConfiguration,omitempty"`
 
 	// TimeoutInSeconds AWS CloudFormation Property
 	// Required: false

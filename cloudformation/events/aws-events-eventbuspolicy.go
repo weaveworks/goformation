@@ -15,7 +15,7 @@ import (
 type EventBusPolicy struct {
 
 	// Action AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-action
 	Action *types.Value `json:"Action,omitempty"`
 
@@ -30,9 +30,14 @@ type EventBusPolicy struct {
 	EventBusName *types.Value `json:"EventBusName,omitempty"`
 
 	// Principal AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-principal
 	Principal *types.Value `json:"Principal,omitempty"`
+
+	// Statement AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-statement
+	Statement interface{} `json:"Statement,omitempty"`
 
 	// StatementId AWS CloudFormation Property
 	// Required: true

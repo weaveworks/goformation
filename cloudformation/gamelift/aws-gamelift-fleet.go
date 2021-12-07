@@ -40,7 +40,7 @@ type Fleet struct {
 	EC2InboundPermissions []Fleet_IpPermission `json:"EC2InboundPermissions,omitempty"`
 
 	// EC2InstanceType AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype
 	EC2InstanceType *types.Value `json:"EC2InstanceType,omitempty"`
 
@@ -54,10 +54,10 @@ type Fleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn
 	InstanceRoleARN *types.Value `json:"InstanceRoleARN,omitempty"`
 
-	// LogPaths AWS CloudFormation Property
+	// Locations AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-logpaths
-	LogPaths *types.Value `json:"LogPaths,omitempty"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations
+	Locations []Fleet_LocationConfiguration `json:"Locations,omitempty"`
 
 	// MaxSize AWS CloudFormation Property
 	// Required: false
@@ -75,7 +75,7 @@ type Fleet struct {
 	MinSize *types.Value `json:"MinSize,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name
 	Name *types.Value `json:"Name,omitempty"`
 
@@ -108,16 +108,6 @@ type Fleet struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid
 	ScriptId *types.Value `json:"ScriptId,omitempty"`
-
-	// ServerLaunchParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-serverlaunchparameters
-	ServerLaunchParameters *types.Value `json:"ServerLaunchParameters,omitempty"`
-
-	// ServerLaunchPath AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-serverlaunchpath
-	ServerLaunchPath *types.Value `json:"ServerLaunchPath,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

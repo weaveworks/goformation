@@ -14,6 +14,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html
 type StateMachine struct {
 
+	// Definition AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definition
+	Definition *StateMachine_Definition `json:"Definition,omitempty"`
+
 	// DefinitionS3Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitions3location
@@ -27,7 +32,7 @@ type StateMachine struct {
 	// DefinitionSubstitutions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionsubstitutions
-	DefinitionSubstitutions *StateMachine_DefinitionSubstitutions `json:"DefinitionSubstitutions,omitempty"`
+	DefinitionSubstitutions map[string]*types.Value `json:"DefinitionSubstitutions,omitempty"`
 
 	// LoggingConfiguration AWS CloudFormation Property
 	// Required: false

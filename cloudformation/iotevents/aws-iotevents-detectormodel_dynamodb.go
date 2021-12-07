@@ -11,7 +11,7 @@ import (
 type DetectorModel_DynamoDB struct {
 
 	// HashKeyField AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-hashkeyfield
 	HashKeyField *types.Value `json:"HashKeyField,omitempty"`
 
@@ -21,7 +21,7 @@ type DetectorModel_DynamoDB struct {
 	HashKeyType *types.Value `json:"HashKeyType,omitempty"`
 
 	// HashKeyValue AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-hashkeyvalue
 	HashKeyValue *types.Value `json:"HashKeyValue,omitempty"`
 
@@ -56,7 +56,7 @@ type DetectorModel_DynamoDB struct {
 	RangeKeyValue *types.Value `json:"RangeKeyValue,omitempty"`
 
 	// TableName AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-tablename
 	TableName *types.Value `json:"TableName,omitempty"`
 

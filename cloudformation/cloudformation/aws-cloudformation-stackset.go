@@ -24,6 +24,11 @@ type StackSet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment
 	AutoDeployment *StackSet_AutoDeployment `json:"AutoDeployment,omitempty"`
 
+	// CallAs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas
+	CallAs *types.Value `json:"CallAs,omitempty"`
+
 	// Capabilities AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities
@@ -39,6 +44,11 @@ type StackSet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-executionrolename
 	ExecutionRoleName *types.Value `json:"ExecutionRoleName,omitempty"`
 
+	// ManagedExecution AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-managedexecution
+	ManagedExecution interface{} `json:"ManagedExecution,omitempty"`
+
 	// OperationPreferences AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences
@@ -50,7 +60,7 @@ type StackSet struct {
 	Parameters []StackSet_Parameter `json:"Parameters,omitempty"`
 
 	// PermissionModel AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel
 	PermissionModel *types.Value `json:"PermissionModel,omitempty"`
 
@@ -60,7 +70,7 @@ type StackSet struct {
 	StackInstancesGroup []StackSet_StackInstances `json:"StackInstancesGroup,omitempty"`
 
 	// StackSetName AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname
 	StackSetName *types.Value `json:"StackSetName,omitempty"`
 

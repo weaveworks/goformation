@@ -20,6 +20,11 @@ type TransitGateway struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-amazonsideasn
 	AmazonSideAsn *types.Value `json:"AmazonSideAsn,omitempty"`
 
+	// AssociationDefaultRouteTableId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-associationdefaultroutetableid
+	AssociationDefaultRouteTableId *types.Value `json:"AssociationDefaultRouteTableId,omitempty"`
+
 	// AutoAcceptSharedAttachments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-autoacceptsharedattachments
@@ -50,10 +55,20 @@ type TransitGateway struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-multicastsupport
 	MulticastSupport *types.Value `json:"MulticastSupport,omitempty"`
 
+	// PropagationDefaultRouteTableId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-propagationdefaultroutetableid
+	PropagationDefaultRouteTableId *types.Value `json:"PropagationDefaultRouteTableId,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-tags
 	Tags []cloudformation.Tag `json:"Tags,omitempty"`
+
+	// TransitGatewayCidrBlocks AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-transitgatewaycidrblocks
+	TransitGatewayCidrBlocks *types.Value `json:"TransitGatewayCidrBlocks,omitempty"`
 
 	// VpnEcmpSupport AWS CloudFormation Property
 	// Required: false

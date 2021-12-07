@@ -15,10 +15,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html
 type Function struct {
 
+	// Architectures AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-architectures
+	Architectures *types.Value `json:"Architectures,omitempty"`
+
 	// Code AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code
 	Code *Function_Code `json:"Code,omitempty"`
+
+	// CodeSigningConfigArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-codesigningconfigarn
+	CodeSigningConfigArn *types.Value `json:"CodeSigningConfigArn,omitempty"`
 
 	// DeadLetterConfig AWS CloudFormation Property
 	// Required: false
@@ -46,9 +56,14 @@ type Function struct {
 	FunctionName *types.Value `json:"FunctionName,omitempty"`
 
 	// Handler AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-handler
 	Handler *types.Value `json:"Handler,omitempty"`
+
+	// ImageConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig
+	ImageConfig *Function_ImageConfig `json:"ImageConfig,omitempty"`
 
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
@@ -65,6 +80,11 @@ type Function struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-memorysize
 	MemorySize *types.Value `json:"MemorySize,omitempty"`
 
+	// PackageType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-packagetype
+	PackageType *types.Value `json:"PackageType,omitempty"`
+
 	// ReservedConcurrentExecutions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-reservedconcurrentexecutions
@@ -76,7 +96,7 @@ type Function struct {
 	Role *types.Value `json:"Role,omitempty"`
 
 	// Runtime AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtime
 	Runtime *types.Value `json:"Runtime,omitempty"`
 

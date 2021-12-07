@@ -15,6 +15,71 @@ type Endpoint_KafkaSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-broker
 	Broker *types.Value `json:"Broker,omitempty"`
 
+	// IncludeControlDetails AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-includecontroldetails
+	IncludeControlDetails *types.Value `json:"IncludeControlDetails,omitempty"`
+
+	// IncludeNullAndEmpty AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-includenullandempty
+	IncludeNullAndEmpty *types.Value `json:"IncludeNullAndEmpty,omitempty"`
+
+	// IncludeTableAlterOperations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-includetablealteroperations
+	IncludeTableAlterOperations *types.Value `json:"IncludeTableAlterOperations,omitempty"`
+
+	// IncludeTransactionDetails AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-includetransactiondetails
+	IncludeTransactionDetails *types.Value `json:"IncludeTransactionDetails,omitempty"`
+
+	// NoHexPrefix AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-nohexprefix
+	NoHexPrefix *types.Value `json:"NoHexPrefix,omitempty"`
+
+	// PartitionIncludeSchemaTable AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-partitionincludeschematable
+	PartitionIncludeSchemaTable *types.Value `json:"PartitionIncludeSchemaTable,omitempty"`
+
+	// SaslPassword AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-saslpassword
+	SaslPassword *types.Value `json:"SaslPassword,omitempty"`
+
+	// SaslUserName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-saslusername
+	SaslUserName *types.Value `json:"SaslUserName,omitempty"`
+
+	// SecurityProtocol AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-securityprotocol
+	SecurityProtocol *types.Value `json:"SecurityProtocol,omitempty"`
+
+	// SslCaCertificateArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-sslcacertificatearn
+	SslCaCertificateArn *types.Value `json:"SslCaCertificateArn,omitempty"`
+
+	// SslClientCertificateArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-sslclientcertificatearn
+	SslClientCertificateArn *types.Value `json:"SslClientCertificateArn,omitempty"`
+
+	// SslClientKeyArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-sslclientkeyarn
+	SslClientKeyArn *types.Value `json:"SslClientKeyArn,omitempty"`
+
+	// SslClientKeyPassword AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-sslclientkeypassword
+	SslClientKeyPassword *types.Value `json:"SslClientKeyPassword,omitempty"`
+
 	// Topic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-topic
