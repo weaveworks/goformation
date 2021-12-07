@@ -27,12 +27,12 @@ type VPCCidrBlock struct {
 	// Ipv6CidrBlock AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock
-	Ipv6CidrBlock string `json:"Ipv6CidrBlock,omitempty"`
+	Ipv6CidrBlock *types.Value `json:"Ipv6CidrBlock,omitempty"`
 
 	// Ipv6Pool AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6pool
-	Ipv6Pool string `json:"Ipv6Pool,omitempty"`
+	Ipv6Pool *types.Value `json:"Ipv6Pool,omitempty"`
 
 	// VpcId AWS CloudFormation Property
 	// Required: true
