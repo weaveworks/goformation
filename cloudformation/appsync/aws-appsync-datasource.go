@@ -49,6 +49,11 @@ type DataSource struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-name
 	Name *types.Value `json:"Name,omitempty"`
 
+	// OpenSearchServiceConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-opensearchserviceconfig
+	OpenSearchServiceConfig *DataSource_OpenSearchServiceConfig `json:"OpenSearchServiceConfig,omitempty"`
+
 	// RelationalDatabaseConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-relationaldatabaseconfig

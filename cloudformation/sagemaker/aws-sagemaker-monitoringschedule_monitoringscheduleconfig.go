@@ -1,6 +1,8 @@
 package sagemaker
 
 import (
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -9,9 +11,19 @@ import (
 type MonitoringSchedule_MonitoringScheduleConfig struct {
 
 	// MonitoringJobDefinition AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringscheduleconfig.html#cfn-sagemaker-monitoringschedule-monitoringscheduleconfig-monitoringjobdefinition
 	MonitoringJobDefinition *MonitoringSchedule_MonitoringJobDefinition `json:"MonitoringJobDefinition,omitempty"`
+
+	// MonitoringJobDefinitionName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringscheduleconfig.html#cfn-sagemaker-monitoringschedule-monitoringscheduleconfig-monitoringjobdefinitionname
+	MonitoringJobDefinitionName *types.Value `json:"MonitoringJobDefinitionName,omitempty"`
+
+	// MonitoringType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringscheduleconfig.html#cfn-sagemaker-monitoringschedule-monitoringscheduleconfig-monitoringtype
+	MonitoringType *types.Value `json:"MonitoringType,omitempty"`
 
 	// ScheduleConfig AWS CloudFormation Property
 	// Required: false

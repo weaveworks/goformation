@@ -15,15 +15,30 @@ type UserPool_LambdaConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-createauthchallenge
 	CreateAuthChallenge *types.Value `json:"CreateAuthChallenge,omitempty"`
 
+	// CustomEmailSender AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-customemailsender
+	CustomEmailSender *UserPool_CustomEmailSender `json:"CustomEmailSender,omitempty"`
+
 	// CustomMessage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-custommessage
 	CustomMessage *types.Value `json:"CustomMessage,omitempty"`
 
+	// CustomSMSSender AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-customsmssender
+	CustomSMSSender *UserPool_CustomSMSSender `json:"CustomSMSSender,omitempty"`
+
 	// DefineAuthChallenge AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-defineauthchallenge
 	DefineAuthChallenge *types.Value `json:"DefineAuthChallenge,omitempty"`
+
+	// KMSKeyID AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-kmskeyid
+	KMSKeyID *types.Value `json:"KMSKeyID,omitempty"`
 
 	// PostAuthentication AWS CloudFormation Property
 	// Required: false

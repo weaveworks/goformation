@@ -25,10 +25,15 @@ type RuleGroup_Rule struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html#cfn-wafv2-rulegroup-rule-priority
 	Priority *types.Value `json:"Priority"`
 
+	// RuleLabels AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html#cfn-wafv2-rulegroup-rule-rulelabels
+	RuleLabels []RuleGroup_Label `json:"RuleLabels,omitempty"`
+
 	// Statement AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html#cfn-wafv2-rulegroup-rule-statement
-	Statement *RuleGroup_StatementOne `json:"Statement,omitempty"`
+	Statement *RuleGroup_Statement `json:"Statement,omitempty"`
 
 	// VisibilityConfig AWS CloudFormation Property
 	// Required: true

@@ -1,6 +1,8 @@
 package kendra
 
 import (
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -11,12 +13,12 @@ type DataSource_SalesforceKnowledgeArticleConfiguration struct {
 	// CustomKnowledgeArticleTypeConfigurations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration.html#cfn-kendra-datasource-salesforceknowledgearticleconfiguration-customknowledgearticletypeconfigurations
-	CustomKnowledgeArticleTypeConfigurations *DataSource_SalesforceCustomKnowledgeArticleTypeConfigurationList `json:"CustomKnowledgeArticleTypeConfigurations,omitempty"`
+	CustomKnowledgeArticleTypeConfigurations []DataSource_SalesforceCustomKnowledgeArticleTypeConfiguration `json:"CustomKnowledgeArticleTypeConfigurations,omitempty"`
 
 	// IncludedStates AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration.html#cfn-kendra-datasource-salesforceknowledgearticleconfiguration-includedstates
-	IncludedStates *DataSource_SalesforceKnowledgeArticleStateList `json:"IncludedStates,omitempty"`
+	IncludedStates *types.Value `json:"IncludedStates,omitempty"`
 
 	// StandardKnowledgeArticleTypeConfiguration AWS CloudFormation Property
 	// Required: false

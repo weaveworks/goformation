@@ -21,7 +21,7 @@ type DetectorModel_Event struct {
 	Condition *types.Value `json:"Condition,omitempty"`
 
 	// EventName AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname
 	EventName *types.Value `json:"EventName,omitempty"`
 

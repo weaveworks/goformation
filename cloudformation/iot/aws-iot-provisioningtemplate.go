@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation/types"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -37,7 +38,7 @@ type ProvisioningTemplate struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-tags
-	Tags *ProvisioningTemplate_Tags `json:"Tags,omitempty"`
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// TemplateBody AWS CloudFormation Property
 	// Required: true

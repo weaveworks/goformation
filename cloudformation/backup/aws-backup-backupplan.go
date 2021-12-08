@@ -5,6 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/types"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -20,7 +22,7 @@ type BackupPlan struct {
 	// BackupPlanTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags
-	BackupPlanTags interface{} `json:"BackupPlanTags,omitempty"`
+	BackupPlanTags map[string]*types.Value `json:"BackupPlanTags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

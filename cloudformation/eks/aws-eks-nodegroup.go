@@ -19,6 +19,11 @@ type Nodegroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-amitype
 	AmiType *types.Value `json:"AmiType,omitempty"`
 
+	// CapacityType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-capacitytype
+	CapacityType *types.Value `json:"CapacityType,omitempty"`
+
 	// ClusterName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-clustername
@@ -38,11 +43,6 @@ type Nodegroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes
 	InstanceTypes *types.Value `json:"InstanceTypes,omitempty"`
-
-	// CapacityType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-capacitytype
-	CapacityType *types.Value `json:"CapacityType,omitempty"`
 
 	// Labels AWS CloudFormation Property
 	// Required: false
@@ -92,11 +92,11 @@ type Nodegroup struct {
 	// Taints AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-taints
-	Taints []*Nodegroup_Taints `json:"Taints,omitempty"`
+	Taints []Nodegroup_Taint `json:"Taints,omitempty"`
 
 	// UpdateConfig AWS CloudFormation Property
 	// Required: false
-	// TODO @nikimanoledaki: Add link to docs
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-updateconfig
 	UpdateConfig *Nodegroup_UpdateConfig `json:"UpdateConfig,omitempty"`
 
 	// Version AWS CloudFormation Property

@@ -21,7 +21,7 @@ type Alias_RoutingStrategy struct {
 	Message *types.Value `json:"Message,omitempty"`
 
 	// Type AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type
 	Type *types.Value `json:"Type,omitempty"`
 

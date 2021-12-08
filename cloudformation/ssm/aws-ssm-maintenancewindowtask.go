@@ -14,6 +14,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html
 type MaintenanceWindowTask struct {
 
+	// CutoffBehavior AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-cutoffbehavior
+	CutoffBehavior *types.Value `json:"CutoffBehavior,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-description
@@ -25,12 +30,12 @@ type MaintenanceWindowTask struct {
 	LoggingInfo *MaintenanceWindowTask_LoggingInfo `json:"LoggingInfo,omitempty"`
 
 	// MaxConcurrency AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxconcurrency
 	MaxConcurrency *types.Value `json:"MaxConcurrency,omitempty"`
 
 	// MaxErrors AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxerrors
 	MaxErrors *types.Value `json:"MaxErrors,omitempty"`
 
@@ -50,7 +55,7 @@ type MaintenanceWindowTask struct {
 	ServiceRoleArn *types.Value `json:"ServiceRoleArn,omitempty"`
 
 	// Targets AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-targets
 	Targets []MaintenanceWindowTask_Target `json:"Targets,omitempty"`
 

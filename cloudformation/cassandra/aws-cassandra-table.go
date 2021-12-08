@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation/types"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -24,6 +25,16 @@ type Table struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-clusteringkeycolumns
 	ClusteringKeyColumns []Table_ClusteringKeyColumn `json:"ClusteringKeyColumns,omitempty"`
 
+	// DefaultTimeToLive AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-defaulttimetolive
+	DefaultTimeToLive *types.Value `json:"DefaultTimeToLive,omitempty"`
+
+	// EncryptionSpecification AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-encryptionspecification
+	EncryptionSpecification *Table_EncryptionSpecification `json:"EncryptionSpecification,omitempty"`
+
 	// KeyspaceName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-keyspacename
@@ -34,6 +45,11 @@ type Table struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-partitionkeycolumns
 	PartitionKeyColumns []Table_Column `json:"PartitionKeyColumns,omitempty"`
 
+	// PointInTimeRecoveryEnabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-pointintimerecoveryenabled
+	PointInTimeRecoveryEnabled *types.Value `json:"PointInTimeRecoveryEnabled,omitempty"`
+
 	// RegularColumns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-regularcolumns
@@ -43,6 +59,11 @@ type Table struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-tablename
 	TableName *types.Value `json:"TableName,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-tags
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

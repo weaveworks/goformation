@@ -15,10 +15,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html
 type CertificateAuthority struct {
 
+	// CsrExtensions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-csrextensions
+	CsrExtensions *CertificateAuthority_CsrExtensions `json:"CsrExtensions,omitempty"`
+
 	// KeyAlgorithm AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-keyalgorithm
 	KeyAlgorithm *types.Value `json:"KeyAlgorithm,omitempty"`
+
+	// KeyStorageSecurityStandard AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-keystoragesecuritystandard
+	KeyStorageSecurityStandard *types.Value `json:"KeyStorageSecurityStandard,omitempty"`
 
 	// RevocationConfiguration AWS CloudFormation Property
 	// Required: false

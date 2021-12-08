@@ -10,18 +10,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html
 type Cluster_KubernetesNetworkConfig struct {
 
+	// IpFamily AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-ipfamily
+	IpFamily *types.Value `json:"IpFamily,omitempty"`
+
 	// ServiceIpv4Cidr AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv4cidr
 	ServiceIpv4Cidr *types.Value `json:"ServiceIpv4Cidr,omitempty"`
 
-	// ServiceIpv6Cidr represents the CIDR block to assign the Kubernetes Service IP addresses from
-	// Expects a string
+	// ServiceIpv6Cidr AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv6cidr
 	ServiceIpv6Cidr *types.Value `json:"ServiceIpv6Cidr,omitempty"`
-
-	// IpFamily can only be "ipv4" or "ipv6"
-	// IPv6 is only supported on clusters with k8s version 1.21 or higher
-	IpFamily *types.Value `json:"IpFamily,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation/types"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -23,6 +24,11 @@ type Application struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-computeplatform
 	ComputePlatform *types.Value `json:"ComputePlatform,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-tags
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

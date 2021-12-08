@@ -21,7 +21,7 @@ type DetectorModel_SetTimer struct {
 	Seconds *types.Value `json:"Seconds,omitempty"`
 
 	// TimerName AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-timername
 	TimerName *types.Value `json:"TimerName,omitempty"`
 

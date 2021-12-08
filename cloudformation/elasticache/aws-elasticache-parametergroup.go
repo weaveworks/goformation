@@ -7,6 +7,7 @@ import (
 
 	"github.com/weaveworks/goformation/v4/cloudformation/types"
 
+	"github.com/weaveworks/goformation/v4/cloudformation/cloudformation"
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
@@ -28,6 +29,11 @@ type ParameterGroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-properties
 	Properties map[string]*types.Value `json:"Properties,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-tags
+	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
