@@ -55,6 +55,8 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version
 	Version *types.Value `json:"Version,omitempty"`
 
+	OutpostConfig *OutpostConfig `json:"OutpostConfig,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 
@@ -74,6 +76,11 @@ type Cluster struct {
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *Cluster) AWSCloudFormationType() string {
 	return "AWS::EKS::Cluster"
+}
+
+type OutpostConfig struct {
+	OutpostARNs              *types.Value `json:"OutpostArns"`
+	ControlPlaneInstanceType *types.Value `json:"ControlPlaneInstanceType,omitempty"`
 }
 
 // MarshalJSON is a custom JSON marshalling hook that embeds this object into
