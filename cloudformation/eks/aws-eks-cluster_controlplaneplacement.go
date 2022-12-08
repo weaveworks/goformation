@@ -6,19 +6,14 @@ import (
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
-// Cluster_EncryptionConfig AWS CloudFormation Resource (AWS::EKS::Cluster.EncryptionConfig)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html
-type Cluster_EncryptionConfig struct {
+// Cluster_ControlPlanePlacement AWS CloudFormation Resource (AWS::EKS::Cluster.ControlPlanePlacement)
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html
+type Cluster_ControlPlanePlacement struct {
 
-	// Provider AWS CloudFormation Property
+	// GroupName AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider
-	Provider *Cluster_Provider `json:"Provider,omitempty"`
-
-	// Resources AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources
-	Resources *types.Value `json:"Resources,omitempty"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html#cfn-eks-cluster-controlplaneplacement-groupname
+	GroupName *types.Value `json:"GroupName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
@@ -37,6 +32,6 @@ type Cluster_EncryptionConfig struct {
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
-func (r *Cluster_EncryptionConfig) AWSCloudFormationType() string {
-	return "AWS::EKS::Cluster.EncryptionConfig"
+func (r *Cluster_ControlPlanePlacement) AWSCloudFormationType() string {
+	return "AWS::EKS::Cluster.ControlPlanePlacement"
 }

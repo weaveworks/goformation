@@ -6,19 +6,19 @@ import (
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
-// Cluster_EncryptionConfig AWS CloudFormation Resource (AWS::EKS::Cluster.EncryptionConfig)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html
-type Cluster_EncryptionConfig struct {
+// IdentityProviderConfig_RequiredClaim AWS CloudFormation Resource (AWS::EKS::IdentityProviderConfig.RequiredClaim)
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-identityproviderconfig-requiredclaim.html
+type IdentityProviderConfig_RequiredClaim struct {
 
-	// Provider AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider
-	Provider *Cluster_Provider `json:"Provider,omitempty"`
+	// Key AWS CloudFormation Property
+	// Required: true
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-identityproviderconfig-requiredclaim.html#cfn-eks-identityproviderconfig-requiredclaim-key
+	Key *types.Value `json:"Key,omitempty"`
 
-	// Resources AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources
-	Resources *types.Value `json:"Resources,omitempty"`
+	// Value AWS CloudFormation Property
+	// Required: true
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-identityproviderconfig-requiredclaim.html#cfn-eks-identityproviderconfig-requiredclaim-value
+	Value *types.Value `json:"Value,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
@@ -37,6 +37,6 @@ type Cluster_EncryptionConfig struct {
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
-func (r *Cluster_EncryptionConfig) AWSCloudFormationType() string {
-	return "AWS::EKS::Cluster.EncryptionConfig"
+func (r *IdentityProviderConfig_RequiredClaim) AWSCloudFormationType() string {
+	return "AWS::EKS::IdentityProviderConfig.RequiredClaim"
 }

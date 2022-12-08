@@ -11,54 +11,34 @@ import (
 	"github.com/weaveworks/goformation/v4/cloudformation/policies"
 )
 
-// Cluster AWS CloudFormation Resource (AWS::EKS::Cluster)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html
-type Cluster struct {
+// IdentityProviderConfig AWS CloudFormation Resource (AWS::EKS::IdentityProviderConfig)
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html
+type IdentityProviderConfig struct {
 
-	// EncryptionConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig
-	EncryptionConfig []Cluster_EncryptionConfig `json:"EncryptionConfig,omitempty"`
-
-	// KubernetesNetworkConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubernetesnetworkconfig
-	KubernetesNetworkConfig *Cluster_KubernetesNetworkConfig `json:"KubernetesNetworkConfig,omitempty"`
-
-	// Logging AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-logging
-	Logging *Cluster_Logging `json:"Logging,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name
-	Name *types.Value `json:"Name,omitempty"`
-
-	// OutpostConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-outpostconfig
-	OutpostConfig *Cluster_OutpostConfig `json:"OutpostConfig,omitempty"`
-
-	// ResourcesVpcConfig AWS CloudFormation Property
+	// ClusterName AWS CloudFormation Property
 	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-resourcesvpcconfig
-	ResourcesVpcConfig *Cluster_ResourcesVpcConfig `json:"ResourcesVpcConfig,omitempty"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-clustername
+	ClusterName *types.Value `json:"ClusterName,omitempty"`
 
-	// RoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn
-	RoleArn *types.Value `json:"RoleArn,omitempty"`
+	// IdentityProviderConfigName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-identityproviderconfigname
+	IdentityProviderConfigName *types.Value `json:"IdentityProviderConfigName,omitempty"`
+
+	// Oidc AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-oidc
+	Oidc *IdentityProviderConfig_OidcIdentityProviderConfig `json:"Oidc,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-tags
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-tags
 	Tags []cloudformation.Tag `json:"Tags,omitempty"`
 
-	// Version AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version
-	Version *types.Value `json:"Version,omitempty"`
+	// Type AWS CloudFormation Property
+	// Required: true
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-type
+	Type *types.Value `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
@@ -77,14 +57,14 @@ type Cluster struct {
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
-func (r *Cluster) AWSCloudFormationType() string {
-	return "AWS::EKS::Cluster"
+func (r *IdentityProviderConfig) AWSCloudFormationType() string {
+	return "AWS::EKS::IdentityProviderConfig"
 }
 
 // MarshalJSON is a custom JSON marshalling hook that embeds this object into
 // an AWS CloudFormation JSON resource's 'Properties' field and adds a 'Type'.
-func (r Cluster) MarshalJSON() ([]byte, error) {
-	type Properties Cluster
+func (r IdentityProviderConfig) MarshalJSON() ([]byte, error) {
+	type Properties IdentityProviderConfig
 	return json.Marshal(&struct {
 		Type                string
 		Properties          Properties
@@ -106,8 +86,8 @@ func (r Cluster) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom JSON unmarshalling hook that strips the outer
 // AWS CloudFormation resource object, and just keeps the 'Properties' field.
-func (r *Cluster) UnmarshalJSON(b []byte) error {
-	type Properties Cluster
+func (r *IdentityProviderConfig) UnmarshalJSON(b []byte) error {
+	type Properties IdentityProviderConfig
 	res := &struct {
 		Type                string
 		Properties          *Properties
@@ -128,7 +108,7 @@ func (r *Cluster) UnmarshalJSON(b []byte) error {
 
 	// If the resource has no Properties set, it could be nil
 	if res.Properties != nil {
-		*r = Cluster(*res.Properties)
+		*r = IdentityProviderConfig(*res.Properties)
 	}
 	if res.DependsOn != nil {
 		r.AWSCloudFormationDependsOn = res.DependsOn
