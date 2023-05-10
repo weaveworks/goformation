@@ -2,6 +2,7 @@ package cloudformation
 
 import (
 	"fmt"
+
 	"github.com/weaveworks/goformation/v4/cloudformation/accessanalyzer"
 	"github.com/weaveworks/goformation/v4/cloudformation/acmpca"
 	"github.com/weaveworks/goformation/v4/cloudformation/amazonmq"
@@ -514,6 +515,7 @@ func AllResources() map[string]Resource {
 		"AWS::EFS::MountTarget":                                       &efs.MountTarget{},
 		"AWS::EKS::Addon":                                             &eks.Addon{},
 		"AWS::EKS::Cluster":                                           &eks.Cluster{},
+		"AWS::EKS::AccessEntry":                                       &eks.AccessEntry{},
 		"AWS::EKS::FargateProfile":                                    &eks.FargateProfile{},
 		"AWS::EKS::Nodegroup":                                         &eks.Nodegroup{},
 		"AWS::EMR::Cluster":                                           &emr.Cluster{},
