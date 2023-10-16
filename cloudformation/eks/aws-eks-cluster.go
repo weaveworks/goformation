@@ -20,7 +20,7 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig
 	EncryptionConfig []Cluster_EncryptionConfig `json:"EncryptionConfig,omitempty"`
 
-	EnableClusterCreatorAdminPermissions *types.Value `json:"EnableClusterCreatorAdminPermissions,omitempty"`
+	AccessConfig *Cluster_AccessConfig `json:"AccessConfig,omitempty"`
 
 	// KubernetesNetworkConfig AWS CloudFormation Property
 	// Required: false
