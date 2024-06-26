@@ -22,6 +22,8 @@ type Cluster struct {
 
 	AccessConfig *Cluster_AccessConfig `json:"AccessConfig,omitempty"`
 
+	BootstrapSelfManagedAddons *types.Value `json:"BootstrapSelfManagedAddons,omitempty"`
+
 	// KubernetesNetworkConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubernetesnetworkconfig
