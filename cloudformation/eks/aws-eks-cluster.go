@@ -20,6 +20,9 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig
 	EncryptionConfig []Cluster_EncryptionConfig `json:"EncryptionConfig,omitempty"`
 
+	// Endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com
+	Endpoint *types.Value `json:"Endpoint,omitempty"`
+
 	AccessConfig *Cluster_AccessConfig `json:"AccessConfig,omitempty"`
 
 	BootstrapSelfManagedAddons *types.Value `json:"BootstrapSelfManagedAddons,omitempty"`
@@ -53,6 +56,8 @@ type Cluster struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn
 	RoleArn *types.Value `json:"RoleArn,omitempty"`
+
+	RemoteNetworkConfig *Cluster_RemoteNetworkConfig `json:"RemoteNetworkConfig,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
