@@ -69,6 +69,8 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version
 	Version *types.Value `json:"Version,omitempty"`
 
+	ZonalShiftConfig *Cluster_ZonalShift `json:"ZonalShiftConfig,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 
