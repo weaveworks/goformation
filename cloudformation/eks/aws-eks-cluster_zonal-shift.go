@@ -7,7 +7,6 @@ import (
 )
 
 type Cluster_ZonalShift struct {
-
 	Enabled *types.Value `json:"Enabled,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
@@ -27,6 +26,6 @@ type Cluster_ZonalShift struct {
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
-func (r *Cluster_ComputeConfig) Cluster_ZonalShift() string {
+func (*Cluster_ZonalShift) AWSCloudFormationType() string {
 	return "AWS::EKS::Cluster.ZonalShift"
 }
