@@ -34,6 +34,10 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-logging
 	Logging *Cluster_Logging `json:"Logging,omitempty"`
 
+	ComputeConfig *Cluster_ComputeConfig `json:"ComputeConfig,omitempty"`
+
+	StorageConfig *Cluster_StorageConfig `json:"StorageConfig,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name
