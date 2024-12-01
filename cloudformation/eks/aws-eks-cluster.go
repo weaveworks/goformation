@@ -54,6 +54,11 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn
 	RoleArn *types.Value `json:"RoleArn,omitempty"`
 
+	// RemoteNetworkConfig AWS CloudFormation Property
+	// Required: false
+	// See: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html
+	RemoteNetworkConfig *Cluster_RemoteNetworkConfig `json:"RemoteNetworkConfig,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-tags
